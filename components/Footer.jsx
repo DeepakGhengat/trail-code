@@ -6,10 +6,11 @@ import twitter from "../public/images/twitter.svg";
 import insta from "../public/images/insta.svg";
 import youtube from "../public/images/youtube.svg";
 import Image from "next/image";
+import Fade from "react-reveal/Fade";
 
 export default function Footer() {
   return (
-    <main>
+    <Fade duration={2000}>
       <section className="bg-[#000015] border-t border-textgray/20">
         <div className="mt-[75px] container mx-auto max-w-[335px]  sm:max-w-[1200px] ">
           <div className="flex flex-col sm:flex-row  justify-between border-b border-white/10  pb-[50px] ">
@@ -21,12 +22,12 @@ export default function Footer() {
                   alt=""
                   src={mainlogo}
                 />
-                <span className="text-[16px] text-textgray mt-[30px] text-center sm:text-left">
+                <span className="text-[16px] text-textgray mt-[32px] text-center sm:text-left">
                   There are many variations of passages of <br /> Lorem the
                   Ipsum it majority.
                 </span>
               </div>
-              <div className="mt-[30px] flex space-x-[10px]">
+              <div className="mt-[32px] flex space-x-[10px]">
                 <span>
                   <Image type="image" alt="" src={discord} />
                 </span>
@@ -86,28 +87,21 @@ export default function Footer() {
                     <a
                       href="https://medium.com/@DefiEdge#:~:text=DefiEdge%20is%20a%20decentralized%2C%20non,5%20min%20read"
                       target="_blank"
-                      className="hover:text-white" rel="noreferrer"
+                      className="hover:text-white"
+                      rel="noreferrer"
                     >
                       <p>Medium</p>
                     </a>
                   </li>
 
                   <li>
-                    <a
-                      href="#"
-                      target="_blank"
-                      className="hover:text-white"
-                    >
+                    <a href="#" target="_blank" className="hover:text-white">
                       <p>Github</p>
                     </a>
                   </li>
 
                   <li>
-                    <a
-                      href="#"
-                      target="_blank"
-                      className="hover:text-white"
-                    >
+                    <a href="#" target="_blank" className="hover:text-white">
                       <p>Brand Assets</p>
                     </a>
                   </li>
@@ -116,7 +110,8 @@ export default function Footer() {
                     <a
                       href="https://docs.defiedge.io/"
                       target="_blank"
-                      className="hover:text-white" rel="noreferrer"
+                      className="hover:text-white"
+                      rel="noreferrer"
                     >
                       <p>Whitepaper</p>
                     </a>
@@ -130,6 +125,6 @@ export default function Footer() {
           </div>
         </div>
       </section>
-    </main>
+    </Fade>
   );
 }

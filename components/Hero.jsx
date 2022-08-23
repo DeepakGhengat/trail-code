@@ -1,53 +1,63 @@
 import topleftgradient from "../public/images/topgradient.svg";
 import lightning from "../public/images/lightning.svg";
 import heroVector from "../public/images/heromain.svg";
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 
 import Image from "next/image";
 
 function Hero() {
   return (
-    <Fade big>
+    <main>
       <section className="w-screen h-screen absolute">
-        <div className="absolute -top-[650px] -left-[700px] ">
-          <Image type="image" alt="" src={topleftgradient} />
+        <div className="absolute -top-[400px] -left-[400px] ">
+          <div className="bg-[#3B4FFF] h-[523px] w-[523px] blur-[354px] opacity-42"></div>
         </div>
       </section>
       <section>
         <div className="container mx-auto max-w-[335px]  sm:max-w-[1200px] flex items-center z-10 relative">
-          <div className=" sm:my-[75px] my-0 sm:flex ">
-            <div className="flex flex-col items-center sm:items-start max-w-[588px] flex-wrap mt-[58px] text-center sm:text-left">
-              <span className="sm:text-[44px] text-[30px] font-bold leading-[50px]  bg-gradient-to-tr from-[#75C1F5] to-[#4452FE] bg-clip-text text-transparent">
-                Permissionless Liquidity Management on Uniswap v3
-              </span>
-              <p className="text-16px text-textgray mt-[30px] sm:w-[410px]">
-                DefiEdge provides the simplest solution to deploy smart{" "}
-                liquidity and optimize yield on Uniswap V3
-              </p>
+          <div className=" my-0 sm:flex ">
+            <div className="flex mt-[120px] flex-col items-center sm:items-start max-w-[588px] flex-wrap  text-center sm:text-left">
+              <Fade delay={10} duration={2000}>
+                <span className="sm:text-[44px] text-[30px] font-semibold	 leading-[55px]  bg-gradient-to-tr from-[#75C1F5] to-[#4452FE] bg-clip-text text-transparent">
+                  Permissionless Liquidity Management on Uniswap v3
+                </span>
+              </Fade>
+              <Fade delay={30} duration={3000}>
+                <p className="text-16px text-textgray mt-[12px] sm:w-[410px] leading-[28px] font-medium">
+                  DefiEdge provides the simplest solution to deploy smart{" "}
+                  liquidity and optimize yield on Uniswap V3
+                </p>
+              </Fade>
+
               <div>
-                <button className="flex space-x-[6px] rounded-full bg-defaultblue py-[16px] px-[29px] items-center justify-center mt-[38px] hover:bg-[#3F1DF0] duration-300">
-                  <a
-                    href="https://app.defiedge.io/"
-                    target="_blank"
-                    className="flex"
-                    rel="noreferrer"
-                  >
-                    {" "}
-                    <Image type="image" alt="" src={lightning} />
-                    <p>&nbsp; Launch App</p>
-                  </a>
-                </button>
+                <Fade delay={30} duration={3000}>
+                  <button className="flex space-x-[6px] rounded-full bg-defaultblue py-[15px] px-[28px] items-center justify-center mt-[32px] hover:bg-[#3F1DF0] duration-300">
+                    <a
+                      href="https://app.defiedge.io/"
+                      target="_blank"
+                      className="flex"
+                      rel="noreferrer"
+                    >
+                      {" "}
+                      <Image type="image" alt="" src={lightning} />
+                      <p>&nbsp; Launch App</p>
+                    </a>
+                  </button>
+                </Fade>
               </div>
             </div>
             <div>
-              <div className="max-w-[588px] my-[50px] sm:my-0">
+              <Fade duration={2000}>
+              <div className="max-w-[588px] my-[50px] sm:my-0 pt-[74px]">
                 <Image type="image" alt="" src={heroVector} />
               </div>
+              </Fade>
+
             </div>
           </div>
         </div>
       </section>
-    </Fade>
+    </main>
   );
 }
 

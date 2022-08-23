@@ -6,12 +6,17 @@ import Image from "next/image";
 import defiedgeLogo from "../public/images/mainlogo.svg";
 import lightning from "../public/images/lightning.svg";
 import closeButton from "../public/images/closeButton.svg";
+import Fade from "react-reveal/Fade";
+
 
 export default function Header() {
   const router = useRouter();
 
+  const [showNav, setShowNav] = useState(true);
+
+
   return (
-    <div>
+    <Fade duration={1000}>
       <section className="z-10 relative">
         <main className="bg-opacity-5 bg-white ring-2 ring-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl  ">
           <div className="text-[16px] flex justify-between items-center py-[20px] sm:max-w-[1200px] max-w-[335px] container mx-auto ">
@@ -71,7 +76,7 @@ export default function Header() {
             </div>
 
             <div>
-              <button className=" hidden sm:flex space-x-[6px] rounded-full w-[141px] bg-defaultblue p-[11px] items-center justify-center hover:bg-[#3F1DF0] duration-300">
+              <button className=" hidden sm:flex space-x-[6px] rounded-full   bg-defaultblue py-[8px] px-[20px] items-center justify-center hover:bg-[#3F1DF0] duration-300">
                 <a href="https://app.defiedge.io/" target="_blank" className="flex" rel="noreferrer">
                   {" "}
                   <Image type="image" alt="" src={lightning} />
@@ -89,16 +94,16 @@ export default function Header() {
           </div>
         </main>
         {/* subheader for notifications */}
-        {/* <main
+        <main
         className={
-          "h-[40px] text-[16px] py-[9px] bg-gradient-to-tr from-[#4D67A1] to-[#6248E9]" +
+          "h-[40px] text-[16px] py-[6px] bg-gradient-to-tr from-[#4D67A1] to-[#6248E9]" +
           (showNav
             ? "h-[40px] text-[16px] py-[9px] bg-gradient-to-tr from-[#4D67A1] to-[#6248E9]"
             : "transition -translate-y-32 duration-300 invisible opacity-5")
         }
       >
         <div className="max-w-[1200px] container mx-auto flex justify-between">
-          <p>
+          <p className="">
             📣 DefiEdge provides the simplest solution to deploy smart liquidity
             and optimize yield on Uniswap V3. &nbsp;
             <a href="#" className="underline">
@@ -109,8 +114,8 @@ export default function Header() {
             <Image type="image" alt="" src={closeButton} />
           </button>
         </div>
-      </main> */}
+      </main>
       </section>
-    </div>
+    </Fade>
   );
 }

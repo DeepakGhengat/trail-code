@@ -11,95 +11,101 @@ import Zoom from "react-reveal/Zoom";
 
 function Swap() {
   return (
-    <Fade big >
+    <Fade big>
       <section id="features" className="flex items-center flex-col">
         <div className="relative w-screen">
-          <div className="absolute right-0 -mt-[270px] -mr-[200px]">
+          <div className="absolute right-0 mr-[320px] ">
+            <div className="bg-[#5749FF] h-[300px] w-[300px] blur-[300px] opacity-42"></div>
+          </div>
+
+          <div className="absolute right-0 mt-[570px] -mr-[450px] ">
+            <div className="bg-[#3B4FFF] h-[523px] w-[523px] blur-[354px] opacity-42"></div>
+          </div>
+        </div>
+        <Fade duration={2000}>
+          <div className="sm:mt-[140px] mt-[70px] xl:w-[792px]">
             <Image
               type="image"
               className="w-[111px] h-[31px]"
               alt=""
-              src={gradient}
+              src={swap}
             />
           </div>
-        </div>
-        <div className="sm:mt-[150px] mt-[70px] xl:w-[792px]">
-          <Image
-            type="image"
-            className="w-[111px] h-[31px]"
-            alt=""
-            src={swap}
-          />
-        </div>
-        <div className="mt-[50px] text-center">
-          <span className="sm:text-[44px] text-[26px] font-semibold leading-[50px]  bg-gradient-to-tr from-[#75C1F5] to-[#4452FE] bg-clip-text text-transparent">
-            Swap and Rebalance
-          </span>
-          <p className="text-16px text-textgray text-center sm:mt-[25px] mt-[20px] sm:w-[500px]">
-            Our Ul accurately calculates how you need to swap assets to deploy{" "}
-            liquidity on selected ranges efficiently.
-          </p>
-        </div>
+        </Fade>
 
-        <div className="grid sm:grid-cols-3 grid-cols-1 gap-[95px] sm:mt-[145px] mt-[70px]">
-          <div className="flex flex-col text-center items-center">
-            <Zoom duration={500}>
-              <Image
-                type="image"
-                className="w-[111px] h-[31px]"
-                alt=""
-                src={ico1}
-              />
-            </Zoom>
-
-            <span className="text-[20px] font-semibold mt-[30px]">
-              Create and Manage Strategy
+        <Fade duration={2000}>
+          <div className="mt-[42px] text-center">
+            <span className="sm:text-[44px] text-[26px] font-semibold leading-[50px]  bg-gradient-to-tr from-[#75C1F5] to-[#4452FE] bg-clip-text text-transparent">
+              Swap and Rebalance
             </span>
-            <p className="text-textgray text-[16px] mt-[20px]">
-              Tokenize liquidity provided on Uniswap V3 using DefiEdge. These
-              tokens can be then used as collateral.
+            <p className="text-16px text-textgray text-center sm:mt-[25px] mt-[20px] sm:w-[500px]">
+              Our Ul accurately calculates how you need to swap assets to deploy{" "}
+              liquidity on selected ranges efficiently.
             </p>
           </div>
+        </Fade>
 
-          <div className="flex flex-col text-center items-center">
-          <Zoom duration={500}>
-              <Image
-                type="image"
-                className="w-[111px] h-[31px]"
-                alt=""
-                src={ico2}
-              />
-            </Zoom>
-            <span className="text-[20px] font-semibold mt-[30px]">
-              Limit orders
-            </span>
-            <p className="text-textgray text-[16px] mt-[20px]">
-              Tokenize liquidity provided on Uniswap V3 using DefiEdge. These
-              tokens can be then used as collateral.
-            </p>
-          </div>
+        <Fade duration={2000}>
+          <div className="grid sm:grid-cols-3 grid-cols-1 gap-[95px] sm:mt-[84px] mt-[70px]">
+            <div className="flex flex-col text-center items-center">
+              <Zoom duration={500}>
+                <Image
+                  type="image"
+                  className="w-[111px] h-[31px]"
+                  alt=""
+                  src={ico1}
+                />
+              </Zoom>
 
-          <div className="flex flex-col text-center items-center">
-          <Zoom duration={500}>
-              <Image
-                type="image"
-                className="w-[111px] h-[31px]"
-                alt=""
-                src={ico3}
-              />
-            </Zoom>
-            <span className="text-[20px] font-semibold mt-[30px]">
-              DE shares
-            </span>
-            <p className="text-textgray text-[16px] mt-[20px]">
-              Tokenize liquidity provided on Uniswap V3 using DefiEdge. These
-              tokens can be then used as collateral.
-            </p>
+              <span className="text-[20px] font-semibold mt-[30px]">
+                Create and Manage Strategy
+              </span>
+              <p className="text-textgray text-[16px] mt-[20px]">
+                Tokenize liquidity provided on Uniswap V3 using DefiEdge. These
+                tokens can be then used as collateral.
+              </p>
+            </div>
+
+            <div className="flex flex-col text-center items-center">
+              <Zoom duration={500}>
+                <Image
+                  type="image"
+                  className="w-[111px] h-[31px]"
+                  alt=""
+                  src={ico2}
+                />
+              </Zoom>
+              <span className="text-[20px] font-semibold mt-[30px]">
+                Limit orders
+              </span>
+              <p className="text-textgray text-[16px] mt-[20px]">
+                Tokenize liquidity provided on Uniswap V3 using DefiEdge. These
+                tokens can be then used as collateral.
+              </p>
+            </div>
+
+            <div className="flex flex-col text-center items-center">
+              <Zoom duration={500}>
+                <Image
+                  type="image"
+                  className="w-[111px] h-[31px]"
+                  alt=""
+                  src={ico3}
+                />
+              </Zoom>
+              <span className="text-[20px] font-semibold mt-[30px]">
+                DE shares
+              </span>
+              <p className="text-textgray text-[16px] mt-[20px]">
+                Tokenize liquidity provided on Uniswap V3 using DefiEdge. These
+                tokens can be then used as collateral.
+              </p>
+            </div>
           </div>
-        </div>
+        </Fade>
       </section>
 
-      <div className="sm:mt-[95px] mt-[40px]">
+      <div className="sm:mt-[70px] mt-[40px]">
         <Image type="image" className="w-[111px] h-[31px]" alt="" src={line} />
       </div>
     </Fade>

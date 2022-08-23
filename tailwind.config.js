@@ -23,6 +23,9 @@ module.exports = {
     },
     
     extend: {
+      opacity: {
+        '42': '.42',
+      },
       backgroundImage: {
         "headerTexture": "url('/img/header02.svg')",
       },

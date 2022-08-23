@@ -6,6 +6,8 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background: #000021;
+  color: white;
 
 }
 
@@ -24,11 +26,4 @@ a {
   src: url('../public/generalsanse.ttf');
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    background: #000021;
-  }
-}
+
