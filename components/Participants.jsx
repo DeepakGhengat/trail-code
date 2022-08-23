@@ -25,7 +25,7 @@ function Participants() {
         </div>
         <div className="grid sm:grid-cols-3 grid-cols-1 gap-[25px]">
           <div className="">
-            <div className="absolute max-w-[335px] sm:max-w-[384px] sm:max-w-0">
+            <div className="absolute max-w-[335px] sm:max-w-none	">
               <Image type="image" className="" alt="" src={gradient1} />
             </div>
             <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[320px]">
@@ -53,7 +53,7 @@ function Participants() {
           </div>
 
           <div className="">
-            <div className="absolute max-w-[335px] sm:max-w-[384px] sm:max-w-0">
+            <div className="absolute max-w-[335px] sm:max-w-none	">
               <Image type="image" className="" alt="" src={gradient2} />
             </div>
             <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[320px]">
@@ -83,7 +83,7 @@ function Participants() {
           </div>
 
           <div className="">
-            <div className="absolute max-w-[335px] sm:max-w-[384px]">
+            <div className="absolute max-w-[335px] sm:max-w-none	">
               <Image type="image" className="" alt="" src={gradient3} />
             </div>
             <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[320px]">

@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden testFont">
       <Layout>
         <Component {...pageProps} />
       </Layout>

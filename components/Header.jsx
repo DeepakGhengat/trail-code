@@ -14,7 +14,7 @@ export default function Header() {
     <div>
       <section className="z-10 relative">
         <main className="bg-opacity-5 bg-white ring-2 ring-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl  ">
-          <div className="text-[16px] flex justify-between items-center py-[20px] sm:max-w-[1200px] max-w-[335px] container mx-auto">
+          <div className="text-[16px] flex justify-between items-center py-[20px] sm:max-w-[1200px] max-w-[335px] container mx-auto ">
             <Image
               type="image"
               className="w-[111px] h-[31px]"
@@ -71,7 +71,7 @@ export default function Header() {
             </div>
 
             <div>
-              <button className="flex hidden sm:block space-x-[6px] rounded-full w-[141px] bg-defaultblue p-[11px] items-center justify-center hover:bg-[#3F1DF0] duration-300">
+              <button className=" hidden sm:flex space-x-[6px] rounded-full w-[141px] bg-defaultblue p-[11px] items-center justify-center hover:bg-[#3F1DF0] duration-300">
                 <a href="https://app.defiedge.io/" target="_blank" className="flex" rel="noreferrer">
                   {" "}
                   <Image type="image" alt="" src={lightning} />

@@ -50,7 +50,7 @@ function Strategies() {
             </div>
             <div className="pb-[30px] border-b-2 border-[#4452FE]/20">
               <span className="text-[20px] flex font-semibold mt-[20px]">
-                <p>Test Strategy634</p>
+                <p className="pr-[6px]">Test Strategy634</p>
                 <Image type="image" alt="" src={info} />
               </span>
               <p className="text-[16px] text-textgray">USDC-WETH#2</p>
@@ -105,7 +105,7 @@ function Strategies() {
             </div>
             <div className="pb-[30px] border-b-2 border-[#4452FE]/20">
               <span className="text-[20px] flex font-semibold mt-[20px]">
-                <p>Test Strategy634</p>
+                <p className="pr-[6px]">Test Strategy634</p>
                 <Image type="image" alt="" src={info} />
               </span>
               <p className="text-[16px] text-textgray">USDC-WETH#2</p>
@@ -160,7 +160,7 @@ function Strategies() {
             </div>
             <div className="pb-[30px] border-b-2 border-[#4452FE]/20">
               <span className="text-[20px] flex font-semibold mt-[20px]">
-                <p>Test Strategy634</p>
+                <p className="pr-[6px]">Test Strategy634</p>
                 <Image type="image" alt="" src={info} />
               </span>
               <p className="text-[16px] text-textgray">USDC-WETH#2</p>
