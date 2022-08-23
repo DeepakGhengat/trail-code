@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Hero from "./Hero";
-import HeroBar from "./heroBar";
+import HeroBar from "./HeroBar";
 import Footer from "./Footer";
 
 const Layout = ({ children }) => {
