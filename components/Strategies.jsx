@@ -1,5 +1,7 @@
-import React from "react";
+// * Import React Libraries
 import Image from "next/image";
+
+//* Import Required Images 
 import one from "../public/images/one.svg";
 import two from "../public/images/two.svg";
 import three from "../public/images/three.svg";
@@ -9,8 +11,9 @@ import arrowcross from "../public/images/arrowcross.svg";
 import arrowdown from "../public/images/arrowdown.svg";
 import arrowupper from "../public/images/arrowupper.svg";
 import tokenlogo from "../public/images/tokenlogo.svg";
-import strategygradient from "../public/images/strategygradient.svg";
 import Fade from "react-reveal/Fade";
+
+//* Import Components 
 import CardCourosel from "./CardCourosel";
 import CardSkeleton from "./CardSkeleton";
 

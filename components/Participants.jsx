@@ -1,9 +1,11 @@
+//* Import Required Images 
 import p1 from "../public/images/p1.svg";
 import p2 from "../public/images/p2.svg";
 import p3 from "../public/images/p3.svg";
 import rightarrow from "../public/images/rightarrow.svg";
+
+// * Import React Libraries
 import Image from "next/image";
-import Link from "next/link";
 import Fade from "react-reveal/Fade";
 
 function Participants() {

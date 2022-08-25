@@ -1,6 +1,8 @@
-// Import Swiper React components
+//* Import React libraries
 import React from "react";
 import Image from "next/image";
+
+//* Import required Images 
 import one from "../public/images/one.svg";
 import two from "../public/images/two.svg";
 import three from "../public/images/three.svg";
@@ -11,16 +13,19 @@ import arrowdown from "../public/images/arrowdown.svg";
 import arrowupper from "../public/images/arrowupper.svg";
 import tokenlogo from "../public/images/tokenlogo.svg";
 
+//* Import Thirdparty Library
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 
+//* Import Css for swiper
 import "swiper/css/pagination";
 import "swiper/css";
 
 function CardCourosel() {
   return (
     <Swiper
-      pagination={true} modules={[Pagination]}
+      pagination={true}
+      modules={[Pagination]}
       className="sm:hidden container mx-auto"
       spaceBetween={15}
       loop={true}

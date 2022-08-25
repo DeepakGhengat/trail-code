@@ -1,5 +1,7 @@
-import React from "react";
+// * Import React Libraries
 import Image from "next/image";
+
+//* Import Required Images
 import one from "../public/images/strategy/001.svg";
 import two from "../public/images/strategy/002.svg";
 import three from "../public/images/strategy/003.svg";

@@ -1,13 +1,15 @@
-import React from "react";
+// * Import React Libraries
 import Image from "next/image";
-import swap from "../public/images/swap.svg";
+
+// * Import Thirdparty Libraries
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
+
+// * Images Required
 import ico1 from "../public/images/ico1.svg";
 import ico2 from "../public/images/ico2.svg";
 import ico3 from "../public/images/ico3.svg";
 import line from "../public/images/line.svg";
-import gradient from "../public/images/swapGradient.svg";
-import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
 
 function Swap() {
   return (
@@ -24,7 +26,15 @@ function Swap() {
         </div>
         <Fade duration={2000}>
           <div className="sm:mt-[140px] mt-[70px] xl:w-[792px]">
-          <video height="502px" width="792px" src="/images/swap.mp4" type="video/mp4" autoPlay muted loop/>
+            <video
+              height="502px"
+              width="792px"
+              src="/images/swap.mp4"
+              type="video/mp4"
+              autoPlay
+              muted
+              loop
+            />
           </div>
         </Fade>
 

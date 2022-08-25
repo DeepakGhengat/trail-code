@@ -1,5 +1,7 @@
-import React from "react";
+// * Import Required Thirdparty Libraries
 import Fade from "react-reveal/Fade";
+
+//* Import Components Required
 import StrategyManagerCard from "./StrategyManagerCard";
 
 function Subscribe() {

@@ -1,13 +1,17 @@
+//* Import React library
 import { useState } from "react";
 import { useRouter } from "next/router";
-
 import Link from "next/link";
 import Image from "next/image";
+
+//* Import Required Images 
 import cross from "../public/images/cross.svg";
 import menue from "../public/images/menue.svg";
 import defiedgeLogo from "../public/images/mainlogo.svg";
 import lightning from "../public/images/lightning.svg";
 import closeButton from "../public/images/closeButton.svg";
+
+//* Import Thirdparty Components
 import Fade from "react-reveal/Fade";
 
 export default function Header() {
@@ -90,12 +94,12 @@ export default function Header() {
               </button>
 
               <button className="flex sm:hidden items-center justify-center duration-300">
-                  <Image
-                    type="image"
-                    className="w-[111px] h-[31px]"
-                    alt=""
-                    src={menue}
-                  />
+                <Image
+                  type="image"
+                  className="w-[111px] h-[31px]"
+                  alt=""
+                  src={menue}
+                />
               </button>
             </div>
           </div>

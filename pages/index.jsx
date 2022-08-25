@@ -1,4 +1,6 @@
 import Head from "next/head";
+
+//* Components Required
 import Swap from "../components/Swap";
 import Participants from "../components/Participants";
 import Strategies from "../components/Strategies";

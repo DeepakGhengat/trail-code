@@ -1,9 +1,9 @@
-import React from "react";
+//* Import Thirdparty Library
 import CountUp from "react-countup";
 
 function heroBar() {
   return (
-    <section className="relative mt-[74px] z-10 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg flex ">
+    <section className="relative mt-[44px] z-10 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg flex ">
       <div className="container mx-auto max-w-[1200px] sm:h-[80px] flex items-center">
         <div className="grid grid-cols-1 sm:grid-cols-3 h-full w-full">
           <div className="flex  justify-between items-center pr-[25px] pl-[20px] sm:pl-0 py-[6px] border-b-2 sm:border-b-0 sm:border-r-4 border-[#000021] font-regular">

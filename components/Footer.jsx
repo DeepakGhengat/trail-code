@@ -1,10 +1,10 @@
-import Link from "next/link";
+//* Import Images Required
 import mainlogo from "../public/images/mainlogo.svg";
 import discord from "../public/images/discord.svg";
 import medium from "../public/images/medium.svg";
 import twitter from "../public/images/twitter.svg";
-import insta from "../public/images/insta.svg";
-import youtube from "../public/images/youtube.svg";
+
+//* Import React Library
 import Image from "next/image";
 import Fade from "react-reveal/Fade";
 
@@ -37,12 +37,6 @@ export default function Footer() {
                 <span>
                   <Image type="image" alt="" src={twitter} />
                 </span>
-                {/* <span>
-                  <Image type="image" alt="" src={insta} />
-                </span>
-                <span>
-                  <Image type="image" alt="" src={youtube} />
-                </span> */}
               </div>
             </div>
 

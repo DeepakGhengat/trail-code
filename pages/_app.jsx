@@ -1,8 +1,8 @@
+//* Import Css
 import "../styles/Home.module.css";
 import "../styles/globals.css";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+//* Import Components
 import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
