@@ -5,6 +5,7 @@ import medium from "../public/images/medium.svg";
 import twitter from "../public/images/twitter.svg";
 
 //* Import React Library
+import React from "react";
 import Image from "next/image";
 import Fade from "react-reveal/Fade";
 

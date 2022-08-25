@@ -5,6 +5,7 @@ import p3 from "../public/images/p3.svg";
 import rightarrow from "../public/images/rightarrow.svg";
 
 // * Import React Libraries
+import React from "react";
 import Image from "next/image";
 import Fade from "react-reveal/Fade";
 

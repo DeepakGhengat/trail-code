@@ -1,4 +1,7 @@
+//* React Import
 import Head from "next/head";
+import React from "react";
+
 
 //* Components Required
 import Swap from "../components/Swap";

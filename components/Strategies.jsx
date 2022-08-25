@@ -1,5 +1,7 @@
 // * Import React Libraries
 import Image from "next/image";
+import React from "react";
+
 
 //* Import Required Images 
 import one from "../public/images/one.svg";

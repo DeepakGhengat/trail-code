@@ -1,5 +1,7 @@
 // * Import React Libraries
 import Image from "next/image";
+import React from "react";
+
 
 // * Import Thirdparty Libraries
 import Fade from "react-reveal/Fade";

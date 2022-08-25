@@ -1,11 +1,12 @@
 //* Import React library
+import React from "react";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 
 //* Import Required Images 
-import cross from "../public/images/cross.svg";
+// import cross from "../public/images/cross.svg";
 import menue from "../public/images/menue.svg";
 import defiedgeLogo from "../public/images/mainlogo.svg";
 import lightning from "../public/images/lightning.svg";

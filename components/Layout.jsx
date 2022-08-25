@@ -1,9 +1,11 @@
 //* Import Components
+import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
 import HeroBar from "./HeroBar";
 import Footer from "./Footer";
 
+// eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => {
   return (
     <div className="">
