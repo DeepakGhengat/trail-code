@@ -52,7 +52,7 @@ function Hero() {
             </div>
             <div>
               <Fade duration={2000}>
-                <div className="max-w-[588px] sm:my-[75px] sm:my-0 pt-[49px] sm:pt-0 ">
+                <div className="max-w-[588px] sm:py-[75px] pt-[49px] sm:pt-[75px]">
                   <video
                     className="sm:h-[403px] sm:w-[588px]"
                     src="/images/heroVideo.mp4"
