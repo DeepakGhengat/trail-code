@@ -1,7 +1,10 @@
 import topleftgradient from "../public/images/topgradient.svg";
 import lightning from "../public/images/lightning.svg";
 import heroVector from "../public/images/heromain.svg";
+// import heroVideo from "../public/images/heroVideo.mp4";
 import Fade from "react-reveal/Fade";
+
+
 
 import Image from "next/image";
 
@@ -49,7 +52,7 @@ function Hero() {
             <div>
               <Fade duration={2000}>
               <div className="max-w-[588px] my-[50px] sm:my-0 pt-[74px]">
-                <Image type="image" height="403px" width="588px" alt="" src={heroVector} />
+                <video height="403px" width="588px" src="/images/heroVideo.mp4" type="video/mp4" autoPlay muted loop/>
               </div>
               </Fade>
 

@@ -24,12 +24,7 @@ function Swap() {
         </div>
         <Fade duration={2000}>
           <div className="sm:mt-[140px] mt-[70px] xl:w-[792px]">
-            <Image
-              type="image"
-              className="w-[111px] h-[31px]"
-              alt=""
-              src={swap}
-            />
+          <video height="502px" width="792px" src="/images/swap.mp4" type="video/mp4" autoPlay muted loop/>
           </div>
         </Fade>
 

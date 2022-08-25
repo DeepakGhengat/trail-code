@@ -13,7 +13,7 @@ import rightarrow from "../public/images/rightarrow.svg";
 function StrategyManagerCard() {
   return (
     <div>
-      <div className="bg-opacity-5 h-[195px] overflow-hidden bg-white ring-2 ring-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl flex flex-col-reverse sm:flex-row">
+      <div className="bg-opacity-30 bg-[#141541] h-[195px] overflow-hidden ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl flex flex-col-reverse sm:flex-row">
         <div className="p-[30px]">
           <span className="sm:text-[32px] leading-[44px] text-[20px] w-[150px] font-semibold">
             Trusted by best in market strategy managers.

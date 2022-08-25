@@ -37,7 +37,7 @@ function Strategies() {
 
         <Fade duration={2000}>
           <div className="hidden sm:grid sm:grid-cols-3 grid-cols-1 gap-[25px] ">
-            <div className="bg-opacity-5 bg-white ring-2 ring-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] ">
+            <div className="bg-opacity-30 bg-[#141541] ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] ">
               <div className="flex justify-between">
                 <Image
                   type="image"
@@ -94,7 +94,7 @@ function Strategies() {
               </div>
             </div>
 
-            <div className="bg-opacity-5 bg-white ring-2 ring-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] ">
+            <div className="bg-opacity-30 bg-[#141541] ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] ">
               <div className="flex justify-between">
                 <Image
                   type="image"
@@ -151,7 +151,7 @@ function Strategies() {
               </div>
             </div>
 
-            <div className="bg-opacity-5 bg-white ring-2 ring-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] ">
+            <div className="bg-opacity-30 bg-[#141541] ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] ">
               <div className="flex justify-between">
                 <Image
                   type="image"
