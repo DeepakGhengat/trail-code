@@ -22,8 +22,8 @@ function Participants() {
         <Fade duration={2000}>
           <div className="grid sm:grid-cols-3 grid-cols-1 gap-[25px]">
             <div className="relative group">
-              <div className="absolute max-w-[335px] 	">
-                <div className=" sm:w-[384px] h-[320px] bg-gradient-to-tl to-transparent from-[#58C0FB] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
+              <div className="absolute w-[335px] 	">
+                <div className="w-full sm:w-[384px] h-[320px] bg-gradient-to-tl to-transparent from-[#58C0FB] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
               </div>
               <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[320px]">
                 <div>
@@ -34,13 +34,13 @@ function Participants() {
                     src={p3}
                   />
                 </div>
-                <span className="sm:text-[24px] text-[20px] font-semibold sm:mt-[28px] mt-[20px]">
+                <span className="sm:text-[24px] text-[20px] font-semibold sm:mt-[28px] mt-[60px]">
                   Liquidity Provider
                 </span>
                 <p className="text-textgray text-[16px] mt-[12px]">
                   Create personalized strategies to manage your own liquidity.
                 </p>
-                <span className="absolute sm:bottom-[32px] bottom-[60px] flex group cursor-pointer">
+                <span className="absolute bottom-[32px]  flex group cursor-pointer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}
@@ -50,8 +50,8 @@ function Participants() {
             </div>
 
             <div className="relative group">
-              <div className="absolute max-w-[335px] 	">
-                <div className=" sm:w-[384px] h-[320px] bg-gradient-to-tl to-transparent from-[#FABB18] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
+              <div className="absolute w-[335px] 	">
+                <div className="w-full sm:w-[384px] h-[320px] bg-gradient-to-tl to-transparent from-[#FABB18] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
               </div>
               <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[320px]">
                 <div>
@@ -70,7 +70,7 @@ function Participants() {
                   platform by selecting a strategy that suits your needs.{" "}
                 </p>
 
-                <span className="absolute sm:bottom-[32px] bottom-[60px] flex group cursor-pointer">
+                <span className="absolute bottom-[32px] bottom-[60px] flex group cursor-pointer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}
@@ -80,8 +80,8 @@ function Participants() {
             </div>
 
             <div className="relative group">
-              <div className="absolute max-w-[335px] 	">
-                <div className=" sm:w-[384px] h-[320px] bg-gradient-to-tl to-transparent from-[#45C646] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
+              <div className="absolute w-[335px] 	">
+                <div className="w-full sm:w-[384px] h-[320px] bg-gradient-to-tl to-transparent from-[#45C646] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
               </div>
               <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[320px]">
                 <div>
@@ -95,7 +95,7 @@ function Participants() {
                   management tools.{" "}
                 </p>
 
-                <span className="absolute sm:bottom-[32px] bottom-[60px] flex group cursor-pointer">
+                <span className="absolute bottom-[32px] bottom-[60px] flex group cursor-pointer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}

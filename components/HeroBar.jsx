@@ -15,7 +15,7 @@ function heroBar() {
             </span>
           </div>
 
-          <div className="flex justify-between items-center pr-[25px] sm:pl-[25px] pl-[20px]  py-[6px] border-b-2 sm:border-b-0 sm:border-r-4 2xl:border-[#000021] xl:border-[#05042E] font-regular">
+          <div className="flex justify-between items-center pr-[25px] sm:pl-[25px] pl-[20px]  py-[6px] border-b-2 border-[#000021] sm:border-b-0 sm:border-r-4 2xl:border-[#000021] xl:border-[#05042E] font-regular">
             <span className="sm:text-[16px] text-[12px] font-normal leading-[22px] text-textgray">
               24 hours <br /> volume
             </span>
@@ -24,7 +24,7 @@ function heroBar() {
             </span>
           </div>
 
-          <div className="flex justify-between items-center pl-[20px] sm:pl-[25px] pr-[20px] sm:pr-0">
+          <div className="flex justify-between items-center pl-[20px] sm:pl-[25px] py-[6px] pr-[20px] sm:pr-0">
             <span className="sm:text-[16px] text-[12px] font-normal leading-[22px] text-textgray">
               Total <br /> Strategies
             </span>

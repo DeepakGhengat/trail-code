@@ -3,17 +3,17 @@ import { useRouter } from "next/router";
 
 import Link from "next/link";
 import Image from "next/image";
+import cross from "../public/images/cross.svg";
+import menue from "../public/images/menue.svg";
 import defiedgeLogo from "../public/images/mainlogo.svg";
 import lightning from "../public/images/lightning.svg";
 import closeButton from "../public/images/closeButton.svg";
 import Fade from "react-reveal/Fade";
 
-
 export default function Header() {
   const router = useRouter();
 
   const [showNav, setShowNav] = useState(true);
-
 
   return (
     <Fade duration={1000}>
@@ -77,44 +77,52 @@ export default function Header() {
 
             <div>
               <button className=" hidden sm:flex space-x-[6px] rounded-full   bg-defaultblue py-[8px] px-[20px] items-center justify-center hover:bg-[#3F1DF0] duration-300">
-                <a href="https://app.defiedge.io/" target="_blank" className="flex" rel="noreferrer">
+                <a
+                  href="https://app.defiedge.io/"
+                  target="_blank"
+                  className="flex"
+                  rel="noreferrer"
+                >
                   {" "}
                   <Image type="image" alt="" src={lightning} />
                   <p>&nbsp; Go To App</p>
                 </a>
               </button>
 
-              <button className="flex sm:hidden rounded-full w-[120px] bg-defaultblue p-[6px] items-center justify-center hover:bg-[#3F1DF0] duration-300">
-                <a href="https://app.defiedge.io/" target="_blank" className="flex" rel="noreferrer">
-                  {" "}
-                  <p>&nbsp; Careers</p>
-                </a>
+              <button className="flex sm:hidden items-center justify-center duration-300">
+                  <Image
+                    type="image"
+                    className="w-[111px] h-[31px]"
+                    alt=""
+                    src={menue}
+                  />
               </button>
             </div>
           </div>
         </main>
+
         {/* subheader for notifications */}
         <main
-        className={
-          "h-[40px] text-[16px] py-[6px] bg-gradient-to-tr from-[#4D67A1] to-[#6248E9]" +
-          (showNav
-            ? "h-[40px] text-[16px] py-[9px] bg-gradient-to-r from-[#4452FE] via-[#5856FE] via-[#6E5AFE]  to-[#60B9FA]"
-            : "transition -translate-y-32 duration-300 invisible opacity-5")
-        }
-      >
-        <div className="max-w-[1200px] container mx-auto flex justify-between">
-          <p className="">
-            📣 DefiEdge provides the simplest solution to deploy smart liquidity
-            and optimize yield on Uniswap V3. &nbsp;
-            <a href="#" className="underline">
-             Know more
-            </a>
-          </p>
-          <button onClick={() => setShowNav(false)}>
-            <Image type="image" alt="" src={closeButton} />
-          </button>
-        </div>
-      </main>
+          className={
+            "h-[40px] text-[16px] py-[6px] bg-gradient-to-tr from-[#4D67A1] to-[#6248E9]" +
+            (showNav
+              ? "h-[40px] text-[16px] py-[9px] bg-gradient-to-r hidden from-[#4452FE] via-[#5856FE] via-[#6E5AFE]  to-[#60B9FA]"
+              : "transition -translate-y-32 duration-300 invisible opacity-5")
+          }
+        >
+          <div className="max-w-[1200px] container mx-auto flex justify-between">
+            <p className="">
+              📣 DefiEdge provides the simplest solution to deploy smart
+              liquidity and optimize yield on Uniswap V3. &nbsp;
+              <a href="#" className="underline">
+                Know more
+              </a>
+            </p>
+            <button onClick={() => setShowNav(false)}>
+              <Image type="image" alt="" src={closeButton} />
+            </button>
+          </div>
+        </main>
       </section>
     </Fade>
   );

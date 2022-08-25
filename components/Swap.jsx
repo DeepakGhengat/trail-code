@@ -29,7 +29,7 @@ function Swap() {
         </Fade>
 
         <Fade duration={2000}>
-          <div className="mt-[42px] text-center">
+          <div className="mt-[32px] sm:mt-[42px] text-center">
             <span className="sm:text-[44px] text-[26px] font-semibold leading-[50px]  bg-gradient-to-tr bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] via-[#60B9FA]   to-[#3E51FF] bg-clip-text text-transparent">
               Swap and Rebalance
             </span>
@@ -41,7 +41,7 @@ function Swap() {
         </Fade>
 
         <Fade duration={2000}>
-          <div className="grid sm:grid-cols-3 grid-cols-1 gap-[95px] sm:mt-[84px] mt-[70px]">
+          <div className="grid sm:grid-cols-3 grid-cols-1 gap-[95px] sm:mt-[84px] mt-[72px]">
             <div className="flex flex-col text-center items-center">
               <Zoom duration={500}>
                 <Image
@@ -55,7 +55,7 @@ function Swap() {
               <span className="text-[20px] font-semibold mt-[30px]">
                 Create and Manage Strategy
               </span>
-              <p className="text-textgray text-[16px] mt-[20px]">
+              <p className="text-textgray text-[16px] sm:mt-[20px] mt-[8px]">
                 Tokenize liquidity provided on Uniswap V3 using DefiEdge. These
                 tokens can be then used as collateral.
               </p>

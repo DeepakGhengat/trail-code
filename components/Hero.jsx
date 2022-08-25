@@ -16,9 +16,9 @@ function Hero() {
       <section>
         <div className="container mx-auto max-w-[335px]  sm:max-w-[1200px] flex items-center z-10 relative">
           <div className=" my-0 sm:flex ">
-            <div className="flex mt-[120px] flex-col items-center sm:items-start max-w-[588px] flex-wrap  text-center sm:text-left">
+            <div className="flex mt-[48px] sm:mt-[120px] flex-col items-center sm:items-start max-w-[588px] flex-wrap  text-center sm:text-left">
               <Fade delay={10} duration={2000}>
-                <span className=" sm:text-[44px] text-[30px] font-semibold	 leading-[55px]  bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] via-[#60B9FA]   to-[#3E51FF] bg-clip-text text-transparent">
+                <span className=" sm:text-[44px] text-[30px] font-semibold	leading-[40px] sm:leading-[55px]  bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] via-[#60B9FA]   to-[#3E51FF] bg-clip-text text-transparent">
                   Permissionless Liquidity Management on Uniswap v3
                 </span>
               </Fade>
@@ -48,10 +48,9 @@ function Hero() {
             </div>
             <div>
               <Fade duration={2000}>
-                <div className="max-w-[588px] my-[50px] sm:my-0 pt-[74px]">
+                <div className="max-w-[588px] sm:my-[50px] sm:my-0 pt-[49px] sm:pt-[74px]">
                   <video
-                    height="403px"
-                    width="588px"
+                  className="sm:h-[403px] sm:w-[588px]"
                     src="/images/heroVideo.mp4"
                     type="video/mp4"
                     autoPlay
