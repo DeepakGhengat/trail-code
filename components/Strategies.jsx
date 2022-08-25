@@ -209,7 +209,7 @@ function Strategies() {
             </div>
           </div>
 
-          <div className="hidden  sm:grid-cols-3 grid-cols-1 gap-[25px] mt-10">
+          <div className="grid hidden sm:grid-cols-3 grid-cols-1 gap-[25px] mt-10">
             <CardSkeleton />
             <CardSkeleton />
             <CardSkeleton />
