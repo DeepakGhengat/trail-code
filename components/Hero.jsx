@@ -18,7 +18,7 @@ function Hero() {
           <div className=" my-0 sm:flex ">
             <div className="flex mt-[120px] flex-col items-center sm:items-start max-w-[588px] flex-wrap  text-center sm:text-left">
               <Fade delay={10} duration={2000}>
-                <span className="sm:text-[44px] text-[30px] font-semibold	 leading-[55px]  bg-gradient-to-tr from-[#75C1F5] to-[#4452FE] bg-clip-text text-transparent">
+                <span className=" sm:text-[44px] text-[30px] font-semibold	 leading-[55px]  bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] via-[#60B9FA]   to-[#3E51FF] bg-clip-text text-transparent">
                   Permissionless Liquidity Management on Uniswap v3
                 </span>
               </Fade>
@@ -49,7 +49,7 @@ function Hero() {
             <div>
               <Fade duration={2000}>
               <div className="max-w-[588px] my-[50px] sm:my-0 pt-[74px]">
-                <Image type="image" alt="" src={heroVector} />
+                <Image type="image" height="403px" width="588px" alt="" src={heroVector} />
               </div>
               </Fade>
 

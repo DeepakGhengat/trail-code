@@ -11,6 +11,8 @@ import arrowupper from "../public/images/arrowupper.svg";
 import tokenlogo from "../public/images/tokenlogo.svg";
 import strategygradient from "../public/images/strategygradient.svg";
 import Fade from "react-reveal/Fade";
+import CardCourosel from "./CardCourosel";
+import CardSkeleton from "./CardSkeleton";
 
 function Strategies() {
   return (
@@ -34,8 +36,7 @@ function Strategies() {
         </Fade>
 
         <Fade duration={2000}>
-          <div className="grid sm:grid-cols-3 grid-cols-1 gap-[25px] ">
-
+          <div className="hidden sm:grid sm:grid-cols-3 grid-cols-1 gap-[25px] ">
             <div className="bg-opacity-5 bg-white ring-2 ring-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] ">
               <div className="flex justify-between">
                 <Image
@@ -206,8 +207,15 @@ function Strategies() {
                 </button>
               </div>
             </div>
-
           </div>
+
+          <div className="hidden  sm:grid-cols-3 grid-cols-1 gap-[25px] mt-10">
+            <CardSkeleton />
+            <CardSkeleton />
+            <CardSkeleton />
+          </div>
+
+          <CardCourosel />
         </Fade>
       </section>
     </main>

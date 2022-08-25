@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <Fade duration={2000}>
       <section className="bg-[#000015] border-t border-textgray/20">
-        <div className="mt-[75px] container mx-auto max-w-[335px]  sm:max-w-[1200px] ">
+        <div className="mt-[40px] sm:mt-[75px] container mx-auto max-w-[335px]  sm:max-w-[1200px] ">
           <div className="flex flex-col sm:flex-row  justify-between border-b border-white/10  pb-[50px] ">
             <div className="flex flex-col items-center sm:items-start">
               <div className="flex flex-col sm:items-start">
@@ -22,7 +22,7 @@ export default function Footer() {
                   alt=""
                   src={mainlogo}
                 />
-                <span className="text-[16px] text-textgray mt-[32px] text-center sm:text-left">
+                <span className="text-[16px] text-textgray mt-[24px] sm:mt-[32px] text-center sm:text-left">
                   There are many variations of passages of <br /> Lorem the
                   Ipsum it majority.
                 </span>
@@ -82,7 +82,7 @@ export default function Footer() {
 
               <div className="text-[16px] sm:pr-[80px] text-center sm:text-left mt-[30px] sm:mt-0">
                 <span className="font-semibold">Resources</span>
-                <ul className="text-textgray mt-[15px] sm:mt-[25px] sm:space-y-[18px] sm:space-x-0 space-x-[10px] flex sm:flex-col	">
+                <ul className="text-textgray mt-[12px] sm:mt-[25px] sm:space-y-[18px] sm:space-x-0 space-x-[10px] flex sm:flex-col	">
                   <li>
                     <a
                       href="https://medium.com/@DefiEdge#:~:text=DefiEdge%20is%20a%20decentralized%2C%20non,5%20min%20read"

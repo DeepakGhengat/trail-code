@@ -35,7 +35,7 @@ function Swap() {
 
         <Fade duration={2000}>
           <div className="mt-[42px] text-center">
-            <span className="sm:text-[44px] text-[26px] font-semibold leading-[50px]  bg-gradient-to-tr from-[#75C1F5] to-[#4452FE] bg-clip-text text-transparent">
+            <span className="sm:text-[44px] text-[26px] font-semibold leading-[50px]  bg-gradient-to-tr bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] via-[#60B9FA]   to-[#3E51FF] bg-clip-text text-transparent">
               Swap and Rebalance
             </span>
             <p className="text-16px text-textgray text-center sm:mt-[25px] mt-[20px] sm:w-[500px]">

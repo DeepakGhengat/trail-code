@@ -18,7 +18,7 @@ function Subscribe() {
               <div className="sm:text-[32px] text-[20px] text-center w-[150px] sm:w-auto font-semibold">
                 Subscibe to our newsletter
               </div>
-              <div className="w-full mt-[20px] sm:mt-0 bg-opacity-5 bg-white rounded-full sm:w-[473px] flex items-center justify-between border border-white/10 hover:border-defaultblue">
+              <div className="w-full mt-[24px] sm:mt-[20px] sm:mt-0 bg-opacity-5 bg-white rounded-full sm:w-[473px] flex items-center justify-between border border-white/10 hover:border-defaultblue">
                 <input
                   type="text"
                   placeholder="Sign up for our newsletter"

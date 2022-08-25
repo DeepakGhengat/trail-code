@@ -2,10 +2,12 @@ import Header from "./Header";
 import Hero from "./Hero";
 import HeroBar from "./HeroBar";
 import Footer from "./Footer";
+import CardCourosel from "./CardCourosel";
 
 const Layout = ({ children }) => {
   return (
     <div className="">
+      
       <Header />
       <Hero />
       <HeroBar />

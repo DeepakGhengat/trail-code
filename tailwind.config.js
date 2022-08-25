@@ -5,29 +5,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    screens: {
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
-    },
-    
     extend: {
-      opacity: {
-        '42': '.42',
-      },
       backgroundImage: {
-        "headerTexture": "url('/img/header02.svg')",
+        'gradient-radial': 'radial-gradient(var(--gradient-color-stops))',
+      },
+      opacity: {
+        42: ".42",
+        16: ".16"
       },
 
       colors: {
@@ -35,6 +19,7 @@ module.exports = {
         defaultblue: "#4452FE",
         textgray: "#A5A5A5",
         white: "#fff",
+        skeleton: "#fff",
       },
       plugins: [],
     },

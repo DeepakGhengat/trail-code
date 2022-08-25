@@ -98,7 +98,7 @@ export default function Header() {
         className={
           "h-[40px] text-[16px] py-[6px] bg-gradient-to-tr from-[#4D67A1] to-[#6248E9]" +
           (showNav
-            ? "h-[40px] text-[16px] py-[9px] bg-gradient-to-tr from-[#4D67A1] to-[#6248E9]"
+            ? "h-[40px] text-[16px] py-[9px] bg-gradient-to-r from-[#4452FE] via-[#5856FE] via-[#6E5AFE]  to-[#60B9FA]"
             : "transition -translate-y-32 duration-300 invisible opacity-5")
         }
       >

@@ -2,14 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  background: #000021;
-  color: white;
 
-}
+  @font-face {
+    font-family: "GeneralSans";
+    src: url('../public/fonts/GeneralSans.ttf') format('truetype');
+  }
+
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    background: #000021;
+    color: white;
+    font-family: "GeneralSans";
+  }
+
 
 a {
   color: inherit;
@@ -21,9 +28,6 @@ a {
 }
 
 
-@font-face {
-  font-family: "generalsanse";
-  src: url('../public/generalsanse.ttf');
-}
+
 
 
