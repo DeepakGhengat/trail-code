@@ -3,7 +3,6 @@ import React from "react";
 //* Import Thirdparty Library
 import CountUp from "react-countup";
 
-
 function heroBar() {
   return (
     <section className="relative  z-10 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg flex ">

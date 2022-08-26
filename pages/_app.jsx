@@ -1,4 +1,4 @@
-//* Import react 
+//* Import react
 import React from "react";
 
 //* Import Css

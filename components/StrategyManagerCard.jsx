@@ -2,8 +2,12 @@
 import Image from "next/image";
 import React from "react";
 
+//* Animation Libraries
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import "animate.css/animate.min.css";
 
 //* Import Required Images
+// import strategy from "../public/images/strategy.png";
 import one from "../public/images/strategy/001.svg";
 import two from "../public/images/strategy/002.svg";
 import three from "../public/images/strategy/003.svg";
@@ -13,6 +17,36 @@ import six from "../public/images/strategy/006.svg";
 import seven from "../public/images/strategy/007.svg";
 import eight from "../public/images/strategy/008.svg";
 import rightarrow from "../public/images/rightarrow.svg";
+
+function FirstRow() {
+  return (
+    <div className="grid grid-cols-8 gap-[15px] sm:gap-[30px] ml-[62px]">
+      <Image type="image" alt="" src={one} />
+      <Image type="image" alt="" src={two} />
+      <Image type="image" alt="" src={three} />
+      <Image type="image" alt="" src={four} />
+      <Image type="image" alt="" src={one} />
+      <Image type="image" alt="" src={two} />
+      <Image type="image" alt="" src={three} />
+      <Image type="image" alt="" src={four} />
+    </div>
+  );
+}
+
+function SecondRow() {
+  return (
+    <div className="grid grid-cols-8 gap-[15px] sm:gap-[30px] mt-[15px] sm:mt-[30px] pr-[62px]">
+      <Image type="image" alt="" src={five} />
+      <Image type="image" alt="" src={six} />
+      <Image type="image" alt="" src={seven} />
+      <Image type="image" alt="" src={eight} />
+      <Image type="image" alt="" src={five} />
+      <Image type="image" alt="" src={six} />
+      <Image type="image" alt="" src={seven} />
+      <Image type="image" alt="" src={eight} />
+    </div>
+  );
+}
 
 function StrategyManagerCard() {
   return (
@@ -29,23 +63,24 @@ function StrategyManagerCard() {
             </span>
           </span>
         </div>
-        <div className="h-[93px] overflow-hidden">
-          <div className="rotate-12 opacity-70 sm:mr-[24px] ">
-            <div className="grid grid-cols-4 gap-[15px] sm:gap-[30px] pl-[62px]">
-              <Image type="image" alt="" src={one} />
-              <Image type="image" alt="" src={two} />
-              <Image type="image" alt="" src={three} />
-              <Image type="image" alt="" src={four} />
-            </div>
 
-            <div className="grid grid-cols-4 gap-[15px] sm:gap-[30px] mt-[15px] sm:mt-[30px] pr-[62px]">
-              <Image type="image" alt="" src={five} />
-              <Image type="image" alt="" src={six} />
-              <Image type="image" alt="" src={seven} />
-              <Image type="image" alt="" src={eight} />
-            </div>
+        <ParallaxProvider>
+          <div className="h-[93px] sm:h-auto overflow-hidden sm:overflow-visible 	">
+            <Parallax speed={10} easing="easeInQuad">
+              <div className="rotate-6 opacity-70 sm:mr-[24px] sm:-mr-[500px] -mt-[80px] sm:-mt-[100px] w-[700px] sm:w-[1030px] ">
+                <div className="mb-[15px] sm:mb-[30px]">
+                  <FirstRow />
+                  <SecondRow />
+                </div>
+
+                <div className="mb-[15px] sm:mb-[30px]">
+                  <FirstRow />
+                  <SecondRow />
+                </div>
+              </div>
+            </Parallax>
           </div>
-        </div>
+        </ParallaxProvider>
       </div>
     </div>
   );

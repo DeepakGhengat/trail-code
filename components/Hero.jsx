@@ -2,8 +2,7 @@
 import Image from "next/image";
 import React from "react";
 
-
-//* Import Required Images 
+//* Import Required Images
 import lightning from "../public/images/lightning.svg";
 
 //* Import Thirdparty Library

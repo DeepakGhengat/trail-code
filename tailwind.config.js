@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line no-undef
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -7,11 +8,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--gradient-color-stops))',
+        "gradient-radial": "radial-gradient(var(--gradient-color-stops))",
       },
       opacity: {
         42: ".42",
-        16: ".16"
+        16: ".16",
       },
 
       colors: {

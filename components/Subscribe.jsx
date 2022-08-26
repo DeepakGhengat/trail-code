@@ -2,7 +2,6 @@
 import Fade from "react-reveal/Fade";
 import React from "react";
 
-
 //* Import Components Required
 import StrategyManagerCard from "./StrategyManagerCard";
 

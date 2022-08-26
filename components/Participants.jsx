@@ -1,4 +1,4 @@
-//* Import Required Images 
+//* Import Required Images
 import p1 from "../public/images/p1.svg";
 import p2 from "../public/images/p2.svg";
 import p3 from "../public/images/p3.svg";
@@ -34,7 +34,7 @@ function Participants() {
                     type="image"
                     className="w-[111px] h-[31px]"
                     alt=""
-                    src={p3}
+                    src={p1}
                   />
                 </div>
                 <span className="sm:text-[24px] text-[20px] font-semibold sm:mt-[28px] mt-[60px]">
@@ -73,7 +73,7 @@ function Participants() {
                   platform by selecting a strategy that suits your needs.{" "}
                 </p>
 
-                <span className="absolute bottom-[32px] bottom-[60px] flex group cursor-pointer">
+                <span className="absolute bottom-[32px]  flex group cursor-pointer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}
@@ -88,7 +88,7 @@ function Participants() {
               </div>
               <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[320px]">
                 <div>
-                  <Image type="image" alt="" src={p1} />
+                  <Image type="image" alt="" src={p3} />
                 </div>
                 <span className="sm:text-[24px] text-[20px] font-semibold sm:mt-[28px] mt-[20px]">
                   Strategy Manager{" "}
@@ -98,7 +98,7 @@ function Participants() {
                   management tools.{" "}
                 </p>
 
-                <span className="absolute bottom-[32px] bottom-[60px] flex group cursor-pointer">
+                <span className="absolute bottom-[32px]  flex group cursor-pointer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}

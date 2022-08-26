@@ -2,8 +2,7 @@
 import Image from "next/image";
 import React from "react";
 
-
-//* Import Required Images 
+//* Import Required Images
 import one from "../public/images/one.svg";
 import two from "../public/images/two.svg";
 import three from "../public/images/three.svg";
@@ -15,7 +14,7 @@ import arrowupper from "../public/images/arrowupper.svg";
 import tokenlogo from "../public/images/tokenlogo.svg";
 import Fade from "react-reveal/Fade";
 
-//* Import Components 
+//* Import Components
 import CardCourosel from "./CardCourosel";
 import CardSkeleton from "./CardSkeleton";
 

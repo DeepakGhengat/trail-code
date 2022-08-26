@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 
-//* Import required Images 
+//* Import required Images
 import one from "../public/images/one.svg";
 import two from "../public/images/two.svg";
 import three from "../public/images/three.svg";
