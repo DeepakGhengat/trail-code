@@ -1,7 +1,6 @@
 // * Import React Libraries
 import Image from "next/image";
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 
 // * Import Thirdparty Libraries
 import Fade from "react-reveal/Fade";
@@ -11,15 +10,37 @@ import Zoom from "react-reveal/Zoom";
 import ico1 from "../public/images/ico1.svg";
 import ico2 from "../public/images/ico2.svg";
 import ico3 from "../public/images/ico3.svg";
+import swap from "../public/images/swap.svg";
+
 import line from "../public/images/line.svg";
 
 function Swap() {
+  const [scrollY, setScrollY] = useState(0);
+
+  function logit() {
+    setScrollY(window.pageYOffset);
+    console.log(new Date().getTime());
+  }
+
+  useEffect(() => {
+    function watchScroll() {
+      window.addEventListener("scroll", logit);
+    }
+    watchScroll();
+    return () => {
+      window.removeEventListener("scroll", logit);
+    };
+  });
+
+  const playVideoOnscroll = scrollY > 600 && scrollY < 1500;
+  console.log(playVideoOnscroll);
+
   return (
     <Fade big>
       <section id="features" className="flex items-center flex-col">
         <div className="relative w-screen">
           <div className="absolute right-0 mr-[320px] ">
-            <div className="bg-[#5749FF] h-[300px] w-[300px] blur-[300px] opacity-42"></div>
+            <div className="bg-[#5749FF] h-[300px]  w-[300px] blur-[300px] opacity-42"></div>
           </div>
 
           <div className="absolute right-0 mt-[570px] -mr-[450px] ">
@@ -27,16 +48,22 @@ function Swap() {
           </div>
         </div>
         <Fade duration={2000}>
-          <div className="sm:mt-[140px] mt-[70px] xl:w-[792px]">
-            <video
-              height="502px"
-              width="792px"
-              src="/images/swap.mp4"
-              type="video/mp4"
-              autoPlay
-              muted
-              loop
-            />
+          <div className="sm:mt-[140px] mt-[70px] sm:w-[792px] sm:h-[502px]">
+            {playVideoOnscroll ? (
+              <Fade>
+                <video
+                  src="/images/swap.mp4"
+                  type="video/mp4"
+                  autoPlay
+                  muted
+                  loop
+                />
+              </Fade>
+            ) : (
+              <Fade>
+                <Image type="image" alt="" src={swap} />
+              </Fade>
+            )}
           </div>
         </Fade>
 
