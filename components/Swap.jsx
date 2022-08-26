@@ -51,13 +51,17 @@ function Swap() {
           <div className="sm:mt-[140px] mt-[70px] sm:w-[792px] sm:h-[502px]">
             {playVideoOnscroll ? (
               <Fade>
-                <video
+                <video autoPlay muted loop>
+                  <source src="/images/swap.mp4" type="video/mp4" />
+                </video>
+
+                {/* <video
                   src="/images/swap.mp4"
                   type="video/mp4"
                   autoPlay
                   muted
                   loop
-                />
+                /> */}
               </Fade>
             ) : (
               <Fade>
