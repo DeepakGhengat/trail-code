@@ -1,6 +1,7 @@
 // * Import React Libraries
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import ReactPlayer from "react-player";
 
 // * Import Thirdparty Libraries
 import Fade from "react-reveal/Fade";
@@ -33,7 +34,6 @@ function Swap() {
   });
 
   const playVideoOnscroll = scrollY > 600 && scrollY < 1500;
-  console.log(playVideoOnscroll);
 
   return (
     <Fade big>
@@ -50,21 +50,21 @@ function Swap() {
         <Fade duration={2000}>
           <div className="sm:mt-[140px] mt-[70px] sm:w-[792px] sm:h-[502px]">
             {playVideoOnscroll ? (
-              <Fade>
-                <video autoPlay muted loop>
-                  <source src="/images/swap.mp4" type="video/mp4" />
-                </video>
-
-                {/* <video
-                  src="/images/swap.mp4"
-                  type="video/mp4"
-                  autoPlay
-                  muted
+              <Fade duration={500}>
+                <ReactPlayer
+                  url="/images/swap.mp4"
                   loop
-                /> */}
+                  muted
+                  playing={true}
+                  width="100%"
+                  height="100%"
+                />
+                {/* <video autoPlay muted loop>
+                  <source src="/images/swap.mp4" type="video/mp4" />
+                </video> */}
               </Fade>
             ) : (
-              <Fade>
+              <Fade duration={500}>
                 <Image type="image" alt="" src={swap} />
               </Fade>
             )}
