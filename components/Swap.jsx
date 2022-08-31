@@ -55,7 +55,6 @@ function Swap() {
                   url="/images/swap.mp4"
                   loop
                   muted
-
                   autoplay
                   playsinline
                   playing={true}
@@ -102,8 +101,7 @@ function Swap() {
                 Create and Manage Strategy
               </span>
               <p className="text-textgray text-[16px] sm:mt-[20px] mt-[8px]">
-                Tokenize liquidity provided on Uniswap V3 using DefiEdge. These
-                tokens can be then used as collateral.
+              Seamless strategy creation with a plethora of advanced features at your disposal and start earning high yields.
               </p>
             </div>
 
@@ -120,8 +118,7 @@ function Swap() {
                 Limit orders
               </span>
               <p className="text-textgray text-[16px] mt-[20px]">
-                Tokenize liquidity provided on Uniswap V3 using DefiEdge. These
-                tokens can be then used as collateral.
+              Automatic Trigger of Limit Orders to move the liquidity and based on notifications taking subsequent actions.
               </p>
             </div>
 
@@ -138,8 +135,7 @@ function Swap() {
                 DE shares
               </span>
               <p className="text-textgray text-[16px] mt-[20px]">
-                Tokenize liquidity provided on Uniswap V3 using DefiEdge. These
-                tokens can be then used as collateral.
+              Track your profits via strategy tokens and use them for farming, collateral and much more.
               </p>
             </div>
           </div>

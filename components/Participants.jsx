@@ -41,8 +41,7 @@ function Participants() {
                   Liquidity Provider
                 </span>
                 <p className="text-textgray text-[16px] mt-[12px]">
-                  Create personalized strategies to manage your own liquidity.
-                </p>
+                Create personalised strategies with the ultimate features from the platform and manage your own liquidity.                </p>
                 <span className="absolute bottom-[32px]  flex group cursor-pointer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
@@ -69,8 +68,7 @@ function Participants() {
                   Yield Hunter{" "}
                 </span>
                 <p className="text-textgray text-[16px] mt-[12px]">
-                  Invest and earn alongside dedicated strategy managers on the
-                  platform by selecting a strategy that suits your needs.{" "}
+                Invest smartly in the best strategies managed by some of the best in the industry. Just sit back, relax and watch your funds grow.
                 </p>
 
                 <span className="absolute bottom-[32px]  flex group cursor-pointer">
@@ -94,8 +92,7 @@ function Participants() {
                   Strategy Manager{" "}
                 </span>
                 <p className="text-textgray text-[16px] mt-[12px]">
-                  Accelerate returns on your managed assets through DefiEdge’s
-                  management tools.{" "}
+                Supercharge the returns on the assets with the cutting edge features and start earning performance fees managing the assets.
                 </p>
 
                 <span className="absolute bottom-[32px]  flex group cursor-pointer">

@@ -52,9 +52,9 @@ function StrategyManagerCard() {
   return (
     <div>
       <div className="bg-opacity-30 bg-[#141541] sm:h-[195px] overflow-hidden ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl flex flex-col-reverse sm:flex-row">
-        <div className="p-[30px]">
+        <div className="p-[30px] w-1/2">
           <span className="sm:text-[32px] sm:mt-0 mt-[24px] leading-[27px] sm:leading-[44px] text-[20px] w-[150px] font-semibold">
-            Trusted by best in market strategy managers.
+          DeFi Edge Ecosystem.
           </span>
           <span className=" flex group mt-[24px]">
             <p>Explore more &nbsp;</p>

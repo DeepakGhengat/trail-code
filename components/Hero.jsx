@@ -22,13 +22,13 @@ function Hero() {
             <div className="flex mt-[48px] sm:mt-[120px] flex-col items-center sm:items-start max-w-[588px] flex-wrap  text-center sm:text-left">
               <Fade delay={10} duration={2000}>
                 <span className=" sm:text-[44px] text-[30px] font-semibold	leading-[40px] sm:leading-[55px]  bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] via-[#60B9FA]   to-[#3E51FF] bg-clip-text text-transparent">
-                  Permissionless Liquidity Management on Uniswap v3
+                  Permissionless Liquidity Management on Uniswap V3
                 </span>
               </Fade>
               <Fade delay={30} duration={3000}>
                 <p className="text-16px text-textgray mt-[12px] sm:w-[410px] leading-[28px] font-medium">
-                  DefiEdge provides the simplest solution to deploy smart{" "}
-                  liquidity and optimize yield on Uniswap V3
+                  DeFiEdge provides the smartest solution to deploy liquidity
+                  and optimise yields on Uniswap V3
                 </p>
               </Fade>
 
