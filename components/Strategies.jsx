@@ -59,21 +59,21 @@ function Strategies() {
                 <p className="text-[16px] text-textgray">USDC-WETH#2</p>
               </div>
               <div className="mt-[42px] text-[20px] font-normal">
-                <span className="justify-between flex ">
-                  <p className="text-textgray font-light text-[20px]">AUM</p>
+                <span className="justify-between flex  items-center">
+                  <p className="text-textgray font-light text-[16px]">AUM</p>
                   <p className="">$47,374.356</p>
                 </span>
 
-                <span className="justify-between flex mt-[24px]">
-                  <p className="text-textgray font-light text-[20px]">
+                <span className="justify-between flex mt-[24px] items-center">
+                  <p className="text-textgray font-light text-[16px]">
                     Accu. Fees
                   </p>
                   <p>$0.04745</p>
                 </span>
 
-                <span className="justify-between flex mt-[24px]">
-                  <p className="text-textgray font-light text-[20px]">
-                    Since inception
+                <span className="justify-between flex mt-[24px] items-center ">
+                  <p className="text-textgray font-light text-[16px]">
+                    Return Since Inception
                   </p>
                   <p className="text-[#D56665] bg-[#D56665] bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-2">
                     -100% &nbsp;
@@ -81,8 +81,8 @@ function Strategies() {
                   </p>
                 </span>
 
-                <span className="justify-between flex mt-[24px]">
-                  <p className="text-textgray font-light text-[20px]">
+                <span className="justify-between flex mt-[24px] items-center">
+                  <p className="text-textgray font-light  text-[16px]">
                     Network
                   </p>
                   <Image type="image" alt="" src={polygon} />
@@ -116,30 +116,30 @@ function Strategies() {
                 <p className="text-[16px] text-textgray">USDC-WETH#2</p>
               </div>
               <div className="mt-[42px] text-[20px] font-normal">
-                <span className="justify-between flex ">
-                  <p className="text-textgray font-light text-[20px]">AUM</p>
+                <span className="justify-between flex  items-center">
+                  <p className="text-textgray font-light text-[16px]">AUM</p>
                   <p className="">$47,374.356</p>
                 </span>
 
-                <span className="justify-between flex mt-[24px]">
-                  <p className="text-textgray font-light text-[20px]">
+                <span className="justify-between flex mt-[24px] items-center">
+                  <p className="text-textgray font-light text-[16px]">
                     Accu. Fees
                   </p>
                   <p>$0.04745</p>
                 </span>
 
-                <span className="justify-between flex mt-[24px]">
-                  <p className="text-textgray font-light text-[20px]">
-                    Since inception
+                <span className="justify-between flex mt-[24px] items-center ">
+                  <p className="text-textgray font-light text-[16px]">
+                    Return Since Inception
                   </p>
                   <p className="text-[#1BA27A] bg-[#1BA27A] bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-2">
-                    -100% &nbsp;
+                    +100% &nbsp;
                     <Image type="image" alt="" src={arrowupper} />
                   </p>
                 </span>
 
-                <span className="justify-between flex mt-[24px]">
-                  <p className="text-textgray font-light text-[20px]">
+                <span className="justify-between flex mt-[24px] items-center">
+                  <p className="text-textgray font-light  text-[16px]">
                     Network
                   </p>
                   <Image type="image" alt="" src={polygon} />
@@ -173,21 +173,21 @@ function Strategies() {
                 <p className="text-[16px] text-textgray">USDC-WETH#2</p>
               </div>
               <div className="mt-[42px] text-[20px] font-normal">
-                <span className="justify-between flex ">
-                  <p className="text-textgray font-light text-[20px]">AUM</p>
+                <span className="justify-between flex  items-center">
+                  <p className="text-textgray font-light text-[16px]">AUM</p>
                   <p className="">$47,374.356</p>
                 </span>
 
-                <span className="justify-between flex mt-[24px]">
-                  <p className="text-textgray font-light text-[20px]">
+                <span className="justify-between flex mt-[24px] items-center">
+                  <p className="text-textgray font-light text-[16px]">
                     Accu. Fees
                   </p>
                   <p>$0.04745</p>
                 </span>
 
-                <span className="justify-between flex mt-[24px]">
-                  <p className="text-textgray font-light text-[20px]">
-                    Since inception
+                <span className="justify-between flex mt-[24px] items-center ">
+                  <p className="text-textgray font-light text-[16px]">
+                    Return Since Inception
                   </p>
                   <p className="text-[#D56665] bg-[#D56665] bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-2">
                     -100% &nbsp;
@@ -195,8 +195,8 @@ function Strategies() {
                   </p>
                 </span>
 
-                <span className="justify-between flex mt-[24px]">
-                  <p className="text-textgray font-light text-[20px]">
+                <span className="justify-between flex mt-[24px] items-center">
+                  <p className="text-textgray font-light  text-[16px]">
                     Network
                   </p>
                   <Image type="image" alt="" src={polygon} />
@@ -211,6 +211,7 @@ function Strategies() {
                 </button>
               </div>
             </div>
+
           </div>
 
           <div className="grid hidden sm:grid-cols-3 grid-cols-1 gap-[25px] mt-10">

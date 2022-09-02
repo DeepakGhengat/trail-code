@@ -20,7 +20,6 @@ function Swap() {
 
   function logit() {
     setScrollY(window.pageYOffset);
-    console.log(new Date().getTime());
   }
 
   useEffect(() => {
@@ -115,7 +114,7 @@ function Swap() {
                 />
               </Zoom>
               <span className="text-[20px] font-semibold mt-[30px]">
-                Limit orders
+                Limit Orders
               </span>
               <p className="text-textgray text-[16px] mt-[20px]">
               Automatic Trigger of Limit Orders to move the liquidity and based on notifications taking subsequent actions.
@@ -132,7 +131,7 @@ function Swap() {
                 />
               </Zoom>
               <span className="text-[20px] font-semibold mt-[30px]">
-                DE shares
+                DE Shares
               </span>
               <p className="text-textgray text-[16px] mt-[20px]">
               Track your profits via strategy tokens and use them for farming, collateral and much more.

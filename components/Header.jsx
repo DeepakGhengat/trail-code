@@ -48,7 +48,7 @@ export default function Header() {
                 </a>
               </Link>
               <Link
-                href="#features"
+                href="/#features"
                 className="opacity-50 hover:opacity-100 duration-300"
               >
                 <a className="opacity-50 hover:opacity-100 duration-300">

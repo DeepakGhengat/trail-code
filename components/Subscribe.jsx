@@ -14,7 +14,7 @@ function Subscribe() {
         </section>
       </Fade>
 
-      <Fade duration={2000}>
+      {/* <Fade duration={2000}>
         <section className="my-[80px] sm:my-[140px]">
           <div className="bg-opacity-30 bg-[#141541] ring-2 ring-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl flex">
             <div className="p-[32px] flex flex-col sm:flex-row justify-between w-full items-center  ">
@@ -39,7 +39,7 @@ function Subscribe() {
             </div>
           </div>
         </section>
-      </Fade>
+      </Fade> */}
     </main>
   );
 }
