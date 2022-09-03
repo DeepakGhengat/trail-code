@@ -24,7 +24,7 @@ export default function Footer() {
                   src={mainlogo}
                 />
                 <span className="text-[16px] text-textgray mt-[24px] sm:mt-[32px] text-center sm:text-left">
-                  DeFiEdge provides the smartest solution to deploy liquidity 
+                  DeFiEdge provides the smartest solution to deploy liquidity <br />
                   and optimise yields on Uniswap V3
                 </span>
               </div>
