@@ -79,9 +79,7 @@ function StrategyManagerCard() {
 
           <div className="mt-[16px]">
             <span className="sm:text-[16px] text-textgray mt-[20px] text-[18px] ">
-              Lorem, ipsum dolor sit amet consectetur elit. Ducimus totam
-              suscipit eveniet <br /> Ducimus totam suscipit eveniet Ducimus
-              totam
+            Minimize risk & maximize returns with DefiEdge’s scalable solution for <br /> liquidity provision on Uniswap v3
             </span>
           </div>
         </div>
