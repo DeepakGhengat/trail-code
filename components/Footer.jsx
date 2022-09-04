@@ -29,15 +29,15 @@ export default function Footer() {
                 </span>
               </div>
               <div className="mt-[32px] flex space-x-[10px]">
-                <span>
+                <a href="https://discord.com/invite/fRc6XxhfBq" target="_blank" rel="noreferrer">
                   <Image type="image" alt="" src={discord} />
-                </span>
-                <span>
+                </a>
+                <a href="https://medium.com/@DefiEdge#:~:text=DefiEdge%20is%20a%20decentralized%2C%20non,users'%20investment%20in%20UniswapV3%20pools." target="_blank" rel="noreferrer">
                   <Image type="image" alt="" src={medium} />
-                </span>
-                <span>
+                </a>
+                <a href="https://mobile.twitter.com/DefiEdge/" target="_blank" rel="noreferrer">
                   <Image type="image" alt="" src={twitter} />
-                </span>
+                </a>
               </div>
             </div>
 
@@ -47,7 +47,7 @@ export default function Footer() {
                 <ul className="text-textgray justify-center mt-[15px] sm:mt-[25px] sm:space-y-[18px] sm:space-x-0 space-x-[10px] flex sm:flex-col	 ">
                   <li>
                     <a
-                      href="app.defiedge.io"
+                      href="/app.defiedge.io"
                       target="_blank"
                       className="hover:text-white"
                     >
@@ -61,7 +61,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="app.defiedge.io"
+                      href="/terms"
                       target="_blank"
                       className="hover:text-white"
                     >
@@ -101,9 +101,8 @@ export default function Footer() {
                     <a
                       href="https://docs.defiedge.io/"
                       target="_blank"
-                      className="hover:text-white"
-                      rel="noreferrer"
-                    >
+                      className="hover:text-white" rel="noreferrer"
+                                          >
                       <p>Whitepaper</p>
                     </a>
                   </li>
