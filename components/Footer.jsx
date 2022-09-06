@@ -35,7 +35,7 @@ export default function Footer() {
                 <a href="https://medium.com/@DefiEdge#:~:text=DefiEdge%20is%20a%20decentralized%2C%20non,users'%20investment%20in%20UniswapV3%20pools." target="_blank" rel="noreferrer">
                   <Image type="image" alt="" src={medium} />
                 </a>
-                <a href="https://mobile.twitter.com/DefiEdge/" target="_blank" rel="noreferrer">
+                <a href="https://twitter.com/DefiEdge/" target="_blank" rel="noreferrer">
                   <Image type="image" alt="" src={twitter} />
                 </a>
               </div>

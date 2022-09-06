@@ -25,7 +25,7 @@ function Community() {
             </span>
           </a>
 
-          <a href="https://mobile.twitter.com/DefiEdge/" target="_blank" className="flex items-center space-x-[10px]" rel="noreferrer">
+          <a href="https://twitter.com/DefiEdge/" target="_blank" className="flex items-center space-x-[10px]" rel="noreferrer">
             <Image type="image" alt="" src={twitter} />
             <span className="font-normal text-[20px] hover:underline duration-300">
               Twitter
