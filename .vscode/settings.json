@@ -6,5 +6,6 @@
         "mainlogo",
         "topgradient",
         "topleftgradient"
-    ]
+    ],
+    "nuxt.isNuxtApp": false
 }
