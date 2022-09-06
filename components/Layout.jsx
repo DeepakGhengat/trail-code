@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
   const path = router.pathname;
 
   const pathbool = path === "/";
-  console.log(pathbool);
+  // console.log(pathbool);
 
 
 

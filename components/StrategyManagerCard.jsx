@@ -84,8 +84,8 @@ function StrategyManagerCard() {
           </div>
         </div>
 
-        <div className=" mt-[40px] px-[84px] mb-[80px] sm:h-auto overflow-hidden sm:overflow-visible  flex items-center	">
-          <div className="grid grid-cols-4 w-full gap-[40px] gap-x-[50px] ">
+        <div className=" mt-[40px] sm:px-[84px] mb-[80px] sm:h-auto overflow-hidden sm:overflow-visible  flex items-center	">
+          <div className="grid sm:grid-cols-4 grid-cols-2  w-full sm:gap-[40px] sm:gap-x-[50px] ">
             {ecosystemArray.map((data) => {
               return (
                 <div key={data.id} className="flex space-x-[8px] items-center">
