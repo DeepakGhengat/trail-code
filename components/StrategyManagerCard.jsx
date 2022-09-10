@@ -16,55 +16,83 @@ import five from "../public/images/strategy/005.svg";
 import six from "../public/images/strategy/006.svg";
 import seven from "../public/images/strategy/007.svg";
 import eight from "../public/images/strategy/008.svg";
+import gelato from "../public/images/strategy/gelato.svg";
+import multifarm from "../public/images/strategy/multifarm.svg";
+import solv from "../public/images/strategy/solv.svg";
+import defibasket from "../public/images/strategy/defibasket.svg";
 
 const ecosystemArray = [
   {
     id: 1,
     name: "Optimism",
     logo: one,
-    desc: "Rollup network",
+    desc: "Rollup Network",
   },
   {
     id: 2,
     name: "1 inch Protocol",
     logo: two,
-    desc: "Decentralized exchange",
+    desc: "DEX Aggregator",
   },
   {
     id: 3,
     name: "Polygon",
     logo: three,
-    desc: "Asset management",
+    desc: "ETH L2 Blockchain",
   },
   {
     id: 4,
     name: "Arbitrum",
     logo: four,
-    desc: "Asset management",
+    desc: "ETH L2 Blockchain",
   },
   {
     id: 5,
     name: "Keyrock",
     logo: five,
-    desc: "Asset management",
+    desc: "Market Maker",
   },
   {
     id: 6,
     name: "Chainlink",
     logo: six,
-    desc: "Asset management",
+    desc: "Decentralized Oracle ",
   },
   {
     id: 7,
     name: "Alchemy",
     logo: seven,
-    desc: "Asset management",
+    desc: "RPC Provider",
   },
   {
     id: 8,
     name: "DeFi Labs",
     logo: eight,
-    desc: "Asset management",
+    desc: "Simulation Engine",
+  },
+  {
+    id: 9,
+    name: "Gelato",
+    logo: gelato,
+    desc: "Web3 DevOps",
+  },
+  {
+    id: 10,
+    name: "DeFi Basket",
+    logo: defibasket,
+    desc: "Portfolio Management",
+  },
+  {
+    id: 11,
+    name: "Solv Protocol",
+    logo: solv,
+    desc: "NFT Trading",
+  },
+  {
+    id: 12,
+    name: "Multifarm",
+    logo: multifarm,
+    desc: "Data Platform",
   },
 ];
 
@@ -79,13 +107,14 @@ function StrategyManagerCard() {
 
           <div className="mt-[16px]">
             <span className="sm:text-[16px] text-textgray mt-[20px] text-[18px] ">
-            Minimize risk & maximize returns with DefiEdge’s scalable solution for <br /> liquidity provision on Uniswap v3
+              Minimize risk & maximize returns with DefiEdge’s scalable solution
+              for <br /> liquidity provision on Uniswap v3
             </span>
           </div>
         </div>
 
         <div className=" mt-[40px] sm:px-[84px] mb-[80px] sm:h-auto overflow-hidden sm:overflow-visible  flex items-center	">
-          <div className="grid sm:grid-cols-4 grid-cols-2  w-full sm:gap-[40px] sm:gap-x-[50px] ">
+          <div className="grid sm:grid-cols-4 grid-cols-2   w-full sm:gap-[40px] sm:gap-x-[50px] ">
             {ecosystemArray.map((data) => {
               return (
                 <div key={data.id} className="flex space-x-[8px] items-center">
@@ -93,7 +122,7 @@ function StrategyManagerCard() {
                     <Image type="image" alt="" src={data.logo} />
                   </div>
 
-                  <div>
+                  <div className="w-full">
                     <div className="font-semibold">{data.name}</div>
                     <div className="font-normal text-textgray">{data.desc}</div>
                   </div>
