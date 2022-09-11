@@ -2,7 +2,6 @@
 import p1 from "../public/images/p1.svg";
 import p2 from "../public/images/p2.svg";
 import p3 from "../public/images/p3.svg";
-import rightarrow from "../public/images/rightarrow.svg";
 
 // * Import React Libraries
 import React from "react";
@@ -26,9 +25,9 @@ function Participants() {
           <div className="grid sm:grid-cols-3 grid-cols-1 gap-[25px]">
             <div className="relative group">
               <div className="absolute w-[335px] 	">
-                <div className="w-full sm:w-[384px] h-[320px] bg-gradient-to-tl to-transparent from-[#58C0FB] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
+                <div className="w-full sm:w-[384px] h-[290px] bg-gradient-to-tl to-transparent from-[#58C0FB] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
               </div>
-              <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[320px]">
+              <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[290px]">
                 <div>
                   <Image
                     type="image"
@@ -42,20 +41,20 @@ function Participants() {
                 </span>
                 <p className="text-textgray text-[16px] mt-[12px]">
                 Create personalised strategies with the ultimate features from the platform and manage your own liquidity.                </p>
-                <span className="absolute bottom-[32px]  flex group cursor-pointer">
+                {/* <span className="absolute bottom-[32px]  flex group cursor-pointer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}
                   </span>
-                </span>
+                </span> */}
               </div>
             </div>
 
             <div className="relative group">
               <div className="absolute w-[335px] 	">
-                <div className="w-full sm:w-[384px] h-[320px] bg-gradient-to-tl to-transparent from-[#FABB18] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
+                <div className="w-full sm:w-[384px] h-[290px] bg-gradient-to-tl to-transparent from-[#FABB18] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
               </div>
-              <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[320px]">
+              <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[290px]">
                 <div>
                   <Image
                     type="image"
@@ -71,20 +70,20 @@ function Participants() {
                 Invest smartly in the best strategies managed by some of the best in the industry. Just sit back, relax and watch your funds grow.
                 </p>
 
-                <span className="absolute bottom-[32px]  flex group cursor-pointer">
+                {/* <span className="absolute bottom-[32px]  flex group cursor-pointer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}
                   </span>
-                </span>
+                </span> */}
               </div>
             </div>
 
             <div className="relative group">
               <div className="absolute w-[335px] 	">
-                <div className="w-full sm:w-[384px] h-[320px] bg-gradient-to-tl to-transparent from-[#45C646] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
+                <div className="w-full sm:w-[384px] h-[290px] bg-gradient-to-tl to-transparent from-[#45C646] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
               </div>
-              <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[320px]">
+              <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[290px]">
                 <div>
                   <Image type="image" alt="" src={p3} />
                 </div>
@@ -95,12 +94,12 @@ function Participants() {
                 Supercharge the returns on the assets with the cutting edge features and start earning performance fees managing the assets.
                 </p>
 
-                <span className="absolute bottom-[32px]  flex group cursor-pointer">
+                {/* <span className="absolute bottom-[32px]  flex group cursor-pointer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}
                   </span>
-                </span>
+                </span> */}
               </div>
             </div>
           </div>

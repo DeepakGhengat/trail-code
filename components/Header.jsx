@@ -25,12 +25,15 @@ export default function Header() {
       <section className="z-10 relative">
         <main className="bg-opacity-5 bg-white ring-2 ring-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl  ">
           <div className="text-[16px] flex justify-between items-center py-[20px] sm:max-w-[1200px] max-w-[335px] container mx-auto ">
+            <Link href="/">
             <Image
               type="image"
               className="w-[111px] h-[31px]"
               alt=""
               src={defiedgeLogo}
             />
+
+            </Link>
 
             <div className="flex space-x-[33px] hidden sm:block">
               <Link
@@ -48,7 +51,7 @@ export default function Header() {
                 </a>
               </Link>
               <Link
-                href="#features"
+                href="/#features"
                 className="opacity-50 hover:opacity-100 duration-300"
               >
                 <a className="opacity-50 hover:opacity-100 duration-300">

@@ -3,10 +3,30 @@
 @tailwind utilities;
 
 
+
+
   @font-face {
     font-family: "GeneralSans";
-    src: url('../public/fonts/GeneralSans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    src: url('../public/fonts/GeneralSans-Regular.otf') format('opentype');    
   }
+
+  @font-face {
+    font-family: "GeneralSans";
+    font-weight: 500;
+    font-style: normal;
+    src: url('../public/fonts/GeneralSans-Medium.otf') format('opentype');    
+  }
+
+  @font-face {
+    font-family: "GeneralSans";
+    font-weight: 600;
+    font-style: normal;
+    src: url('../public/fonts/GeneralSans-Semibold.otf') format('opentype');    
+  }
+
+  
 
   html,
   body {
@@ -27,6 +47,9 @@ a {
   box-sizing: border-box;
 }
 
+.disc {
+  list-style-type:disc
+}
 
 
 

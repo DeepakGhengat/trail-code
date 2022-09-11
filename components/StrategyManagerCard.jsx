@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 
 //* Animation Libraries
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+// import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import "animate.css/animate.min.css";
 
 //* Import Required Images
@@ -16,71 +16,121 @@ import five from "../public/images/strategy/005.svg";
 import six from "../public/images/strategy/006.svg";
 import seven from "../public/images/strategy/007.svg";
 import eight from "../public/images/strategy/008.svg";
-import rightarrow from "../public/images/rightarrow.svg";
+import gelato from "../public/images/strategy/gelato.svg";
+import multifarm from "../public/images/strategy/multifarm.svg";
+import solv from "../public/images/strategy/solv.svg";
+import defibasket from "../public/images/strategy/defibasket.svg";
 
-function FirstRow() {
-  return (
-    <div className="grid grid-cols-8 gap-[15px] sm:gap-[30px] ml-[62px]">
-      <Image type="image" alt="" src={one} />
-      <Image type="image" alt="" src={two} />
-      <Image type="image" alt="" src={three} />
-      <Image type="image" alt="" src={four} />
-      <Image type="image" alt="" src={one} />
-      <Image type="image" alt="" src={two} />
-      <Image type="image" alt="" src={three} />
-      <Image type="image" alt="" src={four} />
-    </div>
-  );
-}
-
-function SecondRow() {
-  return (
-    <div className="grid grid-cols-8 gap-[15px] sm:gap-[30px] mt-[15px] sm:mt-[30px] pr-[62px]">
-      <Image type="image" alt="" src={five} />
-      <Image type="image" alt="" src={six} />
-      <Image type="image" alt="" src={seven} />
-      <Image type="image" alt="" src={eight} />
-      <Image type="image" alt="" src={five} />
-      <Image type="image" alt="" src={six} />
-      <Image type="image" alt="" src={seven} />
-      <Image type="image" alt="" src={eight} />
-    </div>
-  );
-}
+const ecosystemArray = [
+  {
+    id: 1,
+    name: "Optimism",
+    logo: one,
+    desc: "Rollup Network",
+  },
+  {
+    id: 2,
+    name: "1 inch Protocol",
+    logo: two,
+    desc: "DEX Aggregator",
+  },
+  {
+    id: 3,
+    name: "Polygon",
+    logo: three,
+    desc: "ETH L2 Blockchain",
+  },
+  {
+    id: 4,
+    name: "Arbitrum",
+    logo: four,
+    desc: "ETH L2 Blockchain",
+  },
+  {
+    id: 5,
+    name: "Keyrock",
+    logo: five,
+    desc: "Market Maker",
+  },
+  {
+    id: 6,
+    name: "Chainlink",
+    logo: six,
+    desc: "Decentralized Oracle ",
+  },
+  {
+    id: 7,
+    name: "Alchemy",
+    logo: seven,
+    desc: "RPC Provider",
+  },
+  {
+    id: 8,
+    name: "DeFi Labs",
+    logo: eight,
+    desc: "Simulation Engine",
+  },
+  {
+    id: 9,
+    name: "Gelato",
+    logo: gelato,
+    desc: "Web3 DevOps",
+  },
+  {
+    id: 10,
+    name: "DeFi Basket",
+    logo: defibasket,
+    desc: "Portfolio Management",
+  },
+  {
+    id: 11,
+    name: "Solv Protocol",
+    logo: solv,
+    desc: "NFT Trading",
+  },
+  {
+    id: 12,
+    name: "Multifarm",
+    logo: multifarm,
+    desc: "Data Platform",
+  },
+];
 
 function StrategyManagerCard() {
   return (
     <div>
-      <div className="bg-opacity-30 bg-[#141541] sm:h-[195px] overflow-hidden ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl flex flex-col-reverse sm:flex-row">
-        <div className="p-[30px] w-1/2">
-          <span className="sm:text-[32px] sm:mt-0 mt-[24px] leading-[27px] sm:leading-[44px] text-[20px] w-[150px] font-semibold">
-          DeFi Edge Ecosystem.
+      <div className="bg-opacity-30 bg-[#141541]  overflow-hidden ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl">
+        <div className="flex flex-col items-center text-center">
+          <span className="sm:text-[42px] sm:mt-0 pt-[80px] leading-[27px] sm:leading-[44px] text-[20px]  font-semibold ">
+            DeFi Edge Ecosystem.
           </span>
-          <span className=" flex group mt-[24px]">
-            <p>Explore more &nbsp;</p>
-            <span className="group-hover:translate-x-2 duration-300 flex items-center">
-              <Image type="image" alt="" src={rightarrow} />
+
+          <div className="mt-[16px]">
+            <span className="sm:text-[16px] text-textgray mt-[20px] text-[18px] ">
+              Minimize risk & maximize returns with DefiEdge’s scalable solution
+              for <br /> liquidity provision on Uniswap v3
             </span>
-          </span>
+          </div>
         </div>
 
-        <ParallaxProvider>
-          <div className="h-[93px] sm:h-auto overflow-hidden sm:overflow-visible 	">
-            <Parallax speed={10} easing="easeInQuad">
-              <div className="rotate-6 opacity-70 sm:mr-[24px] sm:-mr-[500px] -mt-[80px] sm:-mt-[100px] w-[700px] sm:w-[1030px] ">
-                <div className="mb-[15px] sm:mb-[30px]">
-                  <FirstRow />
-                  <SecondRow />
-                </div>
+        <div className=" mt-[40px] sm:px-[84px] mb-[80px] sm:h-auto overflow-hidden sm:overflow-visible  flex items-center	">
+          <div className="grid sm:grid-cols-4 grid-cols-2   w-full sm:gap-[40px] sm:gap-x-[50px] ">
+            {ecosystemArray.map((data) => {
+              return (
+                <div key={data.id} className="flex space-x-[8px] items-center">
+                  <div className="h-[40px] w-[40px]">
+                    <Image type="image" alt="" src={data.logo} />
+                  </div>
 
-                <div className="mb-[15px] sm:mb-[30px]">
-                  <FirstRow />
-                  <SecondRow />
+                  <div className="w-full">
+                    <div className="font-semibold">{data.name}</div>
+                    <div className="font-normal text-textgray">{data.desc}</div>
+                  </div>
                 </div>
-              </div>
-            </Parallax>
+              );
+            })}
           </div>
-        </ParallaxProvider>
+        </div>
       </div>
     </div>
   );
