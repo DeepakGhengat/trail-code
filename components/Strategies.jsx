@@ -1,17 +1,21 @@
 // * Import React Libraries
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import { getStrategies } from "../services/trendingStretegies/index.js";
 
 //* Import Required Images
 import one from "../public/images/one.svg";
 import two from "../public/images/two.svg";
 import three from "../public/images/three.svg";
 import info from "../public/images/info.svg";
-import polygon from "../public/images/polygon.svg";
 import arrowcross from "../public/images/arrowcross.svg";
-import arrowdown from "../public/images/arrowdown.svg";
+// import arrowdown from "../public/images/arrowdown.svg";
+
+// import que from "../public/images/que.svg";
+
 import arrowupper from "../public/images/arrowupper.svg";
-import tokenlogo from "../public/images/tokenlogo.svg";
+// import tokenlogo from "../public/images/tokenlogo.svg";
 import Fade from "react-reveal/Fade";
 
 //* Import Components
@@ -19,6 +23,26 @@ import CardCourosel from "./CardCourosel";
 import CardSkeleton from "./CardSkeleton";
 
 function Strategies() {
+  const [strategies, setStrategies] = useState(null);
+
+  useEffect(() => {
+    async function fetchTrendingStrategies() {
+      // await getStrategies(3, "aum").then(console.log);
+      try {
+        // eslint-disable-next-line no-unused-vars
+        await getStrategies(3, "aum")
+          .then((data) => {
+            setStrategies(data);
+            console.log(strategies);
+          })
+          .catch((e) => console.log(e));
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    fetchTrendingStrategies();
+  }, []);
+
   return (
     <main>
       <section className="sm:mt-[140px] mt-[90px] sm:mt-[100px]">
@@ -32,6 +56,7 @@ function Strategies() {
             <span className="text-[26px] sm:text-[42px] font-semibold">
               Trending Strategies on DefiEdge{" "}
             </span>
+
             <p className="text-textgray  text-[16px] fornt-normal leading-[26px] sm:text-[18px] mt-[12px] sm:mt-[25px]">
               Minimize risk & maximize returns with DefiEdge’s scalable solution
               for <br /> liquidity provision on Uniswap v3
@@ -41,183 +66,133 @@ function Strategies() {
 
         <Fade duration={2000}>
           <div className="hidden sm:grid sm:grid-cols-3 grid-cols-1 gap-[25px] ">
-            <div className="bg-opacity-30 bg-[#141541] ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] ">
-              <div className="flex justify-between">
-                <Image
-                  type="image"
-                  className="w-[111px] h-[31px]"
-                  alt=""
-                  src={tokenlogo}
-                />
-                <Image type="image" alt="" src={one} />
+            {strategies && strategies.length ? (
+              strategies.map((s, idx) => {
+                return (
+                  <div
+                    key={s.id}
+                    className="bg-opacity-30 bg-[#141541] ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] "
+                  >
+                    <div className="flex justify-between">
+                      <div className="flex">
+                        <span className="z-10">
+                          <Image
+                            type="image"
+                            className=""
+                            width={33}
+                            height={33}
+                            alt="token1"
+                            src={s.token0Url}
+                          />
+                        </span>
+
+                        <span className="-ml-[12px]">
+                          <Image
+                            type="image"
+                            className=""
+                            width={33}
+                            height={33}
+                            alt="token2"
+                            src={s.token1Url}
+                          />
+                        </span>
+                      </div>
+
+                      <Image
+                        type="image"
+                        alt={idx}
+                        width={32}
+                        height={32}
+                        src={
+                          idx == 0
+                            ? one
+                            : null || idx == 1
+                            ? two
+                            : null || idx == 2
+                            ? three
+                            : null
+                        }
+                      />
+                    </div>
+                    <div className="pb-[42px] border-b-2 border-[#4452FE]/20">
+                      <span className="text-[20px] flex font-semibold mt-[20px]">
+                        <p className="pr-[6px]">
+                          {s.title ? s.title : s.subTitle}
+                        </p>
+
+                        <span className="z-20">
+                          <p>
+                            <Image type="image" alt="" src={info} />
+                          </p>
+                        </span>
+                      </span>
+                      <p className="text-[16px] text-textgray">
+                        {s.subTitle ? s.subTitle : s.title}
+                      </p>
+                    </div>
+                    <div className="mt-[42px] text-[20px] font-normal">
+                      <span className="justify-between flex  items-center">
+                        <p className="text-textgray font-light text-[16px]">
+                          AUM
+                        </p>
+                        <p className="">$ {s.aum.toFixed(2)}</p>
+                      </span>
+
+                      <span className="justify-between flex mt-[24px] items-center">
+                        <p className="text-textgray font-light text-[16px]">
+                          Accu. Fees
+                        </p>
+                        <p>$ {parseFloat(s.fees).toLocaleString("en-US")}</p>
+                      </span>
+
+                      <span className="justify-between flex mt-[24px] items-center ">
+                        <p className="text-textgray font-light text-[16px]">
+                          Return Since Inception
+                        </p>
+
+                        <p className="{`${s.since_incepton > 0 ? 'text-green-700 bg-green-700' :  s.since_incepton === 0 ? 'text-white bg-transparent' : 'text-[#D56665] bg-[#D56665]'} bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-`}">
+                          {s.since_incepton > 0
+                            ? "+"
+                            : s.since_incepton === 0
+                            ? ""
+                            : "-"}
+                          {s.since_incepton}&nbsp; % &nbsp;
+                          {s.since_incepton > 0 ? (
+                            <Image type="image" alt="" src={arrowupper} />
+                          ) : s.since_incepton === 0 ? undefined : undefined}
+                        </p>
+                      </span>
+
+                      <span className="justify-between flex mt-[24px] items-center">
+                        <p className="text-textgray font-light  text-[16px]">
+                          Network
+                        </p>
+                        <span className="text-sm capitalize">
+                          {s.network == "matic" ? "Polygon" : s.network}
+                        </span>
+                      </span>
+                    </div>
+                    <div className="mt-[42px] group text-center w-full">
+                      <a
+                        href={`https://app.defiedge.io/s/${s.id}`}
+                        className=" bg-[#4452FE] hover:bg-[#3F1DF0] duration-300 bg-opacity-30 w-full p-[9px] flex items-center justify-center"
+                      >
+                        <p>Trade Now &nbsp;</p>
+                        <span className="group-hover:-translate-y-1  duration-300 flex items-end">
+                          <Image type="image" alt="" src={arrowcross} />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                );
+              })
+            ) : (
+              <div className="grid  sm:grid-cols-3 grid-cols-1 gap-[25px] mt-10 w-[1250px]">
+                <CardSkeleton />
+                <CardSkeleton />
+                <CardSkeleton />
               </div>
-              <div className="pb-[42px] border-b-2 border-[#4452FE]/20">
-                <span className="text-[20px] flex font-semibold mt-[20px]">
-                  <p className="pr-[6px]">Test Strategy634</p>
-                  <Image type="image" alt="" src={info} />
-                </span>
-                <p className="text-[16px] text-textgray">USDC-WETH#2</p>
-              </div>
-              <div className="mt-[42px] text-[20px] font-normal">
-                <span className="justify-between flex  items-center">
-                  <p className="text-textgray font-light text-[16px]">AUM</p>
-                  <p className="">$47,374.356</p>
-                </span>
-
-                <span className="justify-between flex mt-[24px] items-center">
-                  <p className="text-textgray font-light text-[16px]">
-                    Accu. Fees
-                  </p>
-                  <p>$0.04745</p>
-                </span>
-
-                <span className="justify-between flex mt-[24px] items-center ">
-                  <p className="text-textgray font-light text-[16px]">
-                    Return Since Inception
-                  </p>
-                  <p className="text-[#D56665] bg-[#D56665] bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-2">
-                    -100% &nbsp;
-                    <Image type="image" alt="" src={arrowdown} />
-                  </p>
-                </span>
-
-                <span className="justify-between flex mt-[24px] items-center">
-                  <p className="text-textgray font-light  text-[16px]">
-                    Network
-                  </p>
-                  <Image type="image" alt="" src={polygon} />
-                </span>
-              </div>
-              <div className="mt-[42px] text-center w-full">
-                <button className="group bg-[#4452FE] hover:bg-[#3F1DF0] duration-300 bg-opacity-30 w-full p-[9px] flex items-center justify-center">
-                  <p>Trade Now &nbsp;</p>
-                  <span className="group-hover:-translate-y-1  duration-300 flex items-end">
-                    <Image type="image" alt="" src={arrowcross} />
-                  </span>
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-opacity-30 bg-[#141541] ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] ">
-              <div className="flex justify-between">
-                <Image
-                  type="image"
-                  className="w-[111px] h-[31px]"
-                  alt=""
-                  src={tokenlogo}
-                />
-                <Image type="image" alt="" src={two} />
-              </div>
-              <div className="pb-[42px] border-b-2 border-[#4452FE]/20">
-                <span className="text-[20px] flex font-semibold mt-[20px]">
-                  <p className="pr-[6px]">Test Strategy634</p>
-                  <Image type="image" alt="" src={info} />
-                </span>
-                <p className="text-[16px] text-textgray">USDC-WETH#2</p>
-              </div>
-              <div className="mt-[42px] text-[20px] font-normal">
-                <span className="justify-between flex  items-center">
-                  <p className="text-textgray font-light text-[16px]">AUM</p>
-                  <p className="">$47,374.356</p>
-                </span>
-
-                <span className="justify-between flex mt-[24px] items-center">
-                  <p className="text-textgray font-light text-[16px]">
-                    Accu. Fees
-                  </p>
-                  <p>$0.04745</p>
-                </span>
-
-                <span className="justify-between flex mt-[24px] items-center ">
-                  <p className="text-textgray font-light text-[16px]">
-                    Return Since Inception
-                  </p>
-                  <p className="text-[#1BA27A] bg-[#1BA27A] bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-2">
-                    +100% &nbsp;
-                    <Image type="image" alt="" src={arrowupper} />
-                  </p>
-                </span>
-
-                <span className="justify-between flex mt-[24px] items-center">
-                  <p className="text-textgray font-light  text-[16px]">
-                    Network
-                  </p>
-                  <Image type="image" alt="" src={polygon} />
-                </span>
-              </div>
-              <div className="mt-[42px] text-center w-full">
-                <button className="group bg-[#4452FE] hover:bg-[#3F1DF0] duration-300 bg-opacity-30 w-full p-[9px] flex items-center justify-center">
-                  <p>Trade Now &nbsp;</p>
-                  <span className="group-hover:-translate-y-1  duration-300 flex items-end">
-                    <Image type="image" alt="" src={arrowcross} />
-                  </span>
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-opacity-30 bg-[#141541] ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] ">
-              <div className="flex justify-between">
-                <Image
-                  type="image"
-                  className="w-[111px] h-[31px]"
-                  alt=""
-                  src={tokenlogo}
-                />
-                <Image type="image" alt="" src={three} />
-              </div>
-              <div className="pb-[42px] border-b-2 border-[#4452FE]/20">
-                <span className="text-[20px] flex font-semibold mt-[20px]">
-                  <p className="pr-[6px]">Test Strategy634</p>
-                  <Image type="image" alt="" src={info} />
-                </span>
-                <p className="text-[16px] text-textgray">USDC-WETH#2</p>
-              </div>
-              <div className="mt-[42px] text-[20px] font-normal">
-                <span className="justify-between flex  items-center">
-                  <p className="text-textgray font-light text-[16px]">AUM</p>
-                  <p className="">$47,374.356</p>
-                </span>
-
-                <span className="justify-between flex mt-[24px] items-center">
-                  <p className="text-textgray font-light text-[16px]">
-                    Accu. Fees
-                  </p>
-                  <p>$0.04745</p>
-                </span>
-
-                <span className="justify-between flex mt-[24px] items-center ">
-                  <p className="text-textgray font-light text-[16px]">
-                    Return Since Inception
-                  </p>
-                  <p className="text-[#D56665] bg-[#D56665] bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-2">
-                    -100% &nbsp;
-                    <Image type="image" alt="" src={arrowdown} />
-                  </p>
-                </span>
-
-                <span className="justify-between flex mt-[24px] items-center">
-                  <p className="text-textgray font-light  text-[16px]">
-                    Network
-                  </p>
-                  <Image type="image" alt="" src={polygon} />
-                </span>
-              </div>
-              <div className="mt-[42px] text-center w-full">
-                <button className="group bg-[#4452FE] hover:bg-[#3F1DF0] duration-300 bg-opacity-30 w-full p-[9px] flex items-center justify-center">
-                  <p>Trade Now &nbsp;</p>
-                  <span className="group-hover:-translate-y-1  duration-300 flex items-end">
-                    <Image type="image" alt="" src={arrowcross} />
-                  </span>
-                </button>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="grid hidden sm:grid-cols-3 grid-cols-1 gap-[25px] mt-10">
-            <CardSkeleton />
-            <CardSkeleton />
-            <CardSkeleton />
+            )}
           </div>
 
           <CardCourosel />

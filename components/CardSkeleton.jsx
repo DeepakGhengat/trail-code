@@ -4,7 +4,7 @@ function CardSkeleton() {
   return (
     <div>
       <div className="bg-opacity-5 h-[538px] bg-white ring-2 ring-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] ">
-        <div className="animate-pulse">
+        <div className="">
           <div className="flex ">
             <div className="h-[37px] w-[37px]  bg-slate-700 bg-opacity-10 rounded-full bg-skeleton"></div>
             <div className="h-[37px] -ml-[20px] w-[37px]  bg-skeleton bg-opacity-20 rounded-full rounded-full"></div>

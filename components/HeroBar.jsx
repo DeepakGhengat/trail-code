@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 //* Import Thirdparty Library
 import CountUp from "react-countup";
 
+import { getStats } from "../services/trendingStretegies/index.js";
+
 function heroBar() {
+  const [stats, setStats] = useState(null);
+
+  useEffect(() => {
+    async function fetchTrendingStrategies() {
+      // await getStrategies(3, "aum").then(console.log);
+      try {
+        // eslint-disable-next-line no-unused-vars
+        await getStats()
+          .then((data) => {
+            setStats(data);
+            console.log({ stats });
+          })
+          .catch((e) => console.log(e));
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    fetchTrendingStrategies();
+  }, []);
+
+
   return (
     <section className="relative  z-10 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg flex ">
       <div className="container mx-auto max-w-[1200px] sm:h-[80px] flex items-center">
@@ -13,16 +36,16 @@ function heroBar() {
               Assets under <br /> managment
             </span>
             <span className="sm:text-[40px] font-normal text-[32px]">
-              $<CountUp end={458.33} />K
+              $<CountUp end={stats && stats.totalValueManaged / 1000} /> K
             </span>
           </div>
 
           <div className="flex justify-between items-center pr-[25px] sm:pl-[25px] pl-[20px]  py-[6px] border-b-2 border-[#000021] sm:border-b-0 sm:border-r-4 2xl:border-[#000021] xl:border-[#05042E] font-regular">
             <span className="sm:text-[16px] text-[12px] font-normal leading-[22px] text-textgray">
-              24 hours <br /> volume
+              Total <br /> volume
             </span>
             <span className="sm:text-[40px] font-normal text-[32px] font-[400px]">
-              $<CountUp end={21.12} />K
+              $<CountUp end={stats && stats.totalVolume / 1000000} /> M
             </span>
           </div>
 
@@ -31,7 +54,7 @@ function heroBar() {
               Total <br /> Strategies
             </span>
             <span className="sm:text-[40px] font-normal text-[32px]">
-              <CountUp end={110} />+
+              <CountUp end={stats && stats.totalStrategies} />+
             </span>
           </div>
         </div>
