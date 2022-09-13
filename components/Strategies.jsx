@@ -2,10 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-import {
-  getStats,
-  getStrategies,
-} from "../services/trendingStretegies/index.js";
+import { getStrategies } from "../services/trendingStretegies/index.js";
 
 //* Import Required Images
 import one from "../public/images/one.svg";
@@ -152,7 +149,7 @@ function Strategies() {
                         <p className="text-textgray font-light text-[16px]">
                           Return Since Inception
                         </p>
-  
+
                         <p className="{`${s.since_incepton > 0 ? 'text-green-700 bg-green-700' :  s.since_incepton === 0 ? 'text-white bg-transparent' : 'text-[#D56665] bg-[#D56665]'} bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-`}">
                           {s.since_incepton > 0
                             ? "+"
@@ -176,7 +173,10 @@ function Strategies() {
                       </span>
                     </div>
                     <div className="mt-[42px] group text-center w-full">
-                      <a href={`https://app.defiedge.io/s/${s.id}`} className=" bg-[#4452FE] hover:bg-[#3F1DF0] duration-300 bg-opacity-30 w-full p-[9px] flex items-center justify-center">
+                      <a
+                        href={`https://app.defiedge.io/s/${s.id}`}
+                        className=" bg-[#4452FE] hover:bg-[#3F1DF0] duration-300 bg-opacity-30 w-full p-[9px] flex items-center justify-center"
+                      >
                         <p>Trade Now &nbsp;</p>
                         <span className="group-hover:-translate-y-1  duration-300 flex items-end">
                           <Image type="image" alt="" src={arrowcross} />

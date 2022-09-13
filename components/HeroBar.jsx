@@ -26,7 +26,6 @@ function heroBar() {
     fetchTrendingStrategies();
   }, []);
 
-  console.log("stat from hero", stats && stats.totalValueManaged);
 
   return (
     <section className="relative  z-10 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg flex ">
@@ -37,7 +36,7 @@ function heroBar() {
               Assets under <br /> managment
             </span>
             <span className="sm:text-[40px] font-normal text-[32px]">
-              $<CountUp end={stats && stats.totalValueManaged} />
+              $<CountUp end={stats && stats.totalValueManaged / 1000} /> K
             </span>
           </div>
 
@@ -46,7 +45,7 @@ function heroBar() {
               Total <br /> volume
             </span>
             <span className="sm:text-[40px] font-normal text-[32px] font-[400px]">
-              $<CountUp end={stats && stats.totalVolume} />
+              $<CountUp end={stats && stats.totalVolume / 1000000} /> M
             </span>
           </div>
 
