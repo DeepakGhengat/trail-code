@@ -117,7 +117,7 @@ function StrategyManagerCard() {
           <div className="grid sm:grid-cols-4 grid-cols-2   w-full sm:gap-[40px] sm:gap-x-[50px] ">
             {ecosystemArray.map((data) => {
               return (
-                <div key={data.id} className="flex space-x-[8px] items-center justify-center ">
+                <div key={data.id} className="flex space-x-[8px] items-center  ">
                   <div className="flex items-center">
                     <Image type="image" height={40} width={40} alt="" src={data.logo} />
                   </div>
