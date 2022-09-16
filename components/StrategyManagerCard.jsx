@@ -21,6 +21,39 @@ import multifarm from "../public/images/strategy/multifarm.svg";
 import solv from "../public/images/strategy/solv.svg";
 import defibasket from "../public/images/strategy/defibasket.svg";
 
+import sancap from "../public/images/strategy/sancap.svg";
+import wintermute from "../public/images/strategy/wintermute.svg";
+import gsr from "../public/images/strategy/gsr.svg";
+import ziliqa from "../public/images/strategy/ziliqa.svg";
+
+const investorsArray = [
+  {
+    id: 1,
+    name: "Wintermute",
+    logo: wintermute,
+    desc: "Market Maker",
+  },
+  {
+    id: 2,
+    name: "GSR",
+    logo: gsr,
+    desc: "Market Maker",
+  },
+  {
+    id: 3,
+    name: "Sanctum Capital",
+    logo: sancap,
+    desc: "Investment Firm",
+  },
+
+  {
+    id: 4,
+    name: "Ziliqa",
+    logo: ziliqa,
+    desc: "Blockchain",
+  },
+];
+
 const ecosystemArray = [
   {
     id: 1,
@@ -102,7 +135,7 @@ function StrategyManagerCard() {
       <div className="bg-opacity-30 bg-[#141541]  overflow-hidden ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl">
         <div className="flex flex-col items-center text-center">
           <span className="sm:text-[42px] sm:mt-0 pt-[80px] leading-[27px] sm:leading-[44px] text-[20px]  font-semibold ">
-            DeFi Edge Ecosystem.
+            Ecosystem Partners
           </span>
 
           <div className="mt-[16px]">
@@ -113,13 +146,22 @@ function StrategyManagerCard() {
           </div>
         </div>
 
-        <div className=" mt-[40px] sm:px-[84px] mb-[80px] sm:h-auto overflow-hidden sm:overflow-visible  flex items-center	">
+        <div className=" mt-[40px] sm:px-[84px] mb-[80px] sm:h-auto overflow-hidden sm:overflow-visible  flex flex-col items-center	">
           <div className="grid sm:grid-cols-4 grid-cols-2   w-full sm:gap-[40px] sm:gap-x-[50px] ">
             {ecosystemArray.map((data) => {
               return (
-                <div key={data.id} className="flex space-x-[8px] items-center  ">
+                <div
+                  key={data.id}
+                  className="flex space-x-[8px] items-center  "
+                >
                   <div className="flex items-center">
-                    <Image type="image" height={40} width={40} alt="" src={data.logo} />
+                    <Image
+                      type="image"
+                      height={40}
+                      width={40}
+                      alt=""
+                      src={data.logo}
+                    />
                   </div>
 
                   <div className="">
@@ -129,6 +171,46 @@ function StrategyManagerCard() {
                 </div>
               );
             })}
+          </div>
+
+        <div className="w-full h-[1px] bg-white opacity-10 my-[60px]">
+
+        </div>
+
+          <div className="flex flex-col items-center text-center -mt-[6px]">
+            <p className="sm:text-[24px] uppercase sm:mt-0 tracking-[5px]  text-[20px]  font-semibold ">
+              Our Backers
+            </p>
+          </div>
+
+          <div className=" mt-[40px] sm:h-auto overflow-hidden sm:overflow-visible  flex items-center w-full">
+            <div className="grid sm:grid-cols-4 grid-cols-2   w-full sm:gap-[40px] sm:gap-x-[50px] ">
+              {investorsArray.map((data) => {
+                return (
+                  <div
+                    key={data.id}
+                    className="flex space-x-[8px] items-center "
+                  >
+                    <div className="flex items-center ">
+                      <Image
+                        type="image"
+                        height={40}
+                        width={40}
+                        alt=""
+                        src={data.logo}
+                      />
+                    </div>
+
+                    <div className="">
+                      <div className="font-semibold">{data.name}</div>
+                      <div className="font-normal text-textgray">
+                        {data.desc}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
