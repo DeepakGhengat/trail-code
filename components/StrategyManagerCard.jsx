@@ -135,7 +135,7 @@ function StrategyManagerCard() {
       <div className="bg-opacity-30 bg-[#141541]  overflow-hidden ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl">
         <div className="flex flex-col items-center text-center">
           <span className="sm:text-[42px] sm:mt-0 pt-[80px] leading-[27px] sm:leading-[44px] text-[20px]  font-semibold ">
-            DeFi Edge Ecosystem.
+            Ecosystem Partners
           </span>
 
           <div className="mt-[16px]">
