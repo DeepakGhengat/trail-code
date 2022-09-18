@@ -48,9 +48,9 @@ const investorsArray = [
 
   {
     id: 4,
-    name: "Ziliqa",
+    name: "Ziliqa Fund",
     logo: ziliqa,
-    desc: "Blockchain",
+    desc: "Creator Fund",
   },
 ];
 
