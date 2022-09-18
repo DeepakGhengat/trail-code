@@ -25,11 +25,12 @@ function Participants() {
         </div>
         <Fade duration={2000}>
           <div className="grid sm:grid-cols-3 grid-cols-1 gap-[25px]">
+
             <a href="https://docs.defiedge.io/DefiEdge%20Participants/Liquidity%20Provision%20on%20DeFiEdge" target="_blank" className="relative group" rel="noreferrer">
               <div className="absolute w-[335px] 	">
-                <div className="w-full sm:w-[384px] h-[330px] bg-gradient-to-tl to-transparent from-[#58C0FB] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
+              <div className="w-full sm:w-[384px] h-[330px] bg-gradient-to-tl to-transparent from-[#58C0FB] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
               </div>
-              <div className="p-[20px] sm:p-[32px] items-start flex flex-col  h-[330px]  relative h-[10px]">
+              <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[330px]">
                 <div>
                   <Image
                     type="image"
@@ -38,17 +39,19 @@ function Participants() {
                     src={p1}
                   />
                 </div>
-                <span className="sm:text-[24px] text-[20px] font-semibold sm:mt-[28px] mt-[60px]">
-                  Liquidity Provider
+                <span className="sm:text-[24px] text-[20px] font-semibold sm:mt-[28px] mt-[20px]">
+                Liquidity Provider
+
                 </span>
                 <p className="text-textgray text-[16px] mt-[12px]">
                 Create personalised strategies with the ultimate features from the platform and manage your own liquidity.                </p>
-                <div className="absolute bottom-[32px]  flex group cursor-pointer">
+
+                <a href="" target="_blank" className="absolute bottom-[32px]  flex group cursor-pointer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}
                   </span>
-                </div>
+                </a>
               </div>
             </a>
 

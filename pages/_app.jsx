@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
     <div className="overflow-x-hidden">
       <Head>
         <title>
-          Defiedge - Permissionless Liquidity Management on Uniswap v3
+          Defiedge - Asset Management Protocol Built on Uniswap V3
         </title>
 
         <link rel="shortcut icon" href="/images/favicon.ico" />
