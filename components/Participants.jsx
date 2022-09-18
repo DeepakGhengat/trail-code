@@ -46,7 +46,7 @@ function Participants() {
                 <p className="text-textgray text-[16px] mt-[12px]">
                 Create personalised strategies with the ultimate features from the platform and manage your own liquidity.                </p>
 
-                <a href="" target="_blank" className="absolute bottom-[32px]  flex group cursor-pointer">
+                <a href="https://docs.defiedge.io/DefiEdge%20Participants/Liquidity%20Provision%20on%20DeFiEdge" target="_blank" className="absolute bottom-[32px]  flex group cursor-pointer" rel="noreferrer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}
@@ -55,7 +55,7 @@ function Participants() {
               </div>
             </a>
 
-            <a href="https://docs.defiedge.io/DefiEdge%20Participants/Yeild%20Hunters" target="_blank" className="relative group" rel="noreferrer">
+            <a href="https://docs.defiedge.io/DefiEdge%20Participants/Yield%20Hunters" target="_blank" className="relative group" rel="noreferrer">
               <div className="absolute w-[335px] 	">
                 <div className="w-full sm:w-[384px] h-[330px] bg-gradient-to-tl to-transparent from-[#FABB18] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
               </div>
@@ -75,7 +75,7 @@ function Participants() {
                 Invest smartly in the best strategies managed by some of the best in the industry. Just sit back, relax and watch your funds grow.
                 </p>
 
-                <a href="" target="_blank" className="absolute bottom-[32px]  flex group cursor-pointer">
+                <a href="https://docs.defiedge.io/DefiEdge%20Participants/Yield%20Hunters" target="_blank" className="absolute bottom-[32px]  flex group cursor-pointer" rel="noreferrer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}
@@ -99,7 +99,7 @@ function Participants() {
                 Supercharge the returns on the assets with the cutting edge features and start earning performance fees managing the assets.
                 </p>
 
-                <a href="" target="_blank" className="absolute bottom-[32px]  flex group cursor-pointer">
+                <a href="https://docs.defiedge.io/DefiEdge%20Participants/Managing%20Strategy%20on%20DefiEdge" target="_blank" className="absolute bottom-[32px]  flex group cursor-pointer" rel="noreferrer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}
