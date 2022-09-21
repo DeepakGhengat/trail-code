@@ -14,17 +14,19 @@ import three from "../public/images/strategy/003.svg";
 import four from "../public/images/strategy/004.svg";
 import five from "../public/images/strategy/005.svg";
 import six from "../public/images/strategy/006.svg";
-import seven from "../public/images/strategy/007.svg";
-import eight from "../public/images/strategy/008.svg";
-import gelato from "../public/images/strategy/gelato.svg";
 import multifarm from "../public/images/strategy/multifarm.svg";
 import solv from "../public/images/strategy/solv.svg";
-import defibasket from "../public/images/strategy/defibasket.svg";
 
 import sancap from "../public/images/strategy/sancap.svg";
+import meme from "../public/images/strategy/meme.svg";
+import juan from "../public/images/strategy/juan.jpeg";
+
 import wintermute from "../public/images/strategy/wintermute.svg";
 import gsr from "../public/images/strategy/gsr.svg";
 import ziliqa from "../public/images/strategy/ziliqa.svg";
+
+import keyrock from "../public/images/strategy/keyrock.svg";
+import yuriy from "../public/images/strategy/yuriy.jpeg";
 
 const investorsArray = [
   {
@@ -52,20 +54,39 @@ const investorsArray = [
     logo: ziliqa,
     desc: "Creator Fund",
   },
+  {
+    id: 5,
+    name: "Yuriy Myronovych",
+    logo: yuriy,
+    desc: "Sr Software Architect",
+  },
+  {
+    id: 6,
+    name: "Memetic Capital LP",
+    logo: meme,
+    desc: "Market Maker",
+  },
+  {
+    id: 7,
+    name: "Juan David",
+    logo: juan,
+    desc: "Investor",
+  },
+
+  {
+    id: 8,
+    name: "Keyrock",
+    logo: keyrock,
+    desc: "Financial Institution",
+  },
 ];
 
 const ecosystemArray = [
   {
-    id: 1,
-    name: "Optimism",
-    logo: one,
-    desc: "Rollup Network",
-  },
-  {
-    id: 2,
-    name: "1 inch Protocol",
-    logo: two,
-    desc: "DEX Aggregator",
+    id: 5,
+    name: "Ethereum",
+    logo: five,
+    desc: "Blockchain",
   },
   {
     id: 3,
@@ -80,11 +101,18 @@ const ecosystemArray = [
     desc: "ETH L2 Blockchain",
   },
   {
-    id: 5,
-    name: "Keyrock",
-    logo: five,
-    desc: "Market Maker",
+    id: 1,
+    name: "Optimism",
+    logo: one,
+    desc: "Rollup Network",
   },
+  {
+    id: 2,
+    name: "1 inch Protocol",
+    logo: two,
+    desc: "DEX Aggregator",
+  },
+
   {
     id: 6,
     name: "Chainlink",
@@ -93,36 +121,12 @@ const ecosystemArray = [
   },
   {
     id: 7,
-    name: "Alchemy",
-    logo: seven,
-    desc: "RPC Provider",
-  },
-  {
-    id: 8,
-    name: "DeFi Labs",
-    logo: eight,
-    desc: "Simulation Engine",
-  },
-  {
-    id: 9,
-    name: "Gelato",
-    logo: gelato,
-    desc: "Web3 DevOps",
-  },
-  {
-    id: 10,
-    name: "DeFi Basket",
-    logo: defibasket,
-    desc: "Portfolio Management",
-  },
-  {
-    id: 11,
     name: "Solv Protocol",
     logo: solv,
     desc: "NFT Trading",
   },
   {
-    id: 12,
+    id: 8,
     name: "Multifarm",
     logo: multifarm,
     desc: "Data Platform",
@@ -173,9 +177,7 @@ function StrategyManagerCard() {
             })}
           </div>
 
-        <div className="w-full h-[1px] bg-white opacity-10 my-[60px]">
-
-        </div>
+          <div className="w-full h-[1px] bg-white opacity-10 my-[60px]"></div>
 
           <div className="flex flex-col items-center text-center -mt-[6px]">
             <p className="sm:text-[24px] uppercase sm:mt-0 tracking-[5px]  text-[20px]  font-semibold ">
