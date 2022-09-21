@@ -47,9 +47,9 @@ export default function Footer() {
                 <ul className="text-textgray justify-center mt-[15px] sm:mt-[25px] sm:space-y-[18px] sm:space-x-0 space-x-[10px] flex sm:flex-col	 ">
                   <li>
                     <a
-                      href="/app.defiedge.io"
+                      href="https://app.defiedge.io/"
                       target="_blank"
-                      className="hover:text-white"
+                      className="hover:text-white" rel="noreferrer"
                     >
                       <p>Web app</p>
                     </a>
@@ -91,11 +91,11 @@ export default function Footer() {
                     </a>
                   </li>
 
-                  <li>
+                  {/* <li>
                     <a href="#" target="_blank" className="hover:text-white">
                       <p>Brand Assets</p>
                     </a>
-                  </li>
+                  </li> */}
 
                   <li>
                     <a
