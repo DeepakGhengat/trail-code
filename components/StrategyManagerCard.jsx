@@ -18,7 +18,6 @@ import multifarm from "../public/images/strategy/multifarm.svg";
 import solv from "../public/images/strategy/solv.svg";
 
 import sancap from "../public/images/strategy/sancap.svg";
-import isabela from "../public/images/strategy/isabela.jpeg";
 import meme from "../public/images/strategy/meme.svg";
 import juan from "../public/images/strategy/juan.jpeg";
 
