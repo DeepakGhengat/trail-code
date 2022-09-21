@@ -1,6 +1,9 @@
 //* Import React Library
 import Image from "next/image";
 import React from "react";
+import Lottie from "react-lottie-player";
+
+import lottieJson from "../public/lottieJson.json";
 
 //* Import Required Images
 import lightning from "../public/images/lightning.svg";
@@ -52,14 +55,20 @@ function Hero() {
             <div>
               <Fade duration={2000}>
                 <div className="max-w-[588px] sm:py-[75px] pt-[49px] sm:pt-[75px]">
-                  <video
+                  <Lottie
+                    loop
+                    className="sm:h-[403px] sm:w-[588px]"
+                    animationData={lottieJson}
+                    play
+                  />
+                  {/* <video
                     className="sm:h-[403px] sm:w-[588px]"
                     src="/images/heroVideo.mp4"
                     type="video/mp4"
                     autoPlay
                     muted
                     loop
-                  />
+                  /> */}
                 </div>
               </Fade>
             </div>
