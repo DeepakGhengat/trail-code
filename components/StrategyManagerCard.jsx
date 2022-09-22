@@ -21,6 +21,9 @@ import sancap from "../public/images/strategy/sancap.svg";
 import meme from "../public/images/strategy/meme.svg";
 import juan from "../public/images/strategy/juan.jpeg";
 
+import amrit from "../public/images/strategy/amrit.svg";
+import kevin from "../public/images/strategy/kevin.svg";
+
 import wintermute from "../public/images/strategy/wintermute.svg";
 import gsr from "../public/images/strategy/gsr.svg";
 import ziliqa from "../public/images/strategy/ziliqa.svg";
@@ -41,6 +44,19 @@ const investorsArray = [
     logo: gsr,
     desc: "Market Maker",
   },
+
+  {
+    id: 8,
+    name: "Keyrock",
+    logo: keyrock,
+    desc: "Market Maker",
+  },
+  {
+    id: 6,
+    name: "MGNR",
+    logo: meme,
+    desc: "Market Maker",
+  },
   {
     id: 3,
     name: "Sanctum Capital",
@@ -50,7 +66,7 @@ const investorsArray = [
 
   {
     id: 4,
-    name: "Ziliqa Fund",
+    name: "Zilliqa Fund",
     logo: ziliqa,
     desc: "Creator Fund",
   },
@@ -58,27 +74,41 @@ const investorsArray = [
     id: 5,
     name: "Yuriy Myronovych",
     logo: yuriy,
-    desc: "Sr Software Architect",
+    desc: "Quant & HFT Architect",
   },
-  {
-    id: 6,
-    name: "Memetic Capital LP",
-    logo: meme,
-    desc: "Market Maker",
-  },
+
   {
     id: 7,
     name: "Juan David",
     logo: juan,
-    desc: "Investor",
+    desc: "Founder, Keyrock",
+  },
+
+
+  {
+
+  },
+
+
+  {
+    id: 10,
+    name: "Kevin Beardsle",
+    logo: kevin,
+    desc: "Head MM, Kraken",
   },
 
   {
-    id: 8,
-    name: "Keyrock",
-    logo: keyrock,
-    desc: "Financial Institution",
+    id: 10,
+    name: "Amrit Kumar",
+    logo: amrit,
+    desc: "Founder, Zilliqa",
   },
+
+  {
+
+  },
+
+
 ];
 
 const ecosystemArray = [
