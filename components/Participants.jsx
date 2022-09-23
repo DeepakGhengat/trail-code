@@ -48,8 +48,7 @@ function Participants() {
                   Liquidity Provider
                 </span>
                 <p className="text-textgray text-[16px] mt-[12px]">
-                  Create personalised strategies with the ultimate features from
-                  the platform and manage your own liquidity.{" "}
+                UniswapV3 LPs can make use of DefiEdge to get access to many advanced features making the protocol a go-to-platform for managing liquidity.
                 </p>
 
                 <a
@@ -124,9 +123,7 @@ function Participants() {
                   Strategy Manager{" "}
                 </span>
                 <p className="text-textgray text-[16px] mt-[12px]">
-                  Supercharge the returns on the assets with the cutting edge
-                  features and start earning performance fees managing the
-                  assets.
+                Efficiently manage UnisawapV3 strategies, generate high yields and earn fees on profits. Trusted managers can join Liquidity Alliance, the DefiEdge ecosystem.
                 </p>
 
                 <a
