@@ -70,7 +70,7 @@ export default function Header() {
                   Docs
                 </a>
               </Link>
-              <Link
+              {/* <Link
                 href="https://unboundfinance.notion.site/DefiEdge-Job-Board-0bde371c6cb74a8f9fbdb6ec45d56412"
                 className="opacity-50 hover:opacity-100 duration-300"
               >
@@ -80,7 +80,7 @@ export default function Header() {
                 >
                   Careers
                 </a>
-              </Link>
+              </Link> */}
             </div>
 
             <div>

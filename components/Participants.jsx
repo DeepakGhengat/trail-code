@@ -19,8 +19,9 @@ function Participants() {
             DefiEdge Participants
           </span>
           <p className="text-textgray sm:text-[18px] leading-[26px] font-normal text-[16px] sm:mt-[25px] mt-[12px] max-w-[600px]">
-            Minimize risk & maximize returns with DefiEdge’s scalable solution
-            for liquidity provision on Uniswap v3
+            The protocol caters to the needs of all types of participants.
+            Browse to the section of your choice and know how you can benefit by
+            using DefiEdge
           </p>
         </div>
         <Fade duration={2000}>

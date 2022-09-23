@@ -100,7 +100,7 @@ function Swap() {
                 Create and Manage Strategy
               </span>
               <p className="text-textgray text-[16px] sm:mt-[20px] mt-[8px]">
-              Seamless strategy creation with a plethora of advanced features at your disposal and start earning high yields.
+              Create UniswapV3 strategies and seamlessly manage the assets. Cutting edge features provided by DefiEdge help to ensure that you stand out amongst the rest
               </p>
             </div>
 
@@ -117,8 +117,7 @@ function Swap() {
                 Limit Orders
               </span>
               <p className="text-textgray text-[16px] mt-[20px]">
-              Automatic Trigger of Limit Orders to move the liquidity and based on notifications taking subsequent actions.
-              </p>
+              Limit Orders allow you to remove liquidity as soon as the price hits your particular range. On triggering, a webhook notification is sent via DefiEdge to help you track the latest activities of your strategies              </p>
             </div>
 
             <div className="flex flex-col text-center items-center">
@@ -134,8 +133,7 @@ function Swap() {
                 DE Shares
               </span>
               <p className="text-textgray text-[16px] mt-[20px]">
-              Track your profits via strategy tokens and use them for farming, collateral and much more.
-              </p>
+              Strategy deposits are represented by ERC-20 tokens (DE Shares). This allows easy tracking of your profits while allowing composability via farming for LM rewards, collateralization of tokens, and much more              </p>
             </div>
           </div>
         </Fade>

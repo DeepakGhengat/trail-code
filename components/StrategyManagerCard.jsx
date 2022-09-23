@@ -174,8 +174,7 @@ function StrategyManagerCard() {
 
           <div className="mt-[16px]">
             <span className="sm:text-[16px] text-textgray mt-[20px] text-[18px] ">
-              Minimize risk & maximize returns with DefiEdge’s scalable solution
-              for <br /> liquidity provision on Uniswap v3
+            We are proud to be associated with our partners. Their collaboration is an <br /> indispensable factor for DefiEdge to create the next Defi Revolution
             </span>
           </div>
         </div>
@@ -190,7 +189,7 @@ function StrategyManagerCard() {
                 >
                   <div className="flex items-center">
                     <Image
-                      type="image"yeil
+                      type="image"
                       height={40}
                       width={40}
                       alt=""
