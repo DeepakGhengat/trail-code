@@ -15,7 +15,7 @@ function privacypopcy() {
             <p className="font-semibold text-[30px] sm:text-[44px]">
               Terms of Use
             </p>
-            <p className="text-[16px] ">Last updated May 13 , 2022</p>
+            <p className="text-[16px] ">Last updated Sep 23 , 2022</p>
           </div>
           <div className="sm:mt-[64px] mt-[20px] text-[20px] sm:text-[20px] sm:mx-[20px] mb-[120px]">
             <div>

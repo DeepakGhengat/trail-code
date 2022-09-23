@@ -13,7 +13,7 @@ function privacypolicy() {
         <div className="max-w-[840px] mx-auto ">
           <div className="py-[32px] sm:py-[80px] text-center w-full border-b border-[#3F4077]/30">
             <p className="font-semibold text-[30px] sm:text-[44px]">Privacy Policy</p>
-            <p className="text-[16px] ">Last updated May 13 , 2022</p>
+            <p className="text-[16px] ">Last updated Sep 23 , 2022</p>
           </div>
           <div className="sm:mt-[64px] mt-[20px] text-[20px] sm:text-[20px] sm:mx-[20px] mb-[120px]">
             <div>
@@ -44,7 +44,7 @@ function privacypolicy() {
                 <li>
                   Information collected by the third party product, Sentry.io is
                   used to improve user experience and our website. For further
-                  details, please refer to Sentry.io Privacy Policy.
+                  details, please refer to Sentry.io <a target="_blank" className="text-white underline" href="https://sentry.io/privacy/" rel="noreferrer">privacy policy</a>.
                 </li>
               </ul>
             </div>

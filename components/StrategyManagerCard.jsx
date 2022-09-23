@@ -190,7 +190,7 @@ function StrategyManagerCard() {
                 >
                   <div className="flex items-center">
                     <Image
-                      type="image"
+                      type="image"yeil
                       height={40}
                       width={40}
                       alt=""
