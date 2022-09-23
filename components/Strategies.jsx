@@ -58,9 +58,7 @@ function Strategies() {
             </span>
 
             <p className="text-textgray  text-[16px] fornt-normal leading-[26px] sm:text-[18px] mt-[12px] sm:mt-[25px]">
-              Minimize risk & maximize returns with DefiEdge’s scalable solution
-              for <br /> liquidity provision on Uniswap v3
-            </p>
+            Here are the current leading strategies trading on the protocol. Browse to the <br /> one that interests you most and start earning yields            </p>
           </div>
         </Fade>
 
