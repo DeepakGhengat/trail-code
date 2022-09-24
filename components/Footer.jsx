@@ -37,11 +37,7 @@ export default function Footer() {
                 >
                   <Image type="image" alt="" src={discord} />
                 </a>
-                <a
-                  href="https://medium.com/@DefiEdge#:~:text=DefiEdge%20is%20a%20decentralized%2C%20non,users'%20investment%20in%20UniswapV3%20pools."
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href="https://medium.com/@DefiEdge" target="_blank" rel="noreferrer">
                   <Image type="image" alt="" src={medium} />
                 </a>
                 <a
@@ -90,7 +86,7 @@ export default function Footer() {
                 <ul className="text-textgray mt-[12px] sm:mt-[25px] sm:space-y-[18px] sm:space-x-0 space-x-[10px] flex sm:flex-col	">
                   <li>
                     <a
-                      href="https://medium.com/@DefiEdge#:~:text=DefiEdge%20is%20a%20decentralized%2C%20non,5%20min%20read"
+                      href="https://medium.com/@DefiEdge"
                       target="_blank"
                       className="hover:text-white"
                       rel="noreferrer"
@@ -99,11 +95,11 @@ export default function Footer() {
                     </a>
                   </li>
 
-                  <li>
+                  {/* <li>
                     <a href="#" target="_blank" className="hover:text-white">
                       <p>Github</p>
                     </a>
-                  </li>
+                  </li> */}
 
                   {/* <li>
                     <a href="#" target="_blank" className="hover:text-white">

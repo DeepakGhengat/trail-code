@@ -171,7 +171,8 @@ function Strategies() {
                     <div className="mt-[42px] group text-center w-full">
                       <a
                         href={`https://app.defiedge.io/s/${s.id}`}
-                        className=" bg-[#4452FE] hover:bg-[#3F1DF0] duration-300 bg-opacity-30 w-full p-[9px] flex items-center justify-center"
+                        target="_blank"
+                        className=" bg-[#4452FE] hover:bg-[#3F1DF0] duration-300 bg-opacity-30 w-full p-[9px] flex items-center justify-center" rel="noreferrer"
                       >
                         <p>Trade Now &nbsp;</p>
                         <span className="group-hover:-translate-y-1  duration-300 flex items-end">
