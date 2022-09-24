@@ -147,7 +147,7 @@ function liquidityalliance() {
               </span>
               <p className="text-textgray sm:text-[18px] leading-[26px] font-normal text-[16px] sm:mt-[25px] mt-[12px] max-w-[600px]">
                 Minimize risk & maximize returns with DefiEdge’s scalable
-                solution for liquidity provision on Uniswap v3
+                solution for liquidity provision on Uniswap V3
               </p>
             </div>
             <div className="mt-[38px] grid grid-cols-4 gap-[24px]">

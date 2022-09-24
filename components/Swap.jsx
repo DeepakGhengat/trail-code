@@ -100,7 +100,7 @@ function Swap() {
                 Create and Manage Strategy
               </span>
               <p className="text-textgray text-[16px] sm:mt-[20px] mt-[8px]">
-              Create UniswapV3 strategies and seamlessly manage the assets. Cutting edge features provided by DefiEdge help to ensure that you stand out amongst the rest
+              Create Uniswap V3 strategies and seamlessly manage the assets. Cutting edge features provided by DefiEdge help to ensure that you stand out amongst the rest
               </p>
             </div>
 
