@@ -88,7 +88,7 @@ const investorsArray = [
 
   {
     id: 10,
-    name: "Kevin Beardsle",
+    name: "Kevin Beardsley",
     logo: kevin,
     desc: "Head MM, Kraken",
   },
