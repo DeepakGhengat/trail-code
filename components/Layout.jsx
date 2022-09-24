@@ -15,16 +15,17 @@ const Layout = ({ children }) => {
   const pathbool = path === "/";
   // console.log(pathbool);
 
-
-
   return (
     <div className="">
       <Header />
-      {
-        pathbool ? (<><Hero /><HeroBar /></>) : ("")
-      }
-
-      
+      {pathbool ? (
+        <>
+          <Hero />
+          <HeroBar />
+        </>
+      ) : (
+        ""
+      )}
 
       <div className="container mx-auto max-w-[335px]  sm:max-w-[1200px]">
         {children}

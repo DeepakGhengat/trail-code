@@ -26,7 +26,6 @@ function heroBar() {
     fetchTrendingStrategies();
   }, []);
 
-
   return (
     <section className="relative  z-10 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg flex ">
       <div className="container mx-auto max-w-[1200px] sm:h-[80px] flex items-center">

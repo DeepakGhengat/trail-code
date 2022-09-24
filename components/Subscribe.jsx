@@ -2,17 +2,10 @@
 import Fade from "react-reveal/Fade";
 import React from "react";
 
-
 //* Import Components Required
 import StrategyManagerCard from "./StrategyManagerCard";
 
-
-
-
-
 function Subscribe() {
-
-  
   return (
     <main>
       <Fade duration={2000}>
@@ -20,7 +13,6 @@ function Subscribe() {
           <StrategyManagerCard />
         </section>
       </Fade>
-
     </main>
   );
 }

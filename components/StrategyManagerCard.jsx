@@ -84,11 +84,7 @@ const investorsArray = [
     desc: "Founder, Keyrock",
   },
 
-
-  {
-
-  },
-
+  {},
 
   {
     id: 10,
@@ -104,11 +100,7 @@ const investorsArray = [
     desc: "Founder, Zilliqa",
   },
 
-  {
-
-  },
-
-
+  {},
 ];
 
 const ecosystemArray = [
@@ -174,7 +166,9 @@ function StrategyManagerCard() {
 
           <div className="mt-[16px]">
             <span className="sm:text-[16px] text-textgray mt-[20px] text-[18px] ">
-            We are proud to be associated with our partners. Their collaboration is an <br /> indispensable factor for DefiEdge to create the next Defi Revolution
+              We are proud to be associated with our partners. Their
+              collaboration is an <br /> indispensable factor for DefiEdge to
+              create the next Defi Revolution
             </span>
           </div>
         </div>

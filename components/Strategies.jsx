@@ -10,12 +10,7 @@ import two from "../public/images/two.svg";
 import three from "../public/images/three.svg";
 import info from "../public/images/info.svg";
 import arrowcross from "../public/images/arrowcross.svg";
-// import arrowdown from "../public/images/arrowdown.svg";
-
-// import que from "../public/images/que.svg";
-
 import arrowupper from "../public/images/arrowupper.svg";
-// import tokenlogo from "../public/images/tokenlogo.svg";
 import Fade from "react-reveal/Fade";
 
 //* Import Components
@@ -58,7 +53,10 @@ function Strategies() {
             </span>
 
             <p className="text-textgray  text-[16px] fornt-normal leading-[26px] sm:text-[18px] mt-[12px] sm:mt-[25px]">
-            Here are the current leading strategies trading on the protocol. Browse to the <br /> one that interests you most and start earning yields            </p>
+              Here are the current leading strategies trading on the protocol.
+              Browse to the <br /> one that interests you most and start earning
+              yields{" "}
+            </p>
           </div>
         </Fade>
 

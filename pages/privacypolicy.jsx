@@ -12,7 +12,9 @@ function privacypolicy() {
 
         <div className="max-w-[840px] mx-auto ">
           <div className="py-[32px] sm:py-[80px] text-center w-full border-b border-[#3F4077]/30">
-            <p className="font-semibold text-[30px] sm:text-[44px]">Privacy Policy</p>
+            <p className="font-semibold text-[30px] sm:text-[44px]">
+              Privacy Policy
+            </p>
             <p className="text-[16px] ">Last updated Sep 23 , 2022</p>
           </div>
           <div className="sm:mt-[64px] mt-[20px] text-[20px] sm:text-[20px] sm:mx-[20px] mb-[120px]">
@@ -20,7 +22,7 @@ function privacypolicy() {
               <p className="font-semibold ">What information do we collect?</p>
               <ul className="mt-[16px] font-normal text-textgray ml-[20px] disc">
                 <li>
-                  DeFiEdge does not collect any personal information.
+                  DefiEdge does not collect any personal information.
                   Occasionally, at our discretion, we may include or offer third
                   party products or services on our site which may collect
                   non-personally identifiable visitor information.
@@ -30,6 +32,11 @@ function privacypolicy() {
                   their separate and independent privacy policies. We therefore
                   have no responsibility or liability for the content and
                   activities of these linked sites.
+                  <p className="ml-[20px] mt-[12px]">
+                    NOTE: Optional Twitter Verification is used for
+                    identification of the strategy managers but the authenticity
+                    of these identities should be researched by the user.
+                  </p>
                 </li>
                 <li className="mt-[16px]">
                   Nonetheless, we seek to protect the integrity of our site and
@@ -44,7 +51,16 @@ function privacypolicy() {
                 <li>
                   Information collected by the third party product, Sentry.io is
                   used to improve user experience and our website. For further
-                  details, please refer to Sentry.io <a target="_blank" className="text-white underline" href="https://sentry.io/privacy/" rel="noreferrer">privacy policy</a>.
+                  details, please refer to Sentry.io{" "}
+                  <a
+                    target="_blank"
+                    className="text-white underline"
+                    href="https://sentry.io/privacy/"
+                    rel="noreferrer"
+                  >
+                    privacy policy
+                  </a>
+                  .
                 </li>
               </ul>
             </div>
@@ -55,10 +71,10 @@ function privacypolicy() {
               </p>
               <ul className="mt-[16px] font-normal text-textgray ml-[20px] disc">
                 <li>
-                  DeFiEdge being a decentralised platform, does not collect any
+                  DefiEdge being a decentralised platform, does not collect any
                   personally identifiable information and hence, does not sell,
-                  trade, or otherwise transfer it to outside parties. <br />{" "}
-                  <br />
+                  trade, or otherwise transfer it to outside parties.
+                  <br /> <br />
                 </li>
                 <li>
                   This does not include trusted third parties who assist us in
@@ -77,8 +93,8 @@ function privacypolicy() {
                 <li>
                   US residents are currently not blocked from using the
                   protocol. However, a few functionalities might not be
-                  available to them. If we decide to change this policy, we will
-                  post those changes on this page.{" "}
+                  available to them. If this policy is changed, we will post
+                  those changes on this page.
                 </li>
               </ul>
             </div>
@@ -90,7 +106,7 @@ function privacypolicy() {
               <ul className="mt-[16px] font-normal text-textgray ml-[20px] disc">
                 <li>
                   Our site, products and services are all directed to people who
-                  are at least 13 years old or older.{" "}
+                  are at least 13 years old or older.
                 </li>
               </ul>
             </div>
@@ -103,11 +119,12 @@ function privacypolicy() {
                 <li>
                   Currently, strategy managers can share their twitter handle
                   with the protocol for verifying the strategies they create (if
-                  they choose to). <br /> <br />
+                  they choose to).
+                  <br /> <br />
                 </li>
                 <li>
                   This information may only be used for marketing or advertising
-                  initiatives by the protocol.{" "}
+                  initiatives by the protocol.
                 </li>
               </ul>
             </div>
@@ -119,13 +136,15 @@ function privacypolicy() {
               <ul className="mt-[16px] font-normal text-textgray ml-[20px] disc">
                 <li>
                   Strategy managers only have view access to the wallet
-                  addresses of investors.{" "}
+                  addresses of investors.
                 </li>
               </ul>
             </div>
 
             <div className="mt-[40px]">
-              <p className="font-semibold ">Do DE shares ownership ends?</p>
+              <p className="font-semibold ">
+                When does DE shares ownership ends for a particular investor?
+              </p>
               <ul className="mt-[16px] font-normal text-textgray ml-[20px] disc">
                 <li>
                   {" "}
@@ -136,7 +155,7 @@ function privacypolicy() {
                   Investors have ownership of their DE shares as long as they
                   are invested in a strategy. These shares are minted at the
                   prevailing price when the investment is made and are burned
-                  once an investor removes the funds from the strategy.{" "}
+                  once an investor removes the funds from the strategy.
                 </li>
               </ul>
             </div>
@@ -148,7 +167,7 @@ function privacypolicy() {
               <ul className="mt-[16px] font-normal text-textgray ml-[20px] disc">
                 <li>
                   NO information is shared with the government of any state or
-                  country.{" "}
+                  country.
                 </li>
               </ul>
             </div>

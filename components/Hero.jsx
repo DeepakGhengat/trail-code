@@ -30,7 +30,7 @@ function Hero() {
               </Fade>
               <Fade delay={30} duration={3000}>
                 <p className="text-16px text-textgray mt-[12px] sm:w-[410px] leading-[28px] font-medium">
-                  DeFiEdge provides the smartest solution to deploy liquidity
+                  DefiEdge provides the smartest solution to deploy liquidity
                   and optimise yields on Uniswap V3
                 </p>
               </Fade>

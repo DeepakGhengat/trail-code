@@ -21,15 +21,15 @@ function privacypopcy() {
             <div>
               <ul className="mt-[16px] font-normal text-textgray ml-[20px] disc">
                 <p>
-                  BY ACCESSING THE DeFiEdge SERVICE(S), YOU AGREE TO THE
-                  DeFiEdge TERMS OF USE AND THE DeFiEdge PRIVACY POLICY. THESE
-                  TERMS OF USE IS A LEGAL AGREEMENT BETWEEN YOU AND DeFiEdge AND
+                  BY ACCESSING THE DefiEdge SERVICE(S), YOU AGREE TO THE
+                  DefiEdge TERMS OF USE AND THE DefiEdge PRIVACY POLICY. THESE
+                  TERMS OF USE IS A LEGAL AGREEMENT BETWEEN YOU AND DefiEdge AND
                   GOVERNS YOUR USE OF THE SERVICES. BY USING THE SERVICES, YOU
                   ARE INDICATING THAT YOU HAVE READ AND AGREE TO THESE TERMS OF
-                  USE AND DeFiEdge’S PRIVACY POLICY (“PRIVACY POLICY”) AND, IF
-                  APPLICABLE, DeFiEdge’S END USER LICENSE AGREEMENTS (“EULA”),
+                  USE AND DefiEdge’S PRIVACY POLICY (“PRIVACY POLICY”) AND, IF
+                  APPLICABLE, DefiEdge’S END USER LICENSE AGREEMENTS (“EULA”),
                   AND ANY OTHER RELATED TERMS AND CONDITIONS LOCATED ON
-                  DeFiEdge’S WEBSITE, ALL OF WHICH ARE INCORPORATED HEREIN BY
+                  DefiEdge’S WEBSITE, ALL OF WHICH ARE INCORPORATED HEREIN BY
                   THIS REFERENCE. IF YOU DO NOT AGREE TO THESE TERMS OF USE, DO
                   NOT USE THE SERVICES.
                 </p>
@@ -38,20 +38,20 @@ function privacypopcy() {
                   any posted guidepnes, rules or terms apppcable to such
                   Services, which may be posted from time to time. All such
                   guidepnes, rules or terms (including without pmitation
-                  DeFiEdge’s Privacy Popcy) are hereby incorporated by reference
+                  DefiEdge’s Privacy Popcy) are hereby incorporated by reference
                   into the Terms of Use.
                 </p>
                 <p className="mt-[16px]">
                   In the event the terms of these Terms of Use confpct with the
                   Privacy Popcy, apppcable EULA, or any other agreement between
-                  you and DeFiEdge, the terms of the apppcable Privacy Popcy,
+                  you and DefiEdge, the terms of the apppcable Privacy Popcy,
                   EULA, or other agreement shall govern as to the confpcting
                   terms. If you have any questions regarding these terms and
                   conditions, please contact customer service which is provided
-                  via info@defiedge.io.
+                  via info@DefiEdge.io.
                 </p>
                 <p className="mt-[16px]">
-                  By accessing the DeFiEdge Website and use of the Services, you
+                  By accessing the DefiEdge Website and use of the Services, you
                   agree to these Terms of Use and you acknowledge that you have
                   read and understood these Terms of Use. If you do not agree
                   with the terms and conditions in these Terms of Use, please
@@ -89,7 +89,7 @@ function privacypopcy() {
 
                   <span className="flex">
                     <p>
-                      You agree that DeFiEdge may also offer other services that
+                      You agree that DefiEdge may also offer other services that
                       are governed by these or different terms of use.
                     </p>
                   </span>
@@ -99,7 +99,7 @@ function privacypopcy() {
                   <span className="font-bold text-lg">
                     <br />
                     You agree to use the Services for lawful purposes only, and
-                    solely in a manner consistent with the intent of DeFiEdge as
+                    solely in a manner consistent with the intent of DefiEdge as
                     described in these Terms of Use.
                   </span>
                   <span className="flex mt-3">
@@ -118,7 +118,7 @@ function privacypopcy() {
                     <p>
                       You agree that you will not: (i) use any electronic
                       communication feature of the Services or any third-party
-                      electronic communication provider used by DeFiEdge for
+                      electronic communication provider used by DefiEdge for
                       communication purposes, for any purpose that is unlawful,
                       tortious, abusive, intrusive on another’s privacy,
                       harassing, libellous, defamatory, embarrassing, obscene,
@@ -128,7 +128,7 @@ function privacypopcy() {
                       right (as well as rights of publicity and privacy) without
                       first obtaining the permission of the owner of such
                       rights; (iii) use the Services for any commercial purpose
-                      not expressly approved by DeFiEdge in writing; (iv) use
+                      not expressly approved by DefiEdge in writing; (iv) use
                       the Services in connection with surveys, contests, pyramid
                       schemes, chain letters, junk email, spamming, or any
                       duplicative or unsolicited messages (commercial or
