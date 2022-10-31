@@ -54,10 +54,10 @@ function Hero() {
             </div>
             <div>
               <Fade duration={2000}>
-                <div className="max-w-[588px] sm:py-[75px] pt-[49px] sm:pt-[75px]">
+                <div className="max-w-[588px]  pt-[49px] sm:pt-[30px]">
                   <Lottie
                     loop
-                    className="sm:h-[403px] sm:w-[588px]"
+                    className="sm:h-[500px] sm:w-[800px] -ml-[100px]"
                     animationData={lottieJson}
                     play
                   />

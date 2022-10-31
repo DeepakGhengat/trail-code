@@ -31,6 +31,13 @@ import ziliqa from "../public/images/strategy/ziliqa.svg";
 import keyrock from "../public/images/strategy/keyrock.svg";
 import yuriy from "../public/images/strategy/yuriy.jpeg";
 
+import damian from "../public/images/strategy/damian.png";
+import mudit from "../public/images/strategy/mudit.png";
+import riley from "../public/images/strategy/riley.png";
+import watchpug from "../public/images/strategy/watchpug.jpeg";
+import abdk from "../public/images/strategy/abdk.svg";
+import securing from "../public/images/strategy/securing.png";
+
 const investorsArray = [
   {
     id: 1,
@@ -101,6 +108,48 @@ const investorsArray = [
   },
 
   {},
+];
+
+const auditorsArray = [
+  {
+    id: 1,
+    name: "Damian Rusinek",
+    logo: damian,
+    desc: "Security Auditor",
+  },
+  {
+    id: 2,
+    name: "Mudit Gupta",
+    logo: mudit,
+    desc: "Security Auditor",
+  },
+
+  {
+    id: 3,
+    name: "Riley Holterhus",
+    logo: riley,
+    desc: "Security Auditor",
+  },
+  {
+    id: 4,
+    name: "ABDK",
+    logo: abdk,
+    desc: "Auditing Firm",
+  },
+  {},
+
+  {
+    id: 5,
+    name: "WatchPug",
+    logo: watchpug,
+    desc: "Auditing Firm",
+  },
+  {
+    id: 6,
+    name: "Securing",
+    logo: securing,
+    desc: "Auditing Firm",
+  },
 ];
 
 const ecosystemArray = [
@@ -211,6 +260,44 @@ function StrategyManagerCard() {
           <div className=" mt-[40px] sm:h-auto overflow-hidden sm:overflow-visible  flex items-center w-full">
             <div className="grid sm:grid-cols-4 grid-cols-2   w-full sm:gap-[40px] sm:gap-x-[50px] ">
               {investorsArray.map((data) => {
+                return (
+                  <div
+                    key={data.id}
+                    className="flex space-x-[8px] items-center "
+                  >
+                    <div className="flex items-center ">
+                      <Image
+                        type="image"
+                        height={40}
+                        width={40}
+                        alt=""
+                        src={data.logo}
+                      />
+                    </div>
+
+                    <div className="">
+                      <div className="font-semibold">{data.name}</div>
+                      <div className="font-normal text-textgray">
+                        {data.desc}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="w-full h-[1px] bg-white opacity-10 my-[60px]"></div>
+
+          <div className="flex flex-col items-center text-center -mt-[6px]">
+            <p className="sm:text-[24px] uppercase sm:mt-0 tracking-[5px]  text-[20px]  font-semibold ">
+              AUDITORS
+            </p>
+          </div>
+
+          <div className=" mt-[40px] sm:h-auto overflow-hidden sm:overflow-visible  flex items-center w-full">
+            <div className="grid sm:grid-cols-4 grid-cols-2   w-full sm:gap-[40px] sm:gap-x-[50px] ">
+              {auditorsArray.map((data) => {
                 return (
                   <div
                     key={data.id}
