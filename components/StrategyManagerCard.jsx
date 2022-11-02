@@ -115,13 +115,13 @@ const auditorsArray = [
     id: 1,
     name: "Damian Rusinek",
     logo: damian,
-    desc: "Security Auditor",
+    desc: "Securing",
   },
   {
     id: 2,
     name: "Mudit Gupta",
     logo: mudit,
-    desc: "Security Auditor",
+    desc: "CISO, Polygon",
   },
 
   {
