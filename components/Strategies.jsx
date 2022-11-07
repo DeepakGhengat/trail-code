@@ -164,13 +164,13 @@ function Strategies() {
                           Network
                         </p>
                         <span className="text-sm capitalize">
-                          {s.network == "polygon" ? "Polygon" : s.network}
+                          {s.network}
                         </span>
                       </span>
                     </div>
                     <div className="mt-[42px] group text-center w-full">
                       <a
-                        href={`https://app.defiedge.io/s/${s.id}`}
+                        href={`https://app.defiedge.io/s/${s.network}/${s.id}`}
                         target="_blank"
                         className=" bg-[#4452FE] hover:bg-[#3F1DF0] duration-300 bg-opacity-30 w-full p-[9px] flex items-center justify-center" rel="noreferrer"
                       >
