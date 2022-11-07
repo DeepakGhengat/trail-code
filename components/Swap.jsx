@@ -54,7 +54,7 @@ function Swap() {
                   url="/images/swap.mp4"
                   loop
                   muted
-                  autoplay
+                  autoPlay
                   playsinline
                   playing={true}
                   width="100%"

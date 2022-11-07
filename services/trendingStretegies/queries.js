@@ -2,10 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.STATS_QUERY = exports.STRATEGY_LIST_QUERY = void 0;
 exports.STRATEGY_LIST_QUERY = `
-query Query($strategyListTake: Float, $strategyListNetwork: Network, $strategyListPage: Float, $strategyListOrder: SortOrder, $strategyListSearch: String, $strategyListSortBy: StrategyTableSortBy, $strategyListType: StrategyType, $strategyReturnInToken: StrategyReturnInToken, $strategyListAddresses: [String!]) {
+query Query($strategyListTake: Float, $strategyListNetwork: [Network!]!, $strategyListPage: Float, $strategyListOrder: SortOrder, $strategyListSearch: String, $strategyListSortBy: StrategyTableSortBy, $strategyListType: StrategyType, $strategyReturnInToken: StrategyReturnInToken, $strategyListAddresses: [String!]) {
   strategyList(
     take: $strategyListTake
-    network: $strategyListNetwork
+    networks: $strategyListNetwork
     page: $strategyListPage
     order: $strategyListOrder
     search: $strategyListSearch
@@ -25,7 +25,7 @@ query Query($strategyListTake: Float, $strategyListNetwork: Network, $strategyLi
       inception
       token0Url
       token1Url
-      is_archived
+      network
       sharePrice
       since_inception
       fees
@@ -61,104 +61,72 @@ query Stats($network: [Network!], $manager: String) {
       arbitrum
       kovan
       mainnet
-      matic
+      polygon
       rinkeby
-      rinkeby_staging
-      polygon_staging
-      arbitrum_staging
       optimism
-      optimism_staging
       __typename
     }
     countSummary {
       arbitrum
       kovan
       mainnet
-      matic
-      rinkeby
-      rinkeby_staging
-      polygon_staging
-      arbitrum_staging
+      polygon
+      rinkeby    
       optimism
-      optimism_staging
       __typename
     }
     users {
       arbitrum
       kovan
       mainnet
-      matic
-      rinkeby
-      rinkeby_staging
-      polygon_staging
-      arbitrum_staging
+      polygon
+      rinkeby    
       optimism
-      optimism_staging
       __typename
     }
     ranges {
       arbitrum
       kovan
       mainnet
-      matic
-      rinkeby
-      rinkeby_staging
-      polygon_staging
-      arbitrum_staging
+      polygon
+      rinkeby    
       optimism
-      optimism_staging
       __typename
     }
     pools {
       arbitrum
       kovan
       mainnet
-      matic
-      rinkeby
-      rinkeby_staging
-      polygon_staging
-      arbitrum_staging
+      polygon
+      rinkeby    
       optimism
-      optimism_staging
       __typename
     }
     volumeSummary {
       arbitrum
       kovan
       mainnet
-      matic
-      rinkeby
-      rinkeby_staging
-      polygon_staging
-      arbitrum_staging
+      polygon
+      rinkeby    
       optimism
-      optimism_staging
       __typename
     }
     fees {
       arbitrum
       kovan
       mainnet
-      matic
-      rinkeby
-      rinkeby_staging
-      polygon_staging
-      arbitrum_staging
+      polygon
+      rinkeby    
       optimism
-      optimism_staging
       __typename
     }
     assets {
       arbitrum
       kovan
       mainnet
-      matic
-      rinkeby
-      rinkeby_staging
-      polygon_staging
-      arbitrum_staging
+      polygon
+      rinkeby    
       optimism
-      optimism_staging
       __typename
     }
     totalVolume

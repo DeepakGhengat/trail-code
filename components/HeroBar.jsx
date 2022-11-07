@@ -16,7 +16,7 @@ function heroBar() {
         await getStats()
           .then((data) => {
             setStats(data);
-            console.log({ stats });
+            console.log({ data });
           })
           .catch((e) => console.log(e));
       } catch (e) {

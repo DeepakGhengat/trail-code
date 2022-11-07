@@ -25,7 +25,7 @@ function Strategies() {
       // await getStrategies(3, "aum").then(console.log);
       try {
         // eslint-disable-next-line no-unused-vars
-        await getStrategies(3, "aum")
+        await getStrategies(3, "leaderboard")
           .then((data) => {
             setStrategies(data);
             console.log(strategies);
@@ -164,7 +164,7 @@ function Strategies() {
                           Network
                         </p>
                         <span className="text-sm capitalize">
-                          {s.network == "matic" ? "Polygon" : s.network}
+                          {s.network == "polygon" ? "Polygon" : s.network}
                         </span>
                       </span>
                     </div>

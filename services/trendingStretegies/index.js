@@ -16,7 +16,7 @@ var Network;
   Network["arbitrum"] = "arbitrum";
   Network["kovan"] = "kovan";
   Network["mainnet"] = "mainnet";
-  Network["matic"] = "matic";
+  Network["polygon"] = "polygon";
   Network["rinkeby"] = "rinkeby";
   Network["rinkeby_staging"] = "rinkeby_staging";
   Network["polygon_staging"] = "polygon_staging";
@@ -24,45 +24,40 @@ var Network;
   Network["optimism"] = "optimism";
   Network["optimism_staging"] = "optimism_staging";
 })(Network || (Network = {}));
+
 async function getStrategies(
   limit = 3,
-  sortBy = "aum",
-  networks = ["optimism", "arbitrum", "matic"]
+  sortBy = "leaderboard",
+  networks = ["optimism", "arbitrum", "polygon", "mainnet"]
 ) {
-  const list = await Promise.all(
-    networks.map((network) =>
-      axios_1.default
-        .post(URL, {
-          operationName: "Query",
-          query: queries_1.STRATEGY_LIST_QUERY,
-          variables: {
-            strategyListNetwork: network,
-            strategyListOrder: "desc",
-            strategyListSortBy: sortBy,
-            strategyListTake: 10,
-            strategyListPage: 1,
-            strategyListSearch: "",
-            strategyListType: null,
-            strategyReturnInToken: null,
-          },
-        })
-        .then(({ data: { data } }) => {
-          return data.strategyList.data.map((e) => ({
-            ...e,
-            since_inception: e.inception,
-            network,
-          }));
-        })
-        .catch((e) => (console.log(e.message, e.response?.data?.errors), []))
-    )
-  );
-  return list
-    .flat()
-    .sort((a, b) => b[sortBy] - a[sortBy])
-    .slice(0, limit);
+  const list = axios_1.default
+    .post(URL, {
+      operationName: "Query",
+      query: queries_1.STRATEGY_LIST_QUERY,
+      variables: {
+        strategyListNetwork: networks,
+        strategyListOrder: "desc",
+        strategyListSortBy: sortBy,
+        strategyListTake: limit,
+        strategyListPage: 1,
+        strategyListSearch: "",
+        strategyListType: null,
+        strategyReturnInToken: null,
+      },
+    })
+    .then(({ data: { data } }) => {
+      return data.strategyList.data.map((e) => ({
+        ...e,
+        since_inception: e.inception,
+      }));
+    });
+
+  return list;
 }
 exports.getStrategies = getStrategies;
-async function getStats(networks = ["optimism", "arbitrum", "matic"]) {
+async function getStats(
+  networks = ["optimism", "arbitrum", "polygon", "mainnet"]
+) {
   return axios_1.default
     .post(URL, {
       operationName: "Stats",
