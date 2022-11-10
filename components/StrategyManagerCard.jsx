@@ -36,7 +36,7 @@ import mudit from "../public/images/strategy/mudit.png";
 import riley from "../public/images/strategy/riley.png";
 import watchpug from "../public/images/strategy/watchpug.jpeg";
 import abdk from "../public/images/strategy/abdk.svg";
-import securing from "../public/images/strategy/securing.png";
+import lucash from "../public/images/strategy/lucash.png";
 
 const investorsArray = [
   {
@@ -146,9 +146,9 @@ const auditorsArray = [
   },
   {
     id: 6,
-    name: "Securing",
-    logo: securing,
-    desc: "Auditing Firm",
+    name: "Lucash Dev",
+    logo: lucash,
+    desc: "Auditor",
   },
 ];
 
