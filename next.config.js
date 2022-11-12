@@ -2,10 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
+};
 module.exports = {
   nextConfig,
   images: {
-    domains: ['raw.githubusercontent.com'],
+    domains: [
+      "raw.githubusercontent.com",
+      "s2.coinmarketcap.com",
+      "assets.coingecko.com",
+      "crypto.com",
+    ],
   },
-}
+};
