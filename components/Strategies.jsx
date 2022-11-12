@@ -146,16 +146,14 @@ function Strategies() {
                           Return Since Inception
                         </p>
 
-                        <p className="{`${s.since_incepton > 0 ? 'text-green-700 bg-green-700' :  s.since_incepton === 0 ? 'text-white bg-transparent' : 'text-[#D56665] bg-[#D56665]'} bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-`}">
-                          {s.since_incepton > 0
+                        <p className={`${s.since_inception > 0 ? 'text-green-700 bg-green-700' :  s.since_incepton === 0 ? 'text-white bg-transparent' : 'text-[#D56665] bg-[#D56665]'} bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-`}>
+                          {s.since_inception > 0
                             ? "+"
-                            : s.since_incepton === 0
-                            ? ""
-                            : "-"}
-                          {s.since_incepton}&nbsp; % &nbsp;
-                          {s.since_incepton > 0 ? (
+                            : ""}
+                          {+s.since_inception.toFixed(2)}% &nbsp;
+                          {s.since_inception > 0 ? (
                             <Image type="image" alt="" src={arrowupper} />
-                          ) : s.since_incepton === 0 ? undefined : undefined}
+                          ) : s.since_inception === 0 ? undefined : undefined}
                         </p>
                       </span>
 

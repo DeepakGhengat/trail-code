@@ -33,6 +33,7 @@ async function getStrategies(
   const list = axios_1.default
     .post(URL, {
       operationName: "Query",
+      fetchPolicy: "network-only",
       query: queries_1.STRATEGY_LIST_QUERY,
       variables: {
         strategyListNetwork: networks,
@@ -46,10 +47,7 @@ async function getStrategies(
       },
     })
     .then(({ data: { data } }) => {
-      return data.strategyList.data.map((e) => ({
-        ...e,
-        since_inception: e.inception,
-      }));
+      return data.strategyList.data;
     });
 
   return list;
@@ -61,6 +59,7 @@ async function getStats(
   return axios_1.default
     .post(URL, {
       operationName: "Stats",
+      fetchPolicy: "network-only",
       query: queries_1.STATS_QUERY,
       variables: {
         network: networks,
