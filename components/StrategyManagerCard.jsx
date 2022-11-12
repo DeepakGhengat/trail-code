@@ -101,7 +101,7 @@ const investorsArray = [
   },
 
   {
-    id: 10,
+    id: 11,
     name: "Amrit Kumar",
     logo: amrit,
     desc: "Founder, Zilliqa",
