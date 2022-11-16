@@ -27,7 +27,7 @@ function Participants() {
         <Fade duration={2000}>
           <div className="grid sm:grid-cols-3 grid-cols-1 gap-[25px]">
             <a
-              href="https://docs.defiedge.io/DefiEdge%20Participants/Liquidity%20Provision%20on%20DeFiEdge"
+              href="https://docs.defiedge.io/category/liquidty-provider"
               target="_blank"
               className="relative group"
               rel="noreferrer"
@@ -52,7 +52,7 @@ function Participants() {
                 </p>
 
                 <a
-                  href="https://docs.defiedge.io/DefiEdge%20Participants/Liquidity%20Provision%20on%20DeFiEdge"
+                  href="https://docs.defiedge.io/category/liquidty-provider"
                   target="_blank"
                   className="absolute bottom-[32px]  flex group cursor-pointer"
                   rel="noreferrer"
@@ -66,7 +66,7 @@ function Participants() {
             </a>
 
             <a
-              href="https://docs.defiedge.io/DefiEdge%20Participants/Yield%20Hunters"
+              href="https://docs.defiedge.io/category/defiedge-participants"
               target="_blank"
               className="relative group"
               rel="noreferrer"
@@ -93,7 +93,7 @@ function Participants() {
                 </p>
 
                 <a
-                  href="https://docs.defiedge.io/DefiEdge%20Participants/Yield%20Hunters"
+                  href="https://docs.defiedge.io/category/defiedge-participants"
                   target="_blank"
                   className="absolute bottom-[32px]  flex group cursor-pointer"
                   rel="noreferrer"
@@ -107,7 +107,7 @@ function Participants() {
             </a>
 
             <a
-              href="https://docs.defiedge.io/DefiEdge%20Participants/Managing%20Strategy%20on%20DefiEdge"
+              href="https://docs.defiedge.io/category/strategy-manager"
               target="_blank"
               className="relative group"
               rel="noreferrer"
@@ -127,7 +127,7 @@ function Participants() {
                 </p>
 
                 <a
-                  href="https://docs.defiedge.io/DefiEdge%20Participants/Managing%20Strategy%20on%20DefiEdge"
+                  href="https://docs.defiedge.io/category/strategy-manager"
                   target="_blank"
                   className="absolute bottom-[32px]  flex group cursor-pointer"
                   rel="noreferrer"
