@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.STATS_QUERY = exports.STRATEGY_LIST_QUERY = void 0;
 exports.STRATEGY_LIST_QUERY = `
-query Query($strategyListTake: Float, $strategyListNetwork: [Network!]!, $strategyListPage: Float, $strategyListOrder: SortOrder, $strategyListSearch: String, $strategyListSortBy: StrategyTableSortBy, $strategyListType: StrategyType, $strategyReturnInToken: StrategyReturnInToken, $strategyListAddresses: [String!]) {
+query Query($strategyListTake: Float, $strategyListNetwork: [Network!]!, $strategyListPage: Float, $strategyListOrder: SortOrder, $strategyListSearch: String, $strategyListSortBy: StrategyTableSortBy, $strategyListType: StrategyFilterType, $strategyReturnInToken: StrategyReturnInToken, $strategyListAddresses: [String!]) {
   strategyList(
     take: $strategyListTake
     networks: $strategyListNetwork

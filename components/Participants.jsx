@@ -18,7 +18,7 @@ function Participants() {
           <span className="sm:text-[42px] text-[26px] font-semibold">
             DefiEdge Participants
           </span>
-          <p className="text-textgray sm:text-[18px] leading-[26px] font-normal text-[16px] sm:mt-[25px] mt-[12px] max-w-[600px]">
+          <p className="text-gray-mid sm:text-[18px] leading-[26px] font-normal text-[16px] sm:mt-[25px] mt-[12px] max-w-[600px]">
             The protocol caters to the needs of all types of participants.
             Browse to the section of your choice and know how you can benefit by
             using DefiEdge
@@ -47,21 +47,18 @@ function Participants() {
                 <span className="sm:text-[24px] text-[20px] font-semibold sm:mt-[28px] mt-[20px]">
                   Liquidity Provider
                 </span>
-                <p className="text-textgray text-[16px] mt-[12px]">
-                Uniswap V3 LPs can make use of DefiEdge to get access to many advanced features making the protocol a go-to-platform for managing liquidity.
+                <p className="text-gray-mid text-[16px] mt-[12px]">
+                  Uniswap V3 LPs can make use of DefiEdge to get access to many
+                  advanced features making the protocol a go-to-platform for
+                  managing liquidity.
                 </p>
 
-                <a
-                  href="https://docs.defiedge.io/category/liquidty-provider"
-                  target="_blank"
-                  className="absolute bottom-[32px]  flex group cursor-pointer"
-                  rel="noreferrer"
-                >
+                <span className="absolute bottom-[32px] flex group cursor-pointer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}
                   </span>
-                </a>
+                </span>
               </div>
             </a>
 
@@ -86,23 +83,18 @@ function Participants() {
                 <span className="sm:text-[24px] text-[20px] font-semibold sm:mt-[28px] mt-[20px]">
                   Treasury managers{" "}
                 </span>
-                <p className="text-textgray text-[16px] mt-[12px]">
+                <p className="text-gray-mid text-[16px] mt-[12px]">
                   Invest smartly in the best strategies managed by some of the
                   best in the industry. Just sit back, relax and watch your
                   funds grow.
                 </p>
 
-                <a
-                  href="https://docs.defiedge.io/category/defiedge-participants"
-                  target="_blank"
-                  className="absolute bottom-[32px]  flex group cursor-pointer"
-                  rel="noreferrer"
-                >
+                <span className="absolute bottom-[32px]  flex group cursor-pointer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}
                   </span>
-                </a>
+                </span>
               </div>
             </a>
 
@@ -122,21 +114,18 @@ function Participants() {
                 <span className="sm:text-[24px] text-[20px] font-semibold sm:mt-[28px] mt-[20px]">
                   Strategy Manager{" "}
                 </span>
-                <p className="text-textgray text-[16px] mt-[12px]">
-                Efficiently manage UnisawapV3 strategies, generate high yields and earn fees on profits. Trusted managers can join Liquidity Alliance, the DefiEdge ecosystem.
+                <p className="text-gray-mid text-[16px] mt-[12px]">
+                  Efficiently manage UnisawapV3 strategies, generate high yields
+                  and earn fees on profits. Trusted managers can join Liquidity
+                  Alliance, the DefiEdge ecosystem.
                 </p>
 
-                <a
-                  href="https://docs.defiedge.io/category/strategy-manager"
-                  target="_blank"
-                  className="absolute bottom-[32px]  flex group cursor-pointer"
-                  rel="noreferrer"
-                >
+                <span className="absolute bottom-[32px] flex group cursor-pointer">
                   <p className="">Read More &nbsp;</p>{" "}
                   <span className=" group-hover:translate-x-2 duration-300 items-center flex">
                     <Image type="image" className="" alt="" src={rightarrow} />{" "}
                   </span>
-                </a>
+                </span>
               </div>
             </a>
           </div>

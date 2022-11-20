@@ -4,7 +4,7 @@ function privacypopcy() {
   return (
     <section>
       <div>
-        <div className="relative w-screen">
+        <div className="relative w-full overflow-hidden">
           <div className="absolute left-0 -mt-[70px]  -ml-[250px]">
             <div className="bg-[#8692FF] h-[370px] w-[370px] blur-[354px] opacity-42"></div>
           </div>
@@ -19,7 +19,7 @@ function privacypopcy() {
           </div>
           <div className="sm:mt-[64px] mt-[20px] text-[20px] sm:text-[20px] sm:mx-[20px] mb-[120px]">
             <div>
-              <ul className="mt-[16px] font-normal text-textgray ml-[20px] disc">
+              <ul className="mt-[16px] font-normal text-gray-mid ml-[20px] disc">
                 <p>
                   BY ACCESSING THE DefiEdge SERVICE(S), YOU AGREE TO THE
                   DefiEdge TERMS OF USE AND THE DefiEdge PRIVACY POLICY. THESE

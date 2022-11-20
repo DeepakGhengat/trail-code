@@ -7,13 +7,13 @@ import StrategyManagerCard from "./StrategyManagerCard";
 
 function Subscribe() {
   return (
-    <main>
+    <div>
       <Fade duration={2000}>
         <section className="sm:mt-[140px] mt-[120px]">
           <StrategyManagerCard />
         </section>
       </Fade>
-    </main>
+    </div>
   );
 }
 

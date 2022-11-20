@@ -22,16 +22,18 @@ export default function Header() {
 
   return (
     <Fade duration={1000}>
-      <section className="z-10 relative">
-        <main className="bg-opacity-5 bg-white ring-2 ring-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl  ">
+      <header className="z-50 sticky top-0 inset-x-0 backdrop-blur bg-[#0d0d2c]/5">
+        <div className="bg-opacity-5 bg-white ring-2 ring-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl">
           <div className="text-[16px] flex justify-between items-center py-[20px] sm:max-w-[1200px] max-w-[335px] container mx-auto ">
-            <Link href="/">
-              <Image
-                type="image"
-                className="w-[111px] h-[31px]"
-                alt=""
-                src={defiedgeLogo}
-              />
+            <Link href="/" forwardHref>
+              <a>
+                <Image
+                  type="image"
+                  className="w-[111px] h-[31px]"
+                  alt=""
+                  src={defiedgeLogo}
+                />
+              </a>
             </Link>
 
             <div className="flex space-x-[33px] hidden sm:block">
@@ -60,6 +62,7 @@ export default function Header() {
               <Link
                 href={"https://docs.defiedge.io/"}
                 target="_blank"
+                forwardHref
                 className="opacity-50 hover:opacity-100 duration-300"
               >
                 <a
@@ -83,7 +86,7 @@ export default function Header() {
             </div>
 
             <div>
-              <button className=" hidden sm:flex space-x-[6px] rounded-full   bg-defaultblue py-[8px] px-[20px] items-center justify-center hover:bg-[#3F1DF0] duration-300">
+              <button className=" hidden sm:flex space-x-[6px] rounded-full   bg-default-blue py-[8px] px-[20px] items-center justify-center hover:bg-[#3F1DF0] duration-300">
                 <a
                   href="https://app.defiedge.io/"
                   target="_blank"
@@ -106,10 +109,10 @@ export default function Header() {
               </button>
             </div>
           </div>
-        </main>
+        </div>
 
         {/* subheader for notifications */}
-        <main
+        <div
           className={
             "h-[40px] text-[16px] py-[6px] bg-gradient-to-tr from-[#4D67A1] to-[#6248E9]" +
             (showNav
@@ -129,8 +132,8 @@ export default function Header() {
               <Image type="image" alt="" src={closeButton} />
             </button>
           </div>
-        </main>
-      </section>
+        </div>
+      </header>
     </Fade>
   );
 }

@@ -12,11 +12,9 @@ import Layout from "../components/Layout";
 // eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="overflow-x-hidden">
+    <>
       <Head>
-        <title>
-          Defiedge - Asset Management Protocol Built on Uniswap V3
-        </title>
+        <title>Defiedge - Asset Management Protocol Built on Uniswap V3</title>
 
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <link
@@ -32,7 +30,10 @@ function MyApp({ Component, pageProps }) {
           href="/images/favicon.png"
         />
 
-        <meta name="description" content="Defiedge - Asset Management Protocol Built on Uniswap V3" />
+        <meta
+          name="description"
+          content="Defiedge - Asset Management Protocol Built on Uniswap V3"
+        />
         <link
           rel="preload"
           href="../public/fonts/GeneralSans-Regular.otf"
@@ -61,7 +62,7 @@ function MyApp({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </div>
+    </>
   );
 }
 
