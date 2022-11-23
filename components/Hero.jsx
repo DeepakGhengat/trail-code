@@ -13,8 +13,8 @@ import Fade from "react-reveal/Fade";
 
 function Hero() {
   return (
-    <main>
-      <section className="w-screen h-screen absolute">
+    <div>
+      <section className="w-full h-screen absolute overflow-hidden">
         <div className="absolute -top-[400px] -left-[400px] ">
           <div className="bg-[#3B4FFF] h-[523px] w-[523px] blur-[354px] opacity-42"></div>
         </div>
@@ -29,7 +29,7 @@ function Hero() {
                 </span>
               </Fade>
               <Fade delay={30} duration={3000}>
-                <p className="text-16px text-textgray mt-[12px] sm:w-[410px] leading-[28px] font-medium">
+                <p className="text-16px text-gray-mid mt-[12px] sm:w-[410px] leading-[28px] font-medium">
                   DefiEdge provides the smartest solution to deploy liquidity
                   and optimise yields on Uniswap V3
                 </p>
@@ -37,7 +37,7 @@ function Hero() {
 
               <div>
                 <Fade delay={30} duration={3000}>
-                  <button className="flex space-x-[6px] rounded-full bg-defaultblue py-[15px] px-[28px] items-center justify-center mt-[32px] hover:bg-[#3F1DF0] duration-300">
+                  <button className="flex space-x-[6px] rounded-full bg-default-blue py-[15px] px-[28px] items-center justify-center mt-[32px] hover:bg-[#3F1DF0] duration-300">
                     <a
                       href="https://app.defiedge.io/"
                       target="_blank"
@@ -75,7 +75,7 @@ function Hero() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 

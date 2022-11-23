@@ -37,7 +37,7 @@ function Swap() {
   return (
     <Fade big>
       <section id="features" className="flex items-center flex-col">
-        <div className="relative w-screen">
+        <div className="relative w-full overflow-hidden">
           <div className="absolute right-0 mr-[320px] ">
             <div className="bg-[#5749FF] h-[300px]  w-[300px] blur-[300px] opacity-42"></div>
           </div>
@@ -77,7 +77,7 @@ function Swap() {
             <span className="sm:text-[44px] text-[26px] font-semibold leading-[50px]  bg-gradient-to-tr bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] via-[#60B9FA]   to-[#3E51FF] bg-clip-text text-transparent">
               Swap and Rebalance
             </span>
-            <p className="text-16px text-textgray text-center sm:mt-[25px] mt-[20px] sm:w-[500px]">
+            <p className="text-16px text-gray-mid text-center sm:mt-[25px] mt-[20px] sm:w-[500px]">
               Our Ul accurately calculates how you need to swap assets to deploy{" "}
               liquidity on selected ranges efficiently.
             </p>
@@ -99,8 +99,10 @@ function Swap() {
               <span className="text-[20px] font-semibold mt-[30px]">
                 Create and Manage Strategy
               </span>
-              <p className="text-textgray text-[16px] sm:mt-[20px] mt-[8px]">
-              Create Uniswap V3 strategies and seamlessly manage the assets. Cutting edge features provided by DefiEdge help to ensure that you stand out amongst the rest
+              <p className="text-gray-mid text-[16px] sm:mt-[20px] mt-[8px]">
+                Create Uniswap V3 strategies and seamlessly manage the assets.
+                Cutting edge features provided by DefiEdge help to ensure that
+                you stand out amongst the rest
               </p>
             </div>
 
@@ -116,8 +118,12 @@ function Swap() {
               <span className="text-[20px] font-semibold mt-[30px]">
                 Limit Orders
               </span>
-              <p className="text-textgray text-[16px] mt-[20px]">
-              Limit Orders allow you to remove liquidity as soon as the price hits your particular range. On triggering, a webhook notification is sent via DefiEdge to help you track the latest activities of your strategies              </p>
+              <p className="text-gray-mid text-[16px] mt-[20px]">
+                Limit Orders allow you to remove liquidity as soon as the price
+                hits your particular range. On triggering, a webhook
+                notification is sent via DefiEdge to help you track the latest
+                activities of your strategies{" "}
+              </p>
             </div>
 
             <div className="flex flex-col text-center items-center">
@@ -132,8 +138,12 @@ function Swap() {
               <span className="text-[20px] font-semibold mt-[30px]">
                 DE Shares
               </span>
-              <p className="text-textgray text-[16px] mt-[20px]">
-              Strategy deposits are represented by ERC-20 tokens (DE Shares). This allows easy tracking of your profits while allowing composability via farming for LM rewards, collateralization of tokens, and much more              </p>
+              <p className="text-gray-mid text-[16px] mt-[20px]">
+                Strategy deposits are represented by ERC-20 tokens (DE Shares).
+                This allows easy tracking of your profits while allowing
+                composability via farming for LM rewards, collateralization of
+                tokens, and much more{" "}
+              </p>
             </div>
           </div>
         </Fade>

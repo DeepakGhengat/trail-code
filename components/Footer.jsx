@@ -12,7 +12,7 @@ import Fade from "react-reveal/Fade";
 export default function Footer() {
   return (
     <Fade duration={2000}>
-      <section className="bg-[#000015] border-t border-textgray/20">
+      <section className="bg-[#000015] border-t border-gray-mid/20">
         <div className="mt-[40px] sm:mt-[75px] container mx-auto max-w-[335px]  sm:max-w-[1200px] ">
           <div className="flex flex-col sm:flex-row  justify-between border-b border-white/10  pb-[50px] ">
             <div className="flex flex-col items-center sm:items-start">
@@ -23,7 +23,7 @@ export default function Footer() {
                   alt=""
                   src={mainlogo}
                 />
-                <span className="text-[16px] text-textgray mt-[24px] sm:mt-[32px] text-center sm:text-left">
+                <span className="text-[16px] text-gray-mid mt-[24px] sm:mt-[32px] text-center sm:text-left">
                   DefiEdge provides the smartest solution to deploy liquidity{" "}
                   <br />
                   and optimise yields on Uniswap V3
@@ -37,7 +37,11 @@ export default function Footer() {
                 >
                   <Image type="image" alt="" src={discord} />
                 </a>
-                <a href="https://medium.com/@DefiEdge" target="_blank" rel="noreferrer">
+                <a
+                  href="https://medium.com/@DefiEdge"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image type="image" alt="" src={medium} />
                 </a>
                 <a
@@ -53,7 +57,7 @@ export default function Footer() {
             <div className="flex flex-col sm:flex-row">
               <div className="text-[16px] sm:pr-[100px] text-center sm:text-left mt-[30px] sm:mt-0">
                 <span className="font-semibold">Company</span>
-                <ul className="text-textgray justify-center mt-[15px] sm:mt-[25px] sm:space-y-[18px] sm:space-x-0 space-x-[10px] flex sm:flex-col	 ">
+                <ul className="text-gray-mid justify-center mt-[15px] sm:mt-[25px] sm:space-y-[18px] sm:space-x-0 space-x-[10px] flex sm:flex-col	 ">
                   <li>
                     <a
                       href="https://app.defiedge.io/"
@@ -65,7 +69,7 @@ export default function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a href="/privacypolicy" className="hover:text-white">
+                    <a href="/PrivacyPolicy" className="hover:text-white">
                       <p>Privacy Policy</p>
                     </a>
                   </li>
@@ -83,7 +87,7 @@ export default function Footer() {
 
               <div className="text-[16px] sm:pr-[80px] text-center sm:text-left mt-[30px] sm:mt-0">
                 <span className="font-semibold">Resources</span>
-                <ul className="text-textgray mt-[12px] sm:mt-[25px] sm:space-y-[18px] sm:space-x-0 space-x-[10px] flex sm:flex-col	">
+                <ul className="text-gray-mid mt-[12px] sm:mt-[25px] sm:space-y-[18px] sm:space-x-0 space-x-[10px] flex sm:flex-col	">
                   <li>
                     <a
                       href="https://medium.com/@DefiEdge"
@@ -121,7 +125,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="font-regular text-textgray py-[30px] text-center w-full">
+          <div className="font-regular text-gray-mid py-[30px] text-center w-full">
             <span className="">© 2022 DefiEdge. All Rights Reserved</span>
           </div>
         </div>

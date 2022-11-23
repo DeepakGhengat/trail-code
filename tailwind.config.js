@@ -14,11 +14,10 @@ module.exports = {
         42: ".42",
         16: ".16",
       },
-
       colors: {
         default: "#000021",
-        defaultblue: "#4452FE",
-        textgray: "#A5A5A5",
+        "default-blue": "#4452FE",
+        "gray-mid": "#A5A5A5",
         white: "#fff",
         skeleton: "#fff",
       },

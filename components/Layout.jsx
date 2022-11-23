@@ -12,26 +12,21 @@ const Layout = ({ children }) => {
 
   const path = router.pathname;
 
-  const pathbool = path === "/";
-  // console.log(pathbool);
+  const isRoot = path === "/";
 
   return (
-    <div className="">
+    <>
       <Header />
-      {pathbool ? (
+      {isRoot && (
         <>
           <Hero />
           <HeroBar />
         </>
-      ) : (
-        ""
       )}
 
-      <div className="container mx-auto max-w-[335px]  sm:max-w-[1200px]">
-        {children}
-      </div>
+      <main>{children}</main>
       <Footer />
-    </div>
+    </>
   );
 };
 

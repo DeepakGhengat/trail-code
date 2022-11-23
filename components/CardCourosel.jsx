@@ -31,8 +31,6 @@ function CardCourosel() {
       loop={true}
       centeredSlides={true}
       slidesPerView={1}
-      // onSlideChange={() => console.log("slide change")}
-      // onSwiper={(swiper) => console.log(swiper)}
     >
       <SwiperSlide>
         <div className="bg-opacity-5 bg-white ring-2 ring-white/10 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] ">
@@ -50,21 +48,21 @@ function CardCourosel() {
               <p className="pr-[6px]">Test Strategy634</p>
               <Image type="image" alt="" src={info} />
             </span>
-            <p className="text-[16px] text-textgray">USDC-WETH#2</p>
+            <p className="text-[16px] text-gray-mid">USDC-WETH#2</p>
           </div>
           <div className="mt-[42px] text-[20px] font-normal">
             <span className="justify-between flex ">
-              <p className="text-textgray font-light text-[20px]">AUM</p>
+              <p className="text-gray-mid font-light text-[20px]">AUM</p>
               <p className="">$47,374.356</p>
             </span>
 
             <span className="justify-between flex mt-[24px]">
-              <p className="text-textgray font-light text-[20px]">Accu. Fees</p>
+              <p className="text-gray-mid font-light text-[20px]">Accu. Fees</p>
               <p>$0.04745</p>
             </span>
 
             <span className="justify-between flex mt-[24px]">
-              <p className="text-textgray font-light text-[20px]">
+              <p className="text-gray-mid font-light text-[20px]">
                 Since inception
               </p>
               <p className="text-[#D56665] bg-[#D56665] bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-2">
@@ -74,7 +72,7 @@ function CardCourosel() {
             </span>
 
             <span className="justify-between flex mt-[24px]">
-              <p className="text-textgray font-light text-[20px]">Network</p>
+              <p className="text-gray-mid font-light text-[20px]">Network</p>
               <Image type="image" alt="" src={polygon} />
             </span>
           </div>
@@ -105,21 +103,21 @@ function CardCourosel() {
               <p className="pr-[6px]">Test Strategy634</p>
               <Image type="image" alt="" src={info} />
             </span>
-            <p className="text-[16px] text-textgray">USDC-WETH#2</p>
+            <p className="text-[16px] text-gray-mid">USDC-WETH#2</p>
           </div>
           <div className="mt-[42px] text-[20px] font-normal">
             <span className="justify-between flex ">
-              <p className="text-textgray font-light text-[20px]">AUM</p>
+              <p className="text-gray-mid font-light text-[20px]">AUM</p>
               <p className="">$47,374.356</p>
             </span>
 
             <span className="justify-between flex mt-[24px]">
-              <p className="text-textgray font-light text-[20px]">Accu. Fees</p>
+              <p className="text-gray-mid font-light text-[20px]">Accu. Fees</p>
               <p>$0.04745</p>
             </span>
 
             <span className="justify-between flex mt-[24px]">
-              <p className="text-textgray font-light text-[20px]">
+              <p className="text-gray-mid font-light text-[20px]">
                 Since inception
               </p>
               <p className="text-[#1BA27A] bg-[#1BA27A] bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-2">
@@ -129,7 +127,7 @@ function CardCourosel() {
             </span>
 
             <span className="justify-between flex mt-[24px]">
-              <p className="text-textgray font-light text-[20px]">Network</p>
+              <p className="text-gray-mid font-light text-[20px]">Network</p>
               <Image type="image" alt="" src={polygon} />
             </span>
           </div>
@@ -161,21 +159,21 @@ function CardCourosel() {
               <p className="pr-[6px]">Test Strategy634</p>
               <Image type="image" alt="" src={info} />
             </span>
-            <p className="text-[16px] text-textgray">USDC-WETH#2</p>
+            <p className="text-[16px] text-gray-mid">USDC-WETH#2</p>
           </div>
           <div className="mt-[42px] text-[20px] font-normal">
             <span className="justify-between flex ">
-              <p className="text-textgray font-light text-[20px]">AUM</p>
+              <p className="text-gray-mid font-light text-[20px]">AUM</p>
               <p className="">$47,374.356</p>
             </span>
 
             <span className="justify-between flex mt-[24px]">
-              <p className="text-textgray font-light text-[20px]">Accu. Fees</p>
+              <p className="text-gray-mid font-light text-[20px]">Accu. Fees</p>
               <p>$0.04745</p>
             </span>
 
             <span className="justify-between flex mt-[24px]">
-              <p className="text-textgray font-light text-[20px]">
+              <p className="text-gray-mid font-light text-[20px]">
                 Since inception
               </p>
               <p className="text-[#D56665] bg-[#D56665] bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-2">
@@ -185,7 +183,7 @@ function CardCourosel() {
             </span>
 
             <span className="justify-between flex mt-[24px]">
-              <p className="text-textgray font-light text-[20px]">Network</p>
+              <p className="text-gray-mid font-light text-[20px]">Network</p>
               <Image type="image" alt="" src={polygon} />
             </span>
           </div>

@@ -2,41 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "GeneralSans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../public/fonts/GeneralSans-Regular.otf") format("opentype");
+}
 
+@font-face {
+  font-family: "GeneralSans";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../public/fonts/GeneralSans-Medium.otf") format("opentype");
+}
 
+@font-face {
+  font-family: "GeneralSans";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../public/fonts/GeneralSans-Semibold.otf") format("opentype");
+}
 
-  @font-face {
-    font-family: "GeneralSans";
-    font-weight: 400;
-    font-style: normal;
-    src: url('../public/fonts/GeneralSans-Regular.otf') format('opentype');    
-  }
-
-  @font-face {
-    font-family: "GeneralSans";
-    font-weight: 500;
-    font-style: normal;
-    src: url('../public/fonts/GeneralSans-Medium.otf') format('opentype');    
-  }
-
-  @font-face {
-    font-family: "GeneralSans";
-    font-weight: 600;
-    font-style: normal;
-    src: url('../public/fonts/GeneralSans-Semibold.otf') format('opentype');    
-  }
-
-  
-
-  html,
-  body {
-    padding: 0;
-    margin: 0;
-    background: #000021;
-    color: white;
-    font-family: "GeneralSans";
-  }
-
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #000021;
+  color: white;
+  font-family: "GeneralSans";
+}
 
 a {
   color: inherit;
@@ -48,9 +42,40 @@ a {
 }
 
 .disc {
-  list-style-type:disc
+  list-style-type: disc;
 }
 
+.text-gradient {
+  background: radial-gradient(
+        131.3% 2791.24% at 24.4% 95.09%,
+        #58c1fa 0%,
+        rgba(167, 192, 251, 0) 50%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        28.06% 153.36% at 4.34% 83.48%,
+        #755bfe 50%,
+        rgba(117, 91, 254, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    #4452fe;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
 
+.ecosystem-card {
+  @apply transition-all cursor-pointer;
+  border: 1px solid rgba(63, 64, 119, 0.3);
+  background: rgba(20, 21, 65, 0.3);
+}
 
-
+.ecosystem-card:hover {
+  background: radial-gradient(
+      100.91% 121.09% at 100% 100%,
+      rgba(88, 192, 251, 0.16) 0%,
+      rgba(88, 192, 251, 0) 100%
+    ),
+    rgba(20, 21, 65, 0.3);
+}

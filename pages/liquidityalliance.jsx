@@ -21,12 +21,12 @@ import Fade from "react-reveal/Fade";
 
 function liquidityalliance() {
   return (
-    <main>
-      <section className="w-screen h-screen absolute">
+    <div>
+      <div className="w-full h-screen absolute overflow-hidden">
         <div className="absolute -top-[400px] -left-[400px] ">
           <div className="bg-[#3B4FFF] h-[523px] w-[523px] blur-[354px] opacity-42"></div>
         </div>
-      </section>
+      </div>
       <section>
         <div className=" my-0 sm:flex ">
           <div className="flex mt-[48px] sm:mt-[120px] flex-col items-center w-1/2 sm:items-start flex-wrap  text-center sm:text-left">
@@ -36,7 +36,7 @@ function liquidityalliance() {
               </span>
             </Fade>
             <Fade delay={30} duration={3000}>
-              <p className="text-16px text-textgray mt-[12px] sm:w-[410px] leading-[28px] font-medium">
+              <p className="text-16px text-gray-mid mt-[12px] sm:w-[410px] leading-[28px] font-medium">
                 Liquidity Alliance (LA) is an initiative by DefiEdge (DE) for
                 creating an ecosystem of trusted and verified members. It
                 presents a great collaboration opportunity between liquidity
@@ -46,7 +46,7 @@ function liquidityalliance() {
 
             <div>
               <Fade delay={30} duration={3000}>
-                <button className="flex space-x-[6px] rounded-full bg-defaultblue py-[15px] px-[28px] items-center justify-center mt-[32px] hover:bg-[#3F1DF0] duration-300">
+                <button className="flex space-x-[6px] rounded-full bg-default-blue py-[15px] px-[28px] items-center justify-center mt-[32px] hover:bg-[#3F1DF0] duration-300">
                   <a
                     href="https://app.defiedge.io/"
                     target="_blank"
@@ -75,7 +75,7 @@ function liquidityalliance() {
         <section className="my-[70px] h-[466px]">
           <div className="bg-[#141541]/30 border border-[#3F4077] flex px-[50px] relative h-[466px]">
             <div className="absolute">
-              <div className="relative w-screen">
+              <div className="relative w-full overflow-hidden">
                 <div className="absolute right-0 mr-[320px] ">
                   <div className="bg-[#5749FF] h-[300px]  w-[300px] blur-[300px] opacity-42"></div>
                 </div>
@@ -145,7 +145,7 @@ function liquidityalliance() {
               <span className="sm:text-[42px] text-[26px] font-semibold">
                 DefiEdge Participants
               </span>
-              <p className="text-textgray sm:text-[18px] leading-[26px] font-normal text-[16px] sm:mt-[25px] mt-[12px] max-w-[600px]">
+              <p className="text-gray-mid sm:text-[18px] leading-[26px] font-normal text-[16px] sm:mt-[25px] mt-[12px] max-w-[600px]">
                 Minimize risk & maximize returns with DefiEdge’s scalable
                 solution for liquidity provision on Uniswap V3
               </p>
@@ -223,7 +223,7 @@ function liquidityalliance() {
       <section>
         <Faq />
       </section>
-    </main>
+    </div>
   );
 }
 

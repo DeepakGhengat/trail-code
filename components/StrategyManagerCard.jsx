@@ -83,31 +83,25 @@ const investorsArray = [
     logo: yuriy,
     desc: "Quant & HFT Architect",
   },
-
   {
     id: 7,
     name: "Juan David",
     logo: juan,
     desc: "Founder, Keyrock",
   },
-
   {},
-
   {
     id: 10,
     name: "Kevin Beardsley",
     logo: kevin,
     desc: "Head MM, Kraken",
   },
-
   {
     id: 11,
     name: "Amrit Kumar",
     logo: amrit,
     desc: "Founder, Zilliqa",
   },
-
-  {},
 ];
 
 const auditorsArray = [
@@ -123,7 +117,6 @@ const auditorsArray = [
     logo: mudit,
     desc: "CISO, Polygon",
   },
-
   {
     id: 3,
     name: "Riley Holterhus",
@@ -137,7 +130,6 @@ const auditorsArray = [
     desc: "Auditing Firm",
   },
   {},
-
   {
     id: 5,
     name: "WatchPug",
@@ -183,7 +175,6 @@ const ecosystemArray = [
     logo: two,
     desc: "DEX Aggregator",
   },
-
   {
     id: 6,
     name: "Chainlink",
@@ -214,7 +205,7 @@ function StrategyManagerCard() {
           </span>
 
           <div className="mt-[16px]">
-            <span className="sm:text-[16px] text-textgray mt-[20px] text-[18px] ">
+            <span className="sm:text-[16px] text-gray-mid mt-[20px] text-[18px] ">
               We are proud to be associated with our partners. Their
               collaboration is an <br /> indispensable factor for DefiEdge to
               create the next Defi Revolution
@@ -224,26 +215,31 @@ function StrategyManagerCard() {
 
         <div className=" mt-[40px] sm:px-[84px] mb-[80px] sm:h-auto overflow-hidden sm:overflow-visible  flex flex-col items-center	">
           <div className="grid sm:grid-cols-4 grid-cols-2   w-full sm:gap-[40px] sm:gap-x-[50px] ">
-            {ecosystemArray.map((data) => {
+            {ecosystemArray.map((data, idx) => {
               return (
                 <div
-                  key={data.id}
+                  key={data.name || `blank-${idx}`}
                   className="flex space-x-[8px] items-center  "
                 >
-                  <div className="flex items-center">
-                    <Image
-                      type="image"
-                      height={40}
-                      width={40}
-                      alt=""
-                      src={data.logo}
-                    />
-                  </div>
-
-                  <div className="">
-                    <div className="font-semibold">{data.name}</div>
-                    <div className="font-normal text-textgray">{data.desc}</div>
-                  </div>
+                  {data.logo && (
+                    <>
+                      <div className="flex items-center">
+                        <Image
+                          type="image"
+                          height={40}
+                          width={40}
+                          alt=""
+                          src={data.logo}
+                        />
+                      </div>
+                      <div className="">
+                        <div className="font-semibold">{data.name}</div>
+                        <div className="font-normal text-gray-mid">
+                          {data.desc}
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </div>
               );
             })}
@@ -258,29 +254,32 @@ function StrategyManagerCard() {
           </div>
 
           <div className=" mt-[40px] sm:h-auto overflow-hidden sm:overflow-visible  flex items-center w-full">
-            <div className="grid sm:grid-cols-4 grid-cols-2   w-full sm:gap-[40px] sm:gap-x-[50px] ">
-              {investorsArray.map((data) => {
+            <div className="grid sm:grid-cols-4 grid-cols-2  w-full sm:gap-[40px] sm:gap-x-[50px] ">
+              {investorsArray.map((data, idx) => {
                 return (
                   <div
-                    key={data.id}
+                    key={data.name || `blank-${idx}`}
                     className="flex space-x-[8px] items-center "
                   >
-                    <div className="flex items-center ">
-                      <Image
-                        type="image"
-                        height={40}
-                        width={40}
-                        alt=""
-                        src={data.logo}
-                      />
-                    </div>
-
-                    <div className="">
-                      <div className="font-semibold">{data.name}</div>
-                      <div className="font-normal text-textgray">
-                        {data.desc}
-                      </div>
-                    </div>
+                    {!!data.logo && (
+                      <>
+                        <div className="flex items-center ">
+                          <Image
+                            type="image"
+                            height={40}
+                            width={40}
+                            alt=""
+                            src={data.logo}
+                          />
+                        </div>
+                        <div className="">
+                          <div className="font-semibold">{data.name}</div>
+                          <div className="font-normal text-gray-mid">
+                            {data.desc}
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 );
               })}
@@ -297,28 +296,30 @@ function StrategyManagerCard() {
 
           <div className=" mt-[40px] sm:h-auto overflow-hidden sm:overflow-visible  flex items-center w-full">
             <div className="grid sm:grid-cols-4 grid-cols-2   w-full sm:gap-[40px] sm:gap-x-[50px] ">
-              {auditorsArray.map((data) => {
+              {auditorsArray.map((data, idx) => {
                 return (
                   <div
-                    key={data.id}
+                    key={data.name || `blank-${idx}`}
                     className="flex space-x-[8px] items-center "
                   >
-                    <div className="flex items-center ">
-                      <Image
-                        type="image"
-                        height={40}
-                        width={40}
-                        alt=""
-                        src={data.logo}
-                      />
-                    </div>
-
-                    <div className="">
-                      <div className="font-semibold">{data.name}</div>
-                      <div className="font-normal text-textgray">
-                        {data.desc}
-                      </div>
-                    </div>
+                    {!!data.logo && (
+                      <>
+                        <div className="flex items-center ">
+                          <Image
+                            height={40}
+                            width={40}
+                            alt={data.desc}
+                            src={data.logo}
+                          />
+                        </div>
+                        <div className="">
+                          <div className="font-semibold">{data.name}</div>
+                          <div className="font-normal text-gray-mid">
+                            {data.desc}
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 );
               })}

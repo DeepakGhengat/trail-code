@@ -1,11 +1,10 @@
 {
-    "cSpell.words": [
-        "defaultblue",
-        "defiedge",
-        "heromain",
-        "mainlogo",
-        "topgradient",
-        "topleftgradient"
-    ],
-    "nuxt.isNuxtApp": false
+  "cSpell.words": [
+    "defiedge",
+    "heromain",
+    "mainlogo",
+    "topgradient",
+    "topleftgradient"
+  ],
+  "nuxt.isNuxtApp": false
 }

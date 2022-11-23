@@ -10,16 +10,14 @@ import Subscribe from "../components/Subscribe";
 
 export default function Home() {
   return (
-    <div className="container max-w-[1200px] mx-auto">
-      <main>
+    <>
+      <div className="container max-w-[1200px] mx-auto">
         <Swap />
         <Participants />
         <Strategies />
         <Subscribe />
         <Community />
-      </main>
-
-      <footer></footer>
-    </div>
+      </div>
+    </>
   );
 }
