@@ -151,36 +151,6 @@ export default function EcoSystemPage() {
           {`No result for "${searchInput.trim()}"`}
         </div>
       )}
-      {!!partners.length && (
-        <section className="px-5 container mx-auto mb-12 md:mb-20">
-          <h2 className="mt-4 mb-6 md:mt-6 md:mb-10 text-[26px] leading-[35px] md:text-[32px] md:leading-[43px] text-white font-semibold">
-            Ecosystem Partners
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 md:gap-6 md:mb-6">
-            {partners.map((e) => (
-              <div key={e.name} className="ecosystem-card p-8">
-                <div className="h-[60px] w-[60px] relative mb-[18px]">
-                  <Image src={e.logo} objectFit="contain" layout="fill" />
-                </div>
-                <h4 className="text-xl leading-7 md:text-2xl font-semibold text-white mb-3">
-                  {e.name}
-                </h4>
-                <h4 className="text-base leading-6 font-medium text-white/60">
-                  {e.desc}
-                </h4>
-              </div>
-            ))}
-          </div>
-          {INITIAL_ITEMS_TO_SHOW < allPartners.length && !searchText && (
-            <div className="flex justify-center">
-              <LoadMoreButton
-                active={showAllPartners}
-                onClick={() => dispatch({ showAllPartners: !showAllPartners })}
-              />
-            </div>
-          )}
-        </section>
-      )}
       {!!mentors.length && (
         <section className="px-5 container mx-auto mb-12 md:mb-20">
           <h2 className="mt-4 mb-6 md:mt-6 md:mb-10 text-[26px] leading-[35px] md:text-[32px] md:leading-[43px] text-white font-semibold">
@@ -236,6 +206,36 @@ export default function EcoSystemPage() {
               <LoadMoreButton
                 active={showAllAuditors}
                 onClick={() => dispatch({ showAllAuditors: !showAllAuditors })}
+              />
+            </div>
+          )}
+        </section>
+      )}
+      {!!partners.length && (
+        <section className="px-5 container mx-auto mb-12 md:mb-20">
+          <h2 className="mt-4 mb-6 md:mt-6 md:mb-10 text-[26px] leading-[35px] md:text-[32px] md:leading-[43px] text-white font-semibold">
+            Ecosystem Partners
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 md:gap-6 md:mb-6">
+            {partners.map((e) => (
+              <div key={e.name} className="ecosystem-card p-8">
+                <div className="h-[60px] w-[60px] relative mb-[18px]">
+                  <Image src={e.logo} objectFit="contain" layout="fill" />
+                </div>
+                <h4 className="text-xl leading-7 md:text-2xl font-semibold text-white mb-3">
+                  {e.name}
+                </h4>
+                <h4 className="text-base leading-6 font-medium text-white/60">
+                  {e.desc}
+                </h4>
+              </div>
+            ))}
+          </div>
+          {INITIAL_ITEMS_TO_SHOW < allPartners.length && !searchText && (
+            <div className="flex justify-center">
+              <LoadMoreButton
+                active={showAllPartners}
+                onClick={() => dispatch({ showAllPartners: !showAllPartners })}
               />
             </div>
           )}
