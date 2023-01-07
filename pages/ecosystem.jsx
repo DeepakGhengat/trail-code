@@ -130,10 +130,10 @@ export default function EcoSystemPage() {
       {/* {!!partners.length && ( */}
       <Fade>
         <section className="px-5 container mx-auto mb-12 md:mb-[120px] ">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-4 md:gap-6 md:mb-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5  gap-4 mb-4 md:gap-6 md:mb-6 ">
             {allPartners.map((e) => (
               <Fade key={e.name}>
-                <div className="bg-ecosystem-card p-5 flex space-x-3">
+                <div className="bg-ecosystem-card py-6 px-4 flex space-x-3 rounded-lg hover:border hover:border-gray-700">
                   <div
                     className={(
                       "h-[40px] w-[40px] relative overflow-hidden" +
@@ -147,7 +147,12 @@ export default function EcoSystemPage() {
                     style={{ backgroundColor: e.background }}
                   >
                     {e.logo ? (
-                      <Image src={e.logo} objectFit="contain" layout="fill" />
+                      <Image
+                        className="rounded-full"
+                        src={e.logo}
+                        objectFit="contain"
+                        layout="fill"
+                      />
                     ) : (
                       <span className="text-base leading-5 tracking-wider font-medium text-white">
                         {e.name
@@ -158,10 +163,10 @@ export default function EcoSystemPage() {
                     )}
                   </div>
                   <div className="flex-1 ">
-                    <h4 className="text-base leading-5 font-semibold text-white mb-1">
+                    <h4 className="text-lg leading-5 tracking-wide font-semibold text-gray-300 mb-1">
                       {e.name}
                     </h4>
-                    <h4 className="text-sm leading-4 font-medium text-white/60">
+                    <h4 className="text-sm leading-4 mt-2 tracking-wide text-white/60">
                       {e.desc}
                     </h4>
                   </div>

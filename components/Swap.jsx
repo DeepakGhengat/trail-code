@@ -14,6 +14,7 @@ import ico3 from "../public/images/ico3.svg";
 import swap from "../public/images/swap.svg";
 
 import line from "../public/images/line.svg";
+import FeatureCard from "./FeatureCard";
 
 function Swap() {
   const [scrollY, setScrollY] = useState(0);
@@ -73,7 +74,7 @@ function Swap() {
         </Fade>
 
         <Fade duration={2000}>
-          <div className="mt-[32px] sm:mt-[42px] text-center">
+          <div className="mt-72 text-center">
             <span className="sm:text-[44px] text-[26px] font-semibold leading-[50px]  bg-gradient-to-tr bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] via-[#60B9FA]   to-[#3E51FF] bg-clip-text text-transparent">
               Swap and Rebalance
             </span>
@@ -84,7 +85,7 @@ function Swap() {
           </div>
         </Fade>
 
-        <Fade duration={2000}>
+        {/* <Fade duration={2000}>
           <div className="grid sm:grid-cols-3 grid-cols-1 gap-[95px] sm:mt-[84px] mt-[72px]">
             <div className="flex flex-col text-center items-center">
               <Zoom duration={500}>
@@ -146,7 +147,33 @@ function Swap() {
               </p>
             </div>
           </div>
-        </Fade>
+        </Fade> */}
+
+        <div className="flex gap-5 mt-10">
+          <FeatureCard
+            imgUrl={ico1}
+            title="Create & Manage Strategy"
+            desc="Create Uniswap V3 strategies and seamlessly manage the assets.
+            Cutting edge features provided by DefiEdge help to ensure that
+            you stand out amongst the rest"
+          />
+          <FeatureCard
+            imgUrl={ico3}
+            title="DE Shares"
+            desc="Strategy deposits are represented by ERC-20 tokens (DE Shares).
+            This allows easy tracking of your profits while allowing
+            composability via farming for LM rewards, collateralization of
+            tokens, and much more"
+          />
+          <FeatureCard
+            imgUrl={ico2}
+            title="Limit Orders"
+            desc="Limit Orders allow you to remove liquidity as soon as the price
+                hits your particular range. On triggering, a webhook
+                notification is sent via DefiEdge to help you track the latest
+                activities of your strategies"
+          />
+        </div>
       </section>
 
       <div className="sm:mt-[70px] mt-[40px]">

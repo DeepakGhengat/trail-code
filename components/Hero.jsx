@@ -29,7 +29,7 @@ function Hero() {
                 </span>
               </Fade>
               <Fade delay={30} duration={3000}>
-                <p className="text-16px text-gray-mid mt-[12px] sm:w-[410px] leading-[28px] font-medium">
+                <p className="text-16px text-gray-400 mt-[12px] sm:w-[410px] leading-[28px] font-medium ">
                   DefiEdge provides the smartest solution to deploy liquidity
                   and optimise yields on Uniswap V3
                 </p>
@@ -37,7 +37,7 @@ function Hero() {
 
               <div>
                 <Fade delay={30} duration={3000}>
-                  <button className="flex space-x-[6px] rounded-full bg-default-blue py-[15px] px-[28px] items-center justify-center mt-[32px] hover:bg-[#3F1DF0] duration-300">
+                  <button className="flex space-x-[6px] rounded-full border border-gray-600 bg-default-blue py-[15px] px-[28px] items-center justify-center mt-[32px] hover:bg-[#3F1DF0] duration-300">
                     <a
                       href="https://app.defiedge.io/"
                       target="_blank"
@@ -46,7 +46,9 @@ function Hero() {
                     >
                       {" "}
                       <Image type="image" alt="" src={lightning} />
-                      <p>&nbsp; Launch App</p>
+                      <p className="font-semibold text-lg ">
+                        &nbsp; Launch App
+                      </p>
                     </a>
                   </button>
                 </Fade>

@@ -69,7 +69,7 @@ export default function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a href="/PrivacyPolicy" className="hover:text-white">
+                    <a href="/privacypolicy" className="hover:text-white">
                       <p>Privacy Policy</p>
                     </a>
                   </li>
@@ -87,7 +87,7 @@ export default function Footer() {
 
               <div className="text-[16px] sm:pr-[80px] text-center sm:text-left mt-[30px] sm:mt-0">
                 <span className="font-semibold">Resources</span>
-                <ul className="text-gray-mid mt-[12px] sm:mt-[25px] sm:space-y-[18px] sm:space-x-0 space-x-[10px] flex sm:flex-col	">
+                <ul className="text-gray-mid mt-[12px] sm:mt-[25px] sm:space-y-[18px] sm:space-x-0 space-x-[10px] flex sm:flex-col	justify-center">
                   <li>
                     <a
                       href="https://medium.com/@DefiEdge"
@@ -98,18 +98,6 @@ export default function Footer() {
                       <p>Medium</p>
                     </a>
                   </li>
-
-                  {/* <li>
-                    <a href="#" target="_blank" className="hover:text-white">
-                      <p>Github</p>
-                    </a>
-                  </li> */}
-
-                  {/* <li>
-                    <a href="#" target="_blank" className="hover:text-white">
-                      <p>Brand Assets</p>
-                    </a>
-                  </li> */}
 
                   <li>
                     <a

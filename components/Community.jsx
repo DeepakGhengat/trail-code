@@ -7,6 +7,7 @@ import discord from "../public/images/community/discord.svg";
 import twitter from "../public/images/community/twitter.svg";
 
 import substack from "../public/images/substack.svg";
+import medium from "../public/images/medium.svg";
 
 function Community() {
   return (
@@ -49,6 +50,18 @@ function Community() {
             <Image type="image" alt="" src={substack} />
             <span className="font-normal text-[20px] hover:underline duration-300 ">
               Substack
+            </span>
+          </a>
+
+          <a
+            href="https://medium.com/@DefiEdge"
+            target="_blank"
+            className="flex items-center space-x-[10px]"
+            rel="noreferrer"
+          >
+            <Image type="image" height={40} width={40} alt="" src={medium} />
+            <span className="font-normal text-[20px] hover:underline duration-300 ">
+              Medium
             </span>
           </a>
         </div>

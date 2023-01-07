@@ -198,14 +198,14 @@ const ecosystemArray = [
 function StrategyManagerCard() {
   return (
     <div>
-      <div className="bg-opacity-30 bg-[#141541]  overflow-hidden ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl">
+      <div className="bg-opacity-30 bg-[#141541] rounded-xl overflow-hidden ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl">
         <div className="flex flex-col items-center text-center">
           <span className="sm:text-[42px] sm:mt-0 pt-[80px] leading-[27px] sm:leading-[44px] text-[20px]  font-semibold ">
             Ecosystem Partners
           </span>
 
           <div className="mt-[16px]">
-            <span className="sm:text-[16px] text-gray-mid mt-[20px] text-[18px] ">
+            <span className="sm:text-[16px] text-gray-400 mt-[20px] text-[18px] ">
               We are proud to be associated with our partners. Their
               collaboration is an <br /> indispensable factor for DefiEdge to
               create the next Defi Revolution
@@ -223,20 +223,21 @@ function StrategyManagerCard() {
                 >
                   {data.logo && (
                     <>
-                      <div className="flex items-center">
+                      <div className="flex items-center mr-2">
                         <Image
+                          className="rounded-full"
                           type="image"
-                          height={40}
-                          width={40}
+                          height={50}
+                          width={50}
                           alt=""
                           src={data.logo}
                         />
                       </div>
                       <div className="">
-                        <div className="font-semibold">{data.name}</div>
-                        <div className="font-normal text-gray-mid">
-                          {data.desc}
+                        <div className="font-semibold text-lg tracking-wide">
+                          {data.name}
                         </div>
+                        <div className="text-sm text-gray-400">{data.desc}</div>
                       </div>
                     </>
                   )}
@@ -263,18 +264,21 @@ function StrategyManagerCard() {
                   >
                     {!!data.logo && (
                       <>
-                        <div className="flex items-center ">
+                        <div className="flex items-center mr-2">
                           <Image
+                            className="rounded-full"
                             type="image"
-                            height={40}
-                            width={40}
+                            height={50}
+                            width={50}
                             alt=""
                             src={data.logo}
                           />
                         </div>
                         <div className="">
-                          <div className="font-semibold">{data.name}</div>
-                          <div className="font-normal text-gray-mid">
+                          <div className="font-semibold text-lg tracking-wide">
+                            {data.name}
+                          </div>
+                          <div className="text-sm text-gray-400">
                             {data.desc}
                           </div>
                         </div>
@@ -304,8 +308,9 @@ function StrategyManagerCard() {
                   >
                     {!!data.logo && (
                       <>
-                        <div className="flex items-center ">
+                        <div className="flex items-center mr-2">
                           <Image
+                            className="rounded-full"
                             height={40}
                             width={40}
                             alt={data.desc}
@@ -313,8 +318,10 @@ function StrategyManagerCard() {
                           />
                         </div>
                         <div className="">
-                          <div className="font-semibold">{data.name}</div>
-                          <div className="font-normal text-gray-mid">
+                          <div className="font-semibold text-lg tracking-wide">
+                            {data.name}
+                          </div>
+                          <div className="text-sm text-gray-400">
                             {data.desc}
                           </div>
                         </div>

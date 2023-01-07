@@ -122,7 +122,7 @@ export default function Header() {
                 <div className="space-x-[33px] hidden sm:flex">{links}</div>
 
                 <div>
-                  <button className=" hidden sm:flex space-x-[6px] rounded-full   bg-default-blue py-[8px] px-[20px] items-center justify-center hover:bg-[#3F1DF0] duration-300">
+                  <button className=" hidden sm:flex space-x-[6px] rounded-md   bg-default-blue py-[10px] px-7 items-center justify-center hover:bg-[#3F1DF0] duration-300">
                     <a
                       href="https://app.defiedge.io/"
                       target="_blank"

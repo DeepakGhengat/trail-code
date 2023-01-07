@@ -53,7 +53,7 @@ function Strategies() {
                 return (
                   <div
                     key={s.id + s.network}
-                    className="bg-opacity-30 bg-[#141541] ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] "
+                    className="bg-opacity-30 rounded-xl bg-[#141541] ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl p-[32px] "
                   >
                     <div className="flex justify-between">
                       <div className="flex">
@@ -112,7 +112,7 @@ function Strategies() {
                         {s.subTitle ? s.subTitle : s.title}
                       </p>
                     </div>
-                    <div className="mt-[42px] text-[20px] font-normal">
+                    <div className="mt-[42px] text-[20px] font-thin tracking-wide">
                       <span className="justify-between flex  items-center">
                         <p className="text-gray-mid font-light text-[16px]">
                           AUM
@@ -120,14 +120,14 @@ function Strategies() {
                         <p className="">$ {s.aum.toFixed(2)}</p>
                       </span>
 
-                      <span className="justify-between flex mt-[24px] items-center">
+                      <span className="justify-between flex mt-3 items-center">
                         <p className="text-gray-mid font-light text-[16px]">
                           Accu. Fees
                         </p>
                         <p>$ {parseFloat(s.fees).toLocaleString("en-US")}</p>
                       </span>
 
-                      <span className="justify-between flex mt-[24px] items-center ">
+                      <span className="justify-between flex mt-3 items-center ">
                         <p className="text-gray-mid font-light text-[16px]">
                           Return Since Inception
                         </p>
@@ -149,7 +149,7 @@ function Strategies() {
                         </p>
                       </span>
 
-                      <span className="justify-between flex mt-[24px] items-center">
+                      <span className="justify-between flex mt-3 items-center">
                         <p className="text-gray-mid font-light  text-[16px]">
                           Network
                         </p>
@@ -160,7 +160,7 @@ function Strategies() {
                       <a
                         href={`https://app.defiedge.io/s/${s.network}/${s.id}`}
                         target="_blank"
-                        className=" bg-[#4452FE] hover:bg-[#3F1DF0] duration-300 bg-opacity-30 w-full p-[9px] flex items-center justify-center"
+                        className=" bg-[#4452FE] rounded-lg hover:bg-[#3F1DF0] duration-300  w-full py-3 flex items-center justify-center"
                         rel="noreferrer"
                       >
                         <p>Trade Now &nbsp;</p>
