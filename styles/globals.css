@@ -79,3 +79,7 @@ a {
     ),
     rgba(20, 21, 65, 0.3);
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
