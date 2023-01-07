@@ -5,7 +5,6 @@ import Hero from "./Hero";
 import HeroBar from "./HeroBar";
 import Footer from "./Footer";
 import { useRouter } from "next/router";
-import HeroBar2 from "./HeroBar2";
 
 // eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => {

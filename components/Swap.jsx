@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 
 // * Import Thirdparty Libraries
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
+// import Zoom from "react-reveal/Zoom";
 
 // * Images Required
 import ico1 from "../public/images/ico1.svg";
@@ -14,7 +14,6 @@ import ico3 from "../public/images/ico3.svg";
 import swap from "../public/images/swap.svg";
 
 import line from "../public/images/line.svg";
-import FeatureCard from "./FeatureCard";
 
 function Swap() {
   const [scrollY, setScrollY] = useState(0);
@@ -75,7 +74,7 @@ function Swap() {
 
         <Fade duration={2000}>
           <div className="mt-72 text-center">
-            <span className="sm:text-[44px] text-[26px] font-semibold leading-[50px]  bg-gradient-to-tr bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] via-[#60B9FA]   to-[#3E51FF] bg-clip-text text-transparent">
+            <span className="sm:text-[44px] text-[26px] font-semibold leading-[50px]  bg-gradient-to-br from-[#6EA5FB]  via-[#60B9FA]   to-[#3E51FF] bg-clip-text text-transparent">
               Swap and Rebalance
             </span>
             <p className="text-16px text-gray-mid text-center sm:mt-[25px] mt-[20px] sm:w-[500px]">
@@ -150,29 +149,48 @@ function Swap() {
         </Fade> */}
 
         <div className="flex gap-5 mt-10">
-          <FeatureCard
-            imgUrl={ico1}
-            title="Create & Manage Strategy"
-            desc="Create Uniswap V3 strategies and seamlessly manage the assets.
-            Cutting edge features provided by DefiEdge help to ensure that
-            you stand out amongst the rest"
-          />
-          <FeatureCard
-            imgUrl={ico3}
-            title="DE Shares"
-            desc="Strategy deposits are represented by ERC-20 tokens (DE Shares).
-            This allows easy tracking of your profits while allowing
-            composability via farming for LM rewards, collateralization of
-            tokens, and much more"
-          />
-          <FeatureCard
-            imgUrl={ico2}
-            title="Limit Orders"
-            desc="Limit Orders allow you to remove liquidity as soon as the price
+          <Fade duration={500} bottom>
+            <span className="min-h-[300px] rounded-xl border border-gray-500 bg-white bg-opacity-5 p-[15px] shadow-md backdrop-blur-xl backdrop-filter  duration-300 hover:bg-opacity-0 hover:border-gray-200 md:w-full md:p-[31px]">
+              <Image src={ico1} height={40} width={40} />
+              <p className="py-[28px] text-[20px] text-gray-300 font-semibold md:text-[24px]">
+                Create & Manage Strategy
+              </p>
+              <p className="text-[16px] font-thin text-gray-500">
+                Create Uniswap V3 strategies and seamlessly manage the assets.
+                Cutting edge features provided by DefiEdge help to ensure that
+                you stand out amongst the rest
+              </p>
+            </span>
+          </Fade>
+          <Fade duration={500} bottom>
+            <span className="min-h-[300px] rounded-xl border border-gray-500 bg-white bg-opacity-5 p-[15px] shadow-md backdrop-blur-xl backdrop-filter  duration-300 hover:bg-opacity-0 hover:border-gray-200 md:w-full md:p-[31px]">
+              <Image src={ico2} height={40} width={40} />
+              <p className="py-[28px] text-[20px] text-gray-300 font-semibold md:text-[24px]">
+                Limit Orders
+              </p>
+              <p className="text-[16px] font-thin text-gray-500">
+                Create Uniswap V3 strategies and seamlessly manage the assets.
+                Limit Orders allow you to remove liquidity as soon as the price
                 hits your particular range. On triggering, a webhook
                 notification is sent via DefiEdge to help you track the latest
-                activities of your strategies"
-          />
+                activities of your strategies
+              </p>
+            </span>
+          </Fade>
+          <Fade duration={500} bottom>
+            <span className="min-h-[300px] rounded-xl border border-gray-500 bg-white bg-opacity-5 p-[15px] shadow-md backdrop-blur-xl backdrop-filter  duration-300 hover:bg-opacity-0 hover:border-gray-200 md:w-full md:p-[31px]">
+              <Image src={ico3} height={40} width={40} />
+              <p className="py-[28px] text-[20px] text-gray-300 font-semibold md:text-[24px]">
+                DE Shares
+              </p>
+              <p className="text-[16px] font-thin text-gray-500">
+                Strategy deposits are represented by ERC-20 tokens (DE Shares).
+                This allows easy tracking of your profits while allowing
+                composability via farming for LM rewards, collateralization of
+                tokens, and much more
+              </p>
+            </span>
+          </Fade>
         </div>
       </section>
 

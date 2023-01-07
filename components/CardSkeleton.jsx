@@ -7,7 +7,7 @@ function CardSkeleton() {
         <div className="">
           <div className="flex ">
             <div className="h-[37px] w-[37px]  bg-slate-700 bg-opacity-10 rounded-full bg-skeleton"></div>
-            <div className="h-[37px] -ml-[20px] w-[37px]  bg-skeleton bg-opacity-20 rounded-full rounded-full"></div>
+            <div className="h-[37px] -ml-[20px] w-[37px]  bg-skeleton bg-opacity-20 rounded-full "></div>
           </div>
           <div className="pb-[42px] opacity-20">
             <div className="h-[26px] w-[217px] mt-[20px] bg-skeleton rounded-full"></div>

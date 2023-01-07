@@ -26,7 +26,7 @@ function Strategies() {
 
   return (
     <div>
-      <section className="sm:mt-[140px] mt-[90px] sm:mt-[100px]">
+      <section className="sm:mt-[140px] mt-[90px] ">
         <div className="relative w-full">
           <div className="absolute left-0 -mt-[70px]  -ml-[250px]">
             <div className="bg-[#8692FF] h-[370px] w-[370px] blur-[354px] opacity-42"></div>
