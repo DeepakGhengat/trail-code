@@ -37,6 +37,7 @@ import riley from "../public/images/strategy/riley.png";
 import watchpug from "../public/images/strategy/watchpug.jpeg";
 import abdk from "../public/images/strategy/abdk.svg";
 import lucash from "../public/images/strategy/lucash.png";
+import { useRouter } from "next/router";
 
 const investorsArray = [
   {
@@ -196,6 +197,12 @@ const ecosystemArray = [
 ];
 
 function StrategyManagerCard() {
+  const router = useRouter();
+
+  const ecosystemHandler = () => {
+    router.push("/ecosystem");
+  };
+
   return (
     <div>
       <div className="bg-opacity-30 bg-[#141541] rounded-xl overflow-hidden ring-1 ring-[#3F4077]/30 bg-clip-padding backdrop-filter backdrop-blur-xl">
@@ -245,6 +252,12 @@ function StrategyManagerCard() {
               );
             })}
           </div>
+          <button
+            onClick={ecosystemHandler}
+            className="mx-auto py-2 text-gray-300 px-10 rounded-md mt-14 bg-[#4452FE] hover:bg-[#3F1DF0]"
+          >
+            See More
+          </button>
 
           <div className="w-full h-[1px] bg-white opacity-10 my-[60px]"></div>
 
