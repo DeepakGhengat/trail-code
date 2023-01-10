@@ -16,6 +16,7 @@ import Fade from "react-reveal/Fade";
 //* Import Components
 import CardCourosel from "./CardCourosel";
 import CardSkeleton from "./CardSkeleton";
+import line from "../public/images/line.svg";
 
 function Strategies() {
   const [strategies, setStrategies] = useState(null);
@@ -27,6 +28,14 @@ function Strategies() {
   return (
     <div>
       <section className="sm:mt-[140px] mt-[90px] ">
+        <div className="pb-20">
+          <Image
+            type="image"
+            className="w-[111px] h-[31px]"
+            alt=""
+            src={line}
+          />
+        </div>
         <div className="relative w-full">
           <div className="absolute left-0 -mt-[70px]  -ml-[250px]">
             <div className="bg-[#8692FF] h-[370px] w-[370px] blur-[354px] opacity-42"></div>
@@ -48,6 +57,7 @@ function Strategies() {
 
         <Fade duration={2000}>
           <div className="hidden sm:grid sm:grid-cols-3 grid-cols-1 gap-[25px] ">
+            {strategies && console.log(strategies)}
             {strategies && strategies.length ? (
               strategies.map((s, idx) => {
                 return (
@@ -127,7 +137,7 @@ function Strategies() {
                         <p>$ {parseFloat(s.fees).toLocaleString("en-US")}</p>
                       </span>
 
-                      <span className="justify-between flex mt-3 items-center ">
+                      {/* <span className="justify-between flex mt-3 items-center ">
                         <p className="text-gray-mid font-light text-[16px]">
                           Return Since Inception
                         </p>
@@ -146,6 +156,27 @@ function Strategies() {
                           {s.since_inception > 0 ? (
                             <Image type="image" alt="" src={arrowupper} />
                           ) : s.since_inception === 0 ? undefined : undefined}
+                        </p>
+                      </span> */}
+                      <span className="justify-between flex mt-3 items-center ">
+                        <p className="text-gray-mid font-light text-[16px]">
+                          Fees Apr.
+                        </p>
+
+                        <p
+                          className={`${
+                            s.fees_apr > 0
+                              ? "text-green-700 bg-green-700"
+                              : s.since_incepton === 0
+                              ? "text-white bg-transparent"
+                              : "text-[#D56665] bg-[#D56665]"
+                          } bg-opacity-10 px-[12px] py-[6px] rounded-full text-[14px] items-center flex space-x-`}
+                        >
+                          {s.fees_apr > 0 ? "+" : ""}
+                          {+s.fees_apr.toFixed(2)}% &nbsp;
+                          {s.fees_apr > 0 ? (
+                            <Image type="image" alt="" src={arrowupper} />
+                          ) : s.fees_apr === 0 ? undefined : undefined}
                         </p>
                       </span>
 
