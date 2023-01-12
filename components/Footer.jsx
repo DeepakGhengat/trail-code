@@ -8,7 +8,6 @@ import twitter from "../public/images/twitter.svg";
 import React from "react";
 import Image from "next/image";
 import Fade from "react-reveal/Fade";
-import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -73,7 +72,6 @@ export default function Footer() {
                     <a href="/privacypolicy" className="hover:text-white">
                       <p>Privacy Policy</p>
                     </a>
-                    {/* <Link /> */}
                   </li>
                   <li>
                     <a href="/terms" className="hover:text-white">
