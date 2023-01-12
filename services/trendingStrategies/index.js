@@ -53,6 +53,7 @@ async function getStrategies(
   return list;
 }
 exports.getStrategies = getStrategies;
+
 async function getStats(
   networks = ["optimism", "arbitrum", "polygon", "mainnet"]
 ) {

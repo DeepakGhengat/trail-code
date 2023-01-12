@@ -74,11 +74,7 @@ export default function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="/terms"
-                      target="_blank"
-                      className="hover:text-white"
-                    >
+                    <a href="/terms" className="hover:text-white">
                       <p>Terms of Use</p>
                     </a>
                   </li>

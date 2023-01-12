@@ -29,13 +29,13 @@ function Participants() {
             <a
               href="https://docs.defiedge.io/category/liquidty-provider"
               target="_blank"
-              className="relative group"
+              className="relative group "
               rel="noreferrer"
             >
               <div className="absolute w-[335px] 	">
-                <div className="w-full sm:w-[384px] h-[330px] bg-gradient-to-tl rounded-xl  to-transparent from-[#58C0FB] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
+                <div className="w-full sm:w-[384px] h-[330px] bg-gradient-to-tl rounded-xl border hover:border-gray-200  to-transparent from-[#58C0FB] opacity-16 group-hover:opacity-30 duration-300 "></div>
               </div>
-              <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[330px]">
+              <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[330px] ">
                 <div>
                   <Image
                     type="image"
@@ -69,7 +69,7 @@ function Participants() {
               rel="noreferrer"
             >
               <div className="absolute w-[335px] 	">
-                <div className="w-full sm:w-[384px] h-[330px] rounded-xl bg-gradient-to-tl to-transparent from-[#FABB18] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
+                <div className="w-full sm:w-[384px] h-[330px] rounded-xl bg-gradient-to-tl to-transparent from-[#FABB18] opacity-16 group-hover:opacity-30 duration-300 border border-gray-200"></div>
               </div>
               <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[330px]">
                 <div>
@@ -105,7 +105,7 @@ function Participants() {
               rel="noreferrer"
             >
               <div className="absolute w-[335px] 	">
-                <div className="w-full sm:w-[384px] h-[330px] rounded-xl bg-gradient-to-tl to-transparent from-[#45C646] opacity-16 group-hover:opacity-30 duration-300 border border-[#3F4077]/30"></div>
+                <div className="w-full sm:w-[384px] h-[330px] rounded-xl bg-gradient-to-tl to-transparent from-[#45C646] opacity-16 group-hover:opacity-30 duration-300 border border-gray-200"></div>
               </div>
               <div className="p-[20px] sm:p-[32px] items-start flex flex-col  relative h-[330px]">
                 <div>
