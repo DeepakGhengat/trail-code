@@ -107,10 +107,16 @@ const investorsArray = [
 
 const auditorsArray = [
   {
-    id: 1,
-    name: "Damian Rusinek",
-    logo: damian,
-    desc: "Securing",
+    id: 4,
+    name: "ABDK",
+    logo: abdk,
+    desc: "Auditing Firm",
+  },
+  {
+    id: 5,
+    name: "WatchPug",
+    logo: watchpug,
+    desc: "Auditing Firm",
   },
   {
     id: 2,
@@ -124,18 +130,12 @@ const auditorsArray = [
     logo: riley,
     desc: "Security Auditor",
   },
-  {
-    id: 4,
-    name: "ABDK",
-    logo: abdk,
-    desc: "Auditing Firm",
-  },
   {},
   {
-    id: 5,
-    name: "WatchPug",
-    logo: watchpug,
-    desc: "Auditing Firm",
+    id: 1,
+    name: "Damian Rusinek",
+    logo: damian,
+    desc: "Securing",
   },
   {
     id: 6,
