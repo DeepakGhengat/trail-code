@@ -1,16 +1,13 @@
 //* Import react
-import React from "react";
-import Head from "next/head";
-
-//* Import Css
 import "../styles/Home.module.css";
 import "../styles/globals.css";
 
-//* Import Components
+import Head from "next/head";
 import Layout from "../components/Layout";
+import React from "react";
 
 // eslint-disable-next-line react/prop-types
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps: { children, ...pageProps } }) {
   return (
     <>
       <Head>
@@ -59,11 +56,11 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
 
-      <Layout>
-        <Component {...pageProps} />
+      <Layout {...pageProps}>
+        <Component {...{ children, ...pageProps }} />
       </Layout>
     </>
   );
 }
 
-export default MyApp;
+export default App;

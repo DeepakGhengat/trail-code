@@ -1,17 +1,17 @@
 //* Import Components
-import React from "react";
+
+import Footer from "./Footer";
 import Header from "./Header";
 import Hero from "./Hero";
 import HeroBar from "./HeroBar";
-import Footer from "./Footer";
+import React from "react";
 import { useRouter } from "next/router";
 
 // eslint-disable-next-line react/prop-types
-const Layout = ({ children }) => {
+const Layout = ({ children, stats }) => {
   const router = useRouter();
 
   const path = router.pathname;
-
   const isRoot = path === "/";
 
   return (
@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
         <>
           <Hero />
           <HeroBar />
-          {/* <HeroBar2 /> */}
+          <HeroBar stats={stats} />
         </>
       )}
 

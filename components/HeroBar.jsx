@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable react/prop-types */
 
-//* Import Thirdparty Library
-import CountUp from "react-countup";
+import React from "react";
 
-import { getStats } from "../services/trendingStrategies/index.js";
-
-function heroBar() {
-  const [stats, setStats] = useState(null);
-
-  useEffect(() => {
-    getStats().then(setStats).catch(console.log);
-  }, []);
+function HeroBar({ stats }) {
+  console.log({ stats });
+  if (!stats) return null;
 
   return (
     <section className="relative  z-10 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg flex mt-[30px]">
@@ -18,10 +12,14 @@ function heroBar() {
         <div className="grid grid-cols-1 sm:grid-cols-3 h-full w-full">
           <div className="flex  justify-between items-center pr-[25px] pl-[20px] sm:pl-0 py-[6px] border-b-2 sm:border-b-0 sm:border-r-4 border-[#000021] font-regular">
             <span className="sm:text-[16px] text-[12px] font-normal leading-[22px] text-gray-mid">
-              Assets under <br /> managment
+              Assets under <br /> management
             </span>
             <span className="sm:text-[40px] font-normal text-[32px]">
-              $<CountUp end={stats && stats.totalValueManaged / 1000} /> K
+              $
+              {Intl.NumberFormat("en-us", {
+                notation: "compact",
+                maximumFractionDigits: 2,
+              }).format(stats.totalValueManaged)}
             </span>
           </div>
 
@@ -30,7 +28,11 @@ function heroBar() {
               Total <br /> volume
             </span>
             <span className="sm:text-[40px] font-normal text-[32px] font-[400px]">
-              $<CountUp end={stats && stats.totalVolume / 1000000} /> M
+              $
+              {Intl.NumberFormat("en-us", {
+                notation: "compact",
+                maximumFractionDigits: 0,
+              }).format(stats.totalVolume)}
             </span>
           </div>
 
@@ -39,7 +41,7 @@ function heroBar() {
               Total <br /> Strategies
             </span>
             <span className="sm:text-[40px] font-normal text-[32px]">
-              <CountUp end={stats && stats.totalStrategies} />+
+              {stats.totalStrategies}+
             </span>
           </div>
         </div>
@@ -173,4 +175,4 @@ function heroBar() {
   );
 }
 
-export default heroBar;
+export default HeroBar;
