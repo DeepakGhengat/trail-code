@@ -1,15 +1,13 @@
-// * Import Required Thirdparty Libraries
-import Fade from "react-reveal/Fade";
-import React from "react";
+import React from 'react';
+import Fade from 'react-reveal/Fade';
 
-//* Import Components Required
-import StrategyManagerCard from "./StrategyManagerCard";
+import StrategyManagerCard from './StrategyManagerCard';
 
 function Subscribe() {
   return (
     <div>
       <Fade duration={2000}>
-        <section className="sm:mt-[140px] mt-[120px]">
+        <section className="mt-[120px] sm:mt-[140px]">
           <StrategyManagerCard />
         </section>
       </Fade>

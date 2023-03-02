@@ -1,16 +1,15 @@
-import React, { useEffect, useMemo } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React, { useEffect, useMemo, useState } from 'react';
+import Fade from 'react-reveal/Fade';
 
-import Fade from "react-reveal/Fade";
-import Image from "next/image";
-import Link from "next/link";
-import closeButton from "../public/images/closeButton.svg";
-import cross from "../public/images/cross.svg";
-import defiedgeLogo from "../public/images/mainlogo.svg";
-import lightning from "../public/images/lightning.svg";
-import menuIcon from "../public/images/menu.svg";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import arrowcross from "../public/images/arrowcross.svg";
+import arrowcross from '../public/images/arrowcross.svg';
+import closeButton from '../public/images/closeButton.svg';
+import cross from '../public/images/cross.svg';
+import lightning from '../public/images/lightning.svg';
+import defiedgeLogo from '../public/images/mainlogo.svg';
+import menuIcon from '../public/images/menu.svg';
 
 export default function Header() {
   const router = useRouter();
@@ -23,17 +22,17 @@ export default function Header() {
       setShowNav(false);
     }
 
-    document.body.classList[showNav ? "add" : "remove"]("overflow-hidden");
+    document.body.classList[showNav ? 'add' : 'remove']('overflow-hidden');
 
     setTimeout(() => {
-      document.body[showNav ? "addEventListener" : "removeEventListener"](
-        "click",
+      document.body[showNav ? 'addEventListener' : 'removeEventListener'](
+        'click',
         closeNav
       );
     }, 200);
     return () => {
-      document.body.classList.remove("overflow-hidden");
-      document.body.removeEventListener("click", closeNav);
+      document.body.classList.remove('overflow-hidden');
+      document.body.removeEventListener('click', closeNav);
     };
   }, [showNav]);
 
@@ -43,9 +42,9 @@ export default function Header() {
         <Link href="/">
           <a
             className={
-              router.asPath == "/"
-                ? "opacity-100 hover:opacity-100 duration-300"
-                : "opacity-50 hover:opacity-100 duration-300"
+              router.asPath == '/'
+                ? 'opacity-100 duration-300 hover:opacity-100'
+                : 'opacity-50 duration-300 hover:opacity-100'
             }
           >
             Home
@@ -54,9 +53,9 @@ export default function Header() {
         <Link href="/#features" shallow scroll>
           <a
             className={
-              router.asPath == "/#features"
-                ? "opacity-100 hover:opacity-100 duration-300"
-                : "opacity-50 hover:opacity-100 duration-300"
+              router.asPath == '/#features'
+                ? 'opacity-100 duration-300 hover:opacity-100'
+                : 'opacity-50 duration-300 hover:opacity-100'
             }
           >
             Features
@@ -65,9 +64,9 @@ export default function Header() {
         <Link href="/ecosystem">
           <a
             className={
-              router.asPath == "/ecosystem"
-                ? "opacity-100 hover:opacity-100 duration-300"
-                : "opacity-50 hover:opacity-100 duration-300"
+              router.asPath == '/ecosystem'
+                ? 'opacity-100 duration-300 hover:opacity-100'
+                : 'opacity-50 duration-300 hover:opacity-100'
             }
           >
             Ecosystem
@@ -76,10 +75,10 @@ export default function Header() {
         <Link href="https://docs.defiedge.io/" target="_blank" forwardRef>
           <a
             target="_blank"
-            className="opacity-50 flex space-x-0.5 items-center hover:opacity-100 duration-300"
+            className="flex items-center space-x-0.5 opacity-50 duration-300 hover:opacity-100"
           >
             <span>Docs</span>
-            <span className="h-4 w-4 mt-1 relative">
+            <span className="relative mt-1 h-4 w-4">
               <Image type="image" alt="" layout="fill" src={arrowcross.src} />
             </span>
           </a>
@@ -103,26 +102,26 @@ export default function Header() {
 
   return (
     <Fade duration={1000}>
-      <div className="sticky top-0 inset-x-0 backdrop-blur bg-[#0d0d2c]/5 z-50 ">
+      <div className="sticky inset-x-0 top-0 z-50 bg-[#0d0d2c]/5 backdrop-blur ">
         <div className="">
           <header>
-            <div className="ring-2 ring-white/10 bg-clip-padding bg-opacity-5 bg-white backdrop-filter backdrop-blur-xl">
-              <div className="text-[16px] flex justify-between items-center py-[20px] sm:max-w-[1200px] max-w-[335px] container mx-auto ">
+            <div className="bg-white bg-opacity-5 bg-clip-padding ring-2 ring-white/10 backdrop-blur-xl backdrop-filter">
+              <div className="container mx-auto flex max-w-[335px] items-center justify-between py-[20px] text-[16px] sm:max-w-[1200px] ">
                 <Link href="/" forwardHref>
                   <a>
                     <Image
                       type="image"
-                      className="w-[111px] h-[31px]"
+                      className="h-[31px] w-[111px]"
                       alt=""
                       src={defiedgeLogo}
                     />
                   </a>
                 </Link>
 
-                <div className="space-x-[33px] hidden sm:flex">{links}</div>
+                <div className="hidden space-x-[33px] sm:flex">{links}</div>
 
                 <div>
-                  <button className=" hidden sm:flex space-x-[6px] rounded-md   bg-default-blue py-[10px] px-7 items-center justify-center hover:bg-[#3F1DF0] duration-300">
+                  <button className=" hidden items-center justify-center space-x-[6px]   rounded-md bg-default-blue py-[10px] px-7 duration-300 hover:bg-[#3F1DF0] sm:flex">
                     <a
                       href="https://app.defiedge.io/"
                       target="_blank"
@@ -135,12 +134,12 @@ export default function Header() {
                   </button>
 
                   <button
-                    className="flex sm:hidden items-center justify-center duration-300"
+                    className="flex items-center justify-center duration-300 sm:hidden"
                     onClick={() => setShowNav(!showNav)}
                   >
                     <Image
                       type="image"
-                      className="w-[111px] h-[31px]"
+                      className="h-[31px] w-[111px]"
                       objectFit="contain"
                       alt="toggle-nav"
                       src={showNav ? cross : menuIcon}
@@ -153,13 +152,13 @@ export default function Header() {
             {/* subheader for notifications */}
             <div
               className={
-                "h-[40px] text-[16px] py-[6px] bg-gradient-to-tr from-[#4D67A1] to-[#6248E9]" +
+                'h-[40px] bg-gradient-to-tr from-[#4D67A1] to-[#6248E9] py-[6px] text-[16px]' +
                 (showNotification
-                  ? "h-[40px] text-[16px] py-[9px] bg-gradient-to-r hidden from-[#4452FE] via-[#6E5AFE]  to-[#60B9FA]"
-                  : "transition -translate-y-32 duration-300 invisible opacity-5")
+                  ? 'hidden h-[40px] bg-gradient-to-r from-[#4452FE] via-[#6E5AFE] to-[#60B9FA] py-[9px]  text-[16px]'
+                  : 'invisible -translate-y-32 opacity-5 transition duration-300')
               }
             >
-              <div className="max-w-[1200px] container mx-auto flex justify-between">
+              <div className="container mx-auto flex max-w-[1200px] justify-between">
                 <p className="">
                   📣 DefiEdge provides the simplest solution to deploy smart
                   liquidity and optimize yield on Uniswap V3. &nbsp;
@@ -175,14 +174,14 @@ export default function Header() {
           </header>
           <div
             className={
-              "sm:hidden backdrop-blur-xl ease-in-out border-[#3F407799] border-b bg-[#0f0f2d]/80 block absolute z-50 inset-x-0 p-5 transition-all" +
-              " " +
+              'absolute inset-x-0 z-50 block border-b border-[#3F407799] bg-[#0f0f2d]/80 p-5 backdrop-blur-xl transition-all ease-in-out sm:hidden' +
+              ' ' +
               (showNav
-                ? "max-h-[232px] opacity-100"
-                : "max-h-0 pointer-events-none opacity-0")
+                ? 'max-h-[232px] opacity-100'
+                : 'pointer-events-none max-h-0 opacity-0')
             }
           >
-            <div className="flex space-y-[32px] flex-col">{links}</div>
+            <div className="flex flex-col space-y-[32px]">{links}</div>
           </div>
         </div>
       </div>

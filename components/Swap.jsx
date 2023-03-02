@@ -1,19 +1,13 @@
-// * Import React Libraries
-import Image from "next/image";
-import React, { useState, useEffect } from "react";
-import ReactPlayer from "react-player";
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import ReactPlayer from 'react-player';
+import Fade from 'react-reveal/Fade';
 
-// * Import Thirdparty Libraries
-import Fade from "react-reveal/Fade";
-// import Zoom from "react-reveal/Zoom";
-
-// * Images Required
-import ico1 from "../public/images/ico1.svg";
-import ico2 from "../public/images/ico2.svg";
-import ico3 from "../public/images/ico3.svg";
-import swap from "../public/images/swap.svg";
-
-import line from "../public/images/line.svg";
+import ico1 from '../public/images/ico1.svg';
+import ico2 from '../public/images/ico2.svg';
+import ico3 from '../public/images/ico3.svg';
+import line from '../public/images/line.svg';
+import swap from '../public/images/swap.svg';
 
 function Swap() {
   const [scrollY, setScrollY] = useState(0);
@@ -24,11 +18,11 @@ function Swap() {
 
   useEffect(() => {
     function watchScroll() {
-      window.addEventListener("scroll", logit);
+      window.addEventListener('scroll', logit);
     }
     watchScroll();
     return () => {
-      window.removeEventListener("scroll", logit);
+      window.removeEventListener('scroll', logit);
     };
   });
 
@@ -36,18 +30,18 @@ function Swap() {
 
   return (
     <Fade big>
-      <section id="features" className="flex items-center flex-col">
+      <section id="features" className="flex flex-col items-center">
         <div className="relative w-full overflow-hidden">
           <div className="absolute right-0 mr-[320px] ">
-            <div className="bg-[#5749FF] h-[300px]  w-[300px] blur-[300px] opacity-42"></div>
+            <div className="h-[300px] w-[300px]  bg-[#5749FF] opacity-42 blur-[300px]"></div>
           </div>
 
           <div className="absolute right-0 mt-[570px] -mr-[450px] ">
-            <div className="bg-[#3B4FFF] h-[523px] w-[523px] blur-[354px] opacity-42"></div>
+            <div className="h-[523px] w-[523px] bg-[#3B4FFF] opacity-42 blur-[354px]"></div>
           </div>
         </div>
         <Fade duration={2000}>
-          <div className="sm:mt-[140px] mt-[70px] sm:w-[792px] sm:h-[502px]">
+          <div className="mt-[70px] sm:mt-[140px] sm:h-[502px] sm:w-[792px]">
             {playVideoOnscroll ? (
               <Fade duration={500}>
                 <ReactPlayer
@@ -74,11 +68,11 @@ function Swap() {
 
         <Fade duration={2000}>
           <div className="mt-10 text-center">
-            <span className="sm:text-[44px] text-[26px] font-semibold leading-[50px]  bg-gradient-to-br from-[#6EA5FB]  via-[#60B9FA]  to-[#3E51FF] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text text-[26px]  font-semibold  leading-[50px] text-transparent sm:text-[44px]">
               Swap and Rebalance
             </span>
-            <p className="text-16px text-gray-mid text-center sm:mt-[25px] mt-[20px] sm:w-[500px]">
-              Our Ul accurately calculates how you need to swap assets to deploy{" "}
+            <p className="text-16px mt-[20px] text-center text-gray-mid sm:mt-[25px] sm:w-[500px]">
+              Our Ul accurately calculates how you need to swap assets to deploy{' '}
               liquidity on selected ranges efficiently.
             </p>
           </div>
@@ -88,23 +82,23 @@ function Swap() {
           <div className="pb-20">
             <Image
               type="image"
-              className="w-[111px] h-[31px]"
+              className="h-[31px] w-[111px]"
               alt=""
               src={line}
             />
           </div>
-          <p className="sm:text-[44px] text-[26px] text-center font-semibold leading-[50px]  text-[#FEFEFE]">
+          <p className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  sm:text-[44px]">
             DeFiEdge Features
           </p>
-          <p className="text-16px text-gray-mid sm:mt-[25px] mt-[20px] sm:w-[500px] text-center mx-auto">
+          <p className="text-16px mx-auto mt-[20px] text-center text-gray-mid sm:mt-[25px] sm:w-[500px]">
             Use the latest & most promising features of DefiEdge by creating and
             managing strategies, limiting orders and much more.
           </p>
-          <div className="flex gap-5 mt-10">
+          <div className="mt-10 grid gap-5 px-4 md:grid-cols-3 md:px-0">
             <Fade duration={500} bottom>
-              <span className="min-h-[300px] rounded-xl border border-gray-500 bg-white bg-opacity-5 p-[15px] shadow-md backdrop-blur-xl backdrop-filter  duration-300 hover:bg-opacity-0 hover:border-gray-200 md:w-full md:p-[31px]">
+              <span className="min-h-[300px] rounded-xl border border-gray-500 bg-white bg-opacity-5 p-[15px] shadow-md backdrop-blur-xl backdrop-filter  duration-300 hover:border-gray-200 hover:bg-opacity-0 md:w-full md:p-[31px]">
                 <Image src={ico1} height={40} width={40} />
-                <p className="py-[28px] text-[20px] text-gray-300 font-semibold md:text-[24px]">
+                <p className="py-[28px] text-[20px] font-semibold text-gray-300 md:text-[24px]">
                   Create & Manage Strategy
                 </p>
                 <p className="text-[16px] font-thin text-gray-500">
@@ -115,9 +109,9 @@ function Swap() {
               </span>
             </Fade>
             <Fade duration={500} bottom>
-              <span className="min-h-[300px] rounded-xl border border-gray-500 bg-white bg-opacity-5 p-[15px] shadow-md backdrop-blur-xl backdrop-filter  duration-300 hover:bg-opacity-0 hover:border-gray-200 md:w-full md:p-[31px]">
+              <span className="min-h-[300px] rounded-xl border border-gray-500 bg-white bg-opacity-5 p-[15px] shadow-md backdrop-blur-xl backdrop-filter  duration-300 hover:border-gray-200 hover:bg-opacity-0 md:w-full md:p-[31px]">
                 <Image src={ico2} height={40} width={40} />
-                <p className="py-[28px] text-[20px] text-gray-300 font-semibold md:text-[24px]">
+                <p className="py-[28px] text-[20px] font-semibold text-gray-300 md:text-[24px]">
                   Limit Orders
                 </p>
                 <p className="text-[16px] font-thin text-gray-500">
@@ -130,9 +124,9 @@ function Swap() {
               </span>
             </Fade>
             <Fade duration={500} bottom>
-              <span className="min-h-[300px] rounded-xl border border-gray-500 bg-white bg-opacity-5 p-[15px] shadow-md backdrop-blur-xl backdrop-filter  duration-300 hover:bg-opacity-0 hover:border-gray-200 md:w-full md:p-[31px]">
+              <span className="min-h-[300px] rounded-xl border border-gray-500 bg-white bg-opacity-5 p-[15px] shadow-md backdrop-blur-xl backdrop-filter  duration-300 hover:border-gray-200 hover:bg-opacity-0 md:w-full md:p-[31px]">
                 <Image src={ico3} height={40} width={40} />
-                <p className="py-[28px] text-[20px] text-gray-300 font-semibold md:text-[24px]">
+                <p className="py-[28px] text-[20px] font-semibold text-gray-300 md:text-[24px]">
                   DE Shares
                 </p>
                 <p className="text-[16px] font-thin text-gray-500">
@@ -147,8 +141,8 @@ function Swap() {
         </div>
       </section>
 
-      <div className="sm:mt-[70px] mt-[40px]">
-        <Image type="image" className="w-[111px] h-[31px]" alt="" src={line} />
+      <div className="mt-[40px] sm:mt-[70px]">
+        <Image type="image" className="h-[31px] w-[111px]" alt="" src={line} />
       </div>
     </Fade>
   );

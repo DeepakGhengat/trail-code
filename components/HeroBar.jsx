@@ -1,46 +1,45 @@
 /* eslint-disable react/prop-types */
 
-import React from "react";
+import React from 'react';
 
 function HeroBar({ stats }) {
-  console.log({ stats });
   if (!stats) return null;
 
   return (
-    <section className="relative  z-10 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg flex mt-[30px]">
-      <div className="container mx-auto max-w-[1200px] sm:h-[80px] flex items-center">
-        <div className="grid grid-cols-1 sm:grid-cols-3 h-full w-full">
-          <div className="flex  justify-between items-center pr-[25px] pl-[20px] sm:pl-0 py-[6px] border-b-2 sm:border-b-0 sm:border-r-4 border-[#000021] font-regular">
-            <span className="sm:text-[16px] text-[12px] font-normal leading-[22px] text-gray-mid">
+    <section className="relative  z-10 mt-[30px] flex bg-white bg-opacity-10 backdrop-blur-lg backdrop-filter">
+      <div className="container mx-auto flex max-w-[1200px] items-center sm:h-[80px]">
+        <div className="grid h-full w-full grid-cols-1 sm:grid-cols-3">
+          <div className="font-regular  flex items-center justify-between border-b-2 border-[#000021] py-[6px] pr-[25px] pl-[20px] sm:border-b-0 sm:border-r-4 sm:pl-0">
+            <span className="text-[12px] font-normal leading-[22px] text-gray-mid sm:text-[16px]">
               Assets under <br /> management
             </span>
-            <span className="sm:text-[40px] font-normal text-[32px]">
+            <span className="text-[32px] font-normal sm:text-[40px]">
               $
-              {Intl.NumberFormat("en-us", {
-                notation: "compact",
+              {Intl.NumberFormat('en-us', {
+                notation: 'compact',
                 maximumFractionDigits: 2,
               }).format(stats.totalValueManaged)}
             </span>
           </div>
 
-          <div className="flex justify-between items-center pr-[25px] sm:pl-[25px] pl-[20px]  py-[6px] border-b-2 border-[#000021] sm:border-b-0 sm:border-r-4 2xl:border-[#000021] xl:border-[#05042E] font-regular">
-            <span className="sm:text-[16px] text-[12px] font-normal leading-[22px] text-gray-mid">
+          <div className="font-regular flex items-center justify-between border-b-2 border-[#000021]  py-[6px] pr-[25px] pl-[20px] sm:border-b-0 sm:border-r-4 sm:pl-[25px] xl:border-[#05042E] 2xl:border-[#000021]">
+            <span className="text-[12px] font-normal leading-[22px] text-gray-mid sm:text-[16px]">
               Total <br /> volume
             </span>
-            <span className="sm:text-[40px] font-normal text-[32px] font-[400px]">
+            <span className="font-[400px] text-[32px] font-normal sm:text-[40px]">
               $
-              {Intl.NumberFormat("en-us", {
-                notation: "compact",
+              {Intl.NumberFormat('en-us', {
+                notation: 'compact',
                 maximumFractionDigits: 0,
               }).format(stats.totalVolume)}
             </span>
           </div>
 
-          <div className="flex justify-between items-center pl-[20px] sm:pl-[25px] py-[6px] pr-[20px] sm:pr-0">
-            <span className="sm:text-[16px] text-[12px] font-normal leading-[22px] text-gray-mid">
+          <div className="flex items-center justify-between py-[6px] pl-[20px] pr-[20px] sm:pl-[25px] sm:pr-0">
+            <span className="text-[12px] font-normal leading-[22px] text-gray-mid sm:text-[16px]">
               Total <br /> Strategies
             </span>
-            <span className="sm:text-[40px] font-normal text-[32px]">
+            <span className="text-[32px] font-normal sm:text-[40px]">
               {stats.totalStrategies}+
             </span>
           </div>

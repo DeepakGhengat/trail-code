@@ -1,18 +1,17 @@
-/* eslint-disable react/prop-types */
+import React from 'react';
 
-import { getStats, getStrategies } from "../services/trendingStrategies";
+import Community from '../components/Community';
+import Participants from '../components/Participants';
+import Strategies from '../components/Strategies';
+import Subscribe from '../components/Subscribe';
+import Swap from '../components/Swap';
+import { getStats, getStrategies } from '../services/trendingStrategies';
 
-import Community from "../components/Community";
-import Participants from "../components/Participants";
-import React from "react";
-import Strategies from "../components/Strategies";
-import Subscribe from "../components/Subscribe";
-import Swap from "../components/Swap";
-
+// eslint-disable-next-line react/prop-types
 export default function Home({ strategies }) {
   return (
     <>
-      <div className="container max-w-[1200px] mx-auto">
+      <div className="container mx-auto max-w-[1200px]">
         <Swap />
         <Participants />
         <Strategies strategies={strategies} />

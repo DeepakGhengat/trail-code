@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function PrivacyPolicy() {
   return (
@@ -6,21 +6,21 @@ function PrivacyPolicy() {
       <div>
         <div className="relative w-full overflow-hidden">
           <div className="absolute left-0 -mt-[70px]  -ml-[250px]">
-            <div className="bg-[#8692FF] h-[370px] w-[370px] blur-[354px] opacity-42"></div>
+            <div className="h-[370px] w-[370px] bg-[#8692FF] opacity-42 blur-[354px]"></div>
           </div>
         </div>
 
-        <div className="max-w-[840px] mx-auto ">
-          <div className="py-[32px] sm:py-[80px] text-center w-full border-b border-[#3F4077]/30">
-            <p className="font-semibold text-[30px] sm:text-[44px]">
+        <div className="mx-auto max-w-[840px] ">
+          <div className="w-full border-b border-[#3F4077]/30 py-[32px] text-center sm:py-[80px]">
+            <p className="text-[30px] font-semibold sm:text-[44px]">
               Privacy Policy
             </p>
             <p className="text-[16px] ">Last updated Sep 23 , 2022</p>
           </div>
-          <div className="sm:mt-[64px] mt-[20px] text-[20px] sm:text-[20px] sm:mx-[20px] mb-[120px]">
+          <div className="mt-[20px] mb-[120px] text-[20px] sm:mx-[20px] sm:mt-[64px] sm:text-[20px]">
             <div>
               <p className="font-semibold ">What information do we collect?</p>
-              <ul className="mt-[16px] font-normal text-gray-mid ml-[20px] disc">
+              <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
                   DefiEdge does not collect any personal information.
                   Occasionally, at our discretion, we may include or offer third
@@ -47,11 +47,11 @@ function PrivacyPolicy() {
 
             <div className="mt-[40px]">
               <p className="font-semibold ">How do we use this information?</p>
-              <ul className="mt-[16px] font-normal text-gray-mid ml-[20px] disc">
+              <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
                   Information collected by the third party product, Sentry.io is
                   used to improve user experience and our website. For further
-                  details, please refer to Sentry.io{" "}
+                  details, please refer to Sentry.io{' '}
                   <a
                     target="_blank"
                     className="text-white underline"
@@ -69,7 +69,7 @@ function PrivacyPolicy() {
               <p className="font-semibold ">
                 How will this information be shared?
               </p>
-              <ul className="mt-[16px] font-normal text-gray-mid ml-[20px] disc">
+              <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
                   DefiEdge being a decentralised platform, does not collect any
                   personally identifiable information and hence, does not sell,
@@ -89,7 +89,7 @@ function PrivacyPolicy() {
               <p className="font-semibold ">
                 Do US residents have access to the protocol?
               </p>
-              <ul className="mt-[16px] font-normal text-gray-mid ml-[20px] disc">
+              <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
                   US residents are currently not blocked from using the
                   protocol. However, a few functionalities might not be
@@ -103,7 +103,7 @@ function PrivacyPolicy() {
               <p className="font-semibold ">
                 Children’s Online Privacy Protection?
               </p>
-              <ul className="mt-[16px] font-normal text-gray-mid ml-[20px] disc">
+              <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
                   Our site, products and services are all directed to people who
                   are at least 13 years old or older.
@@ -115,7 +115,7 @@ function PrivacyPolicy() {
               <p className="font-semibold ">
                 Is social media information stored with the protocol?
               </p>
-              <ul className="mt-[16px] font-normal text-gray-mid ml-[20px] disc">
+              <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
                   Currently, strategy managers can share their twitter handle
                   with the protocol for verifying the strategies they create (if
@@ -133,7 +133,7 @@ function PrivacyPolicy() {
               <p className="font-semibold ">
                 Do strategy managers have access to investor information?
               </p>
-              <ul className="mt-[16px] font-normal text-gray-mid ml-[20px] disc">
+              <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
                   Strategy managers only have view access to the wallet
                   addresses of investors.
@@ -145,9 +145,9 @@ function PrivacyPolicy() {
               <p className="font-semibold ">
                 When does DE shares ownership ends for a particular investor?
               </p>
-              <ul className="mt-[16px] font-normal text-gray-mid ml-[20px] disc">
+              <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
-                  {" "}
+                  {' '}
                   DE shares are a proof of liquidity added in a strategy.
                   <br /> <br />
                 </li>
@@ -164,7 +164,7 @@ function PrivacyPolicy() {
               <p className="font-semibold ">
                 Is information shared with the government?
               </p>
-              <ul className="mt-[16px] font-normal text-gray-mid ml-[20px] disc">
+              <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
                   NO information is shared with the government of any state or
                   country.

@@ -1,35 +1,30 @@
-//* Import React Library
-import Image from "next/image";
-import React from "react";
-import Lottie from "react-lottie-player";
+import Image from 'next/image';
+import React from 'react';
+import Lottie from 'react-lottie-player';
+import Fade from 'react-reveal/Fade';
 
-import lottieJson from "../public/lottieJson.json";
-
-//* Import Required Images
-import lightning from "../public/images/lightning.svg";
-
-//* Import Thirdparty Library
-import Fade from "react-reveal/Fade";
+import lightning from '../public/images/lightning.svg';
+import lottieJson from '../public/lottieJson.json';
 
 function Hero() {
   return (
     <div>
-      <section className="w-full h-screen absolute overflow-hidden">
+      <section className="absolute h-screen w-full overflow-hidden">
         <div className="absolute -top-[400px] -left-[400px] ">
-          <div className="bg-[#3B4FFF] h-[523px] w-[523px] blur-[354px] opacity-42"></div>
+          <div className="h-[523px] w-[523px] bg-[#3B4FFF] opacity-42 blur-[354px]"></div>
         </div>
       </section>
       <section>
-        <div className="container mx-auto max-w-[335px]  sm:max-w-[1200px] flex items-center z-10 relative">
+        <div className="container relative z-10  mx-auto flex max-w-[335px] items-center sm:max-w-[1200px]">
           <div className=" my-0 sm:flex ">
-            <div className="flex mt-[48px] sm:mt-[120px] flex-col items-center sm:items-start max-w-[594px] flex-wrap  text-center sm:text-left">
+            <div className="mt-[48px] flex max-w-[594px] flex-col flex-wrap items-center text-center sm:mt-[120px]  sm:items-start sm:text-left">
               <Fade delay={10} duration={2000}>
-                <span className=" sm:text-[44px] text-[30px] font-semibold	leading-[40px] sm:leading-[55px]  bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] via-[#60B9FA]   to-[#3E51FF] bg-clip-text text-transparent">
+                <span className=" bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text text-[30px] font-semibold leading-[40px]   text-transparent sm:text-[44px] sm:leading-[55px]">
                   Permissionless Liquidity Management on Uniswap V3
                 </span>
               </Fade>
               <Fade delay={30} duration={3000}>
-                <p className="text-16px text-gray-400 mt-[12px] sm:w-[410px] leading-[28px] font-medium ">
+                <p className="text-16px mt-[12px] font-medium leading-[28px] text-gray-400 sm:w-[410px] ">
                   DefiEdge provides the smartest solution to deploy liquidity
                   and optimise yields on Uniswap V3
                 </p>
@@ -37,16 +32,16 @@ function Hero() {
 
               <div>
                 <Fade delay={30} duration={3000}>
-                  <button className="flex space-x-[6px] rounded-full border border-gray-600 bg-default-blue py-[15px] px-[28px] items-center justify-center mt-[32px] hover:bg-[#3F1DF0] duration-300">
+                  <button className="mt-[32px] flex items-center justify-center space-x-[6px] rounded-full border border-gray-600 bg-default-blue py-[15px] px-[28px] duration-300 hover:bg-[#3F1DF0]">
                     <a
                       href="https://app.defiedge.io/"
                       target="_blank"
                       className="flex"
                       rel="noreferrer"
                     >
-                      {" "}
+                      {' '}
                       <Image type="image" alt="" src={lightning} />
-                      <p className="font-semibold text-lg ">
+                      <p className="text-lg font-semibold ">
                         &nbsp; Launch App
                       </p>
                     </a>
@@ -59,7 +54,7 @@ function Hero() {
                 <div className="max-w-[588px]  pt-[49px] sm:pt-[30px]">
                   <Lottie
                     loop
-                    className="sm:h-[500px] sm:w-[800px] -ml-[100px]"
+                    className="-ml-[100px] sm:h-[500px] sm:w-[800px]"
                     animationData={lottieJson}
                     play
                   />

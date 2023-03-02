@@ -1,30 +1,28 @@
-//* Import Images Required
-import mainlogo from "../public/images/mainlogo.svg";
-import discord from "../public/images/discord.svg";
-import medium from "../public/images/medium.svg";
-import twitter from "../public/images/twitter.svg";
+import Image from 'next/image';
+import React from 'react';
+import Fade from 'react-reveal/Fade';
 
-//* Import React Library
-import React from "react";
-import Image from "next/image";
-import Fade from "react-reveal/Fade";
+import discord from '../public/images/discord.svg';
+import mainlogo from '../public/images/mainlogo.svg';
+import medium from '../public/images/medium.svg';
+import twitter from '../public/images/twitter.svg';
 
 export default function Footer() {
   return (
     <Fade duration={2000}>
-      <section className="bg-[#000015] border-t border-gray-mid/20">
-        <div className="mt-[40px] sm:mt-[75px] container mx-auto max-w-[335px]  sm:max-w-[1200px] ">
-          <div className="flex flex-col sm:flex-row  justify-between border-b border-white/10  pb-[50px] ">
+      <section className="border-t border-gray-mid/20 bg-[#000015]">
+        <div className="container mx-auto mt-[40px] max-w-[335px] sm:mt-[75px]  sm:max-w-[1200px] ">
+          <div className="flex flex-col justify-between  border-b border-white/10 pb-[50px]  sm:flex-row ">
             <div className="flex flex-col items-center sm:items-start">
               <div className="flex flex-col sm:items-start">
                 <Image
                   type="image"
-                  className="w-[111px] h-[31px]"
+                  className="h-[31px] w-[111px]"
                   alt=""
                   src={mainlogo}
                 />
-                <span className="text-[16px] text-gray-mid mt-[24px] sm:mt-[32px] text-center sm:text-left">
-                  DefiEdge provides the smartest solution to deploy liquidity{" "}
+                <span className="mt-[24px] text-center text-[16px] text-gray-mid sm:mt-[32px] sm:text-left">
+                  DefiEdge provides the smartest solution to deploy liquidity{' '}
                   <br />
                   and optimise yields on Uniswap V3
                 </span>
@@ -55,9 +53,9 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-col sm:flex-row">
-              <div className="text-[16px] sm:pr-[100px] text-center sm:text-left mt-[30px] sm:mt-0">
+              <div className="mt-[30px] text-center text-[16px] sm:mt-0 sm:pr-[100px] sm:text-left">
                 <span className="font-semibold">Company</span>
-                <ul className="text-gray-mid justify-center mt-[15px] sm:mt-[25px] sm:space-y-[18px] sm:space-x-0 space-x-[10px] flex sm:flex-col	 ">
+                <ul className="mt-[15px] flex justify-center space-x-[10px] text-gray-mid sm:mt-[25px] sm:flex-col sm:space-y-[18px] sm:space-x-0	 ">
                   <li>
                     <a
                       href="https://app.defiedge.io/"
@@ -81,9 +79,9 @@ export default function Footer() {
                 </ul>
               </div>
 
-              <div className="text-[16px] sm:pr-[80px] text-center sm:text-left mt-[30px] sm:mt-0">
+              <div className="mt-[30px] text-center text-[16px] sm:mt-0 sm:pr-[80px] sm:text-left">
                 <span className="font-semibold">Resources</span>
-                <ul className="text-gray-mid mt-[12px] sm:mt-[25px] sm:space-y-[18px] sm:space-x-0 space-x-[10px] flex sm:flex-col	justify-center">
+                <ul className="mt-[12px] flex justify-center space-x-[10px] text-gray-mid sm:mt-[25px] sm:flex-col sm:space-y-[18px]	sm:space-x-0">
                   <li>
                     <a
                       href="https://medium.com/@DefiEdge"
@@ -109,7 +107,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="font-regular text-gray-mid py-[30px] text-center w-full">
+          <div className="font-regular w-full py-[30px] text-center text-gray-mid">
             <span className="">© 2022 DefiEdge. All Rights Reserved</span>
           </div>
         </div>

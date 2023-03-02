@@ -1,25 +1,25 @@
-import React from "react";
+import React from 'react';
 
-function privacypopcy() {
+function PrivacyPolicy() {
   return (
     <section>
       <div>
         <div className="relative w-full overflow-hidden">
           <div className="absolute left-0 -mt-[70px]  -ml-[250px]">
-            <div className="bg-[#8692FF] h-[370px] w-[370px] blur-[354px] opacity-42"></div>
+            <div className="h-[370px] w-[370px] bg-[#8692FF] opacity-42 blur-[354px]"></div>
           </div>
         </div>
 
-        <div className="max-w-[840px] mx-auto ">
-          <div className="py-[32px] sm:py-[80px] text-center w-full border-b border-[#3F4077]/30">
-            <p className="font-semibold text-[30px] sm:text-[44px]">
+        <div className="mx-auto max-w-[840px] ">
+          <div className="w-full border-b border-[#3F4077]/30 py-[32px] text-center sm:py-[80px]">
+            <p className="text-[30px] font-semibold sm:text-[44px]">
               Terms of Use
             </p>
             <p className="text-[16px] ">Last updated Sep 23 , 2022</p>
           </div>
-          <div className="sm:mt-[64px] mt-[20px] text-[20px] sm:text-[20px] sm:mx-[20px] mb-[120px]">
+          <div className="mt-[20px] mb-[120px] text-[20px] sm:mx-[20px] sm:mt-[64px] sm:text-[20px]">
             <div>
-              <ul className="mt-[16px] font-normal text-gray-mid ml-[20px] disc">
+              <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <p>
                   BY ACCESSING THE DefiEdge SERVICE(S), YOU AGREE TO THE
                   DefiEdge TERMS OF USE AND THE DefiEdge PRIVACY POLICY. THESE
@@ -59,12 +59,12 @@ function privacypopcy() {
                 </p>
 
                 <div className="mt-[20px]">
-                  <span className="font-bold text-[26px] text-white">
+                  <span className="text-[26px] font-bold text-white">
                     <br />
                     Please note the following:
                   </span>
 
-                  <span className="flex mt-3">
+                  <span className="mt-3 flex">
                     <p>
                       You agree that you will only use the Website and Services
                       for lawful purposes, and pursuant to these Terms of Use.
@@ -96,13 +96,13 @@ function privacypopcy() {
                 </div>
 
                 <div className="space-y-2">
-                  <span className="font-bold text-lg">
+                  <span className="text-lg font-bold">
                     <br />
                     You agree to use the Services for lawful purposes only, and
                     solely in a manner consistent with the intent of DefiEdge as
                     described in these Terms of Use.
                   </span>
-                  <span className="flex mt-3">
+                  <span className="mt-3 flex">
                     <p>
                       You agree that while using the Service, You will not
                       engage in any activities that are in violation of any
@@ -163,4 +163,4 @@ function privacypopcy() {
   );
 }
 
-export default privacypopcy;
+export default PrivacyPolicy;

@@ -1,12 +1,11 @@
-import Image from "next/image";
-import React, { useEffect, useRef } from "react";
-import Circle from "../public/images/bg-ecosystem.svg";
-// import PropTypes from "prop-types";
-
-import allPartners from "../data/ecosystemPartners.js";
-// import allAuditors from "../data/auditors.js";
+import Image from 'next/image';
+import React, { useEffect, useRef } from 'react';
 // import allMentors from "../data/mentors.js";
-import { Fade } from "react-reveal";
+import { Fade } from 'react-reveal';
+
+// import PropTypes from "prop-types";
+import allPartners from '../data/ecosystemPartners.js';
+import Circle from '../public/images/bg-ecosystem.svg';
 
 // LoadMoreButton.propTypes = {
 //   active: PropTypes.bool.isRequired,
@@ -78,26 +77,26 @@ export default function EcoSystemPage() {
     if (!input.current) return;
 
     function focusToInput(ev) {
-      if (ev.key != "/") return;
+      if (ev.key != '/') return;
 
       input.current.focus();
-      document.body.scrollIntoView({ behavior: "smooth" });
+      document.body.scrollIntoView({ behavior: 'smooth' });
       ev.preventDefault();
     }
 
-    document.addEventListener("keypress", focusToInput);
-    return () => document.removeEventListener("keypress", focusToInput);
+    document.addEventListener('keypress', focusToInput);
+    return () => document.removeEventListener('keypress', focusToInput);
   }, [input]);
 
   return (
     <div className="relative w-full overflow-hidden">
       {/* className="border-b border-white/[0.08]" */}
       <section>
-        <div className="text-center flex flex-col items-center">
-          <h1 className="mt-20 mb-3 text-gradient text-[30px] leading-[41px] md:text-[44px] md:leading-[127%] font-semibold  max-w-[588px] ">
+        <div className="flex flex-col items-center text-center">
+          <h1 className="text-gradient mt-20 mb-3 max-w-[588px] text-[30px] font-semibold leading-[41px] md:text-[44px]  md:leading-[127%] ">
             Explore the DefiEdge Ecosystem
           </h1>
-          <p className="text-base leading-7 text-white/60 max-w-[500px] mb-10 md:mb-20">
+          <p className="mb-10 max-w-[500px] text-base leading-7 text-white/60 md:mb-20">
             Swap, earn, vote, and more with hundreds of DeFi apps, integrations,
             and tools built on the Uniswap Protocol.
           </p>
@@ -129,20 +128,20 @@ export default function EcoSystemPage() {
       )} */}
       {/* {!!partners.length && ( */}
       <Fade>
-        <section className="px-5 container mx-auto mb-12 md:mb-[120px] ">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5  gap-4 mb-4 md:gap-6 md:mb-6 ">
+        <section className="container mx-auto mb-12 px-5 md:mb-[120px] ">
+          <div className="mb-4 grid grid-cols-2 gap-4 md:mb-6  md:grid-cols-2 md:gap-6 lg:grid-cols-4 xl:grid-cols-5 ">
             {allPartners.map((e) => (
               <Fade key={e.name}>
-                <div className="bg-ecosystem-card py-6 px-4 flex space-x-3 rounded-lg hover:border hover:border-gray-700">
+                <div className="bg-ecosystem-card flex space-x-3 rounded-lg py-6 px-4 hover:border hover:border-gray-700">
                   <div
                     className={(
-                      "h-[40px] w-[40px] relative overflow-hidden" +
-                      " " +
+                      'relative h-[40px] w-[40px] overflow-hidden' +
+                      ' ' +
                       (e.logo
-                        ? ""
-                        : "flex items-center justify-center bg-white/10 !rounded-md") +
-                      " " +
-                      (e.rounded ? "rounded-full" : "rounded-sm")
+                        ? ''
+                        : 'flex items-center justify-center !rounded-md bg-white/10') +
+                      ' ' +
+                      (e.rounded ? 'rounded-full' : 'rounded-sm')
                     ).trim()}
                     style={{ backgroundColor: e.background }}
                   >
@@ -154,19 +153,19 @@ export default function EcoSystemPage() {
                         layout="fill"
                       />
                     ) : (
-                      <span className="text-base leading-5 tracking-wider font-medium text-white">
+                      <span className="text-base font-medium leading-5 tracking-wider text-white">
                         {e.name
-                          .split(" ")
+                          .split(' ')
                           .map((e) => e[0])
-                          .join("")}
+                          .join('')}
                       </span>
                     )}
                   </div>
                   <div className="flex-1 ">
-                    <h4 className="text-lg leading-5 tracking-wide font-semibold text-gray-300 mb-1">
+                    <h4 className="mb-1 text-lg font-semibold leading-5 tracking-wide text-gray-300">
                       {e.name}
                     </h4>
-                    <h4 className="text-sm leading-4 mt-2 tracking-wide text-white/60">
+                    <h4 className="mt-2 text-sm leading-4 tracking-wide text-white/60">
                       {e.desc}
                     </h4>
                   </div>
@@ -187,12 +186,12 @@ export default function EcoSystemPage() {
         </section>
       </Fade>
       {/* )} */}
-      <div className="absolute w-screen top-0 h-full inset-x-0 z-0 pointer-events-none opacity-60">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-full w-screen opacity-60">
         <Image
           src={Circle.src}
           layout="fill"
           objectFit="cover"
-          objectPosition={"top"}
+          objectPosition={'top'}
         />
       </div>
     </div>

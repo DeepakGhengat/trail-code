@@ -1,10 +1,10 @@
-//* Import react
-import "../styles/Home.module.css";
-import "../styles/globals.css";
+import '../styles/Home.module.css';
+import '../styles/globals.css';
 
-import Head from "next/head";
-import Layout from "../components/Layout";
-import React from "react";
+import Head from 'next/head';
+import React from 'react';
+
+import Layout from '../components/Layout';
 
 // eslint-disable-next-line react/prop-types
 function App({ Component, pageProps: { children, ...pageProps } }) {
