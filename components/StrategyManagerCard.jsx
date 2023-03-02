@@ -99,24 +99,28 @@ const auditorsArray = [
     name: 'ABDK',
     logo: abdk,
     desc: 'Auditing Firm',
+    href: 'https://www.abdk.consulting/',
   },
   {
     id: 5,
     name: 'WatchPug',
     logo: watchpug,
     desc: 'Auditing Firm',
+    href: 'https://www.watchpug.org/',
   },
   {
     id: 2,
     name: 'Mudit Gupta',
     logo: mudit,
     desc: 'CISO, Polygon',
+    href: ' https://twitter.com/Mudit__Gupta',
   },
   {
     id: 3,
     name: 'Riley Holterhus',
     logo: riley,
-    desc: 'Security Auditor',
+    desc: 'Ex-researcher, Paradigm',
+    href: 'https://twitter.com/rileyholterhus',
   },
   {},
   {
@@ -124,12 +128,13 @@ const auditorsArray = [
     name: 'Damian Rusinek',
     logo: damian,
     desc: 'Securing',
+    href: 'https://twitter.com/drdr_zz',
   },
   {
     id: 6,
     name: 'Lucash Dev',
     logo: lucash,
-    desc: 'Auditor',
+    desc: 'MakerDAO Bounty Hunter',
   },
 ];
 
@@ -297,7 +302,7 @@ function StrategyManagerCard() {
 
           <div className="mt-[40px] grid w-full grid-cols-2 gap-4 px-4 sm:grid-cols-4 sm:gap-[40px] sm:gap-x-[50px] md:px-0">
             {auditorsArray.map((data, idx) => {
-              return (
+              const div = (
                 <div
                   key={data.name || `blank-${idx}`}
                   className="flex items-center space-x-[8px] empty:hidden md:empty:flex"
@@ -322,6 +327,14 @@ function StrategyManagerCard() {
                     </>
                   )}
                 </div>
+              );
+
+              return data.href ? (
+                <a href={data.href} target="__blank">
+                  {div}
+                </a>
+              ) : (
+                div
               );
             })}
           </div>
