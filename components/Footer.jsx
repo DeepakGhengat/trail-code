@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 
@@ -67,14 +68,14 @@ export default function Footer() {
                     </a>
                   </li>
                   <li>
-                    <a href="/privacypolicy" className="hover:text-white">
+                    <Link href="/privacypolicy" className="hover:text-white">
                       <p>Privacy Policy</p>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="/terms" className="hover:text-white">
+                    <Link href="/terms" className="hover:text-white">
                       <p>Terms of Use</p>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
