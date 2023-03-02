@@ -22,7 +22,7 @@ function LiquidityAlliance() {
         </div>
       </div>
       <section>
-        <div className=" my-0 sm:flex ">
+        <div className="my-0 mx-auto max-w-[1200px] px-4 sm:flex md:px-0">
           <div className="mt-[48px] flex w-1/2 flex-col flex-wrap items-center text-center sm:mt-[120px]  sm:items-start sm:text-left">
             <Fade delay={10} duration={2000}>
               <span className=" bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text text-[30px] font-semibold leading-[40px]   text-transparent sm:text-[44px] sm:leading-[55px]">
@@ -66,7 +66,7 @@ function LiquidityAlliance() {
       </section>
 
       <Fade>
-        <section className="my-[70px] h-[466px]">
+        <section className="mx-auto my-[70px] h-[466px] max-w-[1200px] px-4 md:px-0">
           <div className="relative flex h-[466px] border border-[#3F4077] bg-[#141541]/30 px-[50px]">
             <div className="absolute">
               <div className="relative w-full overflow-hidden">
@@ -133,7 +133,7 @@ function LiquidityAlliance() {
       </Fade>
 
       <Fade>
-        <section className="py-[70px]">
+        <section className="mx-auto max-w-[1200px] py-[70px] px-4 md:px-0">
           <div>
             <div className="mb-[48px] flex flex-col items-center text-center">
               <span className="text-[26px] font-semibold sm:text-[42px]">
@@ -190,7 +190,7 @@ function LiquidityAlliance() {
       </Fade>
 
       <Fade>
-        <section className="py-[70px] ">
+        <section className="mx-auto max-w-[1200px] py-[70px] px-4 md:px-0">
           <div className="flex border border-[#3F4077] bg-[#141541]/30">
             <div>
               <div className="flex flex-col p-[70px] ">

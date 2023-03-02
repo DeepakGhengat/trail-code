@@ -35,7 +35,7 @@ function Strategies({ strategies }) {
               Trending Strategies on DefiEdge{' '}
             </span>
 
-            <p className="mt-[12px]  text-[16px] font-normal leading-[26px] text-gray-mid sm:mt-[25px] sm:text-[18px]">
+            <p className="mt-[12px] px-4 text-[16px] font-normal leading-[26px] text-gray-mid sm:mt-[25px] sm:text-[18px] md:px-0">
               Here are the current leading strategies trading on the protocol.
               Browse to the <br /> one that interests you most and start earning
               yields{' '}
@@ -203,7 +203,7 @@ function Strategies({ strategies }) {
             })}
           </div>
 
-          <CardCarousel />
+          <CardCarousel strategies={strategies} />
         </Fade>
       </section>
     </div>

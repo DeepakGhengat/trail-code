@@ -209,16 +209,16 @@ function StrategyManagerCard() {
         </div>
 
         <div className="mt-[40px] mb-[80px] flex flex-col items-center overflow-hidden sm:h-auto sm:overflow-visible sm:px-[84px]	">
-          <div className="grid sm:grid-cols-4 grid-cols-2   w-full sm:gap-[40px] sm:gap-x-[50px] ">
+          <div className="mt-[40px] grid w-full grid-cols-2 gap-4 px-4 sm:grid-cols-4 sm:gap-[40px] sm:gap-x-[50px] md:px-0">
             {ecosystemArray.map((data, idx) => {
               return (
                 <div
                   key={data.name || `blank-${idx}`}
-                  className="flex space-x-[8px] items-center  "
+                  className="flex items-center space-x-[8px] empty:hidden md:empty:flex"
                 >
                   {data.logo && (
                     <>
-                      <div className="flex items-center mr-2">
+                      <div className="mr-2 flex items-center">
                         <Image
                           className="rounded-full"
                           type="image"
@@ -249,44 +249,42 @@ function StrategyManagerCard() {
 
           <div className="my-[60px] h-[1px] w-full bg-white opacity-10"></div>
 
-          <div className="flex flex-col items-center text-center -mt-[6px]">
-            <p className="sm:text-[24px] uppercase sm:mt-0 tracking-[5px]  text-[20px]  font-semibold ">
+          <div className="-mt-[6px] flex flex-col items-center text-center">
+            <p className="text-[20px] font-semibold uppercase tracking-[5px]  sm:mt-0  sm:text-[24px] ">
               Our Backers
             </p>
           </div>
 
-          <div className=" mt-[40px] sm:h-auto overflow-hidden sm:overflow-visible  flex items-center w-full">
-            <div className="grid sm:grid-cols-4 grid-cols-2  w-full sm:gap-[40px] sm:gap-x-[50px] ">
-              {investorsArray.map((data, idx) => {
-                return (
-                  <div
-                    key={data.name || `blank-${idx}`}
-                    className="flex space-x-[8px] items-center "
-                  >
-                    {!!data.logo && (
-                      <>
-                        <div className="flex items-center mr-2">
-                          <Image
-                            className="rounded-full"
-                            type="image"
-                            height={50}
-                            width={50}
-                            alt=""
-                            src={data.logo}
-                          />
-                        </div>
-                        <div className="">
+          <div className="mt-[40px] grid w-full grid-cols-2 gap-4 px-4 sm:grid-cols-4 sm:gap-[40px] sm:gap-x-[50px] md:px-0">
+            {investorsArray.map((data, idx) => {
+              return (
+                <div
+                  key={data.name || `blank-${idx}`}
+                  className="flex items-center space-x-[8px] empty:hidden md:empty:flex"
+                >
+                  {!!data.logo && (
+                    <>
+                      <div className="mr-2 flex items-center">
+                        <Image
+                          className="rounded-full"
+                          type="image"
+                          height={50}
+                          width={50}
+                          alt=""
+                          src={data.logo}
+                        />
+                      </div>
+                      <div className="">
                         <div className="text-lg font-semibold tracking-wide">
-                            {data.name}
-                          </div>
-                        <div className="text-sm text-gray-400">{data.desc}</div>
+                          {data.name}
                         </div>
-                      </>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
+                        <div className="text-sm text-gray-400">{data.desc}</div>
+                      </div>
+                    </>
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           <div className="my-[60px] h-[1px] w-full bg-white opacity-10"></div>
@@ -297,39 +295,35 @@ function StrategyManagerCard() {
             </p>
           </div>
 
-          <div className=" mt-[40px] sm:h-auto overflow-hidden sm:overflow-visible  flex items-center w-full">
-            <div className="grid sm:grid-cols-4 grid-cols-2   w-full sm:gap-[40px] sm:gap-x-[50px] ">
-              {auditorsArray.map((data, idx) => {
-                return (
-                  <div
-                    key={data.name || `blank-${idx}`}
-                    className="flex space-x-[8px] items-center "
-                  >
-                    {!!data.logo && (
-                      <>
-                        <div className="flex items-center mr-2">
-                          <Image
-                            className="rounded-full"
-                            height={40}
-                            width={40}
-                            alt={data.desc}
-                            src={data.logo}
-                          />
-                        </div>
-                        <div className="">
+          <div className="mt-[40px] grid w-full grid-cols-2 gap-4 px-4 sm:grid-cols-4 sm:gap-[40px] sm:gap-x-[50px] md:px-0">
+            {auditorsArray.map((data, idx) => {
+              return (
+                <div
+                  key={data.name || `blank-${idx}`}
+                  className="flex items-center space-x-[8px] empty:hidden md:empty:flex"
+                >
+                  {!!data.logo && (
+                    <>
+                      <div className="mr-2 flex items-center">
+                        <Image
+                          className="rounded-full"
+                          height={40}
+                          width={40}
+                          alt={data.desc}
+                          src={data.logo}
+                        />
+                      </div>
+                      <div className="">
                         <div className="text-lg font-semibold tracking-wide">
-                            {data.name}
-                          </div>
-                          <div className="text-sm text-gray-400">
-                            {data.desc}
-                          </div>
+                          {data.name}
                         </div>
-                      </>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
+                        <div className="text-sm text-gray-400">{data.desc}</div>
+                      </div>
+                    </>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

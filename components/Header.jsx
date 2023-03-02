@@ -152,13 +152,13 @@ export default function Header() {
             {/* subheader for notifications */}
             <div
               className={
-                'h-[40px] bg-gradient-to-tr from-[#4D67A1] to-[#6248E9] py-[6px] text-[16px]' +
+                'bg-gradient-to-tr from-[#4D67A1] to-[#6248E9] px-4 py-[6px] text-[16px] md:px-0 ' +
                 (showNotification
-                  ? 'hidden h-[40px] bg-gradient-to-r from-[#4452FE] via-[#6E5AFE] to-[#60B9FA] py-[9px]  text-[16px]'
-                  : 'invisible -translate-y-32 opacity-5 transition duration-300')
+                  ? 'min-h-[40px] bg-gradient-to-r from-[#4452FE] via-[#6E5AFE] to-[#60B9FA] py-[9px] text-[16px]'
+                  : 'hidden -translate-y-32 opacity-0 transition duration-300')
               }
             >
-              <div className="container mx-auto flex max-w-[1200px] justify-between">
+              <div className="container mx-auto flex max-w-[1200px] items-center justify-between">
                 <p className="">
                   📣 DefiEdge provides the simplest solution to deploy smart
                   liquidity and optimize yield on Uniswap V3. &nbsp;
@@ -166,9 +166,11 @@ export default function Header() {
                     Know more
                   </a>
                 </p>
-                <button onClick={() => setShowNotification(false)}>
-                  <Image type="image" alt="" src={closeButton} />
-                </button>
+                <div>
+                  <button onClick={() => setShowNotification(false)}>
+                    <Image type="image" alt="" src={closeButton} />
+                  </button>
+                </div>
               </div>
             </div>
           </header>

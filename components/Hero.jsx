@@ -15,7 +15,7 @@ function Hero() {
         </div>
       </section>
       <section>
-        <div className="container relative z-10  mx-auto flex max-w-[335px] items-center sm:max-w-[1200px]">
+        <div className="container relative z-10 mx-auto flex items-center px-4 sm:max-w-[1200px] md:px-0">
           <div className=" my-0 sm:flex ">
             <div className="mt-[48px] flex max-w-[594px] flex-col flex-wrap items-center text-center sm:mt-[120px]  sm:items-start sm:text-left">
               <Fade delay={10} duration={2000}>
@@ -51,10 +51,10 @@ function Hero() {
             </div>
             <div>
               <Fade duration={2000}>
-                <div className="max-w-[588px]  pt-[49px] sm:pt-[30px]">
+                <div className="pt-[49px] sm:pt-[30px] md:max-w-[588px]">
                   <Lottie
                     loop
-                    className="-ml-[100px] sm:h-[500px] sm:w-[800px]"
+                    className="sm:-ml-[100px] sm:h-[500px] sm:w-[800px]"
                     animationData={lottieJson}
                     play
                   />

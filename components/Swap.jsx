@@ -41,7 +41,7 @@ function Swap() {
           </div>
         </div>
         <Fade duration={2000}>
-          <div className="mt-[70px] sm:mt-[140px] sm:h-[502px] sm:w-[792px]">
+          <div className="mt-[70px] px-4 sm:mt-[140px] sm:h-[502px] sm:w-[792px] md:px-0">
             {playVideoOnscroll ? (
               <Fade duration={500}>
                 <ReactPlayer
@@ -78,7 +78,7 @@ function Swap() {
           </div>
         </Fade>
 
-        <div className="mt-72">
+        <div className="mt-[72px]">
           <div className="pb-20">
             <Image
               type="image"
@@ -90,11 +90,11 @@ function Swap() {
           <p className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  sm:text-[44px]">
             DeFiEdge Features
           </p>
-          <p className="text-16px mx-auto mt-[20px] text-center text-gray-mid sm:mt-[25px] sm:w-[500px]">
+          <p className="text-16px mx-auto mt-[20px] px-4 text-center text-gray-mid sm:mt-[25px] sm:w-[500px] md:px-0">
             Use the latest & most promising features of DefiEdge by creating and
             managing strategies, limiting orders and much more.
           </p>
-          <div className="mt-10 grid gap-5 px-4 md:grid-cols-3 md:px-0">
+          <div className="mt-10 grid gap-4 px-4 md:grid-cols-3 md:px-0">
             <Fade duration={500} bottom>
               <span className="min-h-[300px] rounded-xl border border-gray-500 bg-white bg-opacity-5 p-[15px] shadow-md backdrop-blur-xl backdrop-filter  duration-300 hover:border-gray-200 hover:bg-opacity-0 md:w-full md:p-[31px]">
                 <Image src={ico1} height={40} width={40} />
