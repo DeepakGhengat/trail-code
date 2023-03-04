@@ -134,7 +134,7 @@ const auditorsArray = [
     id: 6,
     name: 'Lucash Dev',
     logo: lucash,
-    desc: 'MakerDAO security researched',
+    desc: 'MakerDAO security researcher',
   },
 ];
 
