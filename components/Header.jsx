@@ -14,7 +14,7 @@ import menuIcon from '../public/images/menu.svg';
 export default function Header() {
   const router = useRouter();
 
-  const [showNotification, setShowNotification] = useState(true);
+  const [showNotification, setShowNotification] = useState(false);
   const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
@@ -176,7 +176,7 @@ export default function Header() {
           </header>
           <div
             className={
-              'absolute inset-x-0 z-50 block border-b border-[#3F407799] bg-[#0f0f2d]/80 p-5 backdrop-blur-xl transition-all ease-in-out sm:hidden' +
+              'absolute inset-x-0 z-50 block border-b border-[#3F407799] bg-[#0f0f2d]/90 p-5  backdrop-blur-xl transition-all ease-in-out sm:hidden' +
               ' ' +
               (showNav
                 ? 'max-h-[232px] opacity-100'
