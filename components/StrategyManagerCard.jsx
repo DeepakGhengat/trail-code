@@ -12,7 +12,6 @@ import five from '../public/images/strategy/005.svg';
 import six from '../public/images/strategy/006.svg';
 import abdk from '../public/images/strategy/abdk.svg';
 import amrit from '../public/images/strategy/amrit.svg';
-import damian from '../public/images/strategy/damian.png';
 import gsr from '../public/images/strategy/gsr.svg';
 import juan from '../public/images/strategy/juan.jpeg';
 import kevin from '../public/images/strategy/kevin.svg';
@@ -23,6 +22,7 @@ import mudit from '../public/images/strategy/mudit.png';
 import multifarm from '../public/images/strategy/multifarm.svg';
 import riley from '../public/images/strategy/riley.png';
 import sancap from '../public/images/strategy/sancap.svg';
+import SecuringIcon from '../public/images/strategy/securing-fav.png';
 import solv from '../public/images/strategy/solv.svg';
 import watchpug from '../public/images/strategy/watchpug.jpeg';
 import wintermute from '../public/images/strategy/wintermute.svg';
@@ -125,16 +125,16 @@ const auditorsArray = [
   {},
   {
     id: 1,
-    name: 'Damian Rusinek',
-    logo: damian,
-    desc: 'Securing',
-    href: 'https://twitter.com/drdr_zz',
+    name: 'Securing',
+    logo: SecuringIcon,
+    desc: 'Auditing Firm',
+    href: 'https://securing.pl',
   },
   {
     id: 6,
     name: 'Lucash Dev',
     logo: lucash,
-    desc: 'MakerDAO Bounty Hunter',
+    desc: 'MakerDAO security researched',
   },
 ];
 
