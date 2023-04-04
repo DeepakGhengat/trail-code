@@ -25,7 +25,7 @@ export default function Footer() {
                 <span className="mt-[24px] text-center text-[16px] text-gray-mid sm:mt-[32px] sm:text-left">
                   DefiEdge provides the smartest solution to deploy liquidity{' '}
                   <br />
-                  and optimise yields on Uniswap V3
+                  and optimise yields on Concentrated DEXs
                 </span>
               </div>
               <div className="mt-[32px] flex space-x-[10px]">

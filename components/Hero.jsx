@@ -20,13 +20,13 @@ function Hero() {
             <div className="mt-[48px] flex max-w-[594px] flex-col flex-wrap items-center text-center sm:mt-[120px]  sm:items-start sm:text-left">
               <Fade delay={10} duration={2000}>
                 <span className=" bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text text-[30px] font-semibold leading-[40px]   text-transparent sm:text-[44px] sm:leading-[55px]">
-                  Permissionless Liquidity Management on Uniswap V3
+                  Permissionless Liquidity Management on Concentrated DEXs
                 </span>
               </Fade>
               <Fade delay={30} duration={3000}>
                 <p className="text-16px mt-[12px] font-medium leading-[28px] text-gray-400 sm:w-[410px] ">
                   DefiEdge provides the smartest solution to deploy liquidity
-                  and optimise yields on Uniswap V3
+                  and optimise yields on Concentrated DEXs
                 </p>
               </Fade>
 

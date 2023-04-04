@@ -43,9 +43,9 @@ function Participants() {
                   Liquidity Provider
                 </span>
                 <p className="mt-[12px] mb-5 flex-1 text-[16px] text-gray-mid">
-                  Uniswap V3 LPs can make use of DefiEdge to get access to many
-                  advanced features making the protocol a go-to-platform for
-                  managing liquidity.
+                  Concentrated DEXs LPs can make use of DefiEdge to get access
+                  to many advanced features making the protocol a go-to-platform
+                  for managing liquidity.
                 </p>
 
                 <span className=" flex items-center">

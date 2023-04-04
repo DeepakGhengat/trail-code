@@ -11,7 +11,9 @@ function App({ Component, pageProps: { children, ...pageProps } }) {
   return (
     <>
       <Head>
-        <title>Defiedge - Asset Management Protocol Built on Uniswap V3</title>
+        <title>
+          Defiedge - Asset Management Protocol Built on Concentrated DEXs
+        </title>
 
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <link
@@ -29,7 +31,7 @@ function App({ Component, pageProps: { children, ...pageProps } }) {
 
         <meta
           name="description"
-          content="Defiedge - Asset Management Protocol Built on Uniswap V3"
+          content="Defiedge - Asset Management Protocol Built on Concentrated DEXs"
         />
         <link
           rel="preload"

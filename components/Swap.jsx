@@ -102,9 +102,9 @@ function Swap() {
                   Create & Manage Strategy
                 </p>
                 <p className="text-[16px] font-thin text-gray-500">
-                  Create Uniswap V3 strategies and seamlessly manage the assets.
-                  Cutting edge features provided by DefiEdge help to ensure that
-                  you stand out amongst the rest
+                  Create Concentrated DEXs strategies and seamlessly manage the
+                  assets. Cutting edge features provided by DefiEdge help to
+                  ensure that you stand out amongst the rest
                 </p>
               </span>
             </Fade>
@@ -115,9 +115,9 @@ function Swap() {
                   Limit Orders
                 </p>
                 <p className="text-[16px] font-thin text-gray-500">
-                  Create Uniswap V3 strategies and seamlessly manage the assets.
-                  Limit Orders allow you to remove liquidity as soon as the
-                  price hits your particular range. On triggering, a webhook
+                  Create Concentrated DEXs strategies and seamlessly manage the
+                  assets. Limit Orders allow you to remove liquidity as soon as
+                  the price hits your particular range. On triggering, a webhook
                   notification is sent via DefiEdge to help you track the latest
                   activities of your strategies
                 </p>

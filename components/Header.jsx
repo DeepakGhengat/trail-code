@@ -161,7 +161,7 @@ export default function Header() {
               <div className="container mx-auto flex max-w-[1200px] items-center justify-between">
                 <p className="">
                   📣 DefiEdge provides the simplest solution to deploy smart
-                  liquidity and optimize yield on Uniswap V3. &nbsp;
+                  liquidity and optimize yield on Concentrated DEXs. &nbsp;
                   <a href="#" className="underline">
                     Know more
                   </a>
