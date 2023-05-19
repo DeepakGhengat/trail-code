@@ -24,7 +24,6 @@ export default function Home({ strategies }) {
 
 export async function getStaticProps() {
   let [stats, strategies] = await Promise.all([getStats(), getStrategies()]);
-
   return {
     props: { stats, strategies },
     revalidate: 300,

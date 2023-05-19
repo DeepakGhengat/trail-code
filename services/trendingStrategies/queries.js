@@ -59,75 +59,59 @@ query Stats($network: [Network!], $manager: String) {
   stats(network: $network, manager: $manager) {
     aumSummary {
       arbitrum
-      kovan
+      bsc
       mainnet
-      polygon
-      rinkeby
       optimism
-      __typename
+      polygon
     }
     countSummary {
       arbitrum
-      kovan
+      bsc
       mainnet
-      polygon
-      rinkeby    
       optimism
-      __typename
+      polygon
     }
     users {
       arbitrum
-      kovan
+      bsc
       mainnet
-      polygon
-      rinkeby    
       optimism
-      __typename
+      polygon
     }
     ranges {
       arbitrum
-      kovan
+      bsc
       mainnet
-      polygon
-      rinkeby    
       optimism
-      __typename
+      polygon
     }
     pools {
       arbitrum
-      kovan
+      bsc
       mainnet
-      polygon
-      rinkeby    
       optimism
-      __typename
+      polygon
     }
     volumeSummary {
       arbitrum
-      kovan
+      bsc
       mainnet
-      polygon
-      rinkeby    
       optimism
-      __typename
+      polygon
     }
     fees {
       arbitrum
-      kovan
+      bsc
       mainnet
-      polygon
-      rinkeby    
       optimism
-      __typename
+      polygon
     }
     assets {
       arbitrum
-      kovan
+      bsc
       mainnet
-      polygon
-      rinkeby    
       optimism
-      __typename
+      polygon
     }
     totalVolume
     totalFees
@@ -137,7 +121,6 @@ query Stats($network: [Network!], $manager: String) {
     totalStrategies
     totalValueManaged
     uniqueDepositor
-    __typename
   }
 }
 `.trim();
