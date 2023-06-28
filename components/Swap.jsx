@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 import Fade from 'react-reveal/Fade';
 
-import ico1 from '../public/images/ico1.svg';
-import ico2 from '../public/images/ico2.svg';
-import ico3 from '../public/images/ico3.svg';
+// import ico1 from '../public/images/ico1.svg';
+// import ico2 from '../public/images/ico2.svg';
+// import ico3 from '../public/images/ico3.svg';
 import line from '../public/images/line.svg';
-import swap from '../public/images/swap.svg';
+// import swap from '../public/images/swap.svg';
 
 const defiedgeFeatureContent = [
   {
@@ -32,28 +32,28 @@ const defiedgeFeatureContent = [
 ];
 
 function Swap() {
-  const [scrollY, setScrollY] = useState(0);
+  // const [scrollY, setScrollY] = useState(0);
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  function logit() {
-    setScrollY(window.pageYOffset);
-  }
+  // function logit() {
+  //   // setScrollY(window.pageYOffset);
+  // }
 
-  useEffect(() => {
-    function watchScroll() {
-      window.addEventListener('scroll', logit);
-    }
-    watchScroll();
-    return () => {
-      window.removeEventListener('scroll', logit);
-    };
-  });
+  // useEffect(() => {
+  //   function watchScroll() {
+  //     window.addEventListener('scroll', logit);
+  //   }
+  //   watchScroll();
+  //   return () => {
+  //     window.removeEventListener('scroll', logit);
+  //   };
+  // });
 
-  const playVideoOnscroll = scrollY > 600 && scrollY < 1500;
+  // const playVideoOnscroll = scrollY > 600 && scrollY < 1500;
 
   return (
     <Fade big>
