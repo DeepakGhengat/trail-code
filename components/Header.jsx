@@ -72,6 +72,17 @@ export default function Header() {
             Ecosystem
           </a>
         </Link>
+        <Link href="/standout">
+          <a
+            className={
+              router.asPath == '/standout'
+                ? 'opacity-100 duration-300 hover:opacity-100'
+                : 'opacity-50 duration-300 hover:opacity-100'
+            }
+          >
+            Standout
+          </a>
+        </Link>
         <Link href="https://docs.defiedge.io/" target="_blank" forwardRef>
           <a
             target="_blank"

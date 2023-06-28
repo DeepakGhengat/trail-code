@@ -28,6 +28,7 @@ import watchpug from '../public/images/strategy/watchpug.jpeg';
 import wintermute from '../public/images/strategy/wintermute.svg';
 import yuriy from '../public/images/strategy/yuriy.jpeg';
 import ziliqa from '../public/images/strategy/ziliqa.svg';
+import { TestimonialSlider } from './TestimonialSlider';
 
 const investorsArray = [
   {
@@ -337,6 +338,9 @@ function StrategyManagerCard() {
                 div
               );
             })}
+          </div>
+          <div className="relative m-auto w-full gap-5 lg:w-4/5">
+            <TestimonialSlider />
           </div>
         </div>
       </div>

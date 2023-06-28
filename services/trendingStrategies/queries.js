@@ -55,8 +55,8 @@ query Query($strategyListTake: Float, $strategyListNetwork: [Network!]!, $strate
 }
 `.trim();
 exports.STATS_QUERY = `
-query Stats($network: [Network!], $manager: String) {
-  stats(network: $network, manager: $manager) {
+query Stats($network: [Network!], $manager: String , $dex: [Dex!] = [Uniswap, Apeswap, Pancakeswap, Arbidex]) {
+  stats(network: $network, manager: $manager , dex: $dex) {
     aumSummary {
       arbitrum
       bsc

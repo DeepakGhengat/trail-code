@@ -1,22 +1,18 @@
 import React from 'react';
 
-import Community from '../components/Community';
 import Participants from '../components/Participants';
-import Strategies from '../components/Strategies';
 import Subscribe from '../components/Subscribe';
 import Swap from '../components/Swap';
 import { getStats, getStrategies } from '../services/trendingStrategies';
 
 // eslint-disable-next-line react/prop-types
-export default function Home({ strategies }) {
+export default function Home() {
   return (
     <>
       <div className="container mx-auto max-w-[1200px]">
         <Swap />
         <Participants />
-        <Strategies strategies={strategies} />
         <Subscribe />
-        <Community />
       </div>
     </>
   );

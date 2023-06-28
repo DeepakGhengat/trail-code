@@ -48,6 +48,13 @@ async function getStrategies(
   return list;
 }
 exports.getStrategies = getStrategies;
+export const dexes = [
+  "Uniswap",
+  "Apeswap",
+  "Arbidex",
+  "Pancakeswap",
+  "Sushiswap",
+];
 
 async function getStats(
   networks = ['optimism', 'arbitrum', 'polygon', 'mainnet', 'bsc']
@@ -58,6 +65,7 @@ async function getStats(
       fetchPolicy: 'network-only',
       query: queries_1.STATS_QUERY,
       variables: {
+      dex: dexes,
         network: networks,
         manager: null,
       },
