@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--gradient-color-stops))",
+        'gradient-radial': 'radial-gradient(var(--gradient-color-stops))',
+        'card-img' : 'radial-gradient(105.5% 105.5% at 50% 115.84%, #5C57AE 0%, rgba(92, 87, 174, 0) 100%)',
       },
       opacity: {
         42: ".42",

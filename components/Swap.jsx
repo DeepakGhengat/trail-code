@@ -3,11 +3,7 @@ import React, { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 import Fade from 'react-reveal/Fade';
 
-// import ico1 from '../public/images/ico1.svg';
-// import ico2 from '../public/images/ico2.svg';
-// import ico3 from '../public/images/ico3.svg';
 import line from '../public/images/line.svg';
-// import swap from '../public/images/swap.svg';
 
 const defiedgeFeatureContent = [
   {
@@ -67,21 +63,34 @@ function Swap() {
             <div className="h-[523px] w-[523px] bg-[#3B4FFF] opacity-42 blur-[354px]"></div>
           </div>
         </div>
-        <div className="flex grid-cols-1 flex-col place-items-center gap-6 px-12 py-12 md:grid-cols-10 md:flex-row md:px-20 md:py-28">
-          <div className="md:col-span-4 xl:col-span-5">
-            <h4 className="text-primary-main text-24 leading-p275 font-primary font-medium uppercase">
-              Strategic Fusion
-            </h4>
-            <p className="text-32 lg:text-42 leading-p130 mb-5 font-semibold">
-              Optimal Efficiency, Advanced Tools, and Concentrated AMMs
-            </p>
-            <p className="text-20 leading-p160 opacity-70">
-              DefiEdge strategically harnesses the potential of concentrated
-              AMMs to optimize capital efficiency. Coupled with our signature
-              Automated Liquidity Optimization (ALO) and exclusive advanced
-              liquidity management features, we provide a dynamic edge in the
-              ever-evolving DeFi landscape.
-            </p>
+        <div className="mt-[40px] sm:mt-[70px]">
+          <Image
+            type="image"
+            className="h-[31px] w-[111px]"
+            alt=""
+            src={line}
+          />
+        </div>
+        <div className="mt-[50px] items-center gap-x-20 sm:mt-[70px] sm:flex">
+          <div className="flex  w-1/2 flex-col flex-wrap items-center text-center sm:items-start sm:text-left">
+            <Fade delay={10} duration={2000}>
+              <h4 className="bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]   bg-clip-text    text-[20px] font-semibold text-transparent  sm:text-[24px]">
+                Strategic Fusion
+              </h4>
+
+              <p className=" text-[26px] font-semibold leading-[50px]  text-[#FEFEFE] sm:text-[44px]">
+                Optimal Efficiency, Advanced Tools, and Concentrated AMMs
+              </p>
+            </Fade>
+            <Fade delay={30} duration={3000}>
+              <p className="text-16px mt-[12px] font-medium leading-[28px] text-gray-400">
+                DefiEdge strategically harnesses the potential of concentrated
+                AMMs to optimize capital efficiency. Coupled with our signature
+                Automated Liquidity Optimization (ALO) and exclusive advanced
+                liquidity management features, we provide a dynamic edge in the
+                ever-evolving DeFi landscape.
+              </p>
+            </Fade>
           </div>
           {isClient && (
             <ReactPlayer
@@ -89,8 +98,8 @@ function Swap() {
               className="w-2/3 sm:w-1/2 md:col-span-6 xl:col-span-5"
               loop
               muted
-              width="100%"
-              height="100%"
+              width="50%"
+              height="auto"
               playing={true}
               url="/videos/strategic-fusion.mp4"
             >
@@ -99,8 +108,8 @@ function Swap() {
           )}
         </div>
 
-        <div className="mt-[72px]">
-          <div className="pb-20">
+        <div className="">
+          <div className="mt-[40px] sm:mt-[70px]">
             <Image
               type="image"
               className="h-[31px] w-[111px]"
@@ -108,42 +117,46 @@ function Swap() {
               src={line}
             />
           </div>
-          <p className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  sm:text-[44px]">
-            DeFiEdge Features
-          </p>
-          <p className="text-16px mx-auto mt-[20px] px-4 text-center text-gray-mid sm:mt-[25px] sm:w-[500px] md:px-0">
-            Unlock the Power of DeFi: Explore Innovative, Seamless, and Secure
-            Features Tailored for Your Success.
-          </p>
-          <div className="my-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {defiedgeFeatureContent.map((content, index) => (
-              <div
-                className={`border-grey-1 rounded-20 bg-card-dark-gradiant overflow-hidden border ${
-                  index === 1 ? 'p-3' : ''
-                }`}
-                key={`feature-${index}`}
-              >
-                <div className="bg-card-img ">
-                  <Image
-                    alt="Defiedge feature"
-                    className={`!object-contain  ${
-                      index === 1 ? 'scale-90' : ''
-                    }`}
-                    height={150}
-                    src={content.url}
-                    width={225}
-                  ></Image>
-                </div>
-                <div className="p-6">
-                  <h4 className="text-20 xl:text-24 leading-p120 mb-4  font-semibold">
-                    {content.title}
-                  </h4>
-                  <p className="leading-p150 opacity-70">
-                    {content.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+          <div className="mt-[50px] sm:mt-[70px]">
+            <p className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  sm:text-[44px]">
+              DeFiEdge Features
+            </p>
+            <p className="text-16px mx-auto mt-[20px] px-4 text-center text-gray-mid sm:mt-[25px] sm:w-[500px] md:px-0">
+              Unlock the Power of DeFi: Explore Innovative, Seamless, and Secure
+              Features Tailored for Your Success.
+            </p>
+            <div className="my-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {defiedgeFeatureContent.map((content, index) => (
+                <Fade duration={2000} key={`feature-${index}`}>
+                  <div className="group ">
+                    <div
+                      className={`relative flex h-full flex-col items-start overflow-hidden pt-2`}
+                    >
+                      <div className="absolute inset-0 rounded-xl border bg-gradient-to-tl from-[#58C0FB] to-transparent  opacity-16 duration-300 hover:border-gray-200 group-hover:opacity-30 "></div>
+                      <div className="w-full  bg-card-img">
+                        <img // todo will replace with next/image later
+                          alt="Defiedge feature"
+                          className={`aspect-video w-full !object-contain  ${
+                            index === 1 ? 'scale-90' : ''
+                          }`}
+                          height={150}
+                          src={content.url}
+                          width={225}
+                        ></img>
+                      </div>
+                      <div className="p-[20px] sm:p-[32px]">
+                        <h4 className="text-[20px] font-semibold  sm:text-[24px]">
+                          {content.title}
+                        </h4>
+                        <p className="leading-p150 mt-[12px]  flex-1 text-[16px] text-gray-mid opacity-70">
+                          {content.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </Fade>
+              ))}
+            </div>
           </div>
         </div>
       </section>

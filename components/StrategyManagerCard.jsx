@@ -339,7 +339,7 @@ function StrategyManagerCard() {
               );
             })}
           </div>
-          <div className="relative m-auto w-full gap-5 lg:w-4/5">
+          <div className="relative m-auto mt-[60px] w-full gap-5 ">
             <TestimonialSlider />
           </div>
         </div>

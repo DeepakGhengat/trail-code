@@ -9,36 +9,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const cards = [
   {
-    title: 'Incredible Experience',
     description:
-      'Lorem ipsum dolor sit amet consectetur. Non molestie amet enim erat egestas fusce in scelerisque. Ut ut vitae in dui mi nisi. Enim risus nisl in volutpat. Sit lobortis adipiscing pharetra tortor turpis donec turpis pretium lorem. Consequat arcu magna id vestibulum mattis tortor lacus. Faucibus dignissim enim adipiscing iaculis amet quis dui elementum. Vel sed mollis amet sed ultrices egestas. Id consequat.',
-    name: 'Jane Cooper',
-    url: '/images/user-avatar.png',
-    position: 'CEO, ABC Corporation',
+      "DefiEdge Team's relentless innovation and unmatched responsiveness make them the go-to choice. We are grateful to partner with such a dedicated team that consistently delivers and pushes the boundaries of what's possible with us. It's a privilege to collaborate with such a responsive and forward-thinking team.",
+    name: 'Arbidex Core Team',
+    url: '/images/user-arbidex-core-team.png',
   },
   {
-    title: 'Incredible Experience',
     description:
-      'Lorem ipsum dolor sit amet consectetur. Non molestie amet enim erat egestas fusce in scelerisque. Ut ut vitae in dui mi nisi. Enim risus nisl in volutpat. Sit lobortis adipiscing pharetra tortor turpis donec turpis pretium lorem. Consequat arcu magna id vestibulum mattis tortor lacus. Faucibus dignissim enim adipiscing iaculis amet quis dui elementum. Vel sed mollis amet sed ultrices egestas. Id consequat.',
-    name: 'Jane Cooper',
-    url: '/images/user-avatar.png',
-    position: 'CEO, ABC Corporation',
-  },
-  {
-    title: 'Incredible Experience',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Non molestie amet enim erat egestas fusce in scelerisque. Ut ut vitae in dui mi nisi. Enim risus nisl in volutpat. Sit lobortis adipiscing pharetra tortor turpis donec turpis pretium lorem. Consequat arcu magna id vestibulum mattis tortor lacus. Faucibus dignissim enim adipiscing iaculis amet quis dui elementum. Vel sed mollis amet sed ultrices egestas. Id consequat.',
-    name: 'Jane Cooper',
-    url: '/images/user-avatar.png',
-    position: 'CEO, ABC Corporation',
-  },
-  {
-    title: 'Incredible Experience',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Non molestie amet enim erat egestas fusce in scelerisque. Ut ut vitae in dui mi nisi. Enim risus nisl in volutpat. Sit lobortis adipiscing pharetra tortor turpis donec turpis pretium lorem. Consequat arcu magna id vestibulum mattis tortor lacus. Faucibus dignissim enim adipiscing iaculis amet quis dui elementum. Vel sed mollis amet sed ultrices egestas. Id consequat.',
-    name: 'Jane Cooper',
-    url: '/images/user-avatar.png',
-    position: 'CEO, ABC Corporation',
+      'DefiEdge offers a game-changing approach in the DeFi landscape by connecting liquidity providers with skilled strategy managers making UniswapV3 investments seamlessly efficient and much more effective.',
+    name: 'Mojmir - zkBob team',
+    url: '/images/user-zkbob.png',
   },
 ];
 
@@ -64,7 +44,6 @@ export function TestimonialSlider() {
     <Swiper
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       breakpoints={breakpoints}
-      className="!pb-14"
       modules={[Pagination]}
       pagination={pagination}
       navigation
@@ -74,21 +53,24 @@ export function TestimonialSlider() {
       {cards.map((card, index) => (
         <SwiperSlide key={index}>
           <div
-            className=" m-auto flex w-4/5 flex-col items-center gap-y-5 md:w-full"
+            className=" group m-auto  flex flex-grow flex-col items-center justify-between gap-y-5 md:w-full"
             key={index}
           >
-            <div className="bg-card-dark-gradiant border-grey-1 rounded-2xl border p-8">
-              <h4 className="text-24 font-semibold">{card.title}</h4>
-              <p className="text-14 opacity-70">{card.description}</p>
+            <div className="relative h-52  rounded-2xl p-8 ">
+              <div className="absolute inset-0 rounded-xl border bg-gradient-to-tl from-[#58C0FB] to-transparent opacity-16 duration-300 hover:border-gray-200 group-hover:opacity-30 "></div>
+
+              <p className="text-16px px-4 text-gray-mid  md:px-0">
+                {card.description}
+              </p>
             </div>
             <div className="flex items-center gap-x-2 ">
               <Image
                 alt="Avatar"
-                className="h-16 w-16 rounded-full"
-                height={100}
+                className="h-14 w-14 rounded-full"
+                height={56}
                 quality={100}
                 src={card.url}
-                width={100}
+                width={56}
               ></Image>
               <div className="">
                 <p className="font-bold">{card.name}</p>

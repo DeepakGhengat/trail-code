@@ -2,8 +2,10 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Fade } from 'react-reveal';
 
 import { TestimonialSlider } from '../components/TestimonialSlider';
+import line from '../public/images/line.svg';
 
 export default function StandOut() {
   const cards = [
@@ -88,19 +90,23 @@ export default function StandOut() {
   ];
 
   return (
-    <main>
-      <div className="border-grey-1 flex grid-cols-12 place-items-center justify-between gap-4 border px-12 md:px-20">
-        <div className="col-span-8 w-full py-12 text-center  md:py-28 md:text-left">
-          <div className="w-10/12">
-            <h3 className="text-36 md:text-42 lg:text-52 leading-p130 font-primary font-semibold">
-              Unveiling the Edge in DeFi
-            </h3>
-            <p className="text-18 md:text-20 leading-p160 my-3 opacity-70 opacity-70">
-              At DefiEdge, we believe in empowering our users with the finest
-              tools for navigating the decentralized finance landscape. Our
-              standout features provide robust solutions, catering to varied
-              liquidity management needs in a single platform.
-            </p>
+    <main className="container mx-auto max-w-[1200px]">
+      <div className="flex justify-between gap-4 ">
+        <div className="full mt-12  text-center  sm:mt-[120px] md:text-left">
+          <div className="">
+            <Fade delay={10} duration={2000}>
+              <h3 className=" bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text text-[30px] font-semibold leading-[40px]   text-transparent sm:text-[44px] sm:leading-[55px]">
+                Unveiling the Edge in DeFi
+              </h3>
+            </Fade>
+            <Fade delay={30} duration={3000}>
+              <p className="text-16px mt-[12px] font-medium leading-[28px] text-gray-400 sm:w-[410px] ">
+                At DefiEdge, we believe in empowering our users with the finest
+                tools for navigating the decentralized finance landscape. Our
+                standout features provide robust solutions, catering to varied
+                liquidity management needs in a single platform.
+              </p>
+            </Fade>
           </div>
         </div>
         <Image
@@ -112,43 +118,53 @@ export default function StandOut() {
           width={300}
         ></Image>
       </div>
-      <div className="px-12 py-12 md:px-20 md:py-28">
-        <div className="md:4/5 m-auto text-center lg:w-2/3 lg:w-1/2">
-          <h4 className="text-32 md:36  lg:text-42 leading-p130 font-primary mb-5 font-semibold">
+      <div className="my-[40px] sm:my-[70px]">
+        <Image type="image" className="h-[31px] w-[111px]" alt="" src={line} />
+      </div>
+      <div className="">
+        <div className="md:4/5  m-auto mb-12 text-center lg:w-2/3 lg:w-1/2">
+          <h4 className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  sm:text-[44px]">
             DefiEdge Features
           </h4>
-          <p className="text-18 md:text-20 leading-p160 opacity-70">
-            Lorem ipsum dolor sit amet consectetur. Et lorem quam viverra
-            turpis. Sed ipsum nulla orci sollicitudin magna enim sodales.{' '}
+          <p className="text-16px mx-auto mt-[20px] px-4 text-center text-gray-mid sm:mt-[25px] sm:w-[500px] md:px-0">
+            Unlock the Power of DeFi: Explore Innovative, Seamless, and Secure
+            Features Tailored for Your Success.
           </p>
         </div>
 
-        <div className="m-auto mt-12 grid  w-2/3 pt-4 sm:w-full sm:w-full sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="m-auto  grid  w-2/3  sm:w-full sm:w-full sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {cards.map((card, index) => (
             <FeatureCard card={card} index={index} key={index} />
           ))}
         </div>
       </div>
-      <div className="border-grey-1 border px-12 py-12 md:px-20 md:py-28">
-        <h4 className="text-primary-main text-22 md:text-24 font-primary text-center font-medium uppercase sm:text-left">
+      <div className="my-[40px] sm:my-[70px]">
+        <Image type="image" className="h-[31px] w-[111px]" alt="" src={line} />
+      </div>
+      <div className="">
+        <h4
+          className="bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text    text-[20px] font-semibold text-transparent
+        sm:mt-[28px]  sm:text-[24px] sm:leading-[55px]
+        "
+        >
           DeFiEdge Victories
         </h4>
         <div className="mb-6 flex flex-col items-center justify-between gap-y-2 sm:flex-row">
-          <p className="text-32 md:text-36 lg:text-42 font-primary font-semibold">
+          <p className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  sm:text-[44px]">
             Your Success is Our Story
           </p>
-          <button className="bg-primary-main shrink-0 rounded-full py-2 px-4 text-white">
+          <button className="rounded-md bg-[#4452FE] py-2 px-10 text-gray-300 hover:bg-[#3F1DF0]">
             Start your Journey
           </button>
         </div>
-        <p className="text-20 mb-12 opacity-70">
+        <p className="text-16px  mt-[20px] mb-10  px-4 text-gray-mid sm:mt-[25px] sm:w-[500px] md:px-0">
           We at DeFiEdge believe that the real proof of our platform&apos;s
           effectiveness lies in the tangible success of our users and partners.
           &apos;DeFiEdge Victories&apos; is our tribute to these compelling
           stories, highlighting how our services have transformed liquidity
           management for our community
         </p>
-        <div className="relative m-auto w-full gap-5 lg:w-4/5">
+        <div className="relative m-auto w-full gap-5 ">
           <TestimonialSlider />
           <Image
             alt="quote"
@@ -198,13 +214,15 @@ const FeatureCard = ({ card, index }) => {
         className="mb-6 sm:mb-8"
         height={60}
         quality={100}
-        src={`/svg/stand-out/${1}.svg`}
+        src={`/svg/stand-out/${index + 1}.svg`}
         width={60}
       />
-      <div className="text-24 font-primary leading-p120 mb-3 font-semibold">
+      <div className="mt-[20px] text-[20px] font-semibold sm:mt-[28px] sm:text-[24px]">
         {card.title}
       </div>
-      <div className="leading-p140 opacity-70">{card.description}</div>
+      <div className="mt-[12px] mb-5 flex-1 text-[16px] text-gray-mid">
+        {card.description}
+      </div>
     </div>
   );
 };

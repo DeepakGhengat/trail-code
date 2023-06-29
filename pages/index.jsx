@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Participants from '../components/Participants';
 import Subscribe from '../components/Subscribe';
 import Swap from '../components/Swap';
 import { getStats, getStrategies } from '../services/trendingStrategies';
@@ -11,7 +10,6 @@ export default function Home() {
     <>
       <div className="container mx-auto max-w-[1200px]">
         <Swap />
-        <Participants />
         <Subscribe />
       </div>
     </>
