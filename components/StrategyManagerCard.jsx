@@ -198,8 +198,8 @@ function StrategyManagerCard() {
   };
 
   return (
-    <div>
-      <div className="overflow-hidden rounded-xl bg-[#141541] bg-opacity-30 bg-clip-padding ring-1 ring-[#3F4077]/30 backdrop-blur-xl backdrop-filter">
+    <div id="ecosystem">
+      <div className="mb-12 overflow-hidden rounded-xl bg-[#141541] bg-opacity-30 bg-clip-padding ring-1 ring-[#3F4077]/30 backdrop-blur-xl backdrop-filter sm:mb-[120px]">
         <div className="flex flex-col items-center text-center">
           <span className="pt-[80px] text-[20px] font-semibold leading-[27px] sm:mt-0 sm:text-[42px]  sm:leading-[44px] ">
             Ecosystem Partners

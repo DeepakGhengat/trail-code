@@ -7,13 +7,13 @@ import line from '../public/images/line.svg';
 
 const defiedgeFeatureContent = [
   {
-    url: '/images/feature-mining-farm.png',
+    url: '/images/multi-dex-support.png',
     title: 'Automated Liquidity Optimization (ALO)',
     description:
       'Maximize your returns with our flagship ALO feature. Automating the dynamic movement of liquidity positions based on market conditions, ALO enables efficient capital utilization, enhanced returns, and reduced impermanent loss.',
   },
   {
-    url: '/images/multi-dex-support.png',
+    url: '/images/feature-mining-farm.png',
     title: 'Multi-DEX Support',
     description:
       'Broaden your horizons with support for multiple Concentrated AMMs including Uniswap V3, PancakeSwap, ApeSwap, and more. Benefit from a wider market presence and increase your earning potential across diverse DEXs.',
@@ -71,7 +71,7 @@ function Swap() {
             src={line}
           />
         </div>
-        <div className="mt-[50px] items-center gap-x-20 sm:mt-[70px] sm:flex">
+        <div className="mt-[40px] items-center gap-x-20 sm:mt-[50px] sm:flex">
           <div className="flex  w-1/2 flex-col flex-wrap items-center text-center sm:items-start sm:text-left">
             <Fade delay={10} duration={2000}>
               <h4 className="bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]   bg-clip-text    text-[20px] font-semibold text-transparent  sm:text-[24px]">
@@ -109,7 +109,7 @@ function Swap() {
         </div>
 
         <div className="">
-          <div className="mt-[40px] sm:mt-[70px]">
+          <div className="mt-[30px] sm:mt-[50px]">
             <Image
               type="image"
               className="h-[31px] w-[111px]"
@@ -137,7 +137,7 @@ function Swap() {
                         <img // todo will replace with next/image later
                           alt="Defiedge feature"
                           className={`aspect-video w-full !object-contain  ${
-                            index === 1 ? 'scale-90' : ''
+                            index === 0 ? 'scale-90' : ''
                           }`}
                           height={150}
                           src={content.url}

@@ -39,48 +39,26 @@ export default function Header() {
   const links = useMemo(
     () => (
       <>
-        <Link href="/">
+        <Link href="https://twitter.com/DefiEdge" target="_blank" forwardRef>
           <a
-            className={
-              router.asPath == '/'
-                ? 'opacity-100 duration-300 hover:opacity-100'
-                : 'opacity-50 duration-300 hover:opacity-100'
-            }
+            target="_blank"
+            className="flex items-center space-x-0.5 opacity-50 duration-300 hover:opacity-100"
           >
-            Home
+            <span>Twitter</span>
+            <span className="relative mt-1 h-4 w-4">
+              <Image type="image" alt="" layout="fill" src={arrowcross.src} />
+            </span>
           </a>
         </Link>
-        <Link href="/#features" shallow scroll>
+        <Link href="/#ecosystem" shallow scroll>
           <a
             className={
-              router.asPath == '/#features'
-                ? 'opacity-100 duration-300 hover:opacity-100'
-                : 'opacity-50 duration-300 hover:opacity-100'
-            }
-          >
-            Features
-          </a>
-        </Link>
-        <Link href="/ecosystem">
-          <a
-            className={
-              router.asPath == '/ecosystem'
+              router.asPath == '/#ecosystem'
                 ? 'opacity-100 duration-300 hover:opacity-100'
                 : 'opacity-50 duration-300 hover:opacity-100'
             }
           >
             Ecosystem
-          </a>
-        </Link>
-        <Link href="/standout">
-          <a
-            className={
-              router.asPath == '/standout'
-                ? 'opacity-100 duration-300 hover:opacity-100'
-                : 'opacity-50 duration-300 hover:opacity-100'
-            }
-          >
-            Standout
           </a>
         </Link>
         <Link href="https://docs.defiedge.io/" target="_blank" forwardRef>
@@ -92,6 +70,17 @@ export default function Header() {
             <span className="relative mt-1 h-4 w-4">
               <Image type="image" alt="" layout="fill" src={arrowcross.src} />
             </span>
+          </a>
+        </Link>
+        <Link href="/standout">
+          <a
+            className={
+              router.asPath == '/standout'
+                ? 'opacity-100 duration-300 hover:opacity-100'
+                : 'opacity-50 duration-300 hover:opacity-100'
+            }
+          >
+            Why we stand out
           </a>
         </Link>
 
