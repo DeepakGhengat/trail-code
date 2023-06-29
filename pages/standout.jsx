@@ -132,7 +132,7 @@ export default function StandOut() {
           </p>
         </div>
 
-        <div className="m-auto  grid  w-2/3  sm:w-full sm:w-full sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="m-auto  grid  w-2/3  gap-4 sm:w-full sm:w-full sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {cards.map((card, index) => (
             <FeatureCard card={card} index={index} key={index} />
           ))}
@@ -157,7 +157,7 @@ export default function StandOut() {
             Start your Journey
           </button>
         </div>
-        <p className="text-16px  mt-[20px] mb-10  px-4 text-gray-mid sm:mt-[25px] sm:w-[500px] md:px-0">
+        <p className="text-16px  mt-[20px] mb-10  px-4 text-gray-mid sm:mt-[25px]  md:px-0">
           We at DeFiEdge believe that the real proof of our platform&apos;s
           effectiveness lies in the tangible success of our users and partners.
           &apos;DeFiEdge Victories&apos; is our tribute to these compelling
@@ -208,20 +208,23 @@ export default function StandOut() {
 
 const FeatureCard = ({ card, index }) => {
   return (
-    <div className="card-dark-gradiant p-6 ">
-      <Image
-        alt={`image ${index + 1}`}
-        className="mb-6 sm:mb-8"
-        height={60}
-        quality={100}
-        src={`/svg/stand-out/${index + 1}.svg`}
-        width={60}
-      />
-      <div className="mt-[20px] text-[20px] font-semibold sm:mt-[28px] sm:text-[24px]">
-        {card.title}
-      </div>
-      <div className="mt-[12px] mb-5 flex-1 text-[16px] text-gray-mid">
-        {card.description}
+    <div className="group relative rounded-2xl">
+      <div className="card-dark-gradiant group p-6">
+        <div className="absolute inset-0 rounded-xl border bg-gradient-to-tl from-[#58C0FB] to-transparent opacity-16 duration-300 hover:border-gray-200 group-hover:opacity-30 "></div>
+        <Image
+          alt={`image ${index + 1}`}
+          className="mb-6 sm:mb-8"
+          height={60}
+          quality={100}
+          src={`/svg/stand-out/${index + 1}.svg`}
+          width={60}
+        />
+        <div className="mt-[20px] text-[20px] font-semibold sm:mt-[28px] sm:text-[24px]">
+          {card.title}
+        </div>
+        <div className="mt-[12px] mb-5 flex-1 text-[16px] text-gray-mid">
+          {card.description}
+        </div>
       </div>
     </div>
   );
