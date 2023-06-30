@@ -1,7 +1,8 @@
+import { Menu, Transition } from '@headlessui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 
 import arrowcross from '../public/images/arrowcross.svg';
@@ -11,11 +12,44 @@ import lightning from '../public/images/lightning.svg';
 import defiedgeLogo from '../public/images/mainlogo.svg';
 import menuIcon from '../public/images/menu.svg';
 
+const menuLinks = [
+  { href: 'https://discord.com/invite/fRc6XxhfBq', label: 'Discord' },
+  { href: 'https://twitter.com/DefiEdge/', label: 'Twitter' },
+  { href: 'https://defiedge.substack.com/', label: 'Substack' },
+  { href: 'https://medium.com/@DefiEdge', label: 'Medium' },
+];
+
 export default function Header() {
   const router = useRouter();
 
   const [showNotification, setShowNotification] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const timeoutDuration = 200;
+  let timeout;
+
+  const buttonRef = useRef(null);
+  const dropdownRef = useRef(null);
+
+  const openMenu = (target) => target?.click();
+  const closeMenu = () =>
+    dropdownRef?.current?.dispatchEvent(
+      new KeyboardEvent('keydown', {
+        key: 'Escape',
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+  const removeInterval = () => {
+    timeout && clearTimeout(timeout);
+  };
+
+  const onMouseEnter = (target, closed) => {
+    removeInterval();
+    closed && openMenu(target);
+  };
+  const onMouseLeave = (open) => {
+    open && (timeout = setTimeout(() => closeMenu(), timeoutDuration));
+  };
 
   useEffect(() => {
     function closeNav() {
@@ -39,17 +73,76 @@ export default function Header() {
   const links = useMemo(
     () => (
       <>
-        <Link href="https://twitter.com/DefiEdge" target="_blank" forwardRef>
-          <a
-            target="_blank"
-            className="flex items-center space-x-0.5 opacity-50 duration-300 hover:opacity-100"
-          >
-            <span>Twitter</span>
-            <span className="relative mt-1 h-4 w-4">
-              <Image type="image" alt="" layout="fill" src={arrowcross.src} />
-            </span>
-          </a>
-        </Link>
+        <Menu className="relative inline-block text-left" as="div">
+          {({ open }) => (
+            <div>
+              <div>
+                <Menu.Button
+                  ref={buttonRef}
+                  className="hover:opacity flex inline-flex w-full justify-center rounded-md   bg-opacity-20  text-white opacity-50 outline-none duration-300 hover:opacity-100"
+                  onMouseLeave={() => onMouseLeave(open)}
+                  onMouseEnter={({ target }) => onMouseEnter(target, !open)}
+                >
+                  Community
+                  {/* <span>
+                    <svg
+                      width="28px"
+                      height="28px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 10L12 15L17 10"
+                        stroke="#000000"
+                        fill="white"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>{' '} */}
+                </Menu.Button>
+              </div>
+              <Transition
+                enter="transition duration-100 ease-out"
+                enterFrom="transform scale-95 opacity-0"
+                enterTo="transform scale-100 opacity-100"
+                leave="transition duration-75 ease-out"
+                leaveFrom="transform scale-100 opacity-100"
+                leaveTo="transform scale-95 opacity-0"
+              >
+                <Menu.Items
+                  onMouseEnter={removeInterval}
+                  className="absolute right-0 mt-3 w-40 origin-top-right  rounded-md bg-white p-3  shadow-lg  outline-none   duration-300 "
+                  ref={dropdownRef}
+                  onMouseLeave={() => onMouseLeave(open)}
+                >
+                  {menuLinks.map((link) => (
+                    <Menu.Item
+                      as="a"
+                      target="_blank"
+                      key={link.href}
+                      href={link.href}
+                      className=" group flex w-full items-center rounded-md  px-2 py-2 text-sm text-lg font-medium text-gray-600 opacity-100 transition-all hover:text-black"
+                    >
+                      <span>{link.label}</span>
+                      <span className="relative mt-1 h-4 w-4">
+                        <Image
+                          className="text-black"
+                          type="image"
+                          alt=""
+                          layout="fill"
+                          src={arrowcross.src}
+                        />
+                      </span>
+                    </Menu.Item>
+                  ))}
+                </Menu.Items>
+              </Transition>
+            </div>
+          )}
+        </Menu>
         <Link href="/#ecosystem" shallow scroll>
           <a
             className={

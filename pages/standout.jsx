@@ -211,12 +211,11 @@ const FeatureCard = ({ card, index }) => {
     <div className="group relative rounded-2xl">
       <div className="card-dark-gradiant group p-6">
         <div className="absolute inset-0 rounded-xl border bg-gradient-to-tl from-[#58C0FB] to-transparent opacity-16 duration-300 hover:border-gray-200 group-hover:opacity-30 "></div>
-        <Image
+        <img
           alt={`image ${index + 1}`}
           className="mb-6 sm:mb-8"
           height={60}
-          quality={100}
-          src={`/svg/stand-out/${index + 1}.svg`}
+          src={`/images/stand-out/${index + 1}.png`}
           width={60}
         />
         <div className="mt-[20px] text-[20px] font-semibold sm:mt-[28px] sm:text-[24px]">
