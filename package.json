@@ -31,6 +31,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.1.1",
     "autoprefixer": "^10.4.8",
+    "babel-plugin-inline-react-svg": "^2.0.2",
     "eslint": "^8.22.0",
     "eslint-config-next": "12.2.5",
     "eslint-config-prettier": "^8.5.0",

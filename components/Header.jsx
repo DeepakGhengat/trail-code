@@ -114,7 +114,7 @@ export default function Header() {
               >
                 <Menu.Items
                   onMouseEnter={removeInterval}
-                  className="absolute right-0 mt-3 w-40 origin-top-right  rounded-md bg-white p-3  shadow-lg  outline-none   duration-300 "
+                  className="absolute right-0 mt-3 w-40 origin-top-right  rounded-md border border-white border-opacity-20 bg-[#0F0F2E] p-3  shadow-lg  outline-none   duration-300 "
                   ref={dropdownRef}
                   onMouseLeave={() => onMouseLeave(open)}
                 >
@@ -124,18 +124,9 @@ export default function Header() {
                       target="_blank"
                       key={link.href}
                       href={link.href}
-                      className=" group flex w-full items-center rounded-md  px-2 py-2 text-sm text-lg font-medium text-gray-600 opacity-100 transition-all hover:text-black"
+                      className=" group flex w-full items-center rounded-md  px-2 py-2 text-base  text-white opacity-50 transition-all hover:opacity-100"
                     >
                       <span>{link.label}</span>
-                      <span className="relative mt-1 h-4 w-4">
-                        <Image
-                          className="text-black"
-                          type="image"
-                          alt=""
-                          layout="fill"
-                          src={arrowcross.src}
-                        />
-                      </span>
                     </Menu.Item>
                   ))}
                 </Menu.Items>
@@ -173,7 +164,7 @@ export default function Header() {
                 : 'opacity-50 duration-300 hover:opacity-100'
             }
           >
-            Why we stand out
+            Edge in DefiEdge
           </a>
         </Link>
 

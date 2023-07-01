@@ -2,10 +2,12 @@
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import Image from 'next/image';
+import Image from 'next/future/image';
 import React from 'react';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+import LeftQuoteIcon from './LeftQuoteIcon';
 
 const cards = [
   {
@@ -17,7 +19,7 @@ const cards = [
   {
     description:
       'DefiEdge offers a game-changing approach in the DeFi landscape by connecting liquidity providers with skilled strategy managers making UniswapV3 investments seamlessly efficient and much more effective.',
-    name: 'Mojmir - zkBob team',
+    name: 'Mojmir - zkBob Team',
     url: '/images/user-zkbob.png',
   },
 ];
@@ -51,17 +53,26 @@ export function TestimonialSlider() {
       spaceBetween={50}
     >
       {cards.map((card, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide key={index} className="overflow-y-auto">
           <div
-            className=" group m-auto  flex flex-grow flex-col items-center justify-between gap-y-5 md:w-full"
+            className=" group relative  m-auto flex flex-grow flex-col items-center justify-between gap-y-5 overflow-y-auto py-6 md:w-full"
             key={index}
           >
-            <div className="relative h-52  rounded-2xl p-8 ">
+            <div className="relative h-60  rounded-2xl p-8  py-12">
               <div className="absolute inset-0 rounded-xl border bg-gradient-to-tl from-[#58C0FB] to-transparent opacity-16 duration-300 hover:border-gray-200 group-hover:opacity-30 "></div>
-
               <p className="text-16px px-4 text-gray-mid  md:px-0">
                 {card.description}
               </p>
+              <LeftQuoteIcon
+                width="50px"
+                height="50px"
+                className="absolute top-0 left-0 translate-x-1/2 -translate-y-1/2 fill-default-blue"
+              />
+              <LeftQuoteIcon
+                width="50px"
+                height="50px"
+                className="absolute right-0 bottom-0 -translate-x-1/2 translate-y-1/2 rotate-180 fill-default-blue"
+              />
             </div>
             <div className="flex items-center gap-x-2 ">
               <Image

@@ -166,7 +166,7 @@ const ecosystemArray = [
   },
   {
     id: 2,
-    name: '1 inch Protocol',
+    name: '1inch Protocol',
     logo: two,
     desc: 'DEX Aggregator',
   },
@@ -339,6 +339,8 @@ function StrategyManagerCard() {
               );
             })}
           </div>
+          <div className="mt-[60px] mb-2 h-[1px] w-full bg-white opacity-10"></div>
+
           <div className="relative m-auto mt-[60px] w-full gap-5 ">
             <TestimonialSlider />
           </div>
