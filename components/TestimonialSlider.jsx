@@ -53,7 +53,7 @@ export function TestimonialSlider() {
       spaceBetween={50}
     >
       {cards.map((card, index) => (
-        <SwiperSlide key={index} className="overflow-y-auto">
+        <SwiperSlide key={index} className="w-4/5 overflow-y-auto">
           <div
             className=" group relative  m-auto flex flex-grow flex-col items-center justify-between gap-y-5 overflow-y-auto py-6 md:w-full"
             key={index}

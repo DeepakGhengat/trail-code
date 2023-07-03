@@ -312,11 +312,11 @@ function StrategyManagerCard() {
                 >
                   {!!data.logo && (
                     <>
-                      <div className="mr-2 flex items-center">
+                      <div className="mr-2 flex shrink-0 items-center">
                         <Image
                           className="rounded-full"
-                          height={40}
-                          width={40}
+                          height={50}
+                          width={50}
                           alt={data.desc}
                           src={data.logo}
                         />
@@ -349,7 +349,7 @@ function StrategyManagerCard() {
           </div>
           <div className="mt-[60px] mb-2 h-[1px] w-full bg-white opacity-10"></div>
 
-          <div className="relative m-auto mt-[60px] w-full gap-5 ">
+          <div className="relative m-auto mt-[60px]  gap-5 ">
             <TestimonialSlider />
           </div>
         </div>

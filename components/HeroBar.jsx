@@ -9,7 +9,7 @@ function HeroBar({ stats }) {
     <section className=" relative z-10  mt-[30px] flex  bg-white bg-opacity-10 backdrop-blur-lg backdrop-filter">
       <div className="mx-auto  w-full items-center gap-2 bg-[#000021] md:max-w-[1200px] ">
         <div className="grid h-full w-full grid-cols-1  gap-x-2 gap-y-2 md:grid-cols-3 ">
-          <div className="font-regular  flex items-center justify-between   bg-white bg-opacity-10 pr-6 md:flex-col lg:flex-row">
+          <div className="font-regular  flex items-center justify-between   bg-white bg-opacity-10 px-6 md:flex-col md:pr-6 lg:flex-row">
             <div className="flex gap-x-1 whitespace-nowrap text-[12px] font-normal leading-[22px] text-gray-mid sm:text-[16px] md:text-center lg:flex-col lg:text-left">
               <span>Assets under</span>
               management
@@ -36,7 +36,7 @@ function HeroBar({ stats }) {
             </span>
           </div>
 
-          <div className="flex  items-center justify-between bg-white bg-opacity-10 py-[6px] pl-6 md:flex-col lg:flex-row">
+          <div className="flex  items-center justify-between bg-white bg-opacity-10 py-[6px] px-6 md:flex-col md:pl-6 lg:flex-row">
             <div className="lg:word flex gap-x-1 text-[12px] font-normal leading-[22px] text-gray-mid sm:text-[16px] md:text-center lg:flex-col lg:text-left">
               <span>Total</span> Strategies
             </div>

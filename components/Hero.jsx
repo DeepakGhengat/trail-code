@@ -19,7 +19,7 @@ function Hero() {
           <div className=" my-0 grid place-items-center gap-y-10 md:grid-cols-2">
             <div className="  text-center md:text-left">
               <Fade delay={10} duration={2000}>
-                <span className=" bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text text-[30px] font-semibold leading-[40px]   text-transparent sm:text-[44px] sm:leading-[55px]">
+                <span className=" bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text text-[30px] font-semibold leading-[40px]   text-transparent sm:leading-[55px] md:text-[36px] lg:text-[44px]">
                   Permissionless Liquidity Management on Concentrated DEXs
                 </span>
               </Fade>
@@ -54,7 +54,7 @@ function Hero() {
                 <div>
                   <Lottie
                     loop
-                    className="scale-125"
+                    className="md:scale-125"
                     animationData={lottieJson}
                     play
                   />

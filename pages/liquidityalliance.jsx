@@ -25,7 +25,7 @@ function LiquidityAlliance() {
         <div className="my-0 mx-auto max-w-[1200px] px-4 sm:flex md:px-0">
           <div className="mt-[48px] flex w-1/2 flex-col flex-wrap items-center text-center sm:mt-[120px]  sm:items-start sm:text-left">
             <Fade delay={10} duration={2000}>
-              <span className=" bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text text-[30px] font-semibold leading-[40px]   text-transparent sm:text-[44px] sm:leading-[55px]">
+              <span className=" bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text text-[30px] font-semibold leading-[40px]   text-transparent sm:leading-[55px] md:text-[36px] lg:text-[44px]">
                 What is the Liquidity Alliance?
               </span>
             </Fade>

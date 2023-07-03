@@ -71,14 +71,14 @@ function Swap() {
             src={line}
           />
         </div>
-        <div className="mt-[40px] flex-col items-center gap-x-20 sm:mt-[50px] sm:flex md:flex-row">
-          <div className="text-center   md:w-1/2">
+        <div className="gap-y-30 mt-[40px] flex-col items-center gap-x-20 sm:mt-[50px] sm:flex md:flex-row">
+          <div className="text-center md:w-1/2   md:text-left">
             <Fade delay={10} duration={2000}>
-              <h4 className="bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]   bg-clip-text    text-[20px] font-semibold text-transparent  sm:text-[24px]">
+              <h4 className="bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]   bg-clip-text    text-[20px] font-semibold text-transparent  md:text-[24px]">
                 Strategic Fusion
               </h4>
 
-              <p className=" text-[26px] font-semibold leading-[50px]  text-[#FEFEFE] sm:text-[44px]">
+              <p className=" text-[26px] font-semibold leading-[50px]  text-[#FEFEFE] md:text-[34px] lg:text-[44px]">
                 Optimal Efficiency, Advanced Tools, and Concentrated AMMs
               </p>
             </Fade>
@@ -93,18 +93,20 @@ function Swap() {
             </Fade>
           </div>
           {isClient && (
-            <ReactPlayer
-              autoPlay
-              className="mx-auto"
-              loop
-              muted
-              width="50%"
-              height="auto"
-              playing={true}
-              url="/videos/strategic-fusion.mp4"
-            >
-              Your browser does not support the video tag.
-            </ReactPlayer>
+            <div className="w-4/5 md:w-1/2">
+              <ReactPlayer
+                autoPlay
+                className="mx-auto"
+                loop
+                muted
+                width="100%"
+                height="auto"
+                playing={true}
+                url="/videos/strategic-fusion.mp4"
+              >
+                Your browser does not support the video tag.
+              </ReactPlayer>
+            </div>
           )}
         </div>
 
@@ -118,7 +120,7 @@ function Swap() {
             />
           </div>
           <div className="mt-[50px] sm:mt-[70px]">
-            <p className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  sm:text-[44px]">
+            <p className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  md:text-[36px] lg:text-[44px]">
               DeFiEdge Features
             </p>
             <p className="text-16px mx-auto mt-[20px] px-4 text-center text-gray-mid sm:mt-[25px] sm:w-[500px] md:px-0">

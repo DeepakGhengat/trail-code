@@ -1,5 +1,6 @@
 'use client';
-import Image from 'next/future/image';
+import RawImage from 'next/future/image';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Fade } from 'react-reveal';
@@ -95,7 +96,7 @@ export default function StandOut() {
         <div className="mt-12  text-center  sm:mt-[120px] md:text-left">
           <div className="">
             <Fade delay={10} duration={2000}>
-              <h3 className=" bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text text-[30px] font-semibold leading-[40px]   text-transparent sm:text-[44px] sm:leading-[55px]">
+              <h3 className=" bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text text-[30px] font-semibold leading-[40px]   text-transparent sm:text-[36px] sm:leading-[55px] lg:text-[44px]">
                 Unveiling the Edge in DeFi
               </h3>
             </Fade>
@@ -109,22 +110,22 @@ export default function StandOut() {
             </Fade>
           </div>
         </div>
-        <Image
+        <RawImage
           alt="Hero image"
-          className="col-span-3  !hidden basis-1/3 bg-cover  md:!block lg:basis-auto"
+          className="col-span-3 !hidden w-0  basis-1/3 bg-cover md:!block  md:w-auto lg:basis-auto"
           height={450}
           quality={100}
           src="/images/hero-standout-gradient.webp"
-          width={300}
           layout="raw"
-        ></Image>
+          width={300}
+        ></RawImage>
       </div>
       <div className="my-[40px] sm:my-[70px]">
         <Image type="image" className="h-[31px] w-[111px]" alt="" src={line} />
       </div>
       <div className="">
         <div className="md:4/5  m-auto mb-12 text-center lg:w-2/3 lg:w-1/2">
-          <h4 className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  sm:text-[44px]">
+          <h4 className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE] sm:text-[36px] lg:text-[44px]">
             DefiEdge Features
           </h4>
           <p className="text-16px mx-auto mt-[20px] px-4 text-center text-gray-mid sm:mt-[25px] sm:w-[500px] md:px-0">
@@ -133,7 +134,7 @@ export default function StandOut() {
           </p>
         </div>
 
-        <div className="m-auto  grid  w-2/3 gap-4  sm:w-full sm:grid-cols-2 md:gap-8 lg:w-full lg:grid-cols-3 lg:gap-4 xl:grid-cols-4">
+        <div className="m-auto  grid max-w-xs	gap-4    sm:max-w-none sm:grid-cols-2 md:gap-8 lg:w-full lg:grid-cols-3 lg:gap-4 xl:grid-cols-4">
           {cards.map((card, index) => (
             <FeatureCard card={card} index={index} key={index} />
           ))}
@@ -150,22 +151,22 @@ export default function StandOut() {
         >
           DeFiEdge Victories
         </h4>
-        <div className="mb-6 flex flex-col items-center justify-between gap-y-2 sm:flex-row">
-          <p className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE] sm:text-left  sm:text-[44px]">
+        <div className="mb-6 flex flex-col items-center justify-between gap-y-2 text-center sm:flex-row sm:text-left">
+          <p className="text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  sm:text-[36px]  lg:text-[44px]">
             Your Success is Our Story
           </p>
           <button className="rounded-md bg-[#4452FE] py-2 px-10 text-gray-300 hover:bg-[#3F1DF0]">
             Start your Journey
           </button>
         </div>
-        <p className="text-16px  mt-[20px] mb-10  px-4 text-gray-mid sm:mt-[25px]  md:px-0">
+        <p className="text-16px  mt-[20px] mb-10  px-4 text-center text-gray-mid  sm:mt-[25px] sm:text-left md:px-0">
           We at DeFiEdge believe that the real proof of our platform&apos;s
           effectiveness lies in the tangible success of our users and partners.
           &apos;DeFiEdge Victories&apos; is our tribute to these compelling
           stories, highlighting how our services have transformed liquidity
           management for our community
         </p>
-        <div className="relative m-auto w-full gap-5 ">
+        <div className="relative m-auto w-full max-w-xs gap-5 sm:max-w-none	">
           <TestimonialSlider />
         </div>
       </div>
