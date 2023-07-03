@@ -8,7 +8,7 @@ import { getStats, getStrategies } from '../services/trendingStrategies';
 export default function Home() {
   return (
     <>
-      <div className="container mx-auto max-w-[1200px]">
+      <div className="container">
         <Swap />
         <Subscribe />
       </div>

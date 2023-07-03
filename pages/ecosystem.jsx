@@ -128,7 +128,7 @@ export default function EcoSystemPage() {
       )} */}
       {/* {!!partners.length && ( */}
       <Fade>
-        <section className="container mx-auto mb-12 px-5 md:mb-[120px] ">
+        <section className="container mb-12 px-5 md:mb-[120px] ">
           <div className="mb-4 grid grid-cols-2 gap-4 md:mb-6  md:grid-cols-2 md:gap-6 lg:grid-cols-4 xl:grid-cols-5 ">
             {allPartners.map((e) => (
               <Fade key={e.name}>

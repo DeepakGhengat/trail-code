@@ -190,7 +190,7 @@ export default function Header() {
         <div className="">
           <header>
             <div className="bg-white bg-opacity-5 bg-clip-padding ring-2 ring-white/10 backdrop-blur-xl backdrop-filter">
-              <div className="container mx-auto flex max-w-[335px] items-center justify-between py-[20px] text-[16px] sm:max-w-[1200px] ">
+              <div className="container flex flex-wrap items-center  justify-between gap-y-4 py-[20px] text-[16px]  ">
                 <Link href="/" forwardHref>
                   <a>
                     <Image
@@ -202,10 +202,12 @@ export default function Header() {
                   </a>
                 </Link>
 
-                <div className="hidden space-x-[33px] sm:flex">{links}</div>
+                <div className="order-1 hidden w-full flex-wrap justify-between space-x-[33px] sm:flex lg:order-none lg:w-auto ">
+                  {links}
+                </div>
 
                 <div>
-                  <button className=" hidden items-center justify-center space-x-[6px]   rounded-md bg-default-blue py-[10px] px-7 duration-300 hover:bg-[#3F1DF0] sm:flex">
+                  <button className=" hidden shrink-0 items-center justify-center   space-x-[6px] rounded-md bg-default-blue py-[10px] px-7 duration-300 hover:bg-[#3F1DF0] sm:flex">
                     <a
                       href="https://app.defiedge.io/"
                       target="_blank"
@@ -242,7 +244,7 @@ export default function Header() {
                   : 'hidden -translate-y-32 opacity-0 transition duration-300')
               }
             >
-              <div className="container mx-auto flex max-w-[1200px] items-center justify-between">
+              <div className="container  flex  items-center justify-between">
                 <p className="">
                   📣 DefiEdge provides the simplest solution to deploy smart
                   liquidity and optimize yield on Concentrated DEXs. &nbsp;

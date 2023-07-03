@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <Fade duration={2000}>
       <section className=" border border-gray-mid/20 bg-[#000015]">
-        <div className="container mx-auto mt-[40px] max-w-[335px]  sm:mt-[75px]  sm:max-w-[1200px] ">
+        <div className="container  mt-[40px] sm:mt-[75px]  ">
           <div className="flex flex-col justify-between  border-b border-white/10 py-[50px]  sm:flex-row ">
             <div className="flex flex-col items-center sm:items-start">
               <div className="flex flex-col sm:items-start">

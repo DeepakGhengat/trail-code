@@ -71,8 +71,8 @@ function Swap() {
             src={line}
           />
         </div>
-        <div className="mt-[40px] items-center gap-x-20 sm:mt-[50px] sm:flex">
-          <div className="flex  w-1/2 flex-col flex-wrap items-center text-center sm:items-start sm:text-left">
+        <div className="mt-[40px] flex-col items-center gap-x-20 sm:mt-[50px] sm:flex md:flex-row">
+          <div className="text-center   md:w-1/2">
             <Fade delay={10} duration={2000}>
               <h4 className="bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]   bg-clip-text    text-[20px] font-semibold text-transparent  sm:text-[24px]">
                 Strategic Fusion
@@ -95,7 +95,7 @@ function Swap() {
           {isClient && (
             <ReactPlayer
               autoPlay
-              className="w-2/3 sm:w-1/2 md:col-span-6 xl:col-span-5"
+              className="mx-auto"
               loop
               muted
               width="50%"

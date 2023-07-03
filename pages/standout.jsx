@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Fade } from 'react-reveal';
@@ -90,9 +90,9 @@ export default function StandOut() {
   ];
 
   return (
-    <main className="container mx-auto max-w-[1200px]">
+    <main className="container">
       <div className="flex justify-between gap-4 ">
-        <div className="full mt-12  text-center  sm:mt-[120px] md:text-left">
+        <div className="mt-12  text-center  sm:mt-[120px] md:text-left">
           <div className="">
             <Fade delay={10} duration={2000}>
               <h3 className=" bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text text-[30px] font-semibold leading-[40px]   text-transparent sm:text-[44px] sm:leading-[55px]">
@@ -100,7 +100,7 @@ export default function StandOut() {
               </h3>
             </Fade>
             <Fade delay={30} duration={3000}>
-              <p className="text-16px mt-[12px] font-medium leading-[28px] text-gray-400 sm:w-[410px] ">
+              <p className="text-16px mt-[12px] font-medium leading-[28px] text-gray-400 md:w-[410px] ">
                 At DefiEdge, we believe in empowering our users with the finest
                 tools for navigating the decentralized finance landscape. Our
                 standout features provide robust solutions, catering to varied
@@ -111,11 +111,12 @@ export default function StandOut() {
         </div>
         <Image
           alt="Hero image"
-          className="col-span-3 hidden basis-1/3 bg-cover md:block lg:basis-auto"
+          className="col-span-3  !hidden basis-1/3 bg-cover  md:!block lg:basis-auto"
           height={450}
           quality={100}
           src="/images/hero-standout-gradient.webp"
           width={300}
+          layout="raw"
         ></Image>
       </div>
       <div className="my-[40px] sm:my-[70px]">
@@ -132,7 +133,7 @@ export default function StandOut() {
           </p>
         </div>
 
-        <div className="m-auto  grid  w-2/3  gap-4 sm:w-full sm:w-full sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="m-auto  grid  w-2/3 gap-4  sm:w-full sm:grid-cols-2 md:gap-8 lg:w-full lg:grid-cols-3 lg:gap-4 xl:grid-cols-4">
           {cards.map((card, index) => (
             <FeatureCard card={card} index={index} key={index} />
           ))}
@@ -143,14 +144,14 @@ export default function StandOut() {
       </div>
       <div className="">
         <h4
-          className="bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text    text-[20px] font-semibold text-transparent
-        sm:mt-[28px]  sm:text-[24px] sm:leading-[55px]
+          className="bg-gradient-to-br from-[#6EA5FB] via-[#60B9FA] to-[#3E51FF]  bg-clip-text    text-center text-[20px] font-semibold  text-transparent sm:mt-[28px]
+        sm:text-left  sm:text-[24px] sm:leading-[55px]
         "
         >
           DeFiEdge Victories
         </h4>
         <div className="mb-6 flex flex-col items-center justify-between gap-y-2 sm:flex-row">
-          <p className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  sm:text-[44px]">
+          <p className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE] sm:text-left  sm:text-[44px]">
             Your Success is Our Story
           </p>
           <button className="rounded-md bg-[#4452FE] py-2 px-10 text-gray-300 hover:bg-[#3F1DF0]">
@@ -166,13 +167,6 @@ export default function StandOut() {
         </p>
         <div className="relative m-auto w-full gap-5 ">
           <TestimonialSlider />
-          <Image
-            alt="quote"
-            className="absolute right-0 top-0 z-10  translate-x-6  -translate-y-1/2  md:translate-x-3/4"
-            height={100}
-            src="/svg/quote.svg"
-            width={100}
-          ></Image>
         </div>
       </div>
       <div className="hidden px-12 py-12 md:px-20 md:py-28">
@@ -221,7 +215,7 @@ const FeatureCard = ({ card, index }) => {
         <div className="mt-[20px] text-[20px] font-semibold sm:mt-[28px] sm:text-[24px]">
           {card.title}
         </div>
-        <div className="mt-[12px] mb-5 flex-1 text-[16px] text-gray-mid">
+        <div className="mt-[12px]  flex-1 text-[16px] text-gray-mid">
           {card.description}
         </div>
       </div>
