@@ -61,7 +61,7 @@ export default function Header() {
             Features
           </a>
         </Link>
-        <Link href="/alo" shallow scroll>
+        {/* <Link href="/alo" shallow scroll>
           <a
             className={
               router.asPath == '/alo'
@@ -71,7 +71,7 @@ export default function Header() {
           >
             ALO
           </a>
-        </Link>
+        </Link> */}
         <Link href="/ecosystem">
           <a
             className={
