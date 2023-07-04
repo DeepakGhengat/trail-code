@@ -96,7 +96,7 @@ export default function EcoSystemPage() {
           <h1 className="text-gradient mt-20 mb-3 max-w-[588px] text-[30px] font-semibold leading-[41px] md:text-[44px]  md:leading-[127%] ">
             Explore the DefiEdge Ecosystem
           </h1>
-          <p className="mb-10 max-w-[500px] text-base leading-7 text-white/60 md:mb-20">
+          <p className="text-base leading-7 mb-10 max-w-[500px] text-white/60 md:mb-20">
             Swap, earn, vote, and more with hundreds of DeFi apps, integrations,
             and tools built on the Uniswap Protocol.
           </p>
@@ -153,7 +153,7 @@ export default function EcoSystemPage() {
                         layout="fill"
                       />
                     ) : (
-                      <span className="text-base font-medium leading-5 tracking-wider text-white">
+                      <span className="text-base leading-5 font-medium tracking-wider text-white">
                         {e.name
                           .split(' ')
                           .map((e) => e[0])
@@ -162,10 +162,10 @@ export default function EcoSystemPage() {
                     )}
                   </div>
                   <div className="flex-1 ">
-                    <h4 className="mb-1 text-lg font-semibold leading-5 tracking-wide text-gray-300">
+                    <h4 className="text-lg leading-5 mb-1 font-semibold tracking-wide text-gray-300">
                       {e.name}
                     </h4>
-                    <h4 className="mt-2 text-sm leading-4 tracking-wide text-white/60">
+                    <h4 className="text-sm leading-4 mt-2 tracking-wide text-white/60">
                       {e.desc}
                     </h4>
                   </div>
