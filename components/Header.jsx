@@ -61,6 +61,17 @@ export default function Header() {
             Features
           </a>
         </Link>
+        <Link href="/alo" shallow scroll>
+          <a
+            className={
+              router.asPath == '/alo'
+                ? 'opacity-100 duration-300 hover:opacity-100'
+                : 'opacity-50 duration-300 hover:opacity-100'
+            }
+          >
+            ALO
+          </a>
+        </Link>
         <Link href="/ecosystem">
           <a
             className={

@@ -12,9 +12,13 @@ const Layout = ({ children, stats }) => {
 
   const path = router.pathname;
   const isRoot = path === '/';
+  const isAlo = path === '/alo';
 
   return (
-    <>
+    <div
+      style={{ background: isAlo ? 'black' : undefined }}
+      className="transition-colors duration-200"
+    >
       <Header />
       {isRoot && (
         <>
@@ -26,7 +30,7 @@ const Layout = ({ children, stats }) => {
 
       <main>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 };
 

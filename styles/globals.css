@@ -23,6 +23,22 @@
   src: url("../public/fonts/GeneralSans-Semibold.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  /* You can add additional font formats if available */
+}
+@font-face {
+  font-family: "Sharp Grotesk";
+  src: url("/fonts/sharp-grotesk/SharpGroteskBook20.ttf") format("truetype");
+  /* You can add additional font formats if available */
+}
+@font-face {
+  font-family: "DM Mono";
+  src: url("/fonts/dm-mono/DMMono-Regular.ttf") format("truetype");
+  /* You can add additional font formats if available */
+}
+
 html,
 body {
   padding: 0;
