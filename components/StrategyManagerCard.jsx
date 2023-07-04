@@ -349,7 +349,7 @@ function StrategyManagerCard() {
           </div>
           <div className="mt-[60px] mb-2 h-[1px] w-full bg-white opacity-10"></div>
 
-          <div className="relative m-auto mt-[60px]  gap-5 ">
+          <div className="relative m-auto mt-[60px]  w-full gap-5">
             <TestimonialSlider />
           </div>
         </div>
