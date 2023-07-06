@@ -110,15 +110,14 @@ export default function StandOut() {
             </Fade>
           </div>
         </div>
-        <RawImage
+        <Image
           alt="Hero image"
           className="col-span-3 !hidden w-0  basis-1/3 bg-cover md:!block  md:w-auto lg:basis-auto"
           height={450}
           quality={100}
           src="/images/hero-standout-gradient.webp"
-          layout="raw"
           width={300}
-        ></RawImage>
+        ></Image>
       </div>
       <div className="my-[40px] sm:my-[70px]">
         <Image type="image" className="h-[31px] w-[111px]" alt="" src={line} />
@@ -166,7 +165,7 @@ export default function StandOut() {
           stories, highlighting how our services have transformed liquidity
           management for our community
         </p>
-        <div className="relative m-auto w-full max-w-xs gap-5 sm:max-w-none	">
+        <div className="relative m-auto w-full max-w-xs gap-5 sm:max-w-none lg:w-4/5	">
           <TestimonialSlider />
         </div>
       </div>
