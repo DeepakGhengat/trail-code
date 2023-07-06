@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -8,38 +9,44 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const cards = [
   {
-    title: 'Incredible Experience',
+    title: '',
     description:
-      'Lorem ipsum dolor sit amet consectetur. Non molestie amet enim erat egestas fusce in scelerisque. Ut ut vitae in dui mi nisi. Enim risus nisl in volutpat. Sit lobortis adipiscing pharetra tortor turpis donec turpis pretium lorem. Consequat arcu magna id vestibulum mattis tortor lacus. Faucibus dignissim enim adipiscing iaculis amet quis dui elementum. Vel sed mollis amet sed ultrices egestas. Id consequat.',
-    name: 'Jane Cooper',
-    url: '/images/user-avatar.png',
-    position: 'CEO, ABC Corporation',
+      "DefiEdge Team's relentless innovation and unmatched responsiveness make them the go-to choice. We are grateful to partner with such a dedicated team that consistently delivers and pushes the boundaries of what's possible with us. It's a privilege to collaborate with such a responsive and forward-thinking team.",
+    name: 'Arbidex',
+    url: '/images/user-arbidex-core-team.png',
+    position: 'Core Team',
   },
   {
-    title: 'Incredible Experience',
+    title: '',
     description:
-      'Lorem ipsum dolor sit amet consectetur. Non molestie amet enim erat egestas fusce in scelerisque. Ut ut vitae in dui mi nisi. Enim risus nisl in volutpat. Sit lobortis adipiscing pharetra tortor turpis donec turpis pretium lorem. Consequat arcu magna id vestibulum mattis tortor lacus. Faucibus dignissim enim adipiscing iaculis amet quis dui elementum. Vel sed mollis amet sed ultrices egestas. Id consequat.',
-    name: 'Jane Cooper',
-    url: '/images/user-avatar.png',
-    position: 'CEO, ABC Corporation',
-  },
-  {
-    title: 'Incredible Experience',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Non molestie amet enim erat egestas fusce in scelerisque. Ut ut vitae in dui mi nisi. Enim risus nisl in volutpat. Sit lobortis adipiscing pharetra tortor turpis donec turpis pretium lorem. Consequat arcu magna id vestibulum mattis tortor lacus. Faucibus dignissim enim adipiscing iaculis amet quis dui elementum. Vel sed mollis amet sed ultrices egestas. Id consequat.',
-    name: 'Jane Cooper',
-    url: '/images/user-avatar.png',
-    position: 'CEO, ABC Corporation',
-  },
-  {
-    title: 'Incredible Experience',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Non molestie amet enim erat egestas fusce in scelerisque. Ut ut vitae in dui mi nisi. Enim risus nisl in volutpat. Sit lobortis adipiscing pharetra tortor turpis donec turpis pretium lorem. Consequat arcu magna id vestibulum mattis tortor lacus. Faucibus dignissim enim adipiscing iaculis amet quis dui elementum. Vel sed mollis amet sed ultrices egestas. Id consequat.',
-    name: 'Jane Cooper',
-    url: '/images/user-avatar.png',
-    position: 'CEO, ABC Corporation',
+      'DefiEdge offers a game-changing approach in the DeFi landscape by connecting liquidity providers with skilled strategy managers making UniswapV3 investments seamlessly efficient and much more effective.',
+    name: 'Mojmir',
+    url: '/images/user-zkbob.png',
+    position: 'zkBob Team',
   },
 ];
+
+const PartnerClubCard = ({ card, index }) => {
+  return (
+    <div className="rounded-20 border border-grey-1 bg-card-dark-gradiant p-8">
+      <Image
+        alt="Chat logo"
+        className="mb-6 sm:mb-10"
+        height={60}
+        quality={100}
+        src={`/images/stand-out/chat-${index + 1}.png`}
+        width={60}
+      ></Image>
+      <div className="text-22 mb-4 font-primary font-semibold md:text-24">
+        {card.title}
+      </div>
+      <div className="opacity-70">{card.description}</div>
+      <button className="mt-14 w-full rounded-full border border-grey-1 bg-transparent py-2">
+        Contact Support
+      </button>
+    </div>
+  );
+};
 
 export function ReviewSlider() {
   const pagination = {
@@ -72,29 +79,7 @@ export function ReviewSlider() {
     >
       {cards.map((card, index) => (
         <SwiperSlide key={index}>
-          <div
-            className=" m-auto flex w-4/5 flex-col items-center gap-y-5 md:w-full"
-            key={index}
-          >
-            <div className="rounded-2xl border border-grey-1 bg-card-dark-gradiant p-8">
-              <h4 className="text-24 font-semibold">{card.title}</h4>
-              <p className="text-14 opacity-70">{card.description}</p>
-            </div>
-            <div className="flex items-center gap-x-2 ">
-              <Image
-                alt="Avatar"
-                className="h-16 w-16 rounded-full"
-                height={48}
-                quality={100}
-                src={card.url}
-                width={48}
-              ></Image>
-              <div className="">
-                <p className="font-bold">{card.name}</p>
-                <p>{card.position}</p>
-              </div>
-            </div>
-          </div>
+          <PartnerClubCard card={card} index={index} key={index} />
         </SwiperSlide>
       ))}
     </Swiper>

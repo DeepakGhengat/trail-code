@@ -55,10 +55,10 @@ export function TestimonialSlider() {
       {cards.map((card, index) => (
         <SwiperSlide key={index} className="w-4/5 overflow-y-auto">
           <div
-            className=" group relative  m-auto flex flex-grow flex-col items-center justify-between gap-y-5 overflow-y-auto py-6 md:w-full"
+            className="group relative m-auto flex flex-grow flex-col items-center justify-between gap-y-5 overflow-y-auto py-6 md:w-full"
             key={index}
           >
-            <div className="relative h-60  rounded-2xl p-8  py-12">
+            <div className="relative h-64 rounded-2xl p-8 py-12">
               <div className="absolute inset-0 rounded-xl border bg-gradient-to-tl from-[#58C0FB] to-transparent opacity-16 duration-300 hover:border-gray-200 group-hover:opacity-30 "></div>
               <p className="text-16px px-4 text-gray-mid  md:px-0">
                 {card.description}
