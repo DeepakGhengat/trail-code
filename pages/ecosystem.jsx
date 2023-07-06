@@ -1,199 +1,270 @@
-import Image from 'next/image';
-import React, { useEffect, useRef } from 'react';
-// import allMentors from "../data/mentors.js";
-import { Fade } from 'react-reveal';
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/prop-types */
+import React, { useMemo, useState } from 'react';
 
-// import PropTypes from "prop-types";
-import allPartners from '../data/ecosystemPartners.js';
-import Circle from '../public/images/bg-ecosystem.svg';
+const headers = [
+  {
+    text: 'All',
+    count: '0',
+    id: 0,
+  },
+  {
+    text: 'Integrations',
+    count: '0',
+    id: 1,
+  },
+  {
+    text: 'Networks Supported',
+    count: '0',
+    id: 2,
+  },
+  {
+    text: 'Protocols Integrated',
+    count: '0',
+    id: 3,
+  },
+  {
+    text: 'Ecosystem Collaborations',
+    count: '0',
+    id: 4,
+  },
+];
 
-// LoadMoreButton.propTypes = {
-//   active: PropTypes.bool.isRequired,
-// };
+const coins = [
+  {
+    name: 'Ethereum',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 1,
+    id: 1,
+  },
+  {
+    name: 'Polygon',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 2,
+    id: 2,
+  },
+  {
+    name: 'Arbitrum',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 1,
+    id: 3,
+  },
+  {
+    name: 'Optimism',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 3,
+    id: 4,
+  },
+  {
+    name: '1inch',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 2,
+    id: 5,
+  },
+  {
+    name: 'Chainlink',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 3,
+    id: 6,
+  },
+  {
+    name: 'Gelato',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 4,
+    id: 7,
+  },
+  {
+    name: 'StakeDao',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 2,
+    id: 8,
+  },
+  {
+    name: 'Quicknode',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 3,
+    id: 9,
+  },
+  {
+    name: 'Defilab',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 1,
+    id: 10,
+  },
+  {
+    name: 'Solv',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 4,
+    id: 11,
+  },
+  {
+    name: 'SW DAO',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 3,
+    id: 12,
+  },
+  {
+    name: 'Celo',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 3,
+    id: 13,
+  },
+  {
+    name: 'Morpho',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 2,
+    id: 14,
+  },
+  {
+    name: 'Multifarm',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 1,
+    id: 15,
+  },
+  {
+    name: 'Civilization',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 2,
+    id: 16,
+  },
+  {
+    name: 'Zapper',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 3,
+    id: 17,
+  },
+  {
+    name: 'Perpetual',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 3,
+    id: 18,
+  },
+  {
+    name: 'Genki web',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 1,
+    id: 19,
+  },
+  {
+    name: 'DefiBasket',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 3,
+    id: 20,
+  },
+];
+export default function Ecosystem() {
+  const [selectedCategory, setSelectedCategory] = useState(0);
 
-// export function LoadMoreButton({ active, ...props }) {
-//   return (
-//     <button
-//       {...props}
-//       className="px-5 py-2 bg-default-blue/20 border border-default-blue rounded-full space-x-2 inline-flex items-center text-base leading-7"
-//     >
-//       <svg
-//         className={active ? "rotate-180" : undefined}
-//         width="25"
-//         height="24"
-//         viewBox="0 0 25 24"
-//         fill="none"
-//         xmlns="http://www.w3.org/2000/svg"
-//       >
-//         <path
-//           d="M12.5 5V19"
-//           stroke="white"
-//           strokeWidth="2"
-//           strokeLinecap="round"
-//           strokeLinejoin="round"
-//         />
-//         <path
-//           d="M19.5 12L12.5 19L5.5 12"
-//           stroke="white"
-//           strokeWidth="2"
-//           strokeLinecap="round"
-//           strokeLinejoin="round"
-//         />
-//       </svg>
+  const handleHeaderClick = (id) => {
+    setSelectedCategory(id);
+  };
 
-//       <span> {active ? "Show less" : "Load more"}</span>
-//     </button>
-//   );
-// }
+  const filteredCoins = useMemo(() => {
+    const filteredCoinsArray = coins.filter((coin) => {
+      if (selectedCategory === 0) {
+        return true;
+      }
+      return coin.category_id === selectedCategory;
+    });
+    return filteredCoinsArray;
+  }, [selectedCategory]);
 
-// const INITIAL_ITEMS_TO_SHOW = 8;
-
-export default function EcoSystemPage() {
-  const input = useRef(null);
-
-  // const [{ /* showAllPartners, */ searchInput }, dispatch] = useReducer(
-  //   (state, newState) => ({ ...state, ...newState }),
-  //   {
-  //     // showAllPartners: true,
-  //     searchInput: "",
-  //   }
-  // );
-
-  // const searchText = searchInput.trim().toLowerCase();
-
-  // const partners = useMemo(
-  //   () =>
-  //     allPartners
-  //       // .slice(0, showAllPartners ? undefined : INITIAL_ITEMS_TO_SHOW)
-  //       .filter(
-  //         (e) =>
-  //           e.name.toLowerCase().includes(searchText) ||
-  //           e.desc.toLowerCase().includes(searchText)
-  //       ),
-  //   [/* showAllPartners, */ searchInput]
-  // );
-
-  useEffect(() => {
-    if (!input.current) return;
-
-    function focusToInput(ev) {
-      if (ev.key != '/') return;
-
-      input.current.focus();
-      document.body.scrollIntoView({ behavior: 'smooth' });
-      ev.preventDefault();
-    }
-
-    document.addEventListener('keypress', focusToInput);
-    return () => document.removeEventListener('keypress', focusToInput);
-  }, [input]);
+  const categoryCounts = useMemo(() => {
+    return coins.reduce((acc, coin) => {
+      const categoryId = coin.category_id.toString();
+      if (acc[categoryId]) {
+        acc[categoryId] += 1;
+      } else {
+        acc[categoryId] = 1;
+      }
+      return acc;
+    }, {});
+  }, [coins]);
 
   return (
-    <div className="relative w-full overflow-hidden">
-      {/* className="border-b border-white/[0.08]" */}
-      <section>
-        <div className="flex flex-col items-center text-center">
-          <h1 className="text-gradient mt-20 mb-3 max-w-[588px] text-[30px] font-semibold leading-[41px] md:text-[44px]  md:leading-[127%] ">
-            Explore the DefiEdge Ecosystem
-          </h1>
-          <p className="mb-10 max-w-[500px] text-base leading-7 text-white/60 md:mb-20">
-            Swap, earn, vote, and more with hundreds of DeFi apps, integrations,
-            and tools built on the Uniswap Protocol.
-          </p>
-          {/* <div className="focus-within:ring rounded px-5 py-[10px] border border-white/40 bg-[#d9d9d9]/10 mb-20">
-            <input
-              ref={input}
-              type="text"
-              value={searchInput}
-              onInput={(e) => {
-                // const showButtons = !!e.target.value.trim();
-
-                dispatch({
-                  searchInput: e.target.value,
-                  // showAllPartners: showButtons,
-                  // showAllAuditors: showButtons,
-                  // showAllMentors: showButtons,
-                });
-              }}
-              className="!outline-none bg-transparent text-base leading-6 placeholder:text-white/50"
-              placeholder="⌘/ Search"
-            />
-          </div> */}
-        </div>
-      </section>
-      {/* {!partners.length && (
-        <div className="container py-12 mx-auto text-center text-base leading-6 font-medium text-white/60 mb-3">
-          {`No result for "${searchInput.trim()}"`}
-        </div>
-      )} */}
-      {/* {!!partners.length && ( */}
-      <Fade>
-        <section className="container mb-12 px-5 md:mb-[120px] ">
-          <div className="mb-4 grid grid-cols-2 gap-4 md:mb-6  md:grid-cols-2 md:gap-6 lg:grid-cols-4 xl:grid-cols-5 ">
-            {allPartners.map((e) => (
-              <Fade key={e.name}>
-                <div className="bg-ecosystem-card flex space-x-3 rounded-lg py-6 px-4 hover:border hover:border-gray-700">
-                  <div
-                    className={(
-                      'relative h-[40px] w-[40px] overflow-hidden' +
-                      ' ' +
-                      (e.logo
-                        ? ''
-                        : 'flex items-center justify-center !rounded-md bg-white/10') +
-                      ' ' +
-                      (e.rounded ? 'rounded-full' : 'rounded-sm')
-                    ).trim()}
-                    style={{ backgroundColor: e.background }}
-                  >
-                    {e.logo ? (
-                      <Image
-                        className="rounded-full"
-                        src={e.logo}
-                        objectFit="contain"
-                        layout="fill"
-                      />
-                    ) : (
-                      <span className="text-base font-medium leading-5 tracking-wider text-white">
-                        {e.name
-                          .split(' ')
-                          .map((e) => e[0])
-                          .join('')}
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex-1 ">
-                    <h4 className="mb-1 text-lg font-semibold leading-5 tracking-wide text-gray-300">
-                      {e.name}
-                    </h4>
-                    <h4 className="mt-2 text-sm leading-4 tracking-wide text-white/60">
-                      {e.desc}
-                    </h4>
-                  </div>
-                </div>
-              </Fade>
-            ))}
+    <div className="bg-[#0B0C0F]">
+      <main className="mx-auto max-w-7xl">
+        <div className="pb-20 text-white">
+          <div className="bg-hero-ecosystem-gradient bg-cover bg-center py-28">
+            <div className="mx-auto w-4/5  text-center md:w-1/2">
+              <h3 className="leading-p130 font-primary text-42 font-semibold sm:text-48 md:text-52">
+                Explore the DefiEdge Ecosystem
+              </h3>
+              <p className="my-3 text-20 opacity-70">
+                Swap, earn, vote, and more with hundreds of DeFi apps,
+                integrations, and tools built on the Uniswap Protocol.
+              </p>
+            </div>
           </div>
-          {/* {INITIAL_ITEMS_TO_SHOW < allPartners.length && !searchText && (
-              <div className="flex justify-center">
-                <LoadMoreButton
-                  active={showAllPartners}
-                  onClick={() =>
-                    dispatch({ showAllPartners: !showAllPartners })
-                  }
-                />
-              </div>
-            )} */}
-        </section>
-      </Fade>
-      {/* )} */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-full w-screen opacity-60">
-        <Image
-          src={Circle.src}
-          layout="fill"
-          objectFit="cover"
-          objectPosition={'top'}
-        />
-      </div>
+          <div className="grid grid-cols-8 items-start gap-y-4">
+            <ul className="col-span-full flex flex-wrap justify-center text-center md:col-span-3 md:flex-col md:justify-start   xl:col-span-2 ">
+              {headers.map((header, index) => {
+                return (
+                  <li
+                    className={`leading-p160 flex cursor-pointer items-center gap-x-4 border border-grey-1 p-5 font-medium opacity-70 ${
+                      header.id == selectedCategory ? 'bg-grey-2' : ''
+                    }`}
+                    key={`header-${index}`}
+                    onClick={() => handleHeaderClick(header.id)} // pass null if id is 0
+                  >
+                    <span>{header.text}</span>
+                    <span
+                      className={`leading-p160 min-w-50 inline-block rounded-r-full rounded-l-full border bg-grey-2 px-3 ${
+                        header.id == selectedCategory
+                          ? 'border-grey-1'
+                          : 'border-transparent'
+                      }`}
+                    >
+                      {categoryCounts[header.id] || coins.length}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="coin-card-container col-span-full mx-auto grid w-2/3 sm:w-full sm:grid-cols-2  md:col-span-5 xl:col-span-6 xl:grid-cols-3">
+              {filteredCoins.map((card) => {
+                return <CoinCard card={card} key={`coin-${card.id}`} />;
+              })}
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
+
+const CoinCard = ({ card }) => {
+  return (
+    <div className="border border-grey-1 p-8">
+      <img
+        alt="Ecosystem image"
+        className="mb-8 h-12 w-12 rounded-full"
+        height={100}
+        src={`/images/ecosystem/${card.id - 1}.png`}
+        width={100}
+      />
+      <div className="leading-p120 mb-2 text-24 font-semibold">{card.name}</div>
+      <div className="opacity-70">{card.description}</div>
+    </div>
+  );
+};

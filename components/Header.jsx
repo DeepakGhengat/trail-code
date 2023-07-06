@@ -124,7 +124,7 @@ export default function Header() {
                       target="_blank"
                       key={link.href}
                       href={link.href}
-                      className=" group flex w-full items-center rounded-md  px-2 py-2 text-base  text-white opacity-50 transition-all hover:opacity-100"
+                      className=" text-base group flex w-full items-center rounded-md px-2 py-2  text-white opacity-50 transition-all hover:opacity-100"
                     >
                       <span>{link.label}</span>
                     </Menu.Item>
@@ -134,10 +134,10 @@ export default function Header() {
             </div>
           )}
         </Menu>
-        <Link href="/#ecosystem" shallow scroll>
+        <Link href="/ecosystem" shallow scroll>
           <a
             className={
-              router.asPath == '/#ecosystem'
+              router.asPath == '/ecosystem'
                 ? 'opacity-100 duration-300 hover:opacity-100'
                 : 'opacity-50 duration-300 hover:opacity-100'
             }

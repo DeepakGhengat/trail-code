@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
@@ -7,13 +8,13 @@ import line from '../public/images/line.svg';
 
 const defiedgeFeatureContent = [
   {
-    url: '/images/multi-dex-support.png',
+    url: '/images/feature-alo.png',
     title: 'Automated Liquidity Optimization (ALO)',
     description:
       'Maximize your returns with our flagship ALO feature. Automating the dynamic movement of liquidity positions based on market conditions, ALO enables efficient capital utilization, enhanced returns, and reduced impermanent loss.',
   },
   {
-    url: '/images/feature-mining-farm.png',
+    url: '/images/multi-dex-support.png',
     title: 'Multi-DEX Support',
     description:
       'Broaden your horizons with support for multiple Concentrated AMMs including Uniswap V3, PancakeSwap, ApeSwap, and more. Benefit from a wider market presence and increase your earning potential across diverse DEXs.',
@@ -132,15 +133,13 @@ function Swap() {
                 <Fade duration={2000} key={`feature-${index}`}>
                   <div className="group ">
                     <div
-                      className={`relative flex h-full flex-col items-start overflow-hidden pt-2`}
+                      className={`relative flex h-full flex-col items-start overflow-hidden`}
                     >
-                      <div className="absolute inset-0 rounded-xl border bg-gradient-to-tl from-[#58C0FB] to-transparent  opacity-16 duration-300 hover:border-gray-200 group-hover:opacity-30 "></div>
-                      <div className="w-full  bg-card-img">
+                      <div className="absolute inset-0 rounded-xl border bg-gradient-to-tl from-[#58C0FB] to-transparent opacity-16 duration-300 hover:border-gray-200 group-hover:opacity-30 "></div>
+                      <div className="w-full">
                         <img // todo will replace with next/image later
                           alt="Defiedge feature"
-                          className={`aspect-video w-full !object-contain  ${
-                            index === 0 ? 'scale-90' : ''
-                          }`}
+                          className={`aspect-video w-full !object-contain`}
                           height={150}
                           src={content.url}
                           width={225}

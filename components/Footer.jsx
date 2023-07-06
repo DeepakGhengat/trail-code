@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 
@@ -9,9 +10,17 @@ import medium from '../public/images/medium.svg';
 import twitter from '../public/images/twitter.svg';
 
 export default function Footer() {
+  const router = useRouter();
+
+  const path = router.pathname;
+  const isEcosystem = path === '/ecosystem';
   return (
     <Fade duration={2000}>
-      <section className=" border border-gray-mid/20 bg-[#000015]">
+      <section
+        className={`border-t border-gray-mid/20 ${
+          isEcosystem ? 'bg-zinc-900/20' : 'bg-[#000015]'
+        }`}
+      >
         <div className="container  mt-[40px] sm:mt-[75px]  ">
           <div className="flex flex-col justify-between  border-b border-white/10 py-[50px]  sm:flex-row ">
             <div className="flex flex-col items-center sm:items-start">

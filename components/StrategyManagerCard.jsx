@@ -28,7 +28,8 @@ import watchpug from '../public/images/strategy/watchpug.jpeg';
 import wintermute from '../public/images/strategy/wintermute.svg';
 import yuriy from '../public/images/strategy/yuriy.jpeg';
 import ziliqa from '../public/images/strategy/ziliqa.svg';
-import { TestimonialSlider } from './TestimonialSlider';
+import { ReviewSlider } from './ReviewSlider';
+// import { TestimonialSlider } from './TestimonialSlider';
 
 const investorsArray = [
   {
@@ -233,10 +234,10 @@ function StrategyManagerCard() {
                         />
                       </div>
                       <div className="">
-                        <div className="whitespace-normal text-lg font-semibold tracking-wide">
+                        <div className="text-lg whitespace-normal font-semibold tracking-wide">
                           {data.name}
                         </div>
-                        <div className="whitespace-normal text-sm text-gray-400">
+                        <div className="text-sm whitespace-normal text-gray-400">
                           {data.desc}
                         </div>
                       </div>
@@ -281,10 +282,10 @@ function StrategyManagerCard() {
                         />
                       </div>
                       <div className="">
-                        <div className="whitespace-normal text-lg font-semibold tracking-wide">
+                        <div className="text-lg whitespace-normal font-semibold tracking-wide">
                           {data.name}
                         </div>
-                        <div className=" whitespace-normal text-sm text-gray-400">
+                        <div className=" text-sm whitespace-normal text-gray-400">
                           {data.desc}
                         </div>
                       </div>
@@ -322,10 +323,10 @@ function StrategyManagerCard() {
                         />
                       </div>
                       <div className="">
-                        <div className="whitespace-normal text-lg font-semibold tracking-wide">
+                        <div className="text-lg whitespace-normal font-semibold tracking-wide">
                           {data.name}
                         </div>
-                        <div className="truncate whitespace-normal text-sm text-gray-400">
+                        <div className="text-sm truncate whitespace-normal text-gray-400">
                           {data.desc}
                         </div>
                       </div>
@@ -348,10 +349,13 @@ function StrategyManagerCard() {
             })}
           </div>
           <div className="mt-[60px] mb-2 h-[1px] w-full bg-white opacity-10"></div>
-
-          <div className="relative m-auto mt-[60px]  gap-5 ">
-            <TestimonialSlider />
+          <div className="m-auto mt-[60px] w-full gap-5 lg:w-4/5">
+            <ReviewSlider />
           </div>
+
+          {/* <div className="relative m-auto mt-[60px] gap-5 ">
+            <TestimonialSlider />
+          </div> */}
         </div>
       </div>
     </div>
