@@ -1,5 +1,4 @@
 'use client';
-import RawImage from 'next/future/image';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -170,18 +169,18 @@ export default function StandOut() {
         </div>
       </div>
       <div className="hidden px-12 py-12 md:px-20 md:py-28">
-        <h4 className="text-primary-main text-22 md:text-24 font-primary text-center font-medium uppercase sm:text-left">
+        <h4 className="text-primary-main text-22 text-center font-primary font-medium uppercase sm:text-left md:text-24">
           Partnership Opportunities
         </h4>
         <div className="mb-6 flex flex-col items-center justify-between gap-y-2 sm:flex-row">
-          <p className="text-32 md:text-36 lg:text-42 font-primary font-semibold">
+          <p className="font-primary text-32 font-semibold md:text-36 lg:text-42">
             Join the DefiEdge Partner Club
           </p>
           <button className="bg-primary-main shrink-0 rounded-full py-2 px-4 text-white">
             Partner with us
           </button>
         </div>
-        <p className="text-20 mb-12 opacity-70">
+        <p className="mb-12 text-20 opacity-70">
           At DefiEdge, we&apos;re not just about building tools, we&apos;re
           about building relationships. We invite LPs, protocols, and analytics
           platforms to join us in pushing the boundaries of DeFi. Whether
@@ -225,7 +224,7 @@ const FeatureCard = ({ card, index }) => {
 
 const PartnerClubCard = ({ card, index }) => {
   return (
-    <div className="border-grey-1 bg-card-dark-gradiant rounded-20 border p-8">
+    <div className="rounded-20 border border-grey-1 bg-card-dark-gradiant p-8">
       <Image
         alt="Chat logo"
         className="mb-6 sm:mb-10"
@@ -234,11 +233,11 @@ const PartnerClubCard = ({ card, index }) => {
         src={`/images/stand-out/chat-${index + 1}.png`}
         width={60}
       ></Image>
-      <div className="text-22 md:text-24 font-primary mb-4 font-semibold">
+      <div className="text-22 mb-4 font-primary font-semibold md:text-24">
         {card.title}
       </div>
       <div className="opacity-70">{card.description}</div>
-      <button className="border-grey-1 mt-14 w-full rounded-full border bg-transparent py-2">
+      <button className="mt-14 w-full rounded-full border border-grey-1 bg-transparent py-2">
         Contact Support
       </button>
     </div>
