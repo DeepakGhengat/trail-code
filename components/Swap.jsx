@@ -11,7 +11,7 @@ const defiedgeFeatureContent = [
     url: '/images/feature-alo.png',
     title: 'Automated Liquidity Optimization (ALO)',
     description:
-      "Experience the power of our innovative Automated Liquidity Optimization (ALO) feature. Designed to dynamically adjust liquidity positions in response to market fluctuations, ALO aims for efficient capital utilization and aims to mitigate impermanent loss. Dive into DeFi with DefiEdge's ALO!",
+      "Designed to dynamically adjust liquidity positions in response to market fluctuations, ALO aims for efficient capital utilization and aims to mitigate impermanent loss. Dive into DeFi with DefiEdge's ALO!",
   },
   {
     url: '/images/multi-dex-support.png',
