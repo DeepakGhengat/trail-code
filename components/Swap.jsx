@@ -11,13 +11,13 @@ const defiedgeFeatureContent = [
     url: '/images/feature-alo.png',
     title: 'Automated Liquidity Optimization (ALO)',
     description:
-      'Maximize your returns with our flagship ALO feature. Automating the dynamic movement of liquidity positions based on market conditions, ALO enables efficient capital utilization, enhanced returns, and reduced impermanent loss.',
+      "Experience the power of our innovative Automated Liquidity Optimization (ALO) feature. Designed to dynamically adjust liquidity positions in response to market fluctuations, ALO aims for efficient capital utilization and aims to mitigate impermanent loss. Dive into DeFi with DefiEdge's ALO!",
   },
   {
     url: '/images/multi-dex-support.png',
     title: 'Multi-DEX Support',
     description:
-      'Broaden your horizons with support for multiple Concentrated AMMs including Uniswap V3, PancakeSwap, ApeSwap, and more. Benefit from a wider market presence and increase your earning potential across diverse DEXs.',
+      'Scale new heights in DeFi with DefiEdge. Explore, navigate, and even launch your own concentrated DEX in the realm of already integrated DEXes like Uniswap V3, PancakeSwap, ApeSwap, and beyond!',
     className: 'bg-contain',
   },
   {
@@ -125,8 +125,8 @@ function Swap() {
               DeFiEdge Features
             </p>
             <p className="text-16px mx-auto mt-[20px] px-4 text-center text-gray-mid sm:mt-[25px] sm:w-[500px] md:px-0">
-              Unlock the Power of DeFi: Explore Innovative, Seamless, and Secure
-              Features Tailored for Your Success.
+              ALO, Multi-Dex, Multi-Range - Explore the new era of DeFi with
+              DefiEdge.
             </p>
             <div className="my-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {defiedgeFeatureContent.map((content, index) => (
