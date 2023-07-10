@@ -15,7 +15,7 @@ const defiedgeFeatureContent = [
   },
   {
     url: '/images/multi-dex-support.png',
-    title: 'Multi-DEX Support',
+    title: 'Launch your Own Dex',
     description:
       'Scale new heights in DeFi with DefiEdge. Explore, navigate, and even launch your own concentrated DEX in the realm of already integrated DEXes like Uniswap V3, PancakeSwap, ApeSwap, and beyond!',
     className: 'bg-contain',
