@@ -6,13 +6,18 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    lineHeight: {
-      p120: '120%',
-      p130: '130%',
-      p140: '140%',
-      p150: '150%',
-      p160: '160%',
-      p275: '275%',
+    container: {
+      center: true,
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+      },
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2.5rem',
+      },
     },
     fontSize: {
       12: '0.75rem',
@@ -31,10 +36,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--gradient-color-stops))',
-        'card-dark-gradiant':
-          'linear-gradient(180deg, #040506 0%, rgba(4, 5, 6, 0) 100%)',
         'card-img':
           'radial-gradient(105.5% 105.5% at 50% 115.84%, #5C57AE 0%, rgba(92, 87, 174, 0) 100%)',
+        'card-dark-gradiant':
+          'linear-gradient(180deg, #040506 0%, rgba(4, 5, 6, 0) 100%)',
         'user-avatar': "url('/images/user-avatar.png')",
         'hero-gradient': "url('/images/hero-gradient.webp')",
         'hero-ecosystem-gradient':
@@ -42,6 +47,11 @@ module.exports = {
         'hero-standout-gradient': "url('/images/hero-standout-gradient.webp')",
         'white-gradient':
           'linear-gradient(180deg,#ffffff 0%,rgba(255, 255, 255, 0) 100%)',
+      },
+      fontFamily: {
+        'dm-mono': ['DM Mono', 'ui-sans-serif', 'system-ui'],
+        primary: ["'Sharp Grotesk'", 'sans-serif'],
+        main: ['Inter', 'sans-serif'],
       },
       opacity: {
         42: '.42',
@@ -53,54 +63,11 @@ module.exports = {
         'gray-mid': '#A5A5A5',
         white: '#fff',
         skeleton: '#fff',
-        background: {
-          dark: '#0B0C0F',
-          purple: '#5355cc',
-        },
-        primary: {
-          main: '#4452FE',
-        },
         grey: {
           1: '#26272A',
           2: '#151619',
           3: '#242424',
         },
-        black: {
-          1: '#1E1E1E',
-          2: '#040506',
-        },
-      },
-      minWidth: {
-        50: '50px',
-        320: '20rem',
-      },
-      scale: {
-        120: '1.2',
-      },
-      maxWidth: {
-        1000: '62.5rem',
-        1400: '87.5rem',
-      },
-      maxHeight: {
-        200: '12.5rem',
-      },
-
-      borderRadius: {
-        20: '20px',
-      },
-      fontFamily: {
-        'dm-mono': ['DM Mono', 'ui-sans-serif', 'system-ui'],
-        primary: ["'Sharp Grotesk'", 'sans-serif'],
-        main: ['Inter', 'sans-serif'],
-      },
-
-      width: {
-        15: '3.75rem',
-        250: '62.5rem',
-        '4-grid': 'calc(25% - 8px)',
-      },
-      height: {
-        15: '60px',
       },
     },
   },

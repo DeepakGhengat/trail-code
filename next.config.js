@@ -10,6 +10,7 @@ const nextConfig = {
       "crypto.com",
     ],
   },
+  experimental: { images: { allowFutureImage: true } }
 };
 
 module.exports = nextConfig;

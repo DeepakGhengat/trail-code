@@ -19,7 +19,7 @@ function CardCarousel({ strategies }) {
     <Swiper
       pagination={true}
       modules={[Pagination]}
-      className="container mx-auto sm:hidden"
+      className="container  sm:hidden"
       spaceBetween={15}
       loop={true}
       centeredSlides={true}
