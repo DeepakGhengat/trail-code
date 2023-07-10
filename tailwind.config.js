@@ -69,7 +69,7 @@ module.exports = {
           3: '#242424',
         },
       },
-      plugins: [],
     },
   },
+  plugins: [],
 };
