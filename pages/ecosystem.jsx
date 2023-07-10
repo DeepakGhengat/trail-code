@@ -264,7 +264,7 @@ const CoinCard = ({ card }) => {
         width={100}
       />
       <div className="leading-p120 mb-2 text-24 font-semibold">{card.name}</div>
-      <div className="opacity-70">{card.description}</div>
+      {/* <div className="opacity-70">{card.description}</div> */}
     </div>
   );
 };
