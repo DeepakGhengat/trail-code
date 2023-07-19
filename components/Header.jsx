@@ -168,17 +168,17 @@ export default function Header() {
           </a>
         </Link>
 
-        {/* <Link
-                href="https://unboundfinance.notion.site/DefiEdge-Job-Board-0bde371c6cb74a8f9fbdb6ec45d56412"
-                className="opacity-50 hover:opacity-100 duration-300"
-              >
-                <a
-                  target="_blank"
-                  className="opacity-50 hover:opacity-100 duration-300"
-                >
-                  Careers
-                </a>
-              </Link> */}
+        <Link
+          href="https://www.notion.so/defiedge/Careers-9feeee95a02141bfbaed050bf2a9cf9c"
+          className="opacity-50 duration-300 hover:opacity-100"
+        >
+          <a
+            target="_blank"
+            className="opacity-50 duration-300 hover:opacity-100"
+          >
+            Careers
+          </a>
+        </Link>
       </>
     ),
     [router.asPath]

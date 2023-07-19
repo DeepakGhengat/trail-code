@@ -78,12 +78,22 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link href="/privacypolicy" className="hover:text-white">
-                      <p>Privacy Policy</p>
+                      <a className="hover:text-white">Privacy Policy</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/terms" className="hover:text-white">
-                      <p>Terms of Use</p>
+                      <a className="hover:text-white">Terms of Use</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="https://www.notion.so/defiedge/Careers-9feeee95a02141bfbaed050bf2a9cf9c"
+                      className="hover:text-white"
+                    >
+                      <a target="_blank" className="hover:text-white">
+                        Careers
+                      </a>
                     </Link>
                   </li>
                 </ul>
