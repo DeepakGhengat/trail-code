@@ -30,7 +30,7 @@ export default function Footer() {
               </div>
               <div className="mt-[32px] flex space-x-[10px]">
                 <a
-                  href="https://discord.com/invite/fRc6XxhfBq"
+                  href="https://discord.gg/veGVeDbnBe"
                   target="_blank"
                   rel="noreferrer"
                 >

@@ -16,7 +16,7 @@ function Community() {
         </div>
         <div className="mt-[40px] grid grid-cols-2 gap-6 md:flex md:space-x-[70px]">
           <a
-            href="https://discord.com/invite/fRc6XxhfBq"
+            href="https://discord.gg/veGVeDbnBe"
             target="_blank"
             className="flex items-center space-x-[10px]"
             rel="noreferrer"
