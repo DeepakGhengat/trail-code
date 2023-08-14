@@ -28,6 +28,9 @@ import watchpug from '../public/images/strategy/watchpug.jpeg';
 import wintermute from '../public/images/strategy/wintermute.svg';
 import yuriy from '../public/images/strategy/yuriy.jpeg';
 import ziliqa from '../public/images/strategy/ziliqa.svg';
+// import { ReviewSlider } from './ReviewSlider';
+import { TestimonialSlider } from './TestimonialSlider';
+// import { TestimonialSlider } from './TestimonialSlider';
 
 const investorsArray = [
   {
@@ -78,7 +81,6 @@ const investorsArray = [
     logo: juan,
     desc: 'Founder, Keyrock',
   },
-  {},
   {
     id: 10,
     name: 'Kevin Beardsley',
@@ -122,7 +124,6 @@ const auditorsArray = [
     desc: 'Ex-researcher, Paradigm',
     href: 'https://twitter.com/rileyholterhus',
   },
-  {},
   {
     id: 1,
     name: 'Securing',
@@ -165,7 +166,7 @@ const ecosystemArray = [
   },
   {
     id: 2,
-    name: '1 inch Protocol',
+    name: '1inch Protocol',
     logo: two,
     desc: 'DEX Aggregator',
   },
@@ -197,8 +198,8 @@ function StrategyManagerCard() {
   };
 
   return (
-    <div>
-      <div className="overflow-hidden rounded-xl bg-[#141541] bg-opacity-30 bg-clip-padding ring-1 ring-[#3F4077]/30 backdrop-blur-xl backdrop-filter">
+    <div id="ecosystem">
+      <div className="mb-12 overflow-hidden rounded-xl bg-[#141541] bg-opacity-30 bg-clip-padding ring-1 ring-[#3F4077]/30 backdrop-blur-xl backdrop-filter sm:mb-[120px]">
         <div className="flex flex-col items-center text-center">
           <span className="pt-[80px] text-[20px] font-semibold leading-[27px] sm:mt-0 sm:text-[42px]  sm:leading-[44px] ">
             Ecosystem Partners
@@ -213,8 +214,8 @@ function StrategyManagerCard() {
           </div>
         </div>
 
-        <div className="mt-[40px] mb-[80px] flex flex-col items-center overflow-hidden sm:h-auto sm:overflow-visible sm:px-[84px]	">
-          <div className="mt-[40px] grid w-full grid-cols-2 gap-4 px-4 sm:grid-cols-4 sm:gap-[40px] sm:gap-x-[50px] md:px-0">
+        <div className="mt-[40px] mb-[80px] flex flex-col items-center overflow-hidden sm:h-auto sm:overflow-visible sm:px-8 md:px-10 lg:px-[84px]	">
+          <div className="grid-4-auto mt-[40px] w-1/2 sm:w-full">
             {ecosystemArray.map((data, idx) => {
               return (
                 <div
@@ -223,9 +224,9 @@ function StrategyManagerCard() {
                 >
                   {data.logo && (
                     <>
-                      <div className="mr-2 flex items-center">
+                      <div className="grid__item mr-2 flex shrink-0 items-center">
                         <Image
-                          className="rounded-full"
+                          className=" rounded-full"
                           type="image"
                           height={50}
                           width={50}
@@ -234,10 +235,12 @@ function StrategyManagerCard() {
                         />
                       </div>
                       <div className="">
-                        <div className="text-lg font-semibold tracking-wide">
+                        <div className="text-lg whitespace-normal font-semibold tracking-wide">
                           {data.name}
                         </div>
-                        <div className="text-sm text-gray-400">{data.desc}</div>
+                        <div className="text-sm whitespace-normal text-gray-400">
+                          {data.desc}
+                        </div>
                       </div>
                     </>
                   )}
@@ -260,16 +263,16 @@ function StrategyManagerCard() {
             </p>
           </div>
 
-          <div className="mt-[40px] grid w-full grid-cols-2 gap-4 px-4 sm:grid-cols-4 sm:gap-[40px] sm:gap-x-[50px] md:px-0">
+          <div className="grid-4-auto mt-[40px] w-1/2 sm:w-full">
             {investorsArray.map((data, idx) => {
               return (
                 <div
                   key={data.name || `blank-${idx}`}
-                  className="flex items-center space-x-[8px] empty:hidden md:empty:flex"
+                  className="grid__item flex items-center space-x-[8px]  empty:hidden md:empty:flex"
                 >
                   {!!data.logo && (
                     <>
-                      <div className="mr-2 flex items-center">
+                      <div className=" mr-2 flex shrink-0 items-center">
                         <Image
                           className="rounded-full"
                           type="image"
@@ -280,10 +283,12 @@ function StrategyManagerCard() {
                         />
                       </div>
                       <div className="">
-                        <div className="text-lg font-semibold tracking-wide">
+                        <div className="text-lg whitespace-normal font-semibold tracking-wide">
                           {data.name}
                         </div>
-                        <div className="text-sm text-gray-400">{data.desc}</div>
+                        <div className=" text-sm whitespace-normal text-gray-400">
+                          {data.desc}
+                        </div>
                       </div>
                     </>
                   )}
@@ -300,7 +305,7 @@ function StrategyManagerCard() {
             </p>
           </div>
 
-          <div className="mt-[40px] grid w-full grid-cols-2 gap-4 px-4 sm:grid-cols-4 sm:gap-[40px] sm:gap-x-[50px] md:px-0">
+          <div className="grid-4-auto mt-[40px] w-1/2 sm:w-full">
             {auditorsArray.map((data, idx) => {
               const div = (
                 <div
@@ -309,20 +314,22 @@ function StrategyManagerCard() {
                 >
                   {!!data.logo && (
                     <>
-                      <div className="mr-2 flex items-center">
+                      <div className="mr-2 flex shrink-0 items-center">
                         <Image
                           className="rounded-full"
-                          height={40}
-                          width={40}
+                          height={50}
+                          width={50}
                           alt={data.desc}
                           src={data.logo}
                         />
                       </div>
                       <div className="">
-                        <div className="text-lg font-semibold tracking-wide">
+                        <div className="text-lg whitespace-normal font-semibold tracking-wide">
                           {data.name}
                         </div>
-                        <div className="text-sm text-gray-400">{data.desc}</div>
+                        <div className="text-sm truncate whitespace-normal text-gray-400">
+                          {data.desc}
+                        </div>
                       </div>
                     </>
                   )}
@@ -330,14 +337,26 @@ function StrategyManagerCard() {
               );
 
               return data.href ? (
-                <a href={data.href} target="__blank">
+                <a href={data.href} target="__blank" className="grid__item">
                   {div}
                 </a>
               ) : (
-                div
+                <React.Fragment>
+                  {React.cloneElement(div, {
+                    className: `${div.props.className} grid__item`,
+                  })}
+                </React.Fragment>
               );
             })}
           </div>
+          <div className="mt-[60px] mb-2 h-[1px] w-full bg-white opacity-10"></div>
+          <div className="m-auto mt-[60px] w-full gap-5">
+            <TestimonialSlider />
+          </div>
+
+          {/* <div className="relative m-auto mt-[60px] gap-5 ">
+            <TestimonialSlider />
+          </div> */}
         </div>
       </div>
     </div>

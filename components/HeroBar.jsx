@@ -6,13 +6,14 @@ function HeroBar({ stats }) {
   if (!stats) return null;
 
   return (
-    <section className="relative  z-10 mt-[30px] flex bg-white bg-opacity-10 backdrop-blur-lg backdrop-filter">
-      <div className="container mx-auto flex max-w-[1200px] items-center sm:h-[80px]">
-        <div className="grid h-full w-full grid-cols-1 sm:grid-cols-3">
-          <div className="font-regular  flex items-center justify-between border-b-2 border-[#000021] py-[6px] pr-[25px] pl-[20px] sm:border-b-0 sm:border-r-4 sm:pl-0">
-            <span className="text-[12px] font-normal leading-[22px] text-gray-mid sm:text-[16px]">
-              Assets under <br /> management
-            </span>
+    <section className=" relative z-10  mt-[30px] flex  bg-white bg-opacity-10 backdrop-blur-lg backdrop-filter">
+      <div className="mx-auto  w-full items-center gap-2 bg-[#000021] md:max-w-[1200px] ">
+        <div className="grid h-full w-full grid-cols-1  gap-x-2 gap-y-2 md:grid-cols-3 ">
+          <div className="font-regular  flex items-center justify-between   bg-white bg-opacity-10 px-6 md:flex-col md:pr-6 lg:flex-row">
+            <div className="flex gap-x-1 whitespace-nowrap text-[12px] font-normal leading-[22px] text-gray-mid sm:text-[16px] md:text-center lg:flex-col lg:text-left">
+              <span>Assets under</span>
+              management
+            </div>
             <span className="text-[32px] font-normal sm:text-[40px]">
               $
               {Intl.NumberFormat('en-us', {
@@ -22,10 +23,10 @@ function HeroBar({ stats }) {
             </span>
           </div>
 
-          <div className="font-regular flex items-center justify-between border-b-2 border-[#000021]  py-[6px] pr-[25px] pl-[20px] sm:border-b-0 sm:border-r-4 sm:pl-[25px] xl:border-[#05042E] 2xl:border-[#000021]">
-            <span className="text-[12px] font-normal leading-[22px] text-gray-mid sm:text-[16px]">
-              Total <br /> volume
-            </span>
+          <div className="font-regular flex items-center justify-between   bg-white bg-opacity-10 py-[6px]  px-6 md:flex-col lg:flex-row ">
+            <div className="flex gap-x-1 text-[12px] font-normal leading-[22px] text-gray-mid sm:text-[16px] md:text-center lg:flex-col lg:text-left">
+              <span>Total</span> volume
+            </div>
             <span className="font-[400px] text-[32px] font-normal sm:text-[40px]">
               $
               {Intl.NumberFormat('en-us', {
@@ -35,10 +36,10 @@ function HeroBar({ stats }) {
             </span>
           </div>
 
-          <div className="flex items-center justify-between py-[6px] pl-[20px] pr-[20px] sm:pl-[25px] sm:pr-0">
-            <span className="text-[12px] font-normal leading-[22px] text-gray-mid sm:text-[16px]">
-              Total <br /> Strategies
-            </span>
+          <div className="flex  items-center justify-between bg-white bg-opacity-10 py-[6px] px-6 md:flex-col md:pl-6 lg:flex-row">
+            <div className="lg:word flex gap-x-1 text-[12px] font-normal leading-[22px] text-gray-mid sm:text-[16px] md:text-center lg:flex-col lg:text-left">
+              <span>Total</span> Strategies
+            </div>
             <span className="text-[32px] font-normal sm:text-[40px]">
               {stats.totalStrategies}+
             </span>

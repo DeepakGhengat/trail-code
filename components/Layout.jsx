@@ -12,21 +12,25 @@ const Layout = ({ children, stats }) => {
 
   const path = router.pathname;
   const isRoot = path === '/';
+  const isEcosystem = path === '/ecosystem';
 
   return (
-    <>
+    <div
+      style={{ background: isEcosystem ? 'black' : undefined }}
+      className="transition-colors duration-200"
+    >
       <Header />
       {isRoot && (
-        <>
+        <div>
           <Hero />
           <HeroBar />
           <HeroBar stats={stats} />
-        </>
+        </div>
       )}
 
       <main>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 };
 
