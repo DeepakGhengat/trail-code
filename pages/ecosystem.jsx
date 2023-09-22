@@ -2,6 +2,8 @@
 /* eslint-disable react/prop-types */
 import React, { useMemo, useState } from 'react';
 
+import iconMap from '../json/iconMap';
+
 const headers = [
   {
     text: 'All',
@@ -9,25 +11,25 @@ const headers = [
     id: 0,
   },
   {
-    text: 'Integrations',
+    text: 'Networks Supported',
     count: '0',
     id: 1,
   },
   {
-    text: 'Networks Supported',
+    text: 'Protocols Integrated',
     count: '0',
     id: 2,
   },
   {
-    text: 'Protocols Integrated',
+    text: 'Analytics',
     count: '0',
     id: 3,
   },
-  {
-    text: 'Ecosystem Collaborations',
-    count: '0',
-    id: 4,
-  },
+  // {
+  //   text: 'Ecosystem Collaborations',
+  //   count: '0',
+  //   id: 4,
+  // },
 ];
 
 const coins = [
@@ -42,7 +44,7 @@ const coins = [
     name: 'Polygon',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
+    category_id: 1,
     id: 2,
   },
   {
@@ -56,120 +58,134 @@ const coins = [
     name: 'Optimism',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 3,
+    category_id: 1,
     id: 4,
   },
   {
-    name: '1inch',
+    name: 'BNB Smart Chain',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
+    category_id: 1,
     id: 5,
   },
   {
-    name: 'Chainlink',
+    name: 'Base',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 3,
+    category_id: 1,
     id: 6,
   },
   {
-    name: 'Gelato',
+    name: 'Camelot',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 4,
+    category_id: 2,
     id: 7,
   },
   {
-    name: 'StakeDao',
+    name: 'Thena',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
     category_id: 2,
     id: 8,
   },
   {
-    name: 'Quicknode',
+    name: 'Pancakeswap',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 3,
+    category_id: 2,
     id: 9,
   },
   {
-    name: 'Defilab',
+    name: 'SushiSwap',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 1,
+    category_id: 2,
     id: 10,
   },
   {
-    name: 'Solv',
+    name: 'Retro Finance',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 4,
+    category_id: 2,
     id: 11,
   },
   {
-    name: 'SW DAO',
+    name: 'Arbidex',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 3,
+    category_id: 2,
     id: 12,
   },
   {
-    name: 'Celo',
+    name: 'Apeswap',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 3,
+    category_id: 2,
     id: 13,
   },
   {
-    name: 'Morpho',
+    name: 'Chainlink',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
     category_id: 2,
     id: 14,
   },
   {
-    name: 'Multifarm',
+    name: 'Angle Protocol (Merkl)',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 1,
+    category_id: 2,
     id: 15,
   },
   {
-    name: 'Civilization',
+    name: 'Equilibre',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
     category_id: 2,
     id: 16,
   },
   {
+    name: 'Algebra Protocol',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 2,
+    id: 17,
+  },
+  {
+    name: 'Cruize Finance',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 2,
+    id: 18,
+  },
+  {
+    name: 'SpaceID',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 2,
+    id: 19,
+  },
+  {
+    name: 'Overnight Finance',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 2,
+    id: 20,
+  },
+  {
+    name: 'Defillama',
+    description:
+      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
+    category_id: 3,
+    id: 21,
+  },
+  {
     name: 'Zapper',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
     category_id: 3,
-    id: 17,
-  },
-  {
-    name: 'Perpetual',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 3,
-    id: 18,
-  },
-  {
-    name: 'Genki web',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 1,
-    id: 19,
-  },
-  {
-    name: 'DefiBasket',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 3,
-    id: 20,
+    id: 22,
   },
 ];
 export default function Ecosystem() {
@@ -258,9 +274,11 @@ const CoinCard = ({ card }) => {
     <div className="border border-grey-1 p-8">
       <img
         alt="Ecosystem image"
-        className="mb-8 h-12 w-12 rounded-full"
+        className={`mb-8 h-10 w-10 ${
+          card.id === 15 ? 'rounded-none' : 'rounded-full'
+        }`}
         height={100}
-        src={`/images/ecosystem/${card.id - 1}.png`}
+        src={iconMap[card.id - 1]}
         width={100}
       />
       <div className="leading-p120 mb-2 text-24 font-semibold">{card.name}</div>
