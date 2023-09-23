@@ -83,7 +83,7 @@ const coins = [
     id: 7,
   },
   {
-    name: 'Thena',
+    name: 'Thena Finance',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
     category_id: 2,
@@ -227,7 +227,8 @@ export default function Ecosystem() {
                 Explore the DefiEdge Ecosystem
               </h3>
               <p className="my-3 text-20 opacity-70">
-               Dive into the DefiEdge Ecosystem to find the best way to grow your DeFi wealth
+                Dive into the DefiEdge Ecosystem to find the best way to grow
+                your DeFi wealth
               </p>
             </div>
           </div>
