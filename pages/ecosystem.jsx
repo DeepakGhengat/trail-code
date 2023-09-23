@@ -227,8 +227,7 @@ export default function Ecosystem() {
                 Explore the DefiEdge Ecosystem
               </h3>
               <p className="my-3 text-20 opacity-70">
-                Swap, earn, vote, and more with hundreds of DeFi apps,
-                integrations, and tools built on the Uniswap Protocol.
+               Dive into the DefiEdge Ecosystem to find the best way to grow your DeFi wealth
               </p>
             </div>
           </div>
