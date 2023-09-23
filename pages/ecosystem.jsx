@@ -90,7 +90,7 @@ const coins = [
     id: 8,
   },
   {
-    name: 'Pancakeswap',
+    name: 'PancakeSwap',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
     category_id: 2,
