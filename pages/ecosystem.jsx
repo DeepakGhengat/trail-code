@@ -25,11 +25,11 @@ const headers = [
     count: '0',
     id: 3,
   },
-  // {
-  //   text: 'Ecosystem Collaborations',
-  //   count: '0',
-  //   id: 4,
-  // },
+  {
+    text: 'Miscellaneous',
+    count: '0',
+    id: 4,
+  },
 ];
 
 const coins = [
@@ -186,6 +186,96 @@ const coins = [
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
     category_id: 3,
     id: 22,
+  },
+  {
+    name: '1Inch',
+    description: '',
+    category_id: 2,
+    id: 23,
+  },
+  {
+    name: 'Uniswap',
+    description: '',
+    category_id: 2,
+    id: 24,
+  },
+  {
+    name: 'Kujira',
+    description: '',
+    category_id: 2,
+    id: 25,
+  },
+  {
+    name: 'Horiza',
+    description: '',
+    category_id: 2,
+    id: 26,
+  },
+  {
+    name: 'Ramses Exchange',
+    description: '',
+    category_id: 2,
+    id: 27,
+  },
+  {
+    name: 'BaseSwap',
+    description: '',
+    category_id: 2,
+    id: 28,
+  },
+  {
+    name: 'Unbound Finance',
+    description: '',
+    category_id: 2,
+    id: 29,
+  },
+  {
+    name: 'Quickswap',
+    description: '',
+    category_id: 2,
+    id: 30,
+  },
+  {
+    name: 'Pangolin',
+    description: '',
+    category_id: 2,
+    id: 31,
+  },
+  {
+    name: 'Avalanche',
+    description: '',
+    category_id: 1,
+    id: 32,
+  },
+  {
+    name: 'zkSync',
+    description: '',
+    category_id: 1,
+    id: 33,
+  },
+  {
+    name: 'Nexus Mutual',
+    description: '',
+    category_id: 4,
+    id: 34,
+  },
+  {
+    name: 'OpenCover',
+    description: '',
+    category_id: 4,
+    id: 35,
+  },
+  {
+    name: 'Fjord Foundry',
+    description: '',
+    category_id: 4,
+    id: 36,
+  },
+  {
+    name: 'OpenPad',
+    description: '',
+    category_id: 4,
+    id: 37,
   },
 ];
 export default function Ecosystem() {
