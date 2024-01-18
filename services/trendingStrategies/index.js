@@ -49,25 +49,53 @@ async function getStrategies(
 }
 exports.getStrategies = getStrategies;
 export const dexes = [
-  "Uniswap",
-  "Apeswap",
-  "Arbidex",
-  "Pancakeswap",
-  "Sushiswap",
+  'Uniswap',
+  // "Apeswap",
+  'Arbidex',
+  'Baseswap',
+  'Camelot',
+  'Horiza',
+  'Pancakeswap',
+  'Pangolin',
+  'Quickswap',
+  'Ramses',
+  'Retro',
+  'Sushiswap',
+  'Thena',
 ];
 
-async function getStats(
-  networks = ['optimism', 'arbitrum', 'polygon', 'mainnet', 'bsc']
-) {
+async function getStats() {
   return axios_1.default
     .post(URL, {
       operationName: 'Stats',
       fetchPolicy: 'network-only',
       query: queries_1.STATS_QUERY,
       variables: {
-      dex: dexes,
-        network: networks,
-        manager: null,
+        dex: [
+          'Arbidex',
+          'Baseswap',
+          'Camelot',
+          'Horiza',
+          'Pancakeswap',
+          'Pangolin',
+          'Quickswap',
+          'Ramses',
+          'Retro',
+          'Sushiswap',
+          'Thena',
+          'Uniswap',
+        ],
+        network: [
+          'arbitrum',
+          'avalanche',
+          'base',
+          'bsc',
+          'mainnet',
+          'optimism',
+          'polygon',
+          'zkEVM',
+          'zksyncEra',
+        ],
       },
     })
     .then(({ data: { data } }) => {

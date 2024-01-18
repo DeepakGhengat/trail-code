@@ -1,5 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
 exports.STATS_QUERY = exports.STRATEGY_LIST_QUERY = void 0;
 exports.STRATEGY_LIST_QUERY = `
 query Query($strategyListTake: Float, $strategyListNetwork: [Network!]!, $strategyListPage: Float, $strategyListOrder: SortOrder, $strategyListSearch: String, $strategyListSortBy: StrategyTableSortBy, $strategyListType: StrategyFilterType, $strategyReturnInToken: StrategyReturnInToken, $strategyListAddresses: [String!]) {
@@ -55,72 +55,68 @@ query Query($strategyListTake: Float, $strategyListNetwork: [Network!]!, $strate
 }
 `.trim();
 exports.STATS_QUERY = `
-query Stats($network: [Network!], $manager: String , $dex: [Dex!] = [Uniswap, Apeswap, Pancakeswap, Arbidex]) {
-  stats(network: $network, manager: $manager , dex: $dex) {
+query GlobalStats($network: [Network!], $manager: String, $dex: [Dex!] = [Uniswap, Apeswap, Pancakeswap, Arbidex]) {
+  stats(network: $network, manager: $manager, dex: $dex) {
+    assets {
+      ...networks
+      __typename
+    }
     aumSummary {
-      arbitrum
-      bsc
-      mainnet
-      optimism
-      polygon
+      ...networks
+      __typename
     }
     countSummary {
-      arbitrum
-      bsc
-      mainnet
-      optimism
-      polygon
-    }
-    users {
-      arbitrum
-      bsc
-      mainnet
-      optimism
-      polygon
-    }
-    ranges {
-      arbitrum
-      bsc
-      mainnet
-      optimism
-      polygon
-    }
-    pools {
-      arbitrum
-      bsc
-      mainnet
-      optimism
-      polygon
-    }
-    volumeSummary {
-      arbitrum
-      bsc
-      mainnet
-      optimism
-      polygon
+      ...networks
+      __typename
     }
     fees {
-      arbitrum
-      bsc
-      mainnet
-      optimism
-      polygon
+      ...networks
+      __typename
     }
-    assets {
-      arbitrum
-      bsc
-      mainnet
-      optimism
-      polygon
+    pools {
+      ...networks
+      __typename
     }
-    totalVolume
-    totalFees
-    poolCount
+    ranges {
+      ...networks
+      __typename
+    }
+    users {
+      ...networks
+      __typename
+    }
+    volumeSummary {
+      ...networks
+      __typename
+    }
     assetCount
+    poolCount
     rangesCount
+    totalFees
     totalStrategies
     totalValueManaged
+    totalVolume
     uniqueDepositor
+    __typename
   }
+}
+
+fragment networks on CleanedNetworkStats {
+  arbitrum
+  avalanche
+  base
+  baseTestnet
+  bsc
+  goerli
+  kovan
+  mainnet
+  mantle
+  moonbeam
+  optimism
+  polygon
+  rinkeby
+  zksyncEra
+  zkEVM
+  __typename
 }
 `.trim();
