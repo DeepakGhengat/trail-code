@@ -1,308 +1,291 @@
 /* eslint-disable @next/next/no-img-element */
-/* eslint-disable react/prop-types */
-import React, { useMemo, useState } from 'react';
+import PropTypes from 'prop-types';
+import React, { useCallback, useMemo, useState } from 'react';
 
-import iconMap from '../json/iconMap';
-
-const headers = [
-  {
-    text: 'All',
-    count: '0',
-    id: 0,
-  },
-  {
-    text: 'Networks Supported',
-    count: '0',
-    id: 1,
-  },
-  {
-    text: 'Protocols Integrated',
-    count: '0',
-    id: 2,
-  },
-  {
-    text: 'Analytics',
-    count: '0',
-    id: 3,
-  },
-  {
-    text: 'Miscellaneous',
-    count: '0',
-    id: 4,
-  },
-];
+const Category = {
+  All: 'All',
+  NetworksSupported: 'Networks Supported',
+  ProtocolsIntegrated: 'Protocols Integrated',
+  Analytics: 'Analytics',
+  Miscellaneous: 'Miscellaneous',
+};
 
 const coins = [
   {
     name: 'Ethereum',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 1,
-    id: 1,
+    category: Category.NetworksSupported,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/128x128/1027.png',
   },
   {
     name: 'Polygon',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 1,
-    id: 2,
+    category: Category.NetworksSupported,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/128x128/3890.png',
   },
   {
     name: 'Arbitrum',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 1,
-    id: 3,
+    category: Category.NetworksSupported,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/128x128/11841.png',
   },
   {
     name: 'Optimism',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 1,
-    id: 4,
+    category: Category.NetworksSupported,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/128x128/11840.png',
   },
   {
     name: 'BNB Smart Chain',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 1,
-    id: 5,
+    category: Category.NetworksSupported,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/128x128/1839.png',
   },
   {
     name: 'Base',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 1,
-    id: 6,
+    category: Category.NetworksSupported,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/128x128/27716.png',
   },
   {
     name: 'Camelot',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 7,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/128x128/22949.png',
   },
   {
     name: 'Thena Finance',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 8,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/128x128/23335.png',
   },
   {
     name: 'PancakeSwap',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 9,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/128x128/7186.png',
   },
   {
     name: 'SushiSwap',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 10,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/128x128/6758.png',
   },
   {
     name: 'Retro Finance',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 11,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://s2.coinmarketcap.com/static/img/exchanges/128x128/7516.png',
   },
   {
     name: 'Arbidex',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 12,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/128x128/3179.png',
   },
   {
     name: 'Apeswap',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 13,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://s2.coinmarketcap.com/static/img/exchanges/128x128/1281.png',
   },
   {
     name: 'Chainlink',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 14,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/128x128/1975.png',
   },
   {
     name: 'Angle Protocol (Merkl)',
+    roundedIcon: false,
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 15,
+    category: Category.ProtocolsIntegrated,
+    icon: '/images/ecosystem/merkl.png',
   },
   {
     name: 'Equilibre',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 16,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/128x128/23836.png',
   },
   {
     name: 'Algebra Protocol',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 17,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://s2.coinmarketcap.com/static/img/exchanges/64x64/1553.png',
   },
   {
     name: 'Cruize Finance',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 18,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://pbs.twimg.com/profile_images/1592782887006269440/_KjiKgiG_400x400.jpg',
   },
   {
     name: 'SpaceID',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 19,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://s2.coinmarketcap.com/static/img/coins/64x64/21846.png',
   },
   {
     name: 'Overnight Finance',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 2,
-    id: 20,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://img.api.cryptorank.io/coins/overnight1670302763403.png',
   },
   {
     name: 'Defillama',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 3,
-    id: 21,
+    category: Category.Analytics,
+    icon: 'https://pbs.twimg.com/profile_images/1377743719089254405/LQwS_x0l_400x400.jpg',
   },
   {
     name: 'Zapper',
     description:
       'Lorem ipsum dolor sit amet consectetur. In mauris rhoncus adipiscing id mattis volutpat.',
-    category_id: 3,
-    id: 22,
+    category: Category.Analytics,
+    icon: 'https://pbs.twimg.com/profile_images/1681396816737181707/MZVvpTPr_400x400.jpg',
   },
   {
     name: '1Inch',
     description: '',
-    category_id: 2,
-    id: 23,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://1inch.io/assets/token-logo/1inch_token.png',
   },
   {
     name: 'Uniswap',
     description: '',
-    category_id: 2,
-    id: 24,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://pbs.twimg.com/profile_images/1696986796478091264/79NZgGom_400x400.jpg',
   },
   {
     name: 'Kujira',
     description: '',
-    category_id: 2,
-    id: 25,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://pbs.twimg.com/profile_images/1645802735164608515/vOPYwvDf_400x400.jpg',
   },
   {
     name: 'Horiza',
     description: '',
-    category_id: 2,
-    id: 26,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://pbs.twimg.com/profile_images/1019034006883627008/Svj4w-sg_400x400.jpg',
   },
   {
     name: 'Ramses Exchange',
     description: '',
-    category_id: 2,
-    id: 27,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://pbs.twimg.com/profile_images/1660041171736080384/8Tt13tu7_400x400.png',
   },
   {
     name: 'BaseSwap',
     description: '',
-    category_id: 2,
-    id: 28,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://pbs.twimg.com/profile_images/1702394800043868161/EGsd-c2z_400x400.jpg',
   },
   {
     name: 'Unbound Finance',
     description: '',
-    category_id: 2,
-    id: 29,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://pbs.twimg.com/profile_images/1526851278453751810/Tf2egz-j_400x400.jpg',
   },
   {
     name: 'Quickswap',
     description: '',
-    category_id: 2,
-    id: 30,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://pbs.twimg.com/profile_images/1668560071490502656/HMr5khOI_400x400.jpg',
   },
   {
     name: 'Pangolin',
     description: '',
-    category_id: 2,
-    id: 31,
+    category: Category.ProtocolsIntegrated,
+    icon: 'https://pbs.twimg.com/profile_images/1607809611834298369/f-MClvFk_400x400.png',
   },
   {
     name: 'Avalanche',
     description: '',
-    category_id: 1,
-    id: 32,
+    category: Category.NetworksSupported,
+    icon: 'https://pbs.twimg.com/profile_images/1605605053901021184/9LNylZAA_400x400.png',
   },
   {
-    name: 'zkSync',
+    name: 'zkSync Era',
     description: '',
-    category_id: 1,
-    id: 33,
+    category: Category.NetworksSupported,
+    icon: 'https://pbs.twimg.com/profile_images/1647563917349060608/S1P_lNAN_400x400.jpg',
+  },
+  {
+    name: 'Polygon zkEVM',
+    description: '',
+    category: Category.NetworksSupported,
+    icon: 'https://moralis.io/wp-content/uploads/2023/11/Polygon-zkEVM.png',
   },
   {
     name: 'Nexus Mutual',
     description: '',
-    category_id: 4,
-    id: 34,
+    category: Category.Miscellaneous,
+    icon: 'https://pbs.twimg.com/profile_images/1618226686511747072/s_X7BLTk_400x400.png',
   },
   {
     name: 'OpenCover',
     description: '',
-    category_id: 4,
-    id: 35,
+    category: Category.Miscellaneous,
+    icon: 'https://pbs.twimg.com/profile_images/1630924828592033796/_48-NsTv_400x400.png',
   },
   {
     name: 'Fjord Foundry',
     description: '',
-    category_id: 4,
-    id: 36,
+    category: Category.Miscellaneous,
+    icon: 'https://pbs.twimg.com/profile_images/1572885646112219136/XpMRWwtg_400x400.jpg',
   },
   {
     name: 'OpenPad',
     description: '',
-    category_id: 4,
-    id: 37,
+    category: Category.Miscellaneous,
+    icon: 'https://pbs.twimg.com/profile_images/1725258984683393024/MWidnLnQ_400x400.jpg',
+  },
+  {
+    name: 'Quantstamp',
+    category: Category.Miscellaneous,
+    icon: 'https://cdn.worldvectorlogo.com/logos/quantstamp-1.svg',
   },
 ];
-export default function Ecosystem() {
-  const [selectedCategory, setSelectedCategory] = useState(0);
 
-  const handleHeaderClick = (id) => {
-    setSelectedCategory(id);
-  };
+export default function Ecosystem() {
+  const [selectedCategory, setSelectedCategory] = useState(Category.All);
+
+  const handleHeaderClick = useCallback((categoryId) => {
+    setSelectedCategory(Category[categoryId]);
+  });
 
   const filteredCoins = useMemo(() => {
-    const filteredCoinsArray = coins.filter((coin) => {
-      if (selectedCategory === 0) {
-        return true;
-      }
-      return coin.category_id === selectedCategory;
-    });
-    return filteredCoinsArray;
+    const items = [...coins].sort((a, b) => a.name.localeCompare(b.name));
+    if (selectedCategory === Category.All) return items;
+
+    return items.filter((coin) => coin.category === selectedCategory);
   }, [selectedCategory]);
 
   const categoryCounts = useMemo(() => {
     return coins.reduce((acc, coin) => {
-      const categoryId = coin.category_id.toString();
-      if (acc[categoryId]) {
-        acc[categoryId] += 1;
-      } else {
-        acc[categoryId] = 1;
-      }
+      acc[coin.category] = (acc[coin.category] || 0) + 1;
       return acc;
     }, {});
   }, [coins]);
@@ -324,16 +307,16 @@ export default function Ecosystem() {
           </div>
           <div className="grid grid-cols-8 items-start gap-y-4">
             <ul className="col-span-full flex flex-wrap justify-center text-center md:col-span-3 md:flex-col md:justify-start   xl:col-span-2 ">
-              {headers.map((header, index) => {
+              {Object.entries(Category).map(([index, header]) => {
                 return (
                   <li
                     className={`leading-p160 flex cursor-pointer items-center gap-x-4 border border-grey-1 p-5 font-medium opacity-70 ${
                       header.id == selectedCategory ? 'bg-grey-2' : ''
                     }`}
                     key={`header-${index}`}
-                    onClick={() => handleHeaderClick(header.id)} // pass null if id is 0
+                    onClick={() => handleHeaderClick(index)} // pass null if id is 0
                   >
-                    <span>{header.text}</span>
+                    <span>{header}</span>
                     <span
                       className={`leading-p160 min-w-50 inline-block rounded-r-full rounded-l-full border bg-grey-2 px-3 ${
                         header.id == selectedCategory
@@ -341,7 +324,7 @@ export default function Ecosystem() {
                           : 'border-transparent'
                       }`}
                     >
-                      {categoryCounts[header.id] || coins.length}
+                      {categoryCounts[header] || coins.length}
                     </span>
                   </li>
                 );
@@ -349,7 +332,12 @@ export default function Ecosystem() {
             </ul>
             <div className="coin-card-container col-span-full mx-auto grid w-2/3 sm:w-full sm:grid-cols-2  md:col-span-5 xl:col-span-6 xl:grid-cols-3">
               {filteredCoins.map((card) => {
-                return <CoinCard card={card} key={`coin-${card.id}`} />;
+                return (
+                  <CoinCard
+                    card={card}
+                    key={`coin-${card.category}-${card.name}`}
+                  />
+                );
               })}
             </div>
           </div>
@@ -359,20 +347,30 @@ export default function Ecosystem() {
   );
 }
 
+/**
+ * Renders a CoinCard component.
+ *
+ * @param {Object} card - The card object containing information about the coin.
+ * @return {JSX.Element} - The rendered CoinCard component.
+ */
 const CoinCard = ({ card }) => {
   return (
     <div className="border border-grey-1 p-8">
-      <img
-        alt="Ecosystem image"
-        className={`mb-8 h-10 w-10 ${
-          card.id === 15 ? 'rounded-none' : 'rounded-full'
-        }`}
-        height={100}
-        src={iconMap[card.id - 1]}
-        width={100}
-      />
+      <div className={`mb-8 flex h-10 w-10`}>
+        <img
+          alt="Ecosystem image"
+          className={`object-fit m-auto h-auto w-10 ${
+            card.roundedIcon === false ? '' : 'rounded-full'
+          }`}
+          src={card.icon}
+        />
+      </div>
       <div className="leading-p120 mb-2 text-24 font-semibold">{card.name}</div>
       {/* <div className="opacity-70">{card.description}</div> */}
     </div>
   );
+};
+
+CoinCard.propTypes = {
+  card: PropTypes.object.isRequired, // Replace `object` with the appropriate data type for the `card` prop
 };
