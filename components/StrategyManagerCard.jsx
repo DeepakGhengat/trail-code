@@ -308,10 +308,7 @@ function StrategyManagerCard() {
           <div className="grid-4-auto mt-[40px] w-1/2 sm:w-full">
             {auditorsArray.map((data, idx) => {
               const div = (
-                <div
-                  key={data.name || `blank-${idx}`}
-                  className="flex items-center space-x-[8px] empty:hidden md:empty:flex"
-                >
+                <div className="flex items-center space-x-[8px] empty:hidden md:empty:flex">
                   {!!data.logo && (
                     <>
                       <div className="mr-2 flex shrink-0 items-center">
@@ -337,11 +334,16 @@ function StrategyManagerCard() {
               );
 
               return data.href ? (
-                <a href={data.href} target="__blank" className="grid__item">
+                <a
+                  href={data.href}
+                  key={data.name || `blank-${idx}`}
+                  target="__blank"
+                  className="grid__item"
+                >
                   {div}
                 </a>
               ) : (
-                <React.Fragment>
+                <React.Fragment key={data.name || `blank-${idx}`}>
                   {React.cloneElement(div, {
                     className: `${div.props.className} grid__item`,
                   })}
