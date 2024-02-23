@@ -15,7 +15,7 @@ function PrivacyPolicy() {
             <p className="text-[30px] font-semibold sm:text-[44px]">
               Privacy Policy
             </p>
-            <p className="text-[16px] ">Last updated Sep 23 , 2022</p>
+            <p className="text-[16px]">Last updated February 23, 2024</p>
           </div>
           <div className="mt-[20px] mb-[120px] text-[20px] sm:mx-[20px] sm:mt-[64px] sm:text-[20px]">
             <div>
@@ -23,19 +23,19 @@ function PrivacyPolicy() {
               <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
                   DefiEdge does not collect any personal information.
-                  Occasionally, at our discretion, we may include or offer third
-                  party products or services on our site which may collect
-                  non-personally identifiable visitor information.
+                  Occasionally, at our discretion, we may include or offer
+                  third-party products or services on our site, which may
+                  collect non-personally identifiable visitor information.
                 </li>
                 <li className="mt-[16px]">
-                  Any information collected by third parties are subject to
-                  their separate and independent privacy policies. We therefore
-                  have no responsibility or liability for the content and
-                  activities of these linked sites.
-                  <p className="ml-[20px] mt-[12px]">
-                    NOTE: Optional Twitter Verification is used for
-                    identification of the strategy managers but the authenticity
-                    of these identities should be researched by the user.
+                  Any information collected by third parties is subject to their
+                  separate and independent privacy policies. We, therefore, have
+                  no responsibility or liability for the content and activities
+                  of these linked sites.
+                  <p className="mt-[12px]">
+                    NOTE: Optional Twitter verification is used to identify
+                    strategy managers, but the authenticity of these identities
+                    should be researched by the user.
                   </p>
                 </li>
                 <li className="mt-[16px]">
@@ -49,9 +49,9 @@ function PrivacyPolicy() {
               <p className="font-semibold ">How do we use this information?</p>
               <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
-                  Information collected by the third party product, Sentry.io is
+                  Information collected by the third-party product Sentry.io is
                   used to improve user experience and our website. For further
-                  details, please refer to Sentry.io{' '}
+                  details, please refer to Sentry.io&apos;s{' '}
                   <a
                     target="_blank"
                     className="text-white underline"
@@ -72,9 +72,8 @@ function PrivacyPolicy() {
               <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
                   DefiEdge being a decentralised platform, does not collect any
-                  personally identifiable information and hence, does not sell,
+                  personally identifiable information and, hence, does not sell,
                   trade, or otherwise transfer it to outside parties.
-                  <br /> <br />
                 </li>
                 <li>
                   This does not include trusted third parties who assist us in
@@ -101,12 +100,12 @@ function PrivacyPolicy() {
 
             <div className="mt-[40px]">
               <p className="font-semibold ">
-                Children’s Online Privacy Protection?
+                Children&apos;s Online Privacy Protection?
               </p>
               <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
-                  Our site, products and services are all directed to people who
-                  are at least 13 years old or older.
+                  Our site, products, and services are all directed to people
+                  who are at least 13 years old or older.
                 </li>
               </ul>
             </div>
@@ -117,10 +116,9 @@ function PrivacyPolicy() {
               </p>
               <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
-                  Currently, strategy managers can share their twitter handle
+                  Currently, strategy managers can share their Twitter handle
                   with the protocol for verifying the strategies they create (if
                   they choose to).
-                  <br /> <br />
                 </li>
                 <li>
                   This information may only be used for marketing or advertising
@@ -143,14 +141,10 @@ function PrivacyPolicy() {
 
             <div className="mt-[40px]">
               <p className="font-semibold ">
-                When does DE shares ownership ends for a particular investor?
+                When does DE share ownership end for a particular investor?
               </p>
               <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
-                <li>
-                  {' '}
-                  DE shares are a proof of liquidity added in a strategy.
-                  <br /> <br />
-                </li>
+                <li>DE shares are proof of liquidity added to a strategy.</li>
                 <li>
                   Investors have ownership of their DE shares as long as they
                   are invested in a strategy. These shares are minted at the
@@ -166,7 +160,7 @@ function PrivacyPolicy() {
               </p>
               <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
-                  NO information is shared with the government of any state or
+                  No information is shared with the government of any state or
                   country.
                 </li>
               </ul>
