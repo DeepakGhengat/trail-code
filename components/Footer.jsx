@@ -39,7 +39,7 @@ export default function Footer() {
               </div>
               <div className="mt-[32px] flex space-x-[10px]">
                 <a
-                  href="https://discord.gg/veGVeDbnBe"
+                  href="https://discord.gg/x2QgbqE9jj"
                   target="_blank"
                   rel="noreferrer"
                 >
