@@ -15,11 +15,11 @@ function PrivacyPolicy() {
             <p className="text-[30px] font-semibold sm:text-[44px]">
               Privacy Policy
             </p>
-            <p className="text-[16px]">Last updated February 23, 2024</p>
+            <p className="text-[16px]">Last updated March 4, 2024</p>
           </div>
           <div className="mt-[20px] mb-[120px] text-[20px] sm:mx-[20px] sm:mt-[64px] sm:text-[20px]">
             <div>
-              <p className="font-semibold ">What information do we collect?</p>
+              <p className="font-semibold">What information do we collect?</p>
               <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
                   DefiEdge does not collect any personal information.
@@ -32,11 +32,10 @@ function PrivacyPolicy() {
                   separate and independent privacy policies. We, therefore, have
                   no responsibility or liability for the content and activities
                   of these linked sites.
-                  <p className="mt-[12px]">
-                    NOTE: Optional Twitter verification is used to identify
-                    strategy managers, but the authenticity of these identities
-                    should be researched by the user.
-                  </p>
+                  <br />
+                  NOTE: Optional Twitter verification is used to identify
+                  strategy managers, but the authenticity of these identities
+                  should be researched by the user.
                 </li>
                 <li className="mt-[16px]">
                   Nonetheless, we seek to protect the integrity of our site and
@@ -71,7 +70,7 @@ function PrivacyPolicy() {
               </p>
               <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
                 <li>
-                  DefiEdge being a decentralised platform, does not collect any
+                  DefiEdge, a decentralised platform, does not collect any
                   personally identifiable information and, hence, does not sell,
                   trade, or otherwise transfer it to outside parties.
                 </li>
@@ -80,20 +79,6 @@ function PrivacyPolicy() {
                   operating our site, conducting our business, or servicing you,
                   so long as those parties agree to keep this information
                   confidential.
-                </li>
-              </ul>
-            </div>
-
-            <div className="mt-[40px]">
-              <p className="font-semibold ">
-                Do US residents have access to the protocol?
-              </p>
-              <ul className="disc mt-[16px] ml-[20px] font-normal text-gray-mid">
-                <li>
-                  US residents are currently not blocked from using the
-                  protocol. However, a few functionalities might not be
-                  available to them. If this policy is changed, we will post
-                  those changes on this page.
                 </li>
               </ul>
             </div>

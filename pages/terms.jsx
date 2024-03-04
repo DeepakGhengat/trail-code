@@ -15,11 +15,11 @@ function PrivacyPolicy() {
             <p className="text-[30px] font-semibold sm:text-[44px]">
               Terms and Conditions
             </p>
-            <p className="text-[16px]">Last updated February 23, 2024</p>
+            <p className="text-[16px]">Last updated March 4, 2024</p>
           </div>
-          <div className="mt-[20px] mb-[120px] text-[20px] sm:mx-[20px] sm:mt-[64px] sm:text-[20px]">
+          <div className="mt-5 mb-[120px] text-[20px] sm:mx-5 sm:mt-[64px] sm:text-[20px]">
             <div>
-              <div className=" mt-[16px] ml-[20px] font-normal text-gray-mid">
+              <div className=" mt-4 ml-5 font-normal text-gray-mid">
                 <p>
                   BY ACCESSING THE DefiEdge SERVICE(S), YOU AGREE TO THE
                   DefiEdge TERMS OF USE AND THE DefiEdge PRIVACY POLICY. THESE
@@ -33,37 +33,39 @@ function PrivacyPolicy() {
                   THIS REFERENCE. IF YOU DO NOT AGREE TO THESE TERMS OF USE, DO
                   NOT USE THE SERVICES.
                 </p>
-                <p className="mt-[16px]">
-                  In addition, when using the Services, you shall be subject to
-                  any posted guidelines, rules, or terms applicable to such
-                  Services, which may be posted from time to time. All such
-                  guidelines, rules, or terms (including, without limitation
-                  DefiEdge’s Privacy Policy) are hereby incorporated by
-                  reference into the Terms of Use.
-                </p>
-                <p className="mt-[16px]">
-                  In the event the terms of these Terms of Use conflict with the
-                  Privacy Policy, applicable EULA, or any other agreement
-                  between you and DefiEdge, the terms of the applicable Privacy
-                  Policy, EULA, or other agreement shall govern as to the
-                  conflicting terms. If you have any questions regarding these
-                  terms and conditions, please contact customer service, which
-                  is provided via info@DefiEdge.io.
-                </p>
-                <p className="mt-[16px]">
-                  By accessing the DefiEdge Website and use of the Services, you
-                  agree to these Terms of Use and you acknowledge that you have
-                  read and understood these Terms of Use. If you do not agree
-                  with the terms and conditions in these Terms of Use, please
-                  exit the Website and discontinue any use of the Services.
-                </p>
+                <section className="mt-4 space-y-1">
+                  <p>
+                    In addition, when using the Services, you shall be subject
+                    to any posted guidelines, rules, or terms applicable to such
+                    Services, which may be posted from time to time. All such
+                    guidelines, rules, or terms (including, without limitation
+                    DefiEdge’s Privacy Policy) are hereby incorporated by
+                    reference into the Terms of Use.
+                  </p>
+                  <p>
+                    In the event the terms of these Terms of Use conflict with
+                    the Privacy Policy, applicable EULA, or any other agreement
+                    between you and DefiEdge, the terms of the applicable
+                    Privacy Policy, EULA, or other agreement shall govern as to
+                    the conflicting terms. If you have any questions regarding
+                    these terms and conditions, please contact customer service,
+                    which is provided via{' '}
+                    <a href="mailto:info@DefiEdge.io">info@DefiEdge.io</a>.
+                  </p>
+                  <p>
+                    By accessing the DefiEdge Website and use of the Services,
+                    you agree to these Terms of Use and you acknowledge that you
+                    have read and understood these Terms of Use. If you do not
+                    agree with the terms and conditions in these Terms of Use,
+                    please exit the Website and discontinue any use of the
+                    Services.
+                  </p>
+                </section>
 
-                <div className="mt-[20px]">
-                  <h3 className="mb-3 text-[26px] font-bold text-white">
-                    <br />
-                    Please note the following:
-                  </h3>
-
+                <h3 className="mt-5 mb-3 text-[26px] font-bold text-white">
+                  Please note the following:
+                </h3>
+                <section className="space-y-1">
                   <p>
                     You agree that you will only use the Website and Services
                     for lawful purposes and pursuant to these Terms of Use.
@@ -85,20 +87,22 @@ function PrivacyPolicy() {
                     You agree that DefiEdge may also offer other services that
                     are governed by these or different terms of use.
                   </p>
-                </div>
+                </section>
 
-                <div className="space-y-2">
-                  <p className="text-lg font-bold">
-                    <br />
+                <section className="mt-5 space-y-1">
+                  <p>
                     You agree to use the Services for lawful purposes only, and
                     solely in a manner consistent with the intent of DefiEdge as
-                    described in these Terms of Use. You agree that while using
-                    the Service, You will not engage in any activities that are
-                    in violation of any applicable laws of any jurisdiction that
-                    applies. You further agree to not offer any interests,
-                    tokens, or equity in any fund owned or managed by You to a
-                    person who does not qualify to participate or purchase such
-                    interests, tokens, or equity in the applicable jurisdiction.
+                    described in these Terms of Use.
+                  </p>
+                  <p>
+                    You agree that while using the Service, You will not engage
+                    in any activities that are in violation of any applicable
+                    laws of any jurisdiction that applies. You further agree to
+                    not offer any interests, tokens, or equity in any fund owned
+                    or managed by You to a person who does not qualify to
+                    participate or purchase such interests, tokens, or equity in
+                    the applicable jurisdiction.
                   </p>
 
                   <p>
@@ -132,12 +136,11 @@ function PrivacyPolicy() {
                     thereto or have appropriate to protect your interests,
                     including legal, tax, accounting and other advice.
                   </p>
-
-                  <h3 className="text-[26px] font-bold text-white">
-                    <br />
-                    Please note the following:
-                  </h3>
-
+                </section>
+                <h3 className="mt-5 mb-3 text-[26px] font-bold text-white">
+                  You agree that:
+                </h3>
+                <section className="my-5 space-y-1">
                   <p>
                     You are not a person or entity that resides in, are a
                     citizen of, are incorporated in, or have a registered office
@@ -171,12 +174,11 @@ function PrivacyPolicy() {
                     Syria, Nicaragua, Yemen, Zimbabwe or any other other state,
                     country or region that is included in the Sanction lists.
                   </p>
-
-                  <p>
-                    You understand the risks associated with using the DefiEdge
-                    website and DefiEdge dApp.
-                  </p>
-                </div>
+                </section>
+                <p>
+                  You understand the risks associated with using the DefiEdge
+                  website and DefiEdge dApp.
+                </p>
               </div>
             </div>
           </div>
