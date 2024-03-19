@@ -50,7 +50,6 @@ async function getStrategies(
 exports.getStrategies = getStrategies;
 export const dexes = [
   'Uniswap',
-  // "Apeswap",
   'Arbidex',
   'Baseswap',
   'Camelot',
@@ -67,8 +66,7 @@ export const dexes = [
 async function getStats() {
   return axios_1.default
     .post(URL, {
-      operationName: 'Stats',
-      fetchPolicy: 'network-only',
+      operationName: 'GlobalStats',
       query: queries_1.STATS_QUERY,
       variables: {
         dex: [
@@ -99,7 +97,25 @@ async function getStats() {
       },
     })
     .then(({ data: { data } }) => {
-      return data.stats;
+      return replaceNullWithZero(data.stats, 0);
     });
 }
+
+function replaceNullWithZero(data, replaceWith = 0) {
+  if (typeof data === 'object' && data !== null) {
+    // Check if it's an array or an object
+    if (Array.isArray(data)) {
+      return data.map((item) => replaceNullWithZero(item));
+    } else {
+      return Object.keys(data).reduce((acc, key) => {
+        acc[key] = replaceNullWithZero(data[key]);
+        return acc;
+      }, {});
+    }
+  } else {
+    // If not an object, return 0 for null and the original value otherwise
+    return data === null ? replaceWith : data;
+  }
+}
+
 exports.getStats = getStats;
