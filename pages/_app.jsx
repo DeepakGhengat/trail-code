@@ -12,7 +12,7 @@ function App({ Component, pageProps: { children, ...pageProps } }) {
     <>
       <Head>
         <title>
-          Defiedge - Asset Management Protocol Built on Concentrated DEXs
+          DefiEdge - Asset Management Protocol Built on Concentrated DEXs
         </title>
 
         <link rel="shortcut icon" href="/images/favicon.ico" />
@@ -31,7 +31,7 @@ function App({ Component, pageProps: { children, ...pageProps } }) {
 
         <meta
           name="description"
-          content="Defiedge - Asset Management Protocol Built on Concentrated DEXs"
+          content="DefiEdge - Asset Management Protocol Built on Concentrated DEXs"
         />
         <link
           rel="preload"

@@ -147,7 +147,7 @@ export default function StandOut() {
         sm:text-left  sm:text-[24px] sm:leading-[55px]
         "
         >
-          DeFiEdge Victories
+          DefiEdge Victories
         </h4>
         <div className="mb-6 flex flex-col items-center justify-between gap-y-2 text-center sm:flex-row sm:text-left">
           <p className="text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  sm:text-[36px]  lg:text-[44px]">
@@ -158,9 +158,9 @@ export default function StandOut() {
           </button>
         </div>
         <p className="text-16px  mt-[20px] mb-10  px-4 text-center text-gray-mid  sm:mt-[25px] sm:text-left md:px-0">
-          We at DeFiEdge believe that the real proof of our platform&apos;s
+          We at DefiEdge believe that the real proof of our platform&apos;s
           effectiveness lies in the tangible success of our users and partners.
-          &apos;DeFiEdge Victories&apos; is our tribute to these compelling
+          &apos;DefiEdge Victories&apos; is our tribute to these compelling
           stories, highlighting how our services have transformed liquidity
           management for our community
         </p>

@@ -150,7 +150,7 @@ function PrivacyPolicy() {
 
                   <p>
                     You will not in the future access this website or the
-                    Defiedge dApp while located within the United States or
+                    DefiEdge dApp while located within the United States or
                     prohibited localities.
                   </p>
 

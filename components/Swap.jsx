@@ -122,7 +122,7 @@ function Swap() {
           </div>
           <div className="mt-[50px] sm:mt-[70px]">
             <p className="text-center text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  md:text-[36px] lg:text-[44px]">
-              DeFiEdge Features
+              DefiEdge Features
             </p>
             <p className="text-16px mx-auto mt-[20px] px-4 text-center text-gray-mid sm:mt-[25px] sm:w-[500px] md:px-0">
               ALO, Multi-Dex, Multi-Range - Explore the new era of DeFi with
@@ -138,7 +138,7 @@ function Swap() {
                       <div className="absolute inset-0 rounded-xl border bg-gradient-to-tl from-[#58C0FB] to-transparent opacity-16 duration-300 hover:border-gray-200 group-hover:opacity-30 "></div>
                       <div className="w-full">
                         <img // todo will replace with next/image later
-                          alt="Defiedge feature"
+                          alt="DefiEdge feature"
                           className={`aspect-video w-full !object-contain`}
                           height={150}
                           src={content.url}
