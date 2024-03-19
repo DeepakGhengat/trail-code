@@ -13,10 +13,11 @@ import defiedgeLogo from '../public/images/mainlogo.svg';
 import menuIcon from '../public/images/menu.svg';
 
 const menuLinks = [
-  { href: 'https://discord.gg/x2QgbqE9jj', label: 'Discord' },
-  { href: 'https://twitter.com/DefiEdge/', label: 'Twitter' },
-  { href: 'https://defiedge.substack.com/', label: 'Substack' },
-  { href: 'https://medium.com/@DefiEdge', label: 'Medium' },
+  { label: 'Discord', href: 'https://discord.gg/x2QgbqE9jj' },
+  { label: 'Medium', href: 'https://medium.com/@DefiEdge' },
+  { label: 'Substack', href: 'https://defiedge.substack.com/' },
+  { label: 'Twitter', href: 'https://twitter.com/DefiEdge/' },
+  { label: 'Youtube', href: 'https://www.youtube.com/@DefiedgeProtocol' },
 ];
 
 export default function Header() {

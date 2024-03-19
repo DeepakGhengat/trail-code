@@ -8,6 +8,7 @@ import discord from '../public/images/discord.svg';
 import mainlogo from '../public/images/mainlogo.svg';
 import medium from '../public/images/medium.svg';
 import twitter from '../public/images/twitter.svg';
+import youtube from '../public/images/youtube.svg';
 
 export default function Footer() {
   const router = useRouter();
@@ -43,21 +44,28 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image type="image" alt="" src={discord} />
+                  <Image type="image" alt="discord" src={discord} />
                 </a>
                 <a
                   href="https://medium.com/@DefiEdge"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image type="image" alt="" src={medium} />
+                  <Image type="image" alt="medium" src={medium} />
                 </a>
                 <a
                   href="https://twitter.com/DefiEdge/"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Image type="image" alt="" src={twitter} />
+                  <Image type="image" alt="twitter" src={twitter} />
+                </a>{' '}
+                <a
+                  href="https://www.youtube.com/@DefiedgeProtocol"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image type="image" alt="youtube" src={youtube} />
                 </a>
               </div>
             </div>
