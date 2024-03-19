@@ -153,9 +153,11 @@ export default function StandOut() {
           <p className="text-[26px] font-semibold leading-[50px] text-[#FEFEFE]  sm:text-[36px]  lg:text-[44px]">
             Your Success is Our Story
           </p>
-          <button className="rounded-md bg-[#4452FE] py-2 px-10 text-gray-300 hover:bg-[#3F1DF0]">
-            Start your Journey
-          </button>
+          <a href="https://app.defiedge.io" target="_blank" rel="noreferrer">
+            <button className="rounded-md bg-[#4452FE] py-2 px-10 text-gray-300 hover:bg-[#3F1DF0]">
+              Start your Journey
+            </button>
+          </a>
         </div>
         <p className="text-16px  mt-[20px] mb-10  px-4 text-center text-gray-mid  sm:mt-[25px] sm:text-left md:px-0">
           We at DefiEdge believe that the real proof of our platform&apos;s
