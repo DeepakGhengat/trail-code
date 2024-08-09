@@ -1,7 +1,4 @@
-'use strict';
-Object.defineProperty(exports, '__esModule', { value: true });
-exports.STATS_QUERY = exports.STRATEGY_LIST_QUERY = void 0;
-exports.STRATEGY_LIST_QUERY = `
+const STRATEGY_LIST_QUERY = /* GraphQL */ `
 query Query($strategyListTake: Float, $strategyListNetwork: [Network!]!, $strategyListPage: Float, $strategyListOrder: SortOrder, $strategyListSearch: String, $strategyListSortBy: StrategyTableSortBy, $strategyListType: StrategyFilterType, $strategyReturnInToken: StrategyReturnInToken, $strategyListAddresses: [String!]) {
   strategyList(
     take: $strategyListTake
@@ -54,7 +51,8 @@ query Query($strategyListTake: Float, $strategyListNetwork: [Network!]!, $strate
   }
 }
 `.trim();
-exports.STATS_QUERY = `
+
+const STATS_QUERY = /* GraphQL */ `
 query GlobalStats($network: [Network!], $manager: String, $dex: [Dex!] = [Uniswap, Apeswap, Pancakeswap, Arbidex]) {
   stats(network: $network, manager: $manager, dex: $dex) {
     assets {
@@ -120,3 +118,5 @@ fragment networks on CleanedNetworkStats {
   __typename
 }
 `.trim();
+
+export { STRATEGY_LIST_QUERY, STATS_QUERY };

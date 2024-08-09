@@ -1,35 +1,36 @@
-/* eslint-disable no-undef */
-'use strict';
-var __importDefault =
-  (this && this.__importDefault) ||
-  function (mod) {
-    return mod && mod.__esModule ? mod : { default: mod };
-  };
-Object.defineProperty(exports, '__esModule', { value: true });
-exports.getStats = exports.getStrategies = void 0;
-const axios_1 = __importDefault(require('axios'));
-const queries_1 = require('./queries');
+import * as queries from './queries';
+
+import axios from 'axios';
+
 const URL = 'https://api.defiedge.io/graphql';
 
-var Network;
-(function (Network) {
-  Network['arbitrum'] = 'arbitrum';
-  Network['mainnet'] = 'mainnet';
-  Network['polygon'] = 'polygon';
-  Network['bsc'] = 'bsc';
-  Network['optimism'] = 'optimism';
-})(Network || (Network = {}));
+const Network = {
+  arbitrum: 'arbitrum',
+  astarZkEVM: 'astarZkEVM',
+  avalanche: 'avalanche',
+  base: 'base',
+  bsc: 'bsc',
+  linea: 'linea',
+  mainnet: 'mainnet',
+  mantle: 'mantle',
+  moonbeam: 'moonbeam',
+  optimism: 'optimism',
+  polygon: 'polygon',
+  xLayer: 'xLayer',
+  zkEVM: 'zkEVM',
+  zksyncEra: 'zksyncEra',
+};
 
 async function getStrategies(
   limit = 3,
   sortBy = 'leaderboard',
-  networks = ['optimism', 'arbitrum', 'polygon', 'mainnet', 'bsc']
+  networks = Object.values(Network)
 ) {
-  const list = axios_1.default
+  const list = axios
     .post(URL, {
       operationName: 'Query',
       fetchPolicy: 'network-only',
-      query: queries_1.STRATEGY_LIST_QUERY,
+      query: queries.STRATEGY_LIST_QUERY,
       variables: {
         strategyListNetwork: networks,
         strategyListOrder: 'desc',
@@ -43,61 +44,48 @@ async function getStrategies(
     })
     .then(({ data: { data } }) => {
       return data.strategyList.data;
+    })
+    .catch((error) => {
+      console.log(error.response.data.errors);
     });
 
   return list;
 }
-exports.getStrategies = getStrategies;
+
 export const dexes = [
-  'Uniswap',
+  'Apeswap',
   'Arbidex',
   'Baseswap',
   'Camelot',
+  'Fusionx',
   'Horiza',
+  'Lynex',
   'Pancakeswap',
   'Pangolin',
   'Quickswap',
   'Ramses',
   'Retro',
+  'Stellaswap',
   'Sushiswap',
   'Thena',
+  'Uniswap',
 ];
 
 async function getStats() {
-  return axios_1.default
+  return axios
     .post(URL, {
       operationName: 'GlobalStats',
-      query: queries_1.STATS_QUERY,
+      query: queries.STATS_QUERY,
       variables: {
-        dex: [
-          'Arbidex',
-          'Baseswap',
-          'Camelot',
-          'Horiza',
-          'Pancakeswap',
-          'Pangolin',
-          'Quickswap',
-          'Ramses',
-          'Retro',
-          'Sushiswap',
-          'Thena',
-          'Uniswap',
-        ],
-        network: [
-          'arbitrum',
-          'avalanche',
-          'base',
-          'bsc',
-          'mainnet',
-          'optimism',
-          'polygon',
-          'zkEVM',
-          'zksyncEra',
-        ],
+        dex: dexes,
+        network: Object.values(Network),
       },
     })
     .then(({ data: { data } }) => {
       return replaceNullWithZero(data.stats, 0);
+    })
+    .catch((error) => {
+      console.log(error.response.data.errors);
     });
 }
 
@@ -118,4 +106,4 @@ function replaceNullWithZero(data, replaceWith = 0) {
   }
 }
 
-exports.getStats = getStats;
+export { getStats, getStrategies, Network };
