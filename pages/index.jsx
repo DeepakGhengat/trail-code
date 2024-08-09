@@ -1,5 +1,6 @@
 import React from 'react';
 
+import RoadmapTimeline from '../components/RoadmapTimeline';
 import Subscribe from '../components/Subscribe';
 import Swap from '../components/Swap';
 import { getStats, getStrategies } from '../services/trendingStrategies';
@@ -10,6 +11,7 @@ export default function Home() {
     <>
       <div className="container">
         <Swap />
+        <RoadmapTimeline />
         <Subscribe />
       </div>
     </>
