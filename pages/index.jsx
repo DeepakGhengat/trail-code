@@ -1,8 +1,8 @@
 import React from 'react';
 
-import RoadmapTimeline from '../components/RoadmapTimeline';
 import Subscribe from '../components/Subscribe';
 import Swap from '../components/Swap';
+import Timeline from '../components/Timeline';
 import { getStats, getStrategies } from '../services/trendingStrategies';
 
 // eslint-disable-next-line react/prop-types
@@ -11,7 +11,9 @@ export default function Home() {
     <>
       <div className="container">
         <Swap />
-        <RoadmapTimeline />
+      </div>
+      <Timeline />
+      <div className="container">
         <Subscribe />
       </div>
     </>
