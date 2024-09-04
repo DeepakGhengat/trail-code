@@ -61,6 +61,7 @@ module.exports = {
         primary: '#3772ff',
         default: '#000021',
         'default-blue': '#4452FE',
+        'light-blue': '#3F1DF0',
         'gray-mid': '#A5A5A5',
         white: '#fff',
         skeleton: '#fff',

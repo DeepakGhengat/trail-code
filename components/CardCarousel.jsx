@@ -164,7 +164,7 @@ function CardCarousel({ strategies }) {
                   <a
                     href={`https://app.defiedge.io/s/${s.network}/${s.id}`}
                     target="_blank"
-                    className="flex w-full items-center justify-center rounded-lg bg-[#4452FE] py-3 duration-300 hover:bg-[#3F1DF0]"
+                    className="flex w-full items-center justify-center rounded-lg bg-[#4452FE] py-3 duration-300 hover:bg-light-blue"
                     rel="noreferrer"
                   >
                     <p>Trade Now &nbsp;</p>

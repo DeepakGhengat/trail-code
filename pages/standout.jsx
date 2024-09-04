@@ -154,7 +154,7 @@ export default function StandOut() {
             Your Success is Our Story
           </p>
           <a href="https://app.defiedge.io" target="_blank" rel="noreferrer">
-            <button className="rounded-md bg-[#4452FE] py-2 px-10 text-gray-300 hover:bg-[#3F1DF0]">
+            <button className="rounded-md bg-[#4452FE] py-2 px-10 text-gray-300 hover:bg-light-blue">
               Start your Journey
             </button>
           </a>

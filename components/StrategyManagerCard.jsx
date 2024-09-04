@@ -250,7 +250,7 @@ function StrategyManagerCard() {
           </div>
           <button
             onClick={ecosystemHandler}
-            className="mx-auto mt-14 rounded-md bg-[#4452FE] py-2 px-10 text-gray-300 hover:bg-[#3F1DF0]"
+            className="mx-auto mt-14 rounded-md bg-[#4452FE] py-2 px-10 text-gray-300 hover:bg-light-blue"
           >
             See More
           </button>

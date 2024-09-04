@@ -32,7 +32,7 @@ function Hero() {
 
               <div className="inline-block">
                 <Fade delay={30} duration={3000}>
-                  <button className="mt-[32px] flex items-center justify-center space-x-[6px] rounded-full border border-gray-600 bg-default-blue py-[15px] px-[28px] duration-300 hover:bg-[#3F1DF0]">
+                  <button className="mt-[32px] flex items-center justify-center space-x-[6px] rounded-full border border-gray-600 bg-default-blue py-[15px] px-[28px] duration-300 hover:bg-light-blue">
                     <a
                       href="https://app.defiedge.io/"
                       target="_blank"
