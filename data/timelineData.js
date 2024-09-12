@@ -1,6 +1,18 @@
 const timelineData = {
   2021: [
     {
+      date: 'May 2021',
+      events: [
+        'Testnet Launch on Uniswap V3: DefiEdge launched its initial testnet, enabling early testing and feedback on Uniswap V3 liquidity management features.',
+      ],
+    },
+    {
+      date: 'July 2021',
+      events: [
+        'Limit Order Integration and MVP Launch: Successfully integrated limit orders and launched the MVP version of DefiEdge on Uniswap V3, showcasing core liquidity management capabilities.',
+      ],
+    },
+    {
       date: 'September 2021',
       events: [
         'Audit by Lucash-dev: Recipient of the Whitehat Scholarship from Immunefi, renowned bug bounty hunter at Hackerone.',
