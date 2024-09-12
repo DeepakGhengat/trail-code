@@ -2,17 +2,13 @@ import React from 'react';
 
 import Subscribe from '../components/Subscribe';
 import Swap from '../components/Swap';
-import Timeline from '../components/Timeline';
 import { getStats, getStrategies } from '../services/trendingStrategies';
 
 // eslint-disable-next-line react/prop-types
 export default function Home() {
   return (
     <>
-      <div className="container">
-        <Swap />
-      </div>
-      <Timeline />
+      <Swap />
       <div className="container">
         <Subscribe />
       </div>
