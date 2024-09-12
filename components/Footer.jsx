@@ -1,14 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-
-import discord from '../public/images/discord.svg';
-import mainlogo from '../public/images/mainlogo.svg';
-import medium from '../public/images/medium.svg';
-import twitter from '../public/images/twitter.svg';
-import youtube from '../public/images/youtube.svg';
 
 export default function Footer() {
   const router = useRouter();
@@ -28,9 +23,11 @@ export default function Footer() {
               <div className="flex flex-col sm:items-start">
                 <Image
                   type="image"
+                  alt="logo"
+                  height={31}
+                  width={111}
                   className="h-[31px] w-[111px]"
-                  alt=""
-                  src={mainlogo}
+                  src={'/images/mainlogo.svg'}
                 />
                 <span className="mt-[24px] text-center text-[16px] text-gray-mid sm:mt-[32px] sm:text-left">
                   DefiEdge provides the smartest solution to deploy liquidity{' '}
@@ -39,34 +36,44 @@ export default function Footer() {
                 </span>
               </div>
               <div className="mt-[32px] flex space-x-[10px]">
-                <a
-                  href="https://discord.gg/x2QgbqE9jj"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image type="image" alt="discord" src={discord} />
-                </a>
-                <a
-                  href="https://medium.com/@DefiEdge"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image type="image" alt="medium" src={medium} />
-                </a>
-                <a
-                  href="https://twitter.com/DefiEdge/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image type="image" alt="twitter" src={twitter} />
-                </a>{' '}
-                <a
-                  href="https://www.youtube.com/@DefiedgeProtocol"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Image type="image" alt="youtube" src={youtube} />
-                </a>
+                {[
+                  {
+                    url: 'https://discord.gg/x2QgbqE9jj',
+                    alt: 'discord',
+                    src: '/images/discord.svg',
+                  },
+                  {
+                    url: 'https://medium.com/@DefiEdge',
+                    alt: 'medium',
+                    src: '/images/medium.svg',
+                  },
+                  {
+                    url: 'https://twitter.com/DefiEdge/',
+                    alt: 'twitter',
+                    src: '/images/twitter.svg',
+                  },
+                  {
+                    url: 'https://www.youtube.com/@DefiedgeProtocol',
+                    alt: 'youtube',
+                    src: '/images/youtube.svg',
+                  },
+                ].map(({ url, alt, src }, index) => (
+                  <a
+                    key={`social-${index}`}
+                    href={url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Image
+                      type="image"
+                      alt={alt}
+                      src={src}
+                      height={32}
+                      width={32}
+                      className="h-[32px] w-[32px]"
+                    />
+                  </a>
+                ))}
               </div>
             </div>
 
