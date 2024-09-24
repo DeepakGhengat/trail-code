@@ -11,89 +11,89 @@ import four from '../public/images/strategy/004.svg';
 import five from '../public/images/strategy/005.svg';
 import six from '../public/images/strategy/006.svg';
 import abdk from '../public/images/strategy/abdk.svg';
-import amrit from '../public/images/strategy/amrit.svg';
-import gsr from '../public/images/strategy/gsr.svg';
-import juan from '../public/images/strategy/juan.jpeg';
-import kevin from '../public/images/strategy/kevin.svg';
-import keyrock from '../public/images/strategy/keyrock.svg';
+// import amrit from '../public/images/strategy/amrit.svg';
+// import gsr from '../public/images/strategy/gsr.svg';
+// import juan from '../public/images/strategy/juan.jpeg';
+// import kevin from '../public/images/strategy/kevin.svg';
+// import keyrock from '../public/images/strategy/keyrock.svg';
 import lucash from '../public/images/strategy/lucash.png';
-import meme from '../public/images/strategy/meme.svg';
+// import meme from '../public/images/strategy/meme.svg';
 import mudit from '../public/images/strategy/mudit.png';
 import multifarm from '../public/images/strategy/multifarm.svg';
 import riley from '../public/images/strategy/riley.png';
-import sancap from '../public/images/strategy/sancap.svg';
+// import sancap from '../public/images/strategy/sancap.svg';
 import SecuringIcon from '../public/images/strategy/securing-fav.png';
 import solv from '../public/images/strategy/solv.svg';
 import watchpug from '../public/images/strategy/watchpug.jpeg';
-import wintermute from '../public/images/strategy/wintermute.svg';
-import yuriy from '../public/images/strategy/yuriy.jpeg';
-import ziliqa from '../public/images/strategy/ziliqa.svg';
+// import wintermute from '../public/images/strategy/wintermute.svg';
+// import yuriy from '../public/images/strategy/yuriy.jpeg';
+// import ziliqa from '../public/images/strategy/ziliqa.svg';
 // import { ReviewSlider } from './ReviewSlider';
 import { TestimonialSlider } from './TestimonialSlider';
 // import { TestimonialSlider } from './TestimonialSlider';
 
-const investorsArray = [
-  {
-    id: 1,
-    name: 'Wintermute',
-    logo: wintermute,
-    desc: 'Market Maker',
-  },
-  {
-    id: 2,
-    name: 'GSR',
-    logo: gsr,
-    desc: 'Market Maker',
-  },
-  {
-    id: 8,
-    name: 'Keyrock',
-    logo: keyrock,
-    desc: 'Market Maker',
-  },
-  {
-    id: 6,
-    name: 'MGNR',
-    logo: meme,
-    desc: 'Market Maker',
-  },
-  {
-    id: 3,
-    name: 'Sanctum Capital',
-    logo: sancap,
-    desc: 'Investment Firm',
-  },
-  {
-    id: 4,
-    name: 'Zilliqa Fund',
-    logo: ziliqa,
-    desc: 'Creator Fund',
-  },
-  {
-    id: 5,
-    name: 'Yuriy Myronovych',
-    logo: yuriy,
-    desc: 'Quant & HFT Architect',
-  },
-  {
-    id: 7,
-    name: 'Juan David',
-    logo: juan,
-    desc: 'Founder, Keyrock',
-  },
-  {
-    id: 10,
-    name: 'Kevin Beardsley',
-    logo: kevin,
-    desc: 'Head MM, Kraken',
-  },
-  {
-    id: 11,
-    name: 'Amrit Kumar',
-    logo: amrit,
-    desc: 'Founder, Zilliqa',
-  },
-];
+// const investorsArray = [
+//   {
+//     id: 1,
+//     name: 'Wintermute',
+//     logo: wintermute,
+//     desc: 'Market Maker',
+//   },
+//   {
+//     id: 2,
+//     name: 'GSR',
+//     logo: gsr,
+//     desc: 'Market Maker',
+//   },
+//   {
+//     id: 8,
+//     name: 'Keyrock',
+//     logo: keyrock,
+//     desc: 'Market Maker',
+//   },
+//   {
+//     id: 6,
+//     name: 'MGNR',
+//     logo: meme,
+//     desc: 'Market Maker',
+//   },
+//   {
+//     id: 3,
+//     name: 'Sanctum Capital',
+//     logo: sancap,
+//     desc: 'Investment Firm',
+//   },
+//   {
+//     id: 4,
+//     name: 'Zilliqa Fund',
+//     logo: ziliqa,
+//     desc: 'Creator Fund',
+//   },
+//   {
+//     id: 5,
+//     name: 'Yuriy Myronovych',
+//     logo: yuriy,
+//     desc: 'Quant & HFT Architect',
+//   },
+//   {
+//     id: 7,
+//     name: 'Juan David',
+//     logo: juan,
+//     desc: 'Founder, Keyrock',
+//   },
+//   {
+//     id: 10,
+//     name: 'Kevin Beardsley',
+//     logo: kevin,
+//     desc: 'Head MM, Kraken',
+//   },
+//   {
+//     id: 11,
+//     name: 'Amrit Kumar',
+//     logo: amrit,
+//     desc: 'Founder, Zilliqa',
+//   },
+// ];
 
 const auditorsArray = [
   {
@@ -255,9 +255,9 @@ function StrategyManagerCard() {
             See More
           </button>
 
-          <div className="my-[60px] h-[1px] w-full bg-white opacity-10"></div>
+          {/* <div className="my-[60px] h-[1px] w-full bg-white opacity-10"></div> */}
 
-          <div className="-mt-[6px] flex flex-col items-center text-center">
+          {/* <div className="-mt-[6px] flex flex-col items-center text-center">
             <p className="text-[20px] font-semibold uppercase tracking-[5px]  sm:mt-0  sm:text-[24px] ">
               Our Backers
             </p>
@@ -295,7 +295,7 @@ function StrategyManagerCard() {
                 </div>
               );
             })}
-          </div>
+          </div> */}
 
           <div className="my-[60px] h-[1px] w-full bg-white opacity-10"></div>
 
