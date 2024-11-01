@@ -38,11 +38,6 @@ export default function Footer() {
               <div className="mt-[32px] flex space-x-[10px]">
                 {[
                   {
-                    url: 'https://discord.gg/x2QgbqE9jj',
-                    alt: 'discord',
-                    src: '/images/discord.svg',
-                  },
-                  {
                     url: 'https://medium.com/@DefiEdge',
                     alt: 'medium',
                     src: '/images/medium.svg',
