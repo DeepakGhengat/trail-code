@@ -13,11 +13,7 @@ import defiedgeLogo from '../public/images/mainlogo.svg';
 import menuIcon from '../public/images/menu.svg';
 
 const menuLinks = [
-  { label: 'Discord', href: 'https://discord.gg/x2QgbqE9jj' },
-  { label: 'Medium', href: 'https://medium.com/@DefiEdge' },
-  { label: 'Substack', href: 'https://defiedge.substack.com/' },
   { label: 'Twitter', href: 'https://twitter.com/DefiEdge/' },
-  { label: 'Youtube', href: 'https://www.youtube.com/@DefiedgeProtocol' },
 ];
 
 export default function Header() {
@@ -25,32 +21,6 @@ export default function Header() {
 
   const [showNotification, setShowNotification] = useState(false);
   const [showNav, setShowNav] = useState(false);
-  const timeoutDuration = 200;
-  let timeout;
-
-  const buttonRef = useRef(null);
-  const dropdownRef = useRef(null);
-
-  const openMenu = (target) => target?.click();
-  const closeMenu = () =>
-    dropdownRef?.current?.dispatchEvent(
-      new KeyboardEvent('keydown', {
-        key: 'Escape',
-        bubbles: true,
-        cancelable: true,
-      })
-    );
-  const removeInterval = () => {
-    timeout && clearTimeout(timeout);
-  };
-
-  const onMouseEnter = (target, closed) => {
-    removeInterval();
-    closed && openMenu(target);
-  };
-  const onMouseLeave = (open) => {
-    open && (timeout = setTimeout(() => closeMenu(), timeoutDuration));
-  };
 
   useEffect(() => {
     function closeNav() {
@@ -74,67 +44,9 @@ export default function Header() {
   const links = useMemo(
     () => (
       <>
-        <Menu className="relative inline-block text-left" as="div">
-          {({ open }) => (
-            <div>
-              <div>
-                <Menu.Button
-                  ref={buttonRef}
-                  className="hover:opacity flex inline-flex w-full justify-center rounded-md   bg-opacity-20  text-white opacity-50 outline-none duration-300 hover:opacity-100"
-                  onMouseLeave={() => onMouseLeave(open)}
-                  onMouseEnter={({ target }) => onMouseEnter(target, !open)}
-                >
-                  Community
-                  {/* <span>
-                    <svg
-                      width="28px"
-                      height="28px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M7 10L12 15L17 10"
-                        stroke="#000000"
-                        fill="white"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </span>{' '} */}
-                </Menu.Button>
-              </div>
-              <Transition
-                enter="transition duration-100 ease-out"
-                enterFrom="transform scale-95 opacity-0"
-                enterTo="transform scale-100 opacity-100"
-                leave="transition duration-75 ease-out"
-                leaveFrom="transform scale-100 opacity-100"
-                leaveTo="transform scale-95 opacity-0"
-              >
-                <Menu.Items
-                  onMouseEnter={removeInterval}
-                  className="absolute right-0 mt-3 w-40 origin-top-right  rounded-md border border-white border-opacity-20 bg-[#0F0F2E] p-3  shadow-lg  outline-none   duration-300 "
-                  ref={dropdownRef}
-                  onMouseLeave={() => onMouseLeave(open)}
-                >
-                  {menuLinks.map((link) => (
-                    <Menu.Item
-                      as="a"
-                      target="_blank"
-                      key={link.href}
-                      href={link.href}
-                      className=" text-base group flex w-full items-center rounded-md px-2 py-2  text-white opacity-50 transition-all hover:opacity-100"
-                    >
-                      <span>{link.label}</span>
-                    </Menu.Item>
-                  ))}
-                </Menu.Items>
-              </Transition>
-            </div>
-          )}
-        </Menu>
+        <Link href="https://twitter.com/DefiEdge/" target="_blank">
+          <a className="opacity-50 duration-300 hover:opacity-100">Community</a>
+        </Link>
         <Link href="/ecosystem" shallow scroll>
           <a
             className={
@@ -168,7 +80,6 @@ export default function Header() {
             Edge in DefiEdge
           </a>
         </Link>
-
         <Link
           href="https://www.notion.so/defiedge/Careers-9feeee95a02141bfbaed050bf2a9cf9c"
           className="opacity-50 duration-300 hover:opacity-100"
@@ -191,7 +102,7 @@ export default function Header() {
         <div className="">
           <header>
             <div className="bg-white bg-opacity-5 bg-clip-padding ring-2 ring-white/10 backdrop-blur-xl backdrop-filter">
-              <div className="container flex flex-wrap items-center  justify-between gap-y-4 py-[20px] text-[16px]  ">
+              <div className="container flex flex-wrap items-center justify-between gap-y-4 py-[20px] text-[16px]">
                 <Link href="/" forwardHref>
                   <a>
                     <Image
@@ -202,13 +113,11 @@ export default function Header() {
                     />
                   </a>
                 </Link>
-
-                <div className="order-1 hidden w-full flex-wrap justify-between space-x-[33px] sm:flex lg:order-none lg:w-auto ">
+                <div className="order-1 hidden w-full flex-wrap justify-between space-x-[33px] sm:flex lg:order-none lg:w-auto">
                   {links}
                 </div>
-
                 <div>
-                  <button className=" hidden shrink-0 items-center justify-center   space-x-[6px] rounded-md bg-default-blue py-[10px] px-7 duration-300 hover:bg-light-blue sm:flex">
+                  <button className="hidden shrink-0 items-center justify-center space-x-[6px] rounded-md bg-default-blue py-[10px] px-7 duration-300 hover:bg-light-blue sm:flex">
                     <a
                       href="https://app.defiedge.io/"
                       target="_blank"
@@ -216,10 +125,9 @@ export default function Header() {
                       rel="noreferrer"
                     >
                       <Image type="image" alt="" src={lightning} />
-                      <p>&nbsp; Go To App</p>
+                      <p>&nbsp; Go To App (Sunset)</p>
                     </a>
                   </button>
-
                   <button
                     className="flex items-center justify-center duration-300 sm:hidden"
                     onClick={() => setShowNav(!showNav)}
@@ -235,8 +143,6 @@ export default function Header() {
                 </div>
               </div>
             </div>
-
-            {/* subheader for notifications */}
             <div
               className={
                 'bg-gradient-to-tr from-[#4D67A1] to-[#6248E9] px-4 py-[6px] text-[16px] md:px-0 ' +
@@ -245,8 +151,8 @@ export default function Header() {
                   : 'hidden -translate-y-32 opacity-0 transition duration-300')
               }
             >
-              <div className="container  flex  items-center justify-between">
-                <p className="">
+              <div className="container flex items-center justify-between">
+                <p>
                   📣 DefiEdge provides the simplest solution to deploy smart
                   liquidity and optimize yield on Concentrated DEXs. &nbsp;
                   <a href="#" className="underline">
@@ -263,7 +169,7 @@ export default function Header() {
           </header>
           <div
             className={
-              'absolute inset-x-0 z-50 block border-b border-[#3F407799] bg-[#0f0f2d]/90 p-5  backdrop-blur-xl transition-all ease-in-out sm:hidden' +
+              'absolute inset-x-0 z-50 block border-b border-[#3F407799] bg-[#0f0f2d]/90 p-5 backdrop-blur-xl transition-all ease-in-out sm:hidden' +
               ' ' +
               (showNav
                 ? 'max-h-[232px] opacity-100'
@@ -277,3 +183,4 @@ export default function Header() {
     </Fade>
   );
 }
+
